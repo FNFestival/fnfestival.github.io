@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "update-jam-tracks": "node scripts/update-jam-tracks.js"
+  },
+  "dependencies": {
+    "fnbr": "^4.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Explore daily and generally available Jam Tracks for the Fortnite Festival mode.">
+    <meta property="og:title" content="Fortnite Festival">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/FNFestival.png">
+    <title>Fortnite Festival</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://cdn2.unrealengine.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="assets/images/fn-logo.svg" alt="Fortnite Logo" draggable="false">
+            <p translate="no">Festival</p>
+        </div>
+        <div class="content">
+            <!-- Jam tracks will be added dynamically here -->
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content">
+            <div class="modal-header">
+                <img id="modalCover" src="" alt="Jam Track Cover" draggable="false">
+                <div class="track-info">
+                    <h2 id="modalTitle" translate="no"></h2>
+                    <p id="modalArtist" translate="no"></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-details" id="modalDetails"></div>
+                <div class="modal-difficulties" id="modalDifficulties"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+name: Update Jam Tracks
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-jam-tracks:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run script to update jam tracks
+        run: npm run update-jam-tracks
+        env:
+          FNBR_ACCOUNT_ID: ${{ secrets.FNBR_ACCOUNT_ID }}
+          FNBR_DEVICE_ID: ${{ secrets.FNBR_DEVICE_ID }}
+          FNBR_SECRET: ${{ secrets.FNBR_SECRET }}
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update jam tracks JSON file

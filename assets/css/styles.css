@@ -1,0 +1,340 @@
+/* Fonts */
+@font-face {
+    font-family: 'HeadingNow-68Heavy';
+    src: url('../fonts/HeadingNow-68Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HeadingNow-75Medium';
+    src: url('../fonts/HeadingNow-75Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'HeadingNow-75Medium', Arial, Helvetica, sans-serif;
+    background-color: black;
+    background-image: url('../images/background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100px;
+    flex-direction: row;
+}
+
+.sidebar img {
+    max-height: 45px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.sidebar p {
+    font-family: 'HeadingNow-68Heavy', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.content.fade-in {
+    opacity: 1;
+}
+
+.content h2, .content p {
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Jam Tracks */
+.jam-section {
+    margin-bottom: 20px;
+}
+
+.jam-tracks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.jam-track {
+    width: 400px;
+    margin: 10px 20px 10px 0;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(145, 152, 229, .2);
+    display: flex;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(20px);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.jam-track:hover {
+    outline: 2px solid white;
+}
+
+.jam-track img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.jam-track-info {
+    flex: 1;
+}
+
+.optional-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: yellow;
+    color: black;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 90%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: default;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 10px;
+    line-height: 1;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+.modal-header img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.modal-header h2, .modal-header p {
+    color: white;
+    margin: 0;
+}
+
+.modal-header .track-info {
+    flex-grow: 1;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+.modal-details {
+    flex-grow: 1;
+    max-width: calc(70% - 20px);
+}
+
+.modal-difficulties {
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.difficulty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.instrument-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/instrument-icons.png');
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.bass { background-position: 0 0; }
+.drums { background-position: -30px 0; }
+.guitar { background-position: -60px 0; }
+.vocals { background-position: -90px 0; }
+
+.difficulty-bars {
+    display: flex;
+    align-items: center;
+}
+
+.difficulty-bar {
+    height: 22px;
+}
+
+.difficulty-bar span {
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform-origin: left;
+    transform: skewX(-8deg);
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.active { background-color: white !important; }
+
+/* Media Queries */
+@media only screen and (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        max-width: 100px;
+        writing-mode: vertical-lr;
+    }
+
+    .sidebar p {
+        font-size: 75px;
+        margin-left: 5px;
+    }
+
+    .content {
+        padding-left: 160px;
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .sidebar {
+        text-align: center;
+        padding-bottom: 20px;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sidebar img {
+        margin-right: 0;
+    }
+
+    .content {
+        padding-top: 0;
+        padding: 20px;
+    }
+
+    .jam-tracks {
+        display: block;
+    }
+
+    .jam-track {
+        width: 100%;
+    }
+}
