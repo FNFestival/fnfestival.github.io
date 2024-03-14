@@ -1,229 +1,109 @@
 {
   "Daily Jam Tracks": [
     {
-      "title": "Surround Sound",
-      "artist": "JID ft. 21 Savage & Baby Tate",
-      "releaseYear": 2022,
-      "cover": "https://cdn2.unrealengine.com/wdfsb87lid87hugv-512x512-f27ea5001391.jpg",
-      "bpm": 152,
-      "duration": "3m 54s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 6,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:29.912Z"
-    },
-    {
-      "title": "All Of Me (Tiësto's Birthday Treatment Remix)",
-      "artist": "John Legend",
-      "releaseYear": 2013,
-      "cover": "https://cdn2.unrealengine.com/60idg0nmkrewau9d-512x512-f24884728f5b.jpg",
-      "bpm": 128,
-      "duration": "4m 13s",
+      "title": "Firework",
+      "artist": "Katy Perry",
+      "releaseYear": 2010,
+      "cover": "https://cdn2.unrealengine.com/aiyaomdhfpbz91ac-512x512-69671635c336.jpg",
+      "bpm": 124,
+      "duration": "3m 39s",
       "difficulties": {
         "bass": 1,
         "drums": 2,
         "vocals": 2,
-        "guitar": 3
+        "guitar": 2
       },
-      "lastModified": "2024-02-28T15:09:36.436Z"
+      "lastModified": "2024-03-12T14:26:06.264Z"
     },
     {
-      "title": "It Takes Two",
-      "artist": "Rob Base & DJ EZ Rock",
-      "releaseYear": 1988,
-      "cover": "https://cdn2.unrealengine.com/5iidtymhwllhpgli-512x512-c4b5c50e531e.jpg",
-      "bpm": 112,
-      "duration": "4m 5s",
+      "title": "Come & Go",
+      "artist": "Juice WRLD w/ Marshmello",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/jrfn0gyh1upctc6u-512x512-2119227153f6.png",
+      "bpm": 145,
+      "duration": "3m 25s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 5,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-03-13T12:00:48.919Z"
+    },
+    {
+      "title": "X Gon' Give It To Ya",
+      "artist": "DMX",
+      "releaseYear": 2002,
+      "cover": "https://cdn2.unrealengine.com/vzu7oyin0gbq8kza-512x512-e413fd4c2260.jpg",
+      "bpm": 95,
+      "duration": "3m 36s",
       "difficulties": {
         "bass": 0,
         "drums": 2,
-        "vocals": 4,
-        "guitar": 0
-      },
-      "lastModified": "2024-02-28T15:13:36.629Z"
-    },
-    {
-      "title": "WHATS POPPIN",
-      "artist": "Jack Harlow",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/jzen7cin8nzqvmaw-512x512-2f6ada751920.jpg",
-      "bpm": 145,
-      "duration": "2m 24s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
         "vocals": 5,
         "guitar": 1
       },
-      "lastModified": "2024-03-08T13:54:43.428Z"
+      "lastModified": "2024-03-12T14:28:30.966Z"
     },
     {
-      "title": "High Hopes",
-      "artist": "Panic! at the Disco",
-      "releaseYear": 2018,
-      "cover": "https://cdn2.unrealengine.com/rlkwybn37qfptc6m-512x512-cd3126b65669.jpg",
-      "bpm": 164,
-      "duration": "3m 14s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 4,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-05T19:43:25.194Z"
-    },
-    {
-      "title": "Misery Business",
-      "artist": "Paramore",
-      "releaseYear": 2007,
-      "cover": "https://cdn2.unrealengine.com/w8rdujbyldvsvdis-512x512-c1776242f3bf.jpg",
-      "bpm": 86,
-      "duration": "3m 21s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 5,
-        "vocals": 4,
-        "guitar": 5
-      },
-      "lastModified": "2024-03-05T19:42:32.589Z"
-    },
-    {
-      "title": "Me Too",
-      "artist": "Meghan Trainor",
-      "releaseYear": 2016,
-      "cover": "https://cdn2.unrealengine.com/xdokxxv9x4hovbz6-512x512-d73c8e094b35.jpg",
-      "bpm": 124,
-      "duration": "3m 5s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 4,
-        "vocals": 3,
-        "guitar": 1
-      },
-      "lastModified": "2024-02-28T15:13:13.471Z"
-    },
-    {
-      "title": "Stupid Love",
-      "artist": "Lady Gaga",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/hdavfy8ufdnrh6oq-512x512-ec6a4bc8a9c3.jpg",
-      "bpm": 118,
-      "duration": "3m 17s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 3,
-        "vocals": 3,
-        "guitar": 0
-      },
-      "lastModified": "2024-02-28T15:15:24.266Z"
-    },
-    {
-      "title": "Rain On Me",
-      "artist": "Lady Gaga & Ariana Grande",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/hdavfy8ufdnrh6oq-512x512-c445602ebb84.jpg",
-      "bpm": 123,
-      "duration": "3m 7s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 3,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-21T15:15:36.153Z"
-    },
-    {
-      "title": "YOU DON'T KNOW WHAT YOU'VE GOT",
-      "artist": "blink-182",
-      "releaseYear": 2023,
-      "cover": "https://cdn2.unrealengine.com/6v87ptciedi4mbcq-512x512-f3c60e163fc3.jpg",
-      "bpm": 156,
-      "duration": "3m 19s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 5,
-        "vocals": 1,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:04.932Z"
-    },
-    {
-      "title": "Barbie Girl",
-      "artist": "Aqua",
-      "releaseYear": 1997,
-      "cover": "https://cdn2.unrealengine.com/hbn7x55chczswhly-512x512-cef7dc7bb504.jpg",
-      "bpm": 130,
-      "duration": "3m 15s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 3,
-        "vocals": 3,
-        "guitar": 1
-      },
-      "lastModified": "2024-02-28T15:38:57.168Z"
-    },
-    {
-      "title": "Basket Case",
-      "artist": "Green Day",
-      "releaseYear": 1994,
-      "cover": "https://cdn2.unrealengine.com/hxgcbghz24dib61d-512x512-241ddf669e80.jpg",
-      "bpm": 175,
-      "duration": "3m 2s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 5,
-        "vocals": 2,
-        "guitar": 4
-      },
-      "lastModified": "2024-02-28T15:55:11.332Z"
-    },
-    {
-      "title": "Welcome to Paradise",
-      "artist": "Green Day",
-      "releaseYear": 1994,
-      "cover": "https://cdn2.unrealengine.com/hxgcbghz24dib61d-512x512-a77c7dff6e98.jpg",
-      "bpm": 91,
-      "duration": "4m 30s",
-      "difficulties": {
-        "bass": 5,
-        "drums": 6,
-        "vocals": 2,
-        "guitar": 5
-      },
-      "lastModified": "2024-02-28T15:54:22.479Z"
-    },
-    {
-      "title": "Hold Me Closer",
-      "artist": "Elton John & Britney Spears",
-      "releaseYear": 2022,
-      "cover": "https://cdn2.unrealengine.com/ebggmevwgwq1qyz6-512x512-b814bda847ba.jpg",
+      "title": "So What",
+      "artist": "P!nk",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/oge2c6vrixvxr3an-512x512-3291a5e13d97.jpg",
       "bpm": 126,
-      "duration": "3m 23s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 2,
-        "vocals": 3,
-        "guitar": 4
-      },
-      "lastModified": "2024-02-28T15:41:28.409Z"
-    },
-    {
-      "title": "Shivers",
-      "artist": "Ed Sheeran",
-      "releaseYear": 2021,
-      "cover": "https://cdn2.unrealengine.com/tcpw4aox4edrgvc9-512x512-776406f6f095.jpg",
-      "bpm": 141,
-      "duration": "3m 29s",
+      "duration": "3m 39s",
       "difficulties": {
         "bass": 2,
         "drums": 3,
         "vocals": 4,
         "guitar": 3
       },
-      "lastModified": "2024-03-05T15:36:37.077Z"
+      "lastModified": "2024-03-12T14:27:47.686Z"
+    },
+    {
+      "title": "Just Dance",
+      "artist": "Lady Gaga ft. Colby O'Donis",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/kxrjof9pcojfpq1p-512x512-c53427302335.jpg",
+      "bpm": 120,
+      "duration": "4m 4s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 0,
+        "vocals": 4,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:32:39.725Z"
+    },
+    {
+      "title": "Bloody Mary",
+      "artist": "Lady Gaga",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-87033a56a293.jpg",
+      "bpm": 100,
+      "duration": "4m 7s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 1,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:14:59.595Z"
+    },
+    {
+      "title": "Born This Way",
+      "artist": "Lady Gaga",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-44713dccabd8.jpg",
+      "bpm": 124,
+      "duration": "4m 25s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 4
+      },
+      "lastModified": "2024-02-21T14:19:53.127Z"
     },
     {
       "title": "Numb",
@@ -239,6 +119,126 @@
         "guitar": 0
       },
       "lastModified": "2024-03-05T19:41:39.714Z"
+    },
+    {
+      "title": "I Still Haven't Found What I'm Looking For",
+      "artist": "U2",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/1lnpxjbzkozanhyh-512x512-c6d6579c436c.jpg",
+      "bpm": 101,
+      "duration": "4m 31s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 2,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:58:25.562Z"
+    },
+    {
+      "title": "Flowers",
+      "artist": "Miley Cyrus",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/qegpoyqzsqyjwisf-512x512-f8eb7baf1381.jpg",
+      "bpm": 118,
+      "duration": "4m 31s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 2,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:38:06.499Z"
+    },
+    {
+      "title": "Into You",
+      "artist": "Ariana Grande",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/f42b3iv6hb7j7t7e-512x512-53ce887cfdac.jpg",
+      "bpm": 108,
+      "duration": "4m 6s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 2,
+        "vocals": 4,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:45:17.871Z"
+    },
+    {
+      "title": "Sandstorm",
+      "artist": "Darude",
+      "releaseYear": 1999,
+      "cover": "https://cdn2.unrealengine.com/gallgih5m9chlkxm-512x512-1618ff5f0b94.jpg",
+      "bpm": 136,
+      "duration": "3m 47s",
+      "difficulties": {
+        "bass": 5,
+        "drums": 4,
+        "vocals": 4,
+        "guitar": 5
+      },
+      "lastModified": "2024-03-12T14:25:02.040Z"
+    },
+    {
+      "title": "Lucid Dreams",
+      "artist": "Juice WRLD",
+      "releaseYear": 2018,
+      "cover": "https://cdn2.unrealengine.com/cmqd38ic5njgvtfw-512x512-5e5302b95b1e.jpg",
+      "bpm": 84,
+      "duration": "4m 18s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-03-12T14:25:25.269Z"
+    },
+    {
+      "title": "The Middle",
+      "artist": "Jimmy Eat World",
+      "releaseYear": 2001,
+      "cover": "https://cdn2.unrealengine.com/avyytlc9jdx9xsvl-512x512-934b3054fa88.jpg",
+      "bpm": 162,
+      "duration": "2m 52s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-03-12T14:24:36.201Z"
+    },
+    {
+      "title": "Popular",
+      "artist": "The Weeknd, Madonna & Playboi Carti",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/p44g8btrzrhnoakn-512x512-6c15bc6c4e55.jpg",
+      "bpm": 99,
+      "duration": "3m 41s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 4,
+        "vocals": 4,
+        "guitar": 3
+      },
+      "lastModified": "2024-02-28T15:33:35.355Z"
+    },
+    {
+      "title": "Roses (Imanbek Remix)",
+      "artist": "SAINt JHN",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/wty5zq0fgbogmihz-512x512-072abf9added.jpg",
+      "bpm": 122,
+      "duration": "2m 59s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 0
+      },
+      "lastModified": "2024-03-12T14:26:53.730Z"
     }
   ],
   "Upcoming Jam Tracks": [],
