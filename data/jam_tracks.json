@@ -1,171 +1,6 @@
 {
   "Daily Jam Tracks": [
     {
-      "title": "Firework",
-      "artist": "Katy Perry",
-      "releaseYear": 2010,
-      "cover": "https://cdn2.unrealengine.com/aiyaomdhfpbz91ac-512x512-69671635c336.jpg",
-      "bpm": 124,
-      "duration": "3m 39s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 2,
-        "vocals": 2,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-12T14:26:06.264Z"
-    },
-    {
-      "title": "Come & Go",
-      "artist": "Juice WRLD w/ Marshmello",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/jrfn0gyh1upctc6u-512x512-2119227153f6.png",
-      "bpm": 145,
-      "duration": "3m 25s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 5,
-        "vocals": 3,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-13T12:00:48.919Z"
-    },
-    {
-      "title": "X Gon' Give It To Ya",
-      "artist": "DMX",
-      "releaseYear": 2002,
-      "cover": "https://cdn2.unrealengine.com/vzu7oyin0gbq8kza-512x512-e413fd4c2260.jpg",
-      "bpm": 95,
-      "duration": "3m 36s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 5,
-        "guitar": 1
-      },
-      "lastModified": "2024-03-12T14:28:30.966Z"
-    },
-    {
-      "title": "So What",
-      "artist": "P!nk",
-      "releaseYear": 2008,
-      "cover": "https://cdn2.unrealengine.com/oge2c6vrixvxr3an-512x512-3291a5e13d97.jpg",
-      "bpm": 126,
-      "duration": "3m 39s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 3,
-        "vocals": 4,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-12T14:27:47.686Z"
-    },
-    {
-      "title": "Just Dance",
-      "artist": "Lady Gaga ft. Colby O'Donis",
-      "releaseYear": 2008,
-      "cover": "https://cdn2.unrealengine.com/kxrjof9pcojfpq1p-512x512-c53427302335.jpg",
-      "bpm": 120,
-      "duration": "4m 4s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 0,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:32:39.725Z"
-    },
-    {
-      "title": "Bloody Mary",
-      "artist": "Lady Gaga",
-      "releaseYear": 2011,
-      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-87033a56a293.jpg",
-      "bpm": 100,
-      "duration": "4m 7s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 1,
-        "vocals": 3,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:59.595Z"
-    },
-    {
-      "title": "Born This Way",
-      "artist": "Lady Gaga",
-      "releaseYear": 2011,
-      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-44713dccabd8.jpg",
-      "bpm": 124,
-      "duration": "4m 25s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 3,
-        "vocals": 3,
-        "guitar": 4
-      },
-      "lastModified": "2024-02-21T14:19:53.127Z"
-    },
-    {
-      "title": "Numb",
-      "artist": "Linkin Park",
-      "releaseYear": 2003,
-      "cover": "https://cdn2.unrealengine.com/0o4fntpnuwyu1bqf-512x512-6f1cd4a9229d.jpg",
-      "bpm": 110,
-      "duration": "3m 7s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 2,
-        "guitar": 0
-      },
-      "lastModified": "2024-03-05T19:41:39.714Z"
-    },
-    {
-      "title": "I Still Haven't Found What I'm Looking For",
-      "artist": "U2",
-      "releaseYear": 1987,
-      "cover": "https://cdn2.unrealengine.com/1lnpxjbzkozanhyh-512x512-c6d6579c436c.jpg",
-      "bpm": 101,
-      "duration": "4m 31s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
-        "vocals": 2,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:58:25.562Z"
-    },
-    {
-      "title": "Flowers",
-      "artist": "Miley Cyrus",
-      "releaseYear": 2023,
-      "cover": "https://cdn2.unrealengine.com/qegpoyqzsqyjwisf-512x512-f8eb7baf1381.jpg",
-      "bpm": 118,
-      "duration": "4m 31s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 2,
-        "vocals": 3,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:38:06.499Z"
-    },
-    {
-      "title": "Into You",
-      "artist": "Ariana Grande",
-      "releaseYear": 2016,
-      "cover": "https://cdn2.unrealengine.com/f42b3iv6hb7j7t7e-512x512-53ce887cfdac.jpg",
-      "bpm": 108,
-      "duration": "4m 6s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 2,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:45:17.871Z"
-    },
-    {
       "title": "Sandstorm",
       "artist": "Darude",
       "releaseYear": 1999,
@@ -239,6 +74,171 @@
         "guitar": 0
       },
       "lastModified": "2024-03-12T14:26:53.730Z"
+    },
+    {
+      "title": "All Of Me (Tiësto's Birthday Treatment Remix)",
+      "artist": "John Legend",
+      "releaseYear": 2013,
+      "cover": "https://cdn2.unrealengine.com/60idg0nmkrewau9d-512x512-f24884728f5b.jpg",
+      "bpm": 128,
+      "duration": "4m 13s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 2,
+        "vocals": 2,
+        "guitar": 3
+      },
+      "lastModified": "2024-02-28T15:09:36.436Z"
+    },
+    {
+      "title": "It Takes Two",
+      "artist": "Rob Base & DJ EZ Rock",
+      "releaseYear": 1988,
+      "cover": "https://cdn2.unrealengine.com/5iidtymhwllhpgli-512x512-c4b5c50e531e.jpg",
+      "bpm": 112,
+      "duration": "4m 5s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 2,
+        "vocals": 4,
+        "guitar": 0
+      },
+      "lastModified": "2024-02-28T15:13:36.629Z"
+    },
+    {
+      "title": "Down with the Sickness",
+      "artist": "Disturbed",
+      "releaseYear": 2000,
+      "cover": "https://cdn2.unrealengine.com/r185natclok4bf1e-512x512-281ee83cd3d0.jpg",
+      "bpm": 90,
+      "duration": "4m 46s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 4,
+        "vocals": 3,
+        "guitar": 4
+      },
+      "lastModified": "2024-03-05T15:29:18.844Z"
+    },
+    {
+      "title": "All The Small Things",
+      "artist": "blink-182",
+      "releaseYear": 1999,
+      "cover": "https://cdn2.unrealengine.com/tq37jndowmy1nw8i-512x512-d391e0b43bec.jpg",
+      "bpm": 148,
+      "duration": "2m 50s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 4,
+        "vocals": 1,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:12:45.874Z"
+    },
+    {
+      "title": "Rain On Me",
+      "artist": "Lady Gaga & Ariana Grande",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/hdavfy8ufdnrh6oq-512x512-c445602ebb84.jpg",
+      "bpm": 123,
+      "duration": "3m 7s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-21T15:15:36.153Z"
+    },
+    {
+      "title": "Feel It Still",
+      "artist": "Portugal. The Man",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/xxafw0szeszowbzu-512x512-081cfea63b37.jpg",
+      "bpm": 158,
+      "duration": "2m 45s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 2,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-03-05T19:44:13.050Z"
+    },
+    {
+      "title": "Misery Business",
+      "artist": "Paramore",
+      "releaseYear": 2007,
+      "cover": "https://cdn2.unrealengine.com/w8rdujbyldvsvdis-512x512-c1776242f3bf.jpg",
+      "bpm": 86,
+      "duration": "3m 21s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 5,
+        "vocals": 4,
+        "guitar": 5
+      },
+      "lastModified": "2024-03-05T19:42:32.589Z"
+    },
+    {
+      "title": "Me Too",
+      "artist": "Meghan Trainor",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/xdokxxv9x4hovbz6-512x512-d73c8e094b35.jpg",
+      "bpm": 124,
+      "duration": "3m 5s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 4,
+        "vocals": 3,
+        "guitar": 1
+      },
+      "lastModified": "2024-02-28T15:13:13.471Z"
+    },
+    {
+      "title": "When I Come Around",
+      "artist": "Green Day",
+      "releaseYear": 1994,
+      "cover": "https://cdn2.unrealengine.com/hxgcbghz24dib61d-512x512-b5c3b3bd87e0.jpg",
+      "bpm": 98,
+      "duration": "3m 3s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 3,
+        "vocals": 2,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:53:48.867Z"
+    },
+    {
+      "title": "Single Soon",
+      "artist": "Selena Gomez",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/ujhupij111nnk5hh-512x512-16ec92d7b5cd.jpg",
+      "bpm": 105,
+      "duration": "2m 56s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 1
+      },
+      "lastModified": "2024-02-28T15:47:37.409Z"
+    },
+    {
+      "title": "Timeless",
+      "artist": "WitchGang",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/qfmocov1e2ovkmpt-512x512-78cce7c986d0.jpg",
+      "bpm": 94,
+      "duration": "2m 29s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-02-28T15:39:31.834Z"
     }
   ],
   "Upcoming Jam Tracks": [],
@@ -884,7 +884,7 @@
         "vocals": 3,
         "guitar": 4
       },
-      "lastModified": "2024-02-28T18:28:44.326Z"
+      "lastModified": "2024-03-14T20:28:50.040Z"
     },
     {
       "title": "Can't Feel My Face",
@@ -1784,7 +1784,7 @@
         "vocals": 3,
         "guitar": 3
       },
-      "lastModified": "2024-03-13T12:00:48.919Z"
+      "lastModified": "2024-03-15T04:29:32.281Z"
     },
     {
       "title": "Lucid Dreams",
