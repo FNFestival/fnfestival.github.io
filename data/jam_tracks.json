@@ -1,109 +1,94 @@
 {
   "Daily Jam Tracks": [
     {
-      "title": "(Don't Fear) The Reaper",
-      "artist": "Blue Öyster Cult",
-      "releaseYear": 1976,
-      "cover": "https://cdn2.unrealengine.com/ctzomncwaembo4i9-512x512-4f2be6de1f0e.png",
-      "bpm": 141,
-      "duration": "5m 22s",
-      "difficulties": {
-        "bass": 5,
-        "drums": 6,
-        "vocals": 2,
-        "guitar": 5
-      },
-      "lastModified": "2024-03-19T15:20:54.542Z"
-    },
-    {
-      "title": "Hysteria",
-      "artist": "Muse",
-      "releaseYear": 2003,
-      "cover": "https://cdn2.unrealengine.com/qp68njzglck03mlp-512x512-b82ddb349217.jpg",
-      "bpm": 93,
-      "duration": "3m 50s",
+      "title": "Sandstorm",
+      "artist": "Darude",
+      "releaseYear": 1999,
+      "cover": "https://cdn2.unrealengine.com/gallgih5m9chlkxm-512x512-1618ff5f0b94.jpg",
+      "bpm": 136,
+      "duration": "3m 47s",
       "difficulties": {
         "bass": 5,
         "drums": 4,
-        "vocals": 2,
+        "vocals": 4,
         "guitar": 5
       },
-      "lastModified": "2024-03-22T13:57:06.922Z"
+      "lastModified": "2024-03-12T14:25:02.040Z"
     },
     {
-      "title": "Astronaut In The Ocean",
-      "artist": "Masked Wolf",
-      "releaseYear": 2019,
-      "cover": "https://cdn2.unrealengine.com/arndrvpmhv7dmrko-512x512-8bc3e401a35a.jpg",
-      "bpm": 150,
-      "duration": "2m 14s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 3,
-        "vocals": 5,
-        "guitar": 0
-      },
-      "lastModified": "2024-03-19T14:19:40.140Z"
-    },
-    {
-      "title": "Firework",
-      "artist": "Katy Perry",
-      "releaseYear": 2010,
-      "cover": "https://cdn2.unrealengine.com/aiyaomdhfpbz91ac-512x512-69671635c336.jpg",
-      "bpm": 124,
-      "duration": "3m 39s",
+      "title": "Your Love (9pm)",
+      "artist": "ATB, Topic, A7S",
+      "releaseYear": 2021,
+      "cover": "https://cdn2.unrealengine.com/3uzy0g1r8cp3ovde-512x512-982c1a0fba76.jpg",
+      "bpm": 126,
+      "duration": "2m 34s",
       "difficulties": {
         "bass": 1,
         "drums": 2,
         "vocals": 2,
-        "guitar": 2
+        "guitar": 1
       },
-      "lastModified": "2024-03-12T14:26:06.264Z"
+      "lastModified": "2024-03-19T14:22:33.999Z"
     },
     {
-      "title": "Come & Go",
-      "artist": "Juice WRLD w/ Marshmello",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/jrfn0gyh1upctc6u-512x512-2119227153f6.png",
-      "bpm": 145,
-      "duration": "3m 25s",
+      "title": "Carry on Wayward Son",
+      "artist": "Kansas",
+      "releaseYear": 1976,
+      "cover": "https://cdn2.unrealengine.com/oxjxl9yq5qefpu0l-512x512-17165a6f0ee8.png",
+      "bpm": 124,
+      "duration": "5m 25s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 3,
+        "vocals": 2,
+        "guitar": 6
+      },
+      "lastModified": "2024-03-19T14:21:37.390Z"
+    },
+    {
+      "title": "Lucid Dreams",
+      "artist": "Juice WRLD",
+      "releaseYear": 2018,
+      "cover": "https://cdn2.unrealengine.com/cmqd38ic5njgvtfw-512x512-5e5302b95b1e.jpg",
+      "bpm": 84,
+      "duration": "4m 18s",
       "difficulties": {
         "bass": 1,
-        "drums": 5,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-03-12T14:25:25.269Z"
+    },
+    {
+      "title": "The Middle",
+      "artist": "Jimmy Eat World",
+      "releaseYear": 2001,
+      "cover": "https://cdn2.unrealengine.com/avyytlc9jdx9xsvl-512x512-934b3054fa88.jpg",
+      "bpm": 162,
+      "duration": "2m 52s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
         "vocals": 3,
         "guitar": 3
       },
-      "lastModified": "2024-03-15T04:29:32.281Z"
+      "lastModified": "2024-03-12T14:24:36.201Z"
     },
     {
-      "title": "X Gon' Give It To Ya",
-      "artist": "DMX",
-      "releaseYear": 2002,
-      "cover": "https://cdn2.unrealengine.com/vzu7oyin0gbq8kza-512x512-e413fd4c2260.jpg",
-      "bpm": 95,
-      "duration": "3m 36s",
+      "title": "Call Me Maybe",
+      "artist": "Carly Rae Jepsen",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/k965npoxrrlqlbhn-512x512-4bf856e7e5cd.png",
+      "bpm": 120,
+      "duration": "3m 18s",
       "difficulties": {
         "bass": 0,
         "drums": 2,
-        "vocals": 5,
-        "guitar": 1
+        "vocals": 3,
+        "guitar": 3
       },
-      "lastModified": "2024-03-12T14:28:30.966Z"
-    },
-    {
-      "title": "I Think I'm OKAY",
-      "artist": "mgk, YUNGBLUD & Travis Barker",
-      "releaseYear": 2019,
-      "cover": "https://cdn2.unrealengine.com/ithinkimokay-art-300x300-6801b1e6ad92.jpg",
-      "bpm": 120,
-      "duration": "2m 54s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
-        "vocals": 2,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-19T20:40:08.217Z"
+      "lastModified": "2024-03-19T14:23:19.624Z"
     },
     {
       "title": "Like A G6",
@@ -121,51 +106,6 @@
       "lastModified": "2024-03-19T15:47:58.032Z"
     },
     {
-      "title": "WHATS POPPIN",
-      "artist": "Jack Harlow",
-      "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/jzen7cin8nzqvmaw-512x512-2f6ada751920.jpg",
-      "bpm": 145,
-      "duration": "2m 24s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
-        "vocals": 5,
-        "guitar": 1
-      },
-      "lastModified": "2024-03-08T13:54:43.428Z"
-    },
-    {
-      "title": "Bloody Mary",
-      "artist": "Lady Gaga",
-      "releaseYear": 2011,
-      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-87033a56a293.jpg",
-      "bpm": 100,
-      "duration": "4m 7s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 1,
-        "vocals": 3,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:59.595Z"
-    },
-    {
-      "title": "High Hopes",
-      "artist": "Panic! at the Disco",
-      "releaseYear": 2018,
-      "cover": "https://cdn2.unrealengine.com/rlkwybn37qfptc6m-512x512-cd3126b65669.jpg",
-      "bpm": 164,
-      "duration": "3m 14s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 4,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-05T19:43:25.194Z"
-    },
-    {
       "title": "Feel Good Inc",
       "artist": "Gorillaz",
       "releaseYear": 2005,
@@ -179,6 +119,21 @@
         "guitar": 1
       },
       "lastModified": "2024-03-05T20:38:27.676Z"
+    },
+    {
+      "title": "The Edge of Glory",
+      "artist": "Lady Gaga",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-a24b7d1557af.jpg",
+      "bpm": 128,
+      "duration": "5m 22s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 2,
+        "vocals": 2,
+        "guitar": 5
+      },
+      "lastModified": "2024-02-28T15:27:07.384Z"
     },
     {
       "title": "Shivers",
@@ -196,21 +151,6 @@
       "lastModified": "2024-03-05T15:36:37.077Z"
     },
     {
-      "title": "Numb",
-      "artist": "Linkin Park",
-      "releaseYear": 2003,
-      "cover": "https://cdn2.unrealengine.com/0o4fntpnuwyu1bqf-512x512-6f1cd4a9229d.jpg",
-      "bpm": 110,
-      "duration": "3m 7s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 2,
-        "guitar": 0
-      },
-      "lastModified": "2024-03-05T19:41:39.714Z"
-    },
-    {
       "title": "Feel It Still",
       "artist": "Portugal. The Man",
       "releaseYear": 2017,
@@ -226,79 +166,124 @@
       "lastModified": "2024-03-05T19:44:13.050Z"
     },
     {
-      "title": "Down with the Sickness",
-      "artist": "Disturbed",
-      "releaseYear": 2000,
-      "cover": "https://cdn2.unrealengine.com/r185natclok4bf1e-512x512-281ee83cd3d0.jpg",
-      "bpm": 90,
-      "duration": "4m 46s",
+      "title": "Just Dance",
+      "artist": "Lady Gaga ft. Colby O'Donis",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/kxrjof9pcojfpq1p-512x512-c53427302335.jpg",
+      "bpm": 120,
+      "duration": "4m 4s",
       "difficulties": {
-        "bass": 4,
-        "drums": 4,
-        "vocals": 3,
-        "guitar": 4
-      },
-      "lastModified": "2024-03-05T15:29:18.844Z"
-    },
-    {
-      "title": "Big Energy",
-      "artist": "Latto",
-      "releaseYear": 2022,
-      "cover": "https://cdn2.unrealengine.com/ui18vmajfpzk76df-512x512-73668ca9a366.jpg",
-      "bpm": 106,
-      "duration": "2m 58s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 1,
+        "bass": 1,
+        "drums": 0,
         "vocals": 4,
         "guitar": 2
       },
-      "lastModified": "2024-02-28T15:12:10.116Z"
+      "lastModified": "2024-02-28T15:32:39.725Z"
     },
     {
-      "title": "Me Too",
-      "artist": "Meghan Trainor",
+      "title": "Closer",
+      "artist": "The Chainsmokers ft. Halsey",
       "releaseYear": 2016,
-      "cover": "https://cdn2.unrealengine.com/xdokxxv9x4hovbz6-512x512-d73c8e094b35.jpg",
-      "bpm": 124,
-      "duration": "3m 5s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 4,
-        "vocals": 3,
-        "guitar": 1
-      },
-      "lastModified": "2024-02-28T15:13:13.471Z"
-    },
-    {
-      "title": "All Of Me (Tiësto's Birthday Treatment Remix)",
-      "artist": "John Legend",
-      "releaseYear": 2013,
-      "cover": "https://cdn2.unrealengine.com/60idg0nmkrewau9d-512x512-f24884728f5b.jpg",
-      "bpm": 128,
-      "duration": "4m 13s",
+      "cover": "https://cdn2.unrealengine.com/0kxmqfe5qntvocud-512x512-5af1b9420d1e.jpg",
+      "bpm": 95,
+      "duration": "4m 9s",
       "difficulties": {
         "bass": 1,
         "drums": 2,
         "vocals": 2,
-        "guitar": 3
-      },
-      "lastModified": "2024-02-28T15:09:36.436Z"
-    },
-    {
-      "title": "Pompeii",
-      "artist": "Bastille",
-      "releaseYear": 2013,
-      "cover": "https://cdn2.unrealengine.com/it7rcl8gkvqnknnq-512x512-2ccd8cdb3528.jpg",
-      "bpm": 128,
-      "duration": "3m 37s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 4,
-        "vocals": 4,
         "guitar": 2
       },
-      "lastModified": "2024-02-28T18:19:54.022Z"
+      "lastModified": "2024-02-27T15:43:02.786Z"
+    },
+    {
+      "title": "It Takes Two",
+      "artist": "Rob Base & DJ EZ Rock",
+      "releaseYear": 1988,
+      "cover": "https://cdn2.unrealengine.com/5iidtymhwllhpgli-512x512-c4b5c50e531e.jpg",
+      "bpm": 112,
+      "duration": "4m 5s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 2,
+        "vocals": 4,
+        "guitar": 0
+      },
+      "lastModified": "2024-02-28T15:13:36.629Z"
+    },
+    {
+      "title": "Surround Sound",
+      "artist": "JID ft. 21 Savage & Baby Tate",
+      "releaseYear": 2022,
+      "cover": "https://cdn2.unrealengine.com/wdfsb87lid87hugv-512x512-f27ea5001391.jpg",
+      "bpm": 152,
+      "duration": "3m 54s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 2,
+        "vocals": 6,
+        "guitar": 2
+      },
+      "lastModified": "2024-02-28T15:14:29.912Z"
+    },
+    {
+      "title": "What's My Age Again?",
+      "artist": "blink-182",
+      "releaseYear": 1999,
+      "cover": "https://cdn2.unrealengine.com/tq37jndowmy1nw8i-512x512-0e656a86e495.jpg",
+      "bpm": 155,
+      "duration": "2m 29s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 4,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-03-01T00:41:47.967Z"
+    },
+    {
+      "title": "Misery Business",
+      "artist": "Paramore",
+      "releaseYear": 2007,
+      "cover": "https://cdn2.unrealengine.com/w8rdujbyldvsvdis-512x512-c1776242f3bf.jpg",
+      "bpm": 86,
+      "duration": "3m 21s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 5,
+        "vocals": 4,
+        "guitar": 5
+      },
+      "lastModified": "2024-03-05T19:42:32.589Z"
+    },
+    {
+      "title": "Hold Me Closer",
+      "artist": "Elton John & Britney Spears",
+      "releaseYear": 2022,
+      "cover": "https://cdn2.unrealengine.com/ebggmevwgwq1qyz6-512x512-b814bda847ba.jpg",
+      "bpm": 126,
+      "duration": "3m 23s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 2,
+        "vocals": 3,
+        "guitar": 4
+      },
+      "lastModified": "2024-02-28T15:41:28.409Z"
+    },
+    {
+      "title": "Roses (Imanbek Remix)",
+      "artist": "SAINt JHN",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/wty5zq0fgbogmihz-512x512-072abf9added.jpg",
+      "bpm": 122,
+      "duration": "2m 59s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 0
+      },
+      "lastModified": "2024-03-12T14:26:53.730Z"
     }
   ],
   "Upcoming Jam Tracks": [],
