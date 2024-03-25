@@ -121,7 +121,21 @@
       },
       "lastModified": "2024-03-08T13:54:43.428Z"
     },
-    null,
+    {
+      "title": "The Edge of Glory",
+      "artist": "Lady Gaga",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-a24b7d1557af.jpg",
+      "bpm": 128,
+      "duration": "5m 22s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 2,
+        "vocals": 2,
+        "guitar": 5
+      },
+      "lastModified": "2024-02-28T15:27:07.384Z"
+    },
     {
       "title": "Numb",
       "artist": "Linkin Park",
@@ -589,6 +603,21 @@
       "lastModified": "2024-02-28T18:33:54.731Z"
     },
     {
+      "title": "i",
+      "artist": "Kendrick Lamar",
+      "releaseYear": 2015,
+      "cover": "https://cdn2.unrealengine.com/e9grrtvjygnzygyd-512x512-556e08ad44a8.jpg",
+      "bpm": 122,
+      "duration": "3m 57s",
+      "difficulties": {
+        "bass": 6,
+        "drums": 5,
+        "vocals": 6,
+        "guitar": 3
+      },
+      "lastModified": "2024-02-28T18:42:30.562Z"
+    },
+    {
       "title": "Mr. Brightside",
       "artist": "The Killers",
       "releaseYear": 2004,
@@ -662,6 +691,21 @@
         "guitar": 0
       },
       "lastModified": "2024-02-28T18:43:39.340Z"
+    },
+    {
+      "title": "Return of the Tiger",
+      "artist": "Epic Games",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/yg4jgqd8zfpiygyd-512x512-7aa1bcdb726f.jpg",
+      "bpm": 132,
+      "duration": "4m 8s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 5,
+        "vocals": 4,
+        "guitar": 4
+      },
+      "lastModified": "2024-02-07T17:04:57.239Z"
     },
     {
       "title": "Save Your Tears",
@@ -1384,6 +1428,21 @@
       "lastModified": "2024-02-28T15:15:24.266Z"
     },
     {
+      "title": "The Edge of Glory",
+      "artist": "Lady Gaga",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-a24b7d1557af.jpg",
+      "bpm": 128,
+      "duration": "5m 22s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 2,
+        "vocals": 2,
+        "guitar": 5
+      },
+      "lastModified": "2024-02-28T15:27:07.384Z"
+    },
+    {
       "title": "Applause",
       "artist": "Lady Gaga",
       "releaseYear": 2013,
@@ -1834,6 +1893,21 @@
       "lastModified": "2024-03-12T14:26:06.264Z"
     },
     {
+      "title": "Roses (Imanbek Remix)",
+      "artist": "SAINt JHN",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/wty5zq0fgbogmihz-512x512-072abf9added.jpg",
+      "bpm": 122,
+      "duration": "2m 59s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 0
+      },
+      "lastModified": "2024-03-12T14:26:53.730Z"
+    },
+    {
       "title": "So What",
       "artist": "P!nk",
       "releaseYear": 2008,
@@ -1877,6 +1951,21 @@
         "guitar": 5
       },
       "lastModified": "2024-03-22T13:57:06.922Z"
+    },
+    {
+      "title": "Astronaut In The Ocean",
+      "artist": "Masked Wolf",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/arndrvpmhv7dmrko-512x512-8bc3e401a35a.jpg",
+      "bpm": 150,
+      "duration": "2m 14s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 3,
+        "vocals": 5,
+        "guitar": 0
+      },
+      "lastModified": "2024-03-19T14:19:40.140Z"
     },
     {
       "title": "Call Me Maybe",
