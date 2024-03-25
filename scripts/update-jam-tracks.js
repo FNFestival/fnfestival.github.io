@@ -49,15 +49,21 @@ async function updateJamTracks() {
     const availableTracksData = await fetchAvailableTracks();
     const { dailyTracks, upcomingTracks } = await fetchDailyJamTracks(client);
 
+    // Filter out null tracks
+    const filteredDailyTracks = dailyTracks.filter(track => track !== null);
+    const filteredUpcomingTracks = upcomingTracks.filter(track => track !== null);
+    const filteredAvailableTracks = Object.values(availableTracksData)
+        .filter(trackData => trackData.track)
+        .map(trackData => trackData.track.sn);
+
     // Generate jam tracks object and categorize them
-    const jamTracks = Object.fromEntries(Object.entries(availableTracksData)
-        .filter(([_, trackData]) => trackData.track)
+    const jamTracks = Object.fromEntries(Object.entries(filteredAvailableTracks)
         .map(([_, trackData]) => [trackData.track.sn, generateTrackObject(trackData)]));
 
     const jamTracksData = {
-        "Daily Jam Tracks": dailyTracks.map(track => jamTracks[track]).filter(track => track !== null),
-        "Upcoming Jam Tracks": upcomingTracks.map(track => jamTracks[track]).filter(track => track !== null),
-        "Available Jam Tracks": Object.values(jamTracks).filter(track => track !== null)
+        "Daily Jam Tracks": filteredDailyTracks.map(track => jamTracks[track]),
+        "Upcoming Jam Tracks": filteredUpcomingTracks.map(track => jamTracks[track]),
+        "Available Jam Tracks": Object.values(jamTracks)
     };
 
     // Write jam tracks data to file
