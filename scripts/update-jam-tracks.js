@@ -51,7 +51,7 @@ async function updateJamTracks() {
 
     // Generate jam tracks object and categorize them
     const jamTracks = Object.fromEntries(Object.entries(availableTracksData)
-        .filter(([_, trackData]) => trackData.track)
+        .filter(([_, trackData]) => trackData.track && trackData.track.sn === _)
         .map(([_, trackData]) => [trackData.track.sn, generateTrackObject(trackData)]));
 
     const jamTracksData = {
