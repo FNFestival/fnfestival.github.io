@@ -62,7 +62,7 @@ async function updateJamTracks() {
     const jamTracksData = {
         "dailyTracks": dailyTracks,
         "upcomingTracks": upcomingTracks,
-        "tracks": jamTracks
+        "jamTracks": jamTracks
     };
 
     // Write jam tracks data to file

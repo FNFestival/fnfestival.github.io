@@ -87,7 +87,7 @@ async function loadJamData() {
         const sections = [
             { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.tracks[trackId]) },
             { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.tracks[trackId]) },
-            { title: "All Available Jam Tracks", tracks: data.tracks }
+            { title: "Available Jam Tracks", tracks: data.jamTracks }
         ];
 
         // Iterate over sections
