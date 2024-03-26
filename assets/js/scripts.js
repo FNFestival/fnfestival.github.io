@@ -4,16 +4,19 @@ const modalClose = document.querySelector(".modal-close");
 
 // Add event listeners for closing the modal
 modalClose.addEventListener("click", closeModal);
-modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
+modal.addEventListener("click", closeModalIfClickedOutside);
 
 // Function to close the modal
 function closeModal() {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
+}
+
+// Function to close the modal if clicked outside
+function closeModalIfClickedOutside(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
 }
 
 // Function to open the modal with track details
@@ -80,46 +83,53 @@ async function loadJamData() {
         const data = await response.json();
         const contentDiv = document.querySelector(".content");
 
-        // Iterate over sections in data
-        for (const [sectionKey, section] of Object.entries(data)) {
-            if (section.length > 0) {
-                // Sort tracks by last modified date
-                section.sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified));
+        // Define sections with their corresponding tracks
+        const sections = [
+            { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.tracks[trackId]) },
+            { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.tracks[trackId]) },
+            { title: "All Available Jam Tracks", tracks: data.tracks }
+        ];
 
-                // Create section div and title
-                const sectionDiv = document.createElement("div");
-                sectionDiv.classList.add("jam-section");
-                const sectionTitle = document.createElement("h2");
-                sectionTitle.textContent = sectionKey;
-                sectionDiv.appendChild(sectionTitle);
-
-                // Create div for jam tracks
-                const jamTracksDiv = document.createElement("div");
-                jamTracksDiv.classList.add("jam-tracks");
-
-                // Create track divs and append to jamTracksDiv
-                section.forEach(track => {
-                    const trackDiv = document.createElement("div");
-                    trackDiv.classList.add("jam-track");
-                    const isNewTrack = isTrackNew(track.lastModified);
-                    trackDiv.innerHTML = `
-                        <img src="${track.cover}" alt="Jam Track Cover" draggable="false">
-                        <div class="jam-track-info">
-                            <h2 translate="no">${track.title}</h2>
-                            <p translate="no">${track.artist}</p>
-                            ${isNewTrack ? '<div class="optional-icon">New</div>' : ''}
-                        </div>
-                    `;
-                    // Add click event listener to open modal with track details
-                    trackDiv.addEventListener("click", () => openModal(track));
-                    jamTracksDiv.appendChild(trackDiv);
-                });
-
-                // Append jamTracksDiv to sectionDiv and sectionDiv to contentDiv
-                sectionDiv.appendChild(jamTracksDiv);
-                contentDiv.appendChild(sectionDiv);
+        // Iterate over sections
+        sections.forEach(({ title, tracks }) => {
+            // Skip sections with no tracks
+            if (!tracks) {
+                return;
             }
-        }
+
+            // Create section div and title
+            const sectionDiv = document.createElement("div");
+            sectionDiv.classList.add("jam-section");
+            const sectionTitle = document.createElement("h2");
+            sectionTitle.textContent = title;
+            sectionDiv.appendChild(sectionTitle);
+
+            // Create div for jam tracks
+            const jamTracksDiv = document.createElement("div");
+            jamTracksDiv.classList.add("jam-tracks");
+
+            // Map tracks for this section
+            Object.values(tracks).forEach(track => {
+                const trackDiv = document.createElement("div");
+                trackDiv.classList.add("jam-track");
+                const isNewTrack = isTrackNew(track.lastModified);
+                trackDiv.innerHTML = `
+                    <img src="${track.cover}" alt="Jam Track Cover" draggable="false">
+                    <div class="jam-track-info">
+                        <h2 translate="no">${track.title}</h2>
+                        <p translate="no">${track.artist}</p>
+                        ${isNewTrack ? '<div class="optional-icon">New</div>' : ''}
+                    </div>
+                `;
+                // Add click event listener to open modal with track details
+                trackDiv.addEventListener("click", () => openModal(track));
+                jamTracksDiv.appendChild(trackDiv);
+            });
+
+            // Append jamTracksDiv to sectionDiv and sectionDiv to contentDiv
+            sectionDiv.appendChild(jamTracksDiv);
+            contentDiv.appendChild(sectionDiv);
+        });
 
         // Add fade-in class for styling
         contentDiv.classList.add("fade-in");

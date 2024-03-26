@@ -60,9 +60,9 @@ async function updateJamTracks() {
     );
 
     const jamTracksData = {
-        "Daily Jam Tracks": dailyTracks.map(track => jamTracks[track]).filter(Boolean),
-        "Upcoming Jam Tracks": upcomingTracks.map(track => jamTracks[track]).filter(Boolean),
-        "Available Jam Tracks": Object.values(jamTracks)
+        "dailyTracks": dailyTracks,
+        "upcomingTracks": upcomingTracks,
+        "tracks": jamTracks
     };
 
     // Write jam tracks data to file
