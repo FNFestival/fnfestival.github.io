@@ -87,15 +87,18 @@ async function loadJamData() {
         const sections = [
             { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.jamTracks[trackId]) },
             { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.jamTracks[trackId]) },
-            { title: "Available Jam Tracks", tracks: data.jamTracks }
+            { title: "Available Jam Tracks", tracks: Object.values(data.jamTracks) }
         ];
 
         // Iterate over sections
         sections.forEach(({ title, tracks }) => {
             // Skip sections with no tracks
-            if (!tracks) {
+            if (!tracks || tracks.length === 0) {
                 return;
             }
+
+            // Sort tracks by lastModified
+            tracks.sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified));
 
             // Create section div and title
             const sectionDiv = document.createElement("div");
@@ -109,7 +112,7 @@ async function loadJamData() {
             jamTracksDiv.classList.add("jam-tracks");
 
             // Map tracks for this section
-            Object.values(tracks).forEach(track => {
+            tracks.forEach(track => {
                 const trackDiv = document.createElement("div");
                 trackDiv.classList.add("jam-track");
                 const isNewTrack = isTrackNew(track.lastModified);
