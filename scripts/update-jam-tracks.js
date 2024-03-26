@@ -60,15 +60,17 @@ async function fetchDailyJamTracks(client) {
 
         const eventFlags = await client.getBREventFlags();
         const channel = eventFlags?.channels['client-events'];
-        const mergedStates = [...(channel?.states || [])].flat();
+        const states = channel?.states || [];
 
-        // Filter active events to get only jam tracks and extract track names
-        const filteredTracks = mergedStates
+        const currentDate = new Date();
+
+        // Extract and flatten activeEvents from all states
+        const filteredTracks = states
+            .flatMap(state => state.activeEvents || [])
             .filter(activeEvent => activeEvent.eventType.startsWith('PilgrimSong.'))
             .map(activeEvent => activeEvent.eventType.split('.')[1]);
 
         // Split tracks into daily and upcoming based on activeUntil timestamp
-        const currentDate = new Date();
         const { dailyTracks, upcomingTracks } = filteredTracks.reduce((acc, track) => {
             const activeUntil = new Date(track.activeUntil);
             if (activeUntil.getDate() === currentDate.getDate()) {
