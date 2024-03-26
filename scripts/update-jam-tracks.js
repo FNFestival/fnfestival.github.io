@@ -51,21 +51,18 @@ async function updateJamTracks() {
 
     // Generate jam tracks object and categorize them
     const jamTracks = Object.fromEntries(
-        Object.entries(availableTracksData).map(([_, trackData]) => [
-            trackData.track.sn,
-            generateTrackObject(trackData)
-        ])
+        Object.entries(availableTracksData)
+            .filter(([_, trackData]) => trackData.track && trackData.track.sn === _)
+            .map(([_, trackData]) => [
+                trackData.track.sn,
+                generateTrackObject(trackData)
+            ])
     );
 
-    // Filter out null tracks and categorize them
-    const categorizeTracks = (tracks) => tracks
-        .map(track => jamTracks[track])
-        .filter(track => track !== null);
-
     const jamTracksData = {
-        "Daily Jam Tracks": categorizeTracks(dailyTracks),
-        "Upcoming Jam Tracks": categorizeTracks(upcomingTracks),
-        "Available Jam Tracks": Object.values(jamTracks).filter(track => track !== null)
+        "Daily Jam Tracks": dailyTracks.map(track => jamTracks[track]).filter(Boolean),
+        "Upcoming Jam Tracks": upcomingTracks.map(track => jamTracks[track]).filter(Boolean),
+        "Available Jam Tracks": Object.values(jamTracks)
     };
 
     // Write jam tracks data to file
