@@ -135,6 +135,7 @@ h2, p {
 .jam-section > h2 {
     cursor: pointer;
     margin-bottom: 5px;
+    margin-left: 25px;
     position: relative;
     width: fit-content;
 }
