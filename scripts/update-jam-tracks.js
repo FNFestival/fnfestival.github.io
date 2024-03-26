@@ -60,22 +60,24 @@ async function fetchDailyJamTracks(client) {
 
         const eventFlags = await client.getBREventFlags();
         const channel = eventFlags?.channels['client-events'];
-        const [currentState, upcomingState] = channel?.states || [];
-        console.log(currentState);
-        console.log(upcomingState);
+        const mergedStates = [...(channel?.states || [])].flat();
 
-        // Filter active events to get only jam tracks
-        const filterTracks = events => events
+        // Filter active events to get only jam tracks and extract track names
+        const filteredTracks = mergedStates
             .filter(activeEvent => activeEvent.eventType.startsWith('PilgrimSong.'))
             .map(activeEvent => activeEvent.eventType.split('.')[1]);
 
-        let dailyTracks = currentState ? filterTracks(currentState.activeEvents) : [];
-        let upcomingTracks = upcomingState ? filterTracks(upcomingState.activeEvents) : [];
-
-        // Swap daily and upcoming tracks if upcoming tracks are for the current day
-        if (upcomingState && isCurrentDay(upcomingState.validFrom)) {
-            [dailyTracks, upcomingTracks] = [upcomingTracks, []];
-        }
+        // Split tracks into daily and upcoming based on activeUntil timestamp
+        const currentDate = new Date();
+        const { dailyTracks, upcomingTracks } = filteredTracks.reduce((acc, track) => {
+            const activeUntil = new Date(track.activeUntil);
+            if (activeUntil.getDate() === currentDate.getDate()) {
+                acc.dailyTracks.push(track);
+            } else {
+                acc.upcomingTracks.push(track);
+            }
+            return acc;
+        }, { dailyTracks: [], upcomingTracks: [] });
 
         return { dailyTracks, upcomingTracks };
     } catch (error) {
@@ -163,13 +165,6 @@ function formatDuration(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}m ${remainingSeconds}s`;
-}
-
-// Checks if the provided date string is the current day
-function isCurrentDay(dateString) {
-    const upcomingDate = new Date(dateString);
-    const currentDate = new Date();
-    return upcomingDate.getDate() === currentDate.getDate();
 }
 
 // Initializes Spotify API with client credentials grant
