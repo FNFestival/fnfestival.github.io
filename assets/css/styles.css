@@ -127,11 +127,36 @@ h2, p {
     margin-left: 10px;
 }
 
-/* Jam Tracks */
+/* Jam Section */
 .jam-section {
     margin-bottom: 20px;
 }
 
+.jam-section > h2 {
+    cursor: pointer;
+    margin-bottom: 5px;
+    position: relative;
+    width: fit-content;
+}
+
+.jam-section > h2::before {
+    content: '\25BC';
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    transition: transform 0.3s ease;
+}
+
+.jam-section.hidden > h2::before {
+    transform: rotate(-90deg);
+}
+
+.jam-section.hidden .jam-tracks {
+    display: none;
+}
+
+/* Jam Tracks */
 .jam-tracks {
     display: flex;
     flex-wrap: wrap;

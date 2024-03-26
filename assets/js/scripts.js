@@ -67,6 +67,14 @@ function generateDifficultyBars(difficulty, instrument) {
     `;
 }
 
+// Function to toggle visibility of section content
+function toggleSectionVisibility(sectionDiv, index) {
+    const isHidden = sectionDiv.classList.toggle("hidden");
+
+    // Update localStorage with the visibility state
+    localStorage.setItem(`section_${index}`, isHidden ? 'hidden' : 'visible');
+}
+
 // Function to load jam data asynchronously
 async function loadJamData() {
     try {
@@ -91,7 +99,7 @@ async function loadJamData() {
         ];
 
         // Iterate over sections
-        sections.forEach(({ title, tracks }) => {
+        sections.forEach(({ title, tracks }, index) => {
             // Skip sections with no tracks
             if (!tracks || tracks.length === 0) {
                 return;
@@ -110,6 +118,12 @@ async function loadJamData() {
             badge.textContent = tracks.length;
             sectionTitle.appendChild(badge);
             sectionDiv.appendChild(sectionTitle);
+
+            // Retrieve section visibility state from localStorage
+            const storedVisibility = localStorage.getItem(`section_${index}`);
+            if (storedVisibility === 'hidden') {
+                sectionDiv.classList.add('hidden');
+            }
 
             // Create div for jam tracks
             const jamTracksDiv = document.createElement("div");
@@ -136,6 +150,9 @@ async function loadJamData() {
             // Append jamTracksDiv to sectionDiv and sectionDiv to contentDiv
             sectionDiv.appendChild(jamTracksDiv);
             contentDiv.appendChild(sectionDiv);
+
+            // Add event listener to section title to toggle visibility
+            sectionTitle.addEventListener("click", () => toggleSectionVisibility(sectionDiv, index));
         });
 
         // Add fade-in class for styling
