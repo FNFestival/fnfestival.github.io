@@ -117,6 +117,16 @@ h2, p {
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Badge */
+.badge {
+    background-color: rgba(145, 152, 229, .2);
+    color: white;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
 /* Jam Tracks */
 .jam-section {
     margin-bottom: 20px;

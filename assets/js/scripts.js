@@ -105,6 +105,10 @@ async function loadJamData() {
             sectionDiv.classList.add("jam-section");
             const sectionTitle = document.createElement("h2");
             sectionTitle.textContent = title;
+            const badge = document.createElement("span");
+            badge.classList.add("badge");
+            badge.textContent = tracks.length;
+            sectionTitle.appendChild(badge);
             sectionDiv.appendChild(sectionTitle);
 
             // Create div for jam tracks
