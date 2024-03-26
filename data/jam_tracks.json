@@ -1,294 +1,29 @@
 {
-  "Daily Jam Tracks": [
-    {
-      "title": "Hysteria",
-      "artist": "Muse",
-      "releaseYear": 2003,
-      "cover": "https://cdn2.unrealengine.com/qp68njzglck03mlp-512x512-b82ddb349217.jpg",
-      "bpm": 93,
-      "duration": "3m 50s",
-      "difficulties": {
-        "bass": 5,
-        "drums": 4,
-        "vocals": 2,
-        "guitar": 5
-      },
-      "lastModified": "2024-03-22T13:57:06.922Z"
-    },
-    {
-      "title": "Firework",
-      "artist": "Katy Perry",
-      "releaseYear": 2010,
-      "cover": "https://cdn2.unrealengine.com/aiyaomdhfpbz91ac-512x512-69671635c336.jpg",
-      "bpm": 124,
-      "duration": "3m 39s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 2,
-        "vocals": 2,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-12T14:26:06.264Z"
-    },
-    {
-      "title": "Carry on Wayward Son",
-      "artist": "Kansas",
-      "releaseYear": 1976,
-      "cover": "https://cdn2.unrealengine.com/oxjxl9yq5qefpu0l-512x512-17165a6f0ee8.png",
-      "bpm": 124,
-      "duration": "5m 25s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 3,
-        "vocals": 2,
-        "guitar": 6
-      },
-      "lastModified": "2024-03-19T14:21:37.390Z"
-    },
-    {
-      "title": "Lucid Dreams",
-      "artist": "Juice WRLD",
-      "releaseYear": 2018,
-      "cover": "https://cdn2.unrealengine.com/cmqd38ic5njgvtfw-512x512-5e5302b95b1e.jpg",
-      "bpm": 84,
-      "duration": "4m 18s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
-        "vocals": 3,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-12T14:25:25.269Z"
-    },
-    {
-      "title": "The Middle",
-      "artist": "Jimmy Eat World",
-      "releaseYear": 2001,
-      "cover": "https://cdn2.unrealengine.com/avyytlc9jdx9xsvl-512x512-934b3054fa88.jpg",
-      "bpm": 162,
-      "duration": "2m 52s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 3,
-        "vocals": 3,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-12T14:24:36.201Z"
-    },
-    {
-      "title": "Call Me Maybe",
-      "artist": "Carly Rae Jepsen",
-      "releaseYear": 2011,
-      "cover": "https://cdn2.unrealengine.com/k965npoxrrlqlbhn-512x512-4bf856e7e5cd.png",
-      "bpm": 120,
-      "duration": "3m 18s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 3,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-19T14:23:19.624Z"
-    },
-    {
-      "title": "Like A G6",
-      "artist": "Far East Movement ft. The Cataracs & DEV",
-      "releaseYear": 2010,
-      "cover": "https://cdn2.unrealengine.com/edtsymm8pnpm7qcc-512x512-2117885a7c2b.jpg",
-      "bpm": 125,
-      "duration": "3m 41s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 4,
-        "vocals": 4,
-        "guitar": 1
-      },
-      "lastModified": "2024-03-19T15:47:58.032Z"
-    },
-    {
-      "title": "Feel Good Inc",
-      "artist": "Gorillaz",
-      "releaseYear": 2005,
-      "cover": "https://cdn2.unrealengine.com/ag5hejwpro7pzbby-512x512-b346cdceaec2.jpg",
-      "bpm": 138,
-      "duration": "3m 42s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 3,
-        "vocals": 4,
-        "guitar": 1
-      },
-      "lastModified": "2024-03-05T20:38:27.676Z"
-    },
-    {
-      "title": "Bloody Mary",
-      "artist": "Lady Gaga",
-      "releaseYear": 2011,
-      "cover": "https://cdn2.unrealengine.com/swyzmcoklt5fcp84-512x512-87033a56a293.jpg",
-      "bpm": 100,
-      "duration": "4m 7s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 1,
-        "vocals": 3,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:59.595Z"
-    },
-    {
-      "title": "Shivers",
-      "artist": "Ed Sheeran",
-      "releaseYear": 2021,
-      "cover": "https://cdn2.unrealengine.com/tcpw4aox4edrgvc9-512x512-776406f6f095.jpg",
-      "bpm": 141,
-      "duration": "3m 29s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 3,
-        "vocals": 4,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-05T15:36:37.077Z"
-    },
-    {
-      "title": "Feel It Still",
-      "artist": "Portugal. The Man",
-      "releaseYear": 2017,
-      "cover": "https://cdn2.unrealengine.com/xxafw0szeszowbzu-512x512-081cfea63b37.jpg",
-      "bpm": 158,
-      "duration": "2m 45s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 2,
-        "vocals": 3,
-        "guitar": 3
-      },
-      "lastModified": "2024-03-05T19:44:13.050Z"
-    },
-    {
-      "title": "YOU DON'T KNOW WHAT YOU'VE GOT",
-      "artist": "blink-182",
-      "releaseYear": 2023,
-      "cover": "https://cdn2.unrealengine.com/6v87ptciedi4mbcq-512x512-f3c60e163fc3.jpg",
-      "bpm": 156,
-      "duration": "3m 19s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 5,
-        "vocals": 1,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:04.932Z"
-    },
-    {
-      "title": "It Takes Two",
-      "artist": "Rob Base & DJ EZ Rock",
-      "releaseYear": 1988,
-      "cover": "https://cdn2.unrealengine.com/5iidtymhwllhpgli-512x512-c4b5c50e531e.jpg",
-      "bpm": 112,
-      "duration": "4m 5s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 4,
-        "guitar": 0
-      },
-      "lastModified": "2024-02-28T15:13:36.629Z"
-    },
-    {
-      "title": "Surround Sound",
-      "artist": "JID ft. 21 Savage & Baby Tate",
-      "releaseYear": 2022,
-      "cover": "https://cdn2.unrealengine.com/wdfsb87lid87hugv-512x512-f27ea5001391.jpg",
-      "bpm": 152,
-      "duration": "3m 54s",
-      "difficulties": {
-        "bass": 0,
-        "drums": 2,
-        "vocals": 6,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T15:14:29.912Z"
-    },
-    {
-      "title": "Zombie",
-      "artist": "The Cranberries",
-      "releaseYear": 1994,
-      "cover": "https://cdn2.unrealengine.com/83liwzwa0sdzc3gc-512x512-d575d0c4869a.jpg",
-      "bpm": 84,
-      "duration": "5m 13s",
-      "difficulties": {
-        "bass": 1,
-        "drums": 3,
-        "vocals": 2,
-        "guitar": 2
-      },
-      "lastModified": "2024-02-28T18:30:56.705Z"
-    },
-    {
-      "title": "Can't Feel My Face",
-      "artist": "The Weeknd",
-      "releaseYear": 2015,
-      "cover": "https://cdn2.unrealengine.com/2q5tumpatzkhfnke-512x512-1d077188a5f4.jpg",
-      "bpm": 108,
-      "duration": "3m 36s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 0,
-        "vocals": 3,
-        "guitar": 0
-      },
-      "lastModified": "2024-02-28T18:26:38.864Z"
-    },
-    {
-      "title": "High Hopes",
-      "artist": "Panic! at the Disco",
-      "releaseYear": 2018,
-      "cover": "https://cdn2.unrealengine.com/rlkwybn37qfptc6m-512x512-cd3126b65669.jpg",
-      "bpm": 164,
-      "duration": "3m 14s",
-      "difficulties": {
-        "bass": 3,
-        "drums": 4,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-03-05T19:43:25.194Z"
-    },
-    {
-      "title": "Misery Business",
-      "artist": "Paramore",
-      "releaseYear": 2007,
-      "cover": "https://cdn2.unrealengine.com/w8rdujbyldvsvdis-512x512-c1776242f3bf.jpg",
-      "bpm": 86,
-      "duration": "3m 21s",
-      "difficulties": {
-        "bass": 4,
-        "drums": 5,
-        "vocals": 4,
-        "guitar": 5
-      },
-      "lastModified": "2024-03-05T19:42:32.589Z"
-    },
-    {
-      "title": "Hold Me Closer",
-      "artist": "Elton John & Britney Spears",
-      "releaseYear": 2022,
-      "cover": "https://cdn2.unrealengine.com/ebggmevwgwq1qyz6-512x512-b814bda847ba.jpg",
-      "bpm": 126,
-      "duration": "3m 23s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 2,
-        "vocals": 3,
-        "guitar": 4
-      },
-      "lastModified": "2024-02-28T15:41:28.409Z"
-    }
+  "dailyTracks": [
+    "hysteria",
+    "firework",
+    "carryonwaywardson",
+    "luciddreams",
+    "themiddle2",
+    "callmemaybe",
+    "likeag6",
+    "feelgoodinc",
+    "bloodymary",
+    "shivers",
+    "feelitstill",
+    "youdontknowwhatyouvegot",
+    "ittakestwo",
+    "surroundsound",
+    "zombie",
+    "cantfeelmyface",
+    "highhopes",
+    "miserybusiness",
+    "holdmecloser",
+    "rosesimanbek"
   ],
-  "Upcoming Jam Tracks": [],
-  "Available Jam Tracks": [
-    {
+  "upcomingTracks": [],
+  "tracks": {
+    "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
       "artist": "Epic Games",
       "releaseYear": 2021,
@@ -303,7 +38,7 @@
       },
       "lastModified": "2024-02-15T21:26:26.912Z"
     },
-    {
+    "ogfutureremix": {
       "title": "OG (Future Remix)",
       "artist": "Epic Games",
       "releaseYear": 2020,
@@ -318,7 +53,7 @@
       },
       "lastModified": "2024-02-28T15:43:56.013Z"
     },
-    {
+    "switchup": {
       "title": "Switch Up",
       "artist": "Epic Games",
       "releaseYear": 2020,
@@ -333,7 +68,7 @@
       },
       "lastModified": "2024-02-06T21:48:27.252Z"
     },
-    {
+    "showthemwhoweare": {
       "title": "Show Them Who We Are",
       "artist": "Epic Games",
       "releaseYear": 2022,
@@ -347,7 +82,7 @@
       },
       "lastModified": "2024-02-06T21:51:39.584Z"
     },
-    {
+    "takemehigher": {
       "title": "Take Me Higher",
       "artist": "Epic Games",
       "releaseYear": 2022,
@@ -362,7 +97,7 @@
       },
       "lastModified": "2024-02-06T21:54:29.789Z"
     },
-    {
+    "braceforchaos": {
       "title": "Brace for Chaos",
       "artist": "Epic Games",
       "releaseYear": 2023,
@@ -377,7 +112,7 @@
       },
       "lastModified": "2024-02-06T21:53:03.344Z"
     },
-    {
+    "runit": {
       "title": "Run It",
       "artist": "Epic Games",
       "releaseYear": 2023,
@@ -391,7 +126,7 @@
       },
       "lastModified": "2024-02-07T16:06:44.437Z"
     },
-    {
+    "badguy": {
       "title": "bad guy",
       "artist": "Billie Eilish",
       "releaseYear": 2019,
@@ -406,7 +141,7 @@
       },
       "lastModified": "2024-02-28T18:46:01.278Z"
     },
-    {
+    "badromance": {
       "title": "Bad Romance",
       "artist": "Lady Gaga",
       "releaseYear": 2009,
@@ -421,7 +156,7 @@
       },
       "lastModified": "2024-02-28T15:44:40.784Z"
     },
-    {
+    "blindinglights": {
       "title": "Blinding Lights",
       "artist": "The Weeknd",
       "releaseYear": 2020,
@@ -436,7 +171,7 @@
       },
       "lastModified": "2024-02-28T18:43:01.118Z"
     },
-    {
+    "buddyholly": {
       "title": "Buddy Holly",
       "artist": "Weezer",
       "releaseYear": 1994,
@@ -451,7 +186,7 @@
       },
       "lastModified": "2024-02-28T18:33:12.614Z"
     },
-    {
+    "cakebytheocean": {
       "title": "Cake By The Ocean",
       "artist": "DNCE",
       "releaseYear": 2016,
@@ -466,7 +201,7 @@
       },
       "lastModified": "2024-02-28T18:37:59.086Z"
     },
-    {
+    "countingstars": {
       "title": "Counting Stars",
       "artist": "OneRepublic",
       "releaseYear": 2014,
@@ -481,7 +216,7 @@
       },
       "lastModified": "2024-02-28T18:40:28.635Z"
     },
-    {
+    "cradles": {
       "title": "Cradles",
       "artist": "Sub Urban",
       "releaseYear": 2019,
@@ -496,7 +231,7 @@
       },
       "lastModified": "2024-02-28T18:37:26.520Z"
     },
-    {
+    "dirtylittlesecret": {
       "title": "Dirty Little Secret",
       "artist": "The All-American Rejects",
       "releaseYear": 2005,
@@ -511,7 +246,7 @@
       },
       "lastModified": "2024-02-28T18:36:20.850Z"
     },
-    {
+    "dogdaysareover": {
       "title": "Dog Days Are Over",
       "artist": "Florence + The Machine",
       "releaseYear": 2009,
@@ -526,7 +261,7 @@
       },
       "lastModified": "2024-02-28T18:29:44.119Z"
     },
-    {
+    "emogirl": {
       "title": "emo girl",
       "artist": "mgk ft. WILLOW",
       "releaseYear": 2022,
@@ -541,7 +276,7 @@
       },
       "lastModified": "2024-02-28T18:32:24.830Z"
     },
-    {
+    "flickeringflame": {
       "title": "Flickering Flame",
       "artist": "Epic Games",
       "releaseYear": 2023,
@@ -556,7 +291,7 @@
       },
       "lastModified": "2024-02-07T17:06:30.310Z"
     },
-    {
+    "gangnamstyle": {
       "title": "Gangnam Style",
       "artist": "PSY",
       "releaseYear": 2012,
@@ -571,7 +306,7 @@
       },
       "lastModified": "2024-02-28T18:44:03.822Z"
     },
-    {
+    "gowiththeflow": {
       "title": "Go With The Flow",
       "artist": "Queens of the Stone Age",
       "releaseYear": 2002,
@@ -586,7 +321,7 @@
       },
       "lastModified": "2024-02-28T18:34:50.133Z"
     },
-    {
+    "highwaytune": {
       "title": "Highway Tune",
       "artist": "Greta Van Fleet",
       "releaseYear": 2017,
@@ -601,7 +336,7 @@
       },
       "lastModified": "2024-02-28T18:33:54.731Z"
     },
-    {
+    "mrbrightside": {
       "title": "Mr. Brightside",
       "artist": "The Killers",
       "releaseYear": 2004,
@@ -616,7 +351,7 @@
       },
       "lastModified": "2024-02-28T18:38:54.990Z"
     },
-    {
+    "lightemup": {
       "title": "My Songs Know What You Did In The Dark (Light Em Up)",
       "artist": "Fall Out Boy",
       "releaseYear": 2013,
@@ -631,7 +366,7 @@
       },
       "lastModified": "2024-02-28T18:44:30.815Z"
     },
-    {
+    "nothingsalright": {
       "title": "Nothing's Alright",
       "artist": "WitchGang",
       "releaseYear": 2023,
@@ -646,7 +381,7 @@
       },
       "lastModified": "2024-02-28T18:32:03.086Z"
     },
-    {
+    "partyrockanthem": {
       "title": "Party Rock Anthem",
       "artist": "LMFAO ft. Lauren Bennett & GoonRock",
       "releaseYear": 2011,
@@ -661,7 +396,7 @@
       },
       "lastModified": "2024-02-28T18:39:24.671Z"
     },
-    {
+    "poison": {
       "title": "Poison",
       "artist": "Bell Biv DeVoe",
       "releaseYear": 1990,
@@ -676,7 +411,7 @@
       },
       "lastModified": "2024-02-28T18:43:39.340Z"
     },
-    {
+    "saveyourtears": {
       "title": "Save Your Tears",
       "artist": "The Weeknd",
       "releaseYear": 2020,
@@ -691,7 +426,7 @@
       },
       "lastModified": "2024-02-28T18:47:04.875Z"
     },
-    {
+    "sevennationarmy": {
       "title": "Seven Nation Army",
       "artist": "The White Stripes",
       "releaseYear": 2003,
@@ -706,7 +441,7 @@
       },
       "lastModified": "2024-02-28T18:45:24.269Z"
     },
-    {
+    "suddenlyisee": {
       "title": "Suddenly I See",
       "artist": "KT Tunstall",
       "releaseYear": 2004,
@@ -721,7 +456,7 @@
       },
       "lastModified": "2024-02-28T18:34:29.173Z"
     },
-    {
+    "takemybreath": {
       "title": "Take My Breath",
       "artist": "The Weeknd",
       "releaseYear": 2022,
@@ -736,7 +471,7 @@
       },
       "lastModified": "2024-02-28T18:44:53.840Z"
     },
-    {
+    "thehandthatfeeds": {
       "title": "The Hand That Feeds",
       "artist": "Nine Inch Nails",
       "releaseYear": 2005,
@@ -751,7 +486,7 @@
       },
       "lastModified": "2024-02-28T18:31:25.866Z"
     },
-    {
+    "thehills": {
       "title": "The Hills",
       "artist": "The Weeknd",
       "releaseYear": 2015,
@@ -766,7 +501,7 @@
       },
       "lastModified": "2024-02-28T18:46:30.111Z"
     },
-    {
+    "thesearch": {
       "title": "The Search",
       "artist": "NF",
       "releaseYear": 2019,
@@ -781,7 +516,7 @@
       },
       "lastModified": "2024-02-28T18:38:24.796Z"
     },
-    {
+    "thunder": {
       "title": "Thunder",
       "artist": "Imagine Dragons",
       "releaseYear": 2017,
@@ -796,7 +531,7 @@
       },
       "lastModified": "2024-02-28T18:40:56.891Z"
     },
-    {
+    "vampire": {
       "title": "vampire",
       "artist": "Olivia Rodrigo",
       "releaseYear": 2023,
@@ -811,7 +546,7 @@
       },
       "lastModified": "2024-02-28T18:39:49.243Z"
     },
-    {
+    "youdontknowme": {
       "title": "You Don't Know Me",
       "artist": "Epic Games",
       "releaseYear": 2023,
@@ -826,7 +561,7 @@
       },
       "lastModified": "2024-02-07T17:03:46.095Z"
     },
-    {
+    "zombie": {
       "title": "Zombie",
       "artist": "The Cranberries",
       "releaseYear": 1994,
@@ -841,7 +576,7 @@
       },
       "lastModified": "2024-02-28T18:30:56.705Z"
     },
-    {
+    "winterfestwish": {
       "title": "Winterfest Wish",
       "artist": "Epic Games",
       "releaseYear": 2023,
@@ -856,7 +591,7 @@
       },
       "lastModified": "2024-02-07T15:58:18.227Z"
     },
-    {
+    "beautifulday": {
       "title": "Beautiful Day",
       "artist": "U2",
       "releaseYear": 2000,
@@ -871,7 +606,7 @@
       },
       "lastModified": "2024-02-28T18:27:44.979Z"
     },
-    {
+    "believer": {
       "title": "Believer",
       "artist": "Imagine Dragons",
       "releaseYear": 2017,
@@ -886,7 +621,7 @@
       },
       "lastModified": "2024-02-28T18:29:08.608Z"
     },
-    {
+    "heartbreaker": {
       "title": "Heartbreaker",
       "artist": "Pat Benatar",
       "releaseYear": 1979,
@@ -901,7 +636,7 @@
       },
       "lastModified": "2024-03-14T20:28:50.040Z"
     },
-    {
+    "cantfeelmyface": {
       "title": "Can't Feel My Face",
       "artist": "The Weeknd",
       "releaseYear": 2015,
@@ -916,7 +651,7 @@
       },
       "lastModified": "2024-02-28T18:26:38.864Z"
     },
-    {
+    "stitches": {
       "title": "Stitches",
       "artist": "Shawn Mendes",
       "releaseYear": 2015,
@@ -931,7 +666,7 @@
       },
       "lastModified": "2024-02-28T18:20:52.017Z"
     },
-    {
+    "heatwaves": {
       "title": "Heat Waves",
       "artist": "Glass Animals",
       "releaseYear": 2020,
@@ -946,7 +681,7 @@
       },
       "lastModified": "2024-02-28T18:20:27.857Z"
     },
-    {
+    "pompeii": {
       "title": "Pompeii",
       "artist": "Bastille",
       "releaseYear": 2013,
@@ -961,7 +696,7 @@
       },
       "lastModified": "2024-02-28T18:19:54.022Z"
     },
-    {
+    "istillhaventfound": {
       "title": "I Still Haven't Found What I'm Looking For",
       "artist": "U2",
       "releaseYear": 1987,
@@ -976,7 +711,7 @@
       },
       "lastModified": "2024-02-28T15:58:25.562Z"
     },
-    {
+    "marchofthepigs": {
       "title": "March Of The Pigs",
       "artist": "Nine Inch Nails",
       "releaseYear": 1994,
@@ -991,7 +726,7 @@
       },
       "lastModified": "2024-02-28T18:19:02.224Z"
     },
-    {
+    "lessthan": {
       "title": "Less Than",
       "artist": "Nine Inch Nails",
       "releaseYear": 2017,
@@ -1006,7 +741,7 @@
       },
       "lastModified": "2024-02-28T18:18:23.428Z"
     },
-    {
+    "good4u": {
       "title": "good 4 u",
       "artist": "Olivia Rodrigo",
       "releaseYear": 2021,
@@ -1021,7 +756,7 @@
       },
       "lastModified": "2024-02-28T18:19:26.824Z"
     },
-    {
+    "gethimback": {
       "title": "get him back!",
       "artist": "Olivia Rodrigo",
       "releaseYear": 2023,
@@ -1036,7 +771,7 @@
       },
       "lastModified": "2024-02-28T18:16:59.103Z"
     },
-    {
+    "withorwithoutyou": {
       "title": "With Or Without You",
       "artist": "U2",
       "releaseYear": 1987,
@@ -1051,7 +786,7 @@
       },
       "lastModified": "2024-02-28T15:57:53.466Z"
     },
-    {
+    "sayso": {
       "title": "Say So",
       "artist": "Doja Cat",
       "releaseYear": 2019,
@@ -1066,7 +801,7 @@
       },
       "lastModified": "2024-02-28T15:55:58.580Z"
     },
-    {
+    "whenicomearound": {
       "title": "When I Come Around",
       "artist": "Green Day",
       "releaseYear": 1994,
@@ -1081,7 +816,7 @@
       },
       "lastModified": "2024-02-28T15:53:48.867Z"
     },
-    {
+    "welcometoparadise": {
       "title": "Welcome to Paradise",
       "artist": "Green Day",
       "releaseYear": 1994,
@@ -1096,7 +831,7 @@
       },
       "lastModified": "2024-02-28T15:54:22.479Z"
     },
-    {
+    "basketcase": {
       "title": "Basket Case",
       "artist": "Green Day",
       "releaseYear": 1994,
@@ -1111,7 +846,7 @@
       },
       "lastModified": "2024-02-28T15:55:11.332Z"
     },
-    {
+    "whatislove": {
       "title": "What Is Love",
       "artist": "Haddaway",
       "releaseYear": 1993,
@@ -1126,7 +861,7 @@
       },
       "lastModified": "2024-02-28T15:49:05.818Z"
     },
-    {
+    "intoyou": {
       "title": "Into You",
       "artist": "Ariana Grande",
       "releaseYear": 2016,
@@ -1141,7 +876,7 @@
       },
       "lastModified": "2024-02-28T15:45:17.871Z"
     },
-    {
+    "holdmecloser": {
       "title": "Hold Me Closer",
       "artist": "Elton John & Britney Spears",
       "releaseYear": 2022,
@@ -1156,7 +891,7 @@
       },
       "lastModified": "2024-02-28T15:41:28.409Z"
     },
-    {
+    "singlesoon": {
       "title": "Single Soon",
       "artist": "Selena Gomez",
       "releaseYear": 2023,
@@ -1171,7 +906,7 @@
       },
       "lastModified": "2024-02-28T15:47:37.409Z"
     },
-    {
+    "barbiegirl": {
       "title": "Barbie Girl",
       "artist": "Aqua",
       "releaseYear": 1997,
@@ -1186,7 +921,7 @@
       },
       "lastModified": "2024-02-28T15:38:57.168Z"
     },
-    {
+    "timeless": {
       "title": "Timeless",
       "artist": "WitchGang",
       "releaseYear": 2023,
@@ -1201,7 +936,7 @@
       },
       "lastModified": "2024-02-28T15:39:31.834Z"
     },
-    {
+    "makeitknown": {
       "title": "Make It Known",
       "artist": "Epic Games",
       "releaseYear": 2024,
@@ -1216,7 +951,7 @@
       },
       "lastModified": "2024-02-13T18:02:38.672Z"
     },
-    {
+    "streetsignite": {
       "title": "Streets Ignite",
       "artist": "Epic Games",
       "releaseYear": 2024,
@@ -1231,7 +966,7 @@
       },
       "lastModified": "2024-03-11T18:39:56.849Z"
     },
-    {
+    "flowers": {
       "title": "Flowers",
       "artist": "Miley Cyrus",
       "releaseYear": 2023,
@@ -1246,7 +981,7 @@
       },
       "lastModified": "2024-02-28T15:38:06.499Z"
     },
-    {
+    "popular": {
       "title": "Popular",
       "artist": "The Weeknd, Madonna & Playboi Carti",
       "releaseYear": 2023,
@@ -1261,7 +996,7 @@
       },
       "lastModified": "2024-02-28T15:33:35.355Z"
     },
-    {
+    "bloom": {
       "title": "Bloom",
       "artist": "Epic Games",
       "releaseYear": 2020,
@@ -1276,7 +1011,7 @@
       },
       "lastModified": "2024-02-20T19:24:38.390Z"
     },
-    {
+    "bestbuds": {
       "title": "Best Buds",
       "artist": "Epic Games",
       "releaseYear": 2019,
@@ -1291,7 +1026,7 @@
       },
       "lastModified": "2024-02-20T19:25:11.815Z"
     },
-    {
+    "eightbitbeat": {
       "title": "8-Bit Beat",
       "artist": "Epic Games",
       "releaseYear": 2019,
@@ -1306,7 +1041,7 @@
       },
       "lastModified": "2024-02-28T15:45:45.465Z"
     },
-    {
+    "sweetvictory": {
       "title": "Sweet Victory",
       "artist": "Epic Games",
       "releaseYear": 2020,
@@ -1321,7 +1056,7 @@
       },
       "lastModified": "2024-02-20T19:23:51.060Z"
     },
-    {
+    "bornthisway": {
       "title": "Born This Way",
       "artist": "Lady Gaga",
       "releaseYear": 2011,
@@ -1336,7 +1071,7 @@
       },
       "lastModified": "2024-02-21T14:19:53.127Z"
     },
-    {
+    "justdance": {
       "title": "Just Dance",
       "artist": "Lady Gaga ft. Colby O'Donis",
       "releaseYear": 2008,
@@ -1351,7 +1086,7 @@
       },
       "lastModified": "2024-02-28T15:32:39.725Z"
     },
-    {
+    "pokerface": {
       "title": "Poker Face",
       "artist": "Lady Gaga",
       "releaseYear": 2008,
@@ -1366,7 +1101,7 @@
       },
       "lastModified": "2024-02-28T15:33:01.869Z"
     },
-    {
+    "ridewitme": {
       "title": "Ride Wit Me",
       "artist": "Nelly ft. City Spud",
       "releaseYear": 2000,
@@ -1381,7 +1116,7 @@
       },
       "lastModified": "2024-02-28T15:21:14.531Z"
     },
-    {
+    "stupidlove": {
       "title": "Stupid Love",
       "artist": "Lady Gaga",
       "releaseYear": 2020,
@@ -1396,7 +1131,7 @@
       },
       "lastModified": "2024-02-28T15:15:24.266Z"
     },
-    {
+    "applause": {
       "title": "Applause",
       "artist": "Lady Gaga",
       "releaseYear": 2013,
@@ -1411,7 +1146,7 @@
       },
       "lastModified": "2024-02-28T15:19:06.785Z"
     },
-    {
+    "blackholesun": {
       "title": "Black Hole Sun",
       "artist": "Soundgarden",
       "releaseYear": 1994,
@@ -1426,7 +1161,7 @@
       },
       "lastModified": "2024-02-28T15:22:20.733Z"
     },
-    {
+    "breakingme": {
       "title": "Breaking Me",
       "artist": "Topic w/ A7S",
       "releaseYear": 2019,
@@ -1441,7 +1176,7 @@
       },
       "lastModified": "2024-02-28T15:18:45.604Z"
     },
-    {
+    "rainonme": {
       "title": "Rain On Me",
       "artist": "Lady Gaga & Ariana Grande",
       "releaseYear": 2020,
@@ -1456,7 +1191,7 @@
       },
       "lastModified": "2024-02-21T15:15:36.153Z"
     },
-    {
+    "bloodymary": {
       "title": "Bloody Mary",
       "artist": "Lady Gaga",
       "releaseYear": 2011,
@@ -1471,7 +1206,7 @@
       },
       "lastModified": "2024-02-28T15:14:59.595Z"
     },
-    {
+    "allofme": {
       "title": "All Of Me (Tiësto's Birthday Treatment Remix)",
       "artist": "John Legend",
       "releaseYear": 2013,
@@ -1486,7 +1221,7 @@
       },
       "lastModified": "2024-02-28T15:09:36.436Z"
     },
-    {
+    "allthesmallthings": {
       "title": "All The Small Things",
       "artist": "blink-182",
       "releaseYear": 1999,
@@ -1501,7 +1236,7 @@
       },
       "lastModified": "2024-02-28T15:12:45.874Z"
     },
-    {
+    "closer": {
       "title": "Closer",
       "artist": "The Chainsmokers ft. Halsey",
       "releaseYear": 2016,
@@ -1516,7 +1251,7 @@
       },
       "lastModified": "2024-02-27T15:43:02.786Z"
     },
-    {
+    "ittakestwo": {
       "title": "It Takes Two",
       "artist": "Rob Base & DJ EZ Rock",
       "releaseYear": 1988,
@@ -1531,7 +1266,7 @@
       },
       "lastModified": "2024-02-28T15:13:36.629Z"
     },
-    {
+    "metoo": {
       "title": "Me Too",
       "artist": "Meghan Trainor",
       "releaseYear": 2016,
@@ -1546,7 +1281,7 @@
       },
       "lastModified": "2024-02-28T15:13:13.471Z"
     },
-    {
+    "surroundsound": {
       "title": "Surround Sound",
       "artist": "JID ft. 21 Savage & Baby Tate",
       "releaseYear": 2022,
@@ -1561,7 +1296,7 @@
       },
       "lastModified": "2024-02-28T15:14:29.912Z"
     },
-    {
+    "whatsmyageagain": {
       "title": "What's My Age Again?",
       "artist": "blink-182",
       "releaseYear": 1999,
@@ -1576,7 +1311,7 @@
       },
       "lastModified": "2024-03-01T00:41:47.967Z"
     },
-    {
+    "youdontknowwhatyouvegot": {
       "title": "YOU DON'T KNOW WHAT YOU'VE GOT",
       "artist": "blink-182",
       "releaseYear": 2023,
@@ -1591,7 +1326,7 @@
       },
       "lastModified": "2024-02-28T15:14:04.932Z"
     },
-    {
+    "bigenergy": {
       "title": "Big Energy",
       "artist": "Latto",
       "releaseYear": 2022,
@@ -1606,7 +1341,7 @@
       },
       "lastModified": "2024-02-28T15:12:10.116Z"
     },
-    {
+    "whatspoppin": {
       "title": "WHATS POPPIN",
       "artist": "Jack Harlow",
       "releaseYear": 2020,
@@ -1621,7 +1356,7 @@
       },
       "lastModified": "2024-03-08T13:54:43.428Z"
     },
-    {
+    "numb": {
       "title": "Numb",
       "artist": "Linkin Park",
       "releaseYear": 2003,
@@ -1636,7 +1371,7 @@
       },
       "lastModified": "2024-03-05T19:41:39.714Z"
     },
-    {
+    "shivers": {
       "title": "Shivers",
       "artist": "Ed Sheeran",
       "releaseYear": 2021,
@@ -1651,7 +1386,7 @@
       },
       "lastModified": "2024-03-05T15:36:37.077Z"
     },
-    {
+    "miserybusiness": {
       "title": "Misery Business",
       "artist": "Paramore",
       "releaseYear": 2007,
@@ -1666,7 +1401,7 @@
       },
       "lastModified": "2024-03-05T19:42:32.589Z"
     },
-    {
+    "highhopes": {
       "title": "High Hopes",
       "artist": "Panic! at the Disco",
       "releaseYear": 2018,
@@ -1681,7 +1416,7 @@
       },
       "lastModified": "2024-03-05T19:43:25.194Z"
     },
-    {
+    "feelitstill": {
       "title": "Feel It Still",
       "artist": "Portugal. The Man",
       "releaseYear": 2017,
@@ -1696,7 +1431,7 @@
       },
       "lastModified": "2024-03-05T19:44:13.050Z"
     },
-    {
+    "downwiththesickness": {
       "title": "Down with the Sickness",
       "artist": "Disturbed",
       "releaseYear": 2000,
@@ -1711,7 +1446,7 @@
       },
       "lastModified": "2024-03-05T15:29:18.844Z"
     },
-    {
+    "feelgoodinc": {
       "title": "Feel Good Inc",
       "artist": "Gorillaz",
       "releaseYear": 2005,
@@ -1726,7 +1461,7 @@
       },
       "lastModified": "2024-03-05T20:38:27.676Z"
     },
-    {
+    "thehuntingground": {
       "title": "The Hunting Ground",
       "artist": "Epic Games",
       "releaseYear": 2024,
@@ -1741,7 +1476,7 @@
       },
       "lastModified": "2024-03-05T15:57:31.732Z"
     },
-    {
+    "swimfree": {
       "title": "Swim Free",
       "artist": "Epic Games",
       "releaseYear": 2024,
@@ -1756,7 +1491,7 @@
       },
       "lastModified": "2024-03-05T19:39:27.479Z"
     },
-    {
+    "youreallmine": {
       "title": "You're All Mine",
       "artist": "Epic Games",
       "releaseYear": 2024,
@@ -1771,7 +1506,7 @@
       },
       "lastModified": "2024-03-05T19:37:15.067Z"
     },
-    {
+    "comeandgo": {
       "title": "Come & Go",
       "artist": "Juice WRLD w/ Marshmello",
       "releaseYear": 2020,
@@ -1786,7 +1521,7 @@
       },
       "lastModified": "2024-03-15T04:29:32.281Z"
     },
-    {
+    "luciddreams": {
       "title": "Lucid Dreams",
       "artist": "Juice WRLD",
       "releaseYear": 2018,
@@ -1801,7 +1536,7 @@
       },
       "lastModified": "2024-03-12T14:25:25.269Z"
     },
-    {
+    "sandstorm": {
       "title": "Sandstorm",
       "artist": "Darude",
       "releaseYear": 1999,
@@ -1816,7 +1551,7 @@
       },
       "lastModified": "2024-03-12T14:25:02.040Z"
     },
-    {
+    "themiddle2": {
       "title": "The Middle",
       "artist": "Jimmy Eat World",
       "releaseYear": 2001,
@@ -1831,7 +1566,7 @@
       },
       "lastModified": "2024-03-12T14:24:36.201Z"
     },
-    {
+    "firework": {
       "title": "Firework",
       "artist": "Katy Perry",
       "releaseYear": 2010,
@@ -1846,7 +1581,7 @@
       },
       "lastModified": "2024-03-12T14:26:06.264Z"
     },
-    {
+    "sowhat": {
       "title": "So What",
       "artist": "P!nk",
       "releaseYear": 2008,
@@ -1861,7 +1596,7 @@
       },
       "lastModified": "2024-03-12T14:27:47.686Z"
     },
-    {
+    "xgongiveittoya": {
       "title": "X Gon' Give It To Ya",
       "artist": "DMX",
       "releaseYear": 2002,
@@ -1876,7 +1611,7 @@
       },
       "lastModified": "2024-03-12T14:28:30.966Z"
     },
-    {
+    "hysteria": {
       "title": "Hysteria",
       "artist": "Muse",
       "releaseYear": 2003,
@@ -1891,7 +1626,7 @@
       },
       "lastModified": "2024-03-22T13:57:06.922Z"
     },
-    {
+    "callmemaybe": {
       "title": "Call Me Maybe",
       "artist": "Carly Rae Jepsen",
       "releaseYear": 2011,
@@ -1906,7 +1641,7 @@
       },
       "lastModified": "2024-03-19T14:23:19.624Z"
     },
-    {
+    "carryonwaywardson": {
       "title": "Carry on Wayward Son",
       "artist": "Kansas",
       "releaseYear": 1976,
@@ -1921,7 +1656,7 @@
       },
       "lastModified": "2024-03-19T14:21:37.390Z"
     },
-    {
+    "dontfearthereaper": {
       "title": "(Don't Fear) The Reaper",
       "artist": "Blue Öyster Cult",
       "releaseYear": 1976,
@@ -1936,7 +1671,7 @@
       },
       "lastModified": "2024-03-19T15:20:54.542Z"
     },
-    {
+    "ithinkimokay": {
       "title": "I Think I'm OKAY",
       "artist": "mgk, YUNGBLUD & Travis Barker",
       "releaseYear": 2019,
@@ -1951,7 +1686,7 @@
       },
       "lastModified": "2024-03-19T20:40:08.217Z"
     },
-    {
+    "likeag6": {
       "title": "Like A G6",
       "artist": "Far East Movement ft. The Cataracs & DEV",
       "releaseYear": 2010,
@@ -1966,7 +1701,7 @@
       },
       "lastModified": "2024-03-19T15:47:58.032Z"
     },
-    {
+    "yourlove9pm": {
       "title": "Your Love (9pm)",
       "artist": "ATB, Topic, A7S",
       "releaseYear": 2021,
@@ -1981,5 +1716,5 @@
       },
       "lastModified": "2024-03-19T14:22:33.999Z"
     }
-  ]
+  }
 }
