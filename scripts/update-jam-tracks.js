@@ -21,7 +21,7 @@ const spotifyApi = new SpotifyWebApi({
 // Fetches the preview URL of a track from Spotify
 async function fetchPreviewUrl(track) {
     try {
-        const query = `${track.tt.trim()} - ${track.an.trim()}`;
+        const query = `${track.an.trim()} - ${track.tt.trim()}`;
         const searchResult = await spotifyApi.searchTracks(query, { limit: 1 });
         const trackId = searchResult.body.tracks.items[0]?.id;
 
@@ -71,6 +71,8 @@ async function fetchDailyJamTracks(client) {
         let upcomingTracks = upcomingState ? filterTracks(upcomingState.activeEvents) : [];
 
         // Swap daily and upcoming tracks if upcoming tracks are for the current day
+        console.log('Current state valid from:', currentState.validFrom);
+        console.log('Upcoming state valid from:', upcomingState.validFrom);
         if (upcomingState && isCurrentDay(upcomingState.validFrom)) {
             [dailyTracks, upcomingTracks] = [upcomingTracks, []];
         }
@@ -167,6 +169,7 @@ function formatDuration(seconds) {
 function isCurrentDay(dateString) {
     const upcomingDate = new Date(dateString);
     const currentDate = new Date();
+    console.log('Comparing', upcomingDate.getDate(), 'and', currentDate.getDate())
     return upcomingDate.getDate() === currentDate.getDate();
 }
 
