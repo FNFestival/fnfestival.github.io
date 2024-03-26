@@ -4,6 +4,7 @@
     "update-jam-tracks": "node scripts/update-jam-tracks.js"
   },
   "dependencies": {
-    "fnbr": "^4.0.0"
+    "fnbr": "^4.0.0",
+    "spotify-web-api-node": "^5.0.2"
   }
 }
