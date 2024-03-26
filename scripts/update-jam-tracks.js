@@ -61,6 +61,8 @@ async function fetchDailyJamTracks(client) {
         const eventFlags = await client.getBREventFlags();
         const channel = eventFlags?.channels['client-events'];
         const [currentState, upcomingState] = channel?.states || [];
+        console.log(currentState);
+        console.log(upcomingState);
 
         // Filter active events to get only jam tracks
         const filterTracks = events => events
@@ -71,8 +73,6 @@ async function fetchDailyJamTracks(client) {
         let upcomingTracks = upcomingState ? filterTracks(upcomingState.activeEvents) : [];
 
         // Swap daily and upcoming tracks if upcoming tracks are for the current day
-        console.log('Current state valid from:', currentState.validFrom);
-        console.log('Upcoming state valid from:', upcomingState.validFrom);
         if (upcomingState && isCurrentDay(upcomingState.validFrom)) {
             [dailyTracks, upcomingTracks] = [upcomingTracks, []];
         }
@@ -169,7 +169,6 @@ function formatDuration(seconds) {
 function isCurrentDay(dateString) {
     const upcomingDate = new Date(dateString);
     const currentDate = new Date();
-    console.log('Comparing', upcomingDate.getDate(), 'and', currentDate.getDate())
     return upcomingDate.getDate() === currentDate.getDate();
 }
 
