@@ -85,8 +85,8 @@ async function loadJamData() {
 
         // Define sections with their corresponding tracks
         const sections = [
-            { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.tracks[trackId]) },
-            { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.tracks[trackId]) },
+            { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.jamTracks[trackId]) },
+            { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.jamTracks[trackId]) },
             { title: "Available Jam Tracks", tracks: data.jamTracks }
         ];
 
