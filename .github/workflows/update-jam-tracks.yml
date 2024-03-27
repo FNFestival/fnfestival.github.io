@@ -1,6 +1,9 @@
 name: Update Jam Tracks
 
 on:
+  push:
+    paths:
+      - 'scripts/update-jam-tracks.js'
   workflow_dispatch:
 
 jobs:
