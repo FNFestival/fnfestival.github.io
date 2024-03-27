@@ -55,6 +55,9 @@ async function fetchAvailableTracks() {
 
 // Fetches daily and upcoming jam tracks using the Fortnite client
 async function fetchDailyJamTracks(client) {
+    const currentDate = new Date();
+    let jamTracks = { dailyTracks: [], upcomingTracks: [] };
+
     try {
         await client.login();
 
@@ -62,30 +65,25 @@ async function fetchDailyJamTracks(client) {
         const channel = eventFlags?.channels['client-events'];
         const states = channel?.states || [];
 
-        const currentDate = new Date();
-
-        // Extract and flatten activeEvents from all states
-        const filteredTracks = states
+        states
             .flatMap(state => state.activeEvents || [])
             .filter(activeEvent => activeEvent.eventType.startsWith('PilgrimSong.'))
-            .map(activeEvent => activeEvent.eventType.split('.')[1]);
+            .forEach(activeEvent => {
+                const eventType = activeEvent.eventType.split('.')[1];
+                const activeSince = new Date(activeEvent.activeSince);
+                const activeUntil = new Date(activeEvent.activeUntil);
 
-        // Split tracks into daily and upcoming based on activeUntil timestamp
-        const { dailyTracks, upcomingTracks } = filteredTracks.reduce((acc, track) => {
-            const activeUntil = new Date(track.activeUntil);
-            if (activeUntil.getDate() === currentDate.getDate()) {
-                acc.dailyTracks.push(track);
-            } else {
-                acc.upcomingTracks.push(track);
-            }
-            return acc;
-        }, { dailyTracks: [], upcomingTracks: [] });
-
-        return { dailyTracks, upcomingTracks };
+                if (activeSince.getDate() <= currentDate.getDate() && activeUntil.getDate() >= currentDate.getDate()) {
+                    jamTracks.dailyTracks.push({ eventType, activeUntil });
+                } else {
+                    jamTracks.upcomingTracks.push({ eventType, activeUntil });
+                }
+            });
     } catch (error) {
         console.error('Error fetching daily jam tracks:', error);
-        return { dailyTracks: [], upcomingTracks: [] };
     }
+
+    return jamTracks;
 }
 
 // Updates jam tracks data
