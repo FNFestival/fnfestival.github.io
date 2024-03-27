@@ -74,9 +74,9 @@ async function fetchDailyJamTracks(client) {
                 const activeUntil = new Date(activeEvent.activeUntil);
 
                 if (activeSince.getDate() <= currentDate.getDate() && activeUntil.getDate() >= currentDate.getDate()) {
-                    jamTracks.dailyTracks.push({ eventType, activeUntil });
+                    jamTracks.dailyTracks.push(eventType);
                 } else {
-                    jamTracks.upcomingTracks.push({ eventType, activeUntil });
+                    jamTracks.upcomingTracks.push(eventType);
                 }
             });
     } catch (error) {
