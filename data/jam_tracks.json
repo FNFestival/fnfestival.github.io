@@ -1,47 +1,87 @@
 {
-  "dailyTracks": [],
-  "upcomingTracks": [
-    "sandstorm",
-    "yourlove9pm",
-    "comeandgo",
-    "dontfearthereaper",
-    "callmemaybe",
-    "ithinkimokay",
-    "likeag6",
-    "firework",
-    "shivers",
-    "numb",
-    "justdance",
-    "closer",
-    "bigenergy",
-    "metoo",
-    "surroundsound",
-    "allthesmallthings",
-    "highhopes",
-    "pompeii",
-    "whenicomearound",
-    "astronautintheocean",
-    "sandstorm",
-    "yourlove9pm",
-    "comeandgo",
-    "dontfearthereaper",
-    "callmemaybe",
-    "ithinkimokay",
-    "likeag6",
-    "firework",
-    "shivers",
-    "numb",
-    "justdance",
-    "closer",
-    "bigenergy",
-    "metoo",
-    "surroundsound",
-    "allthesmallthings",
-    "highhopes",
-    "pompeii",
-    "whenicomearound",
-    "astronautintheocean"
+  "dailyTracks": [
+    {
+      "eventType": "sandstorm",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "yourlove9pm",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "comeandgo",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "dontfearthereaper",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "callmemaybe",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "ithinkimokay",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "likeag6",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "firework",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "shivers",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "numb",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "justdance",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "closer",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "bigenergy",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "metoo",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "surroundsound",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "allthesmallthings",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "highhopes",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "pompeii",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "whenicomearound",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    },
+    {
+      "eventType": "astronautintheocean",
+      "activeUntil": "2024-03-27T23:00:00.000Z"
+    }
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
