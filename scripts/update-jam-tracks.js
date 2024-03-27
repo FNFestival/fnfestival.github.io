@@ -65,6 +65,9 @@ async function fetchDailyJamTracks(client) {
         const channel = eventFlags?.channels['client-events'];
         const states = channel?.states || [];
 
+        console.log(states.length);
+        console.log(states.flatMap(state => state.activeEvents));
+
         states
             .flatMap(state => state.activeEvents || [])
             .filter(activeEvent => activeEvent.eventType.startsWith('PilgrimSong.'))
