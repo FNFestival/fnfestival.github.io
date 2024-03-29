@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Define sections with their corresponding tracks
             const sections = [
-                { title: "Daily Jam Tracks", tracks: data.dailyTracks.map(trackId => data.jamTracks[trackId]) },
-                { title: "Upcoming Jam Tracks", tracks: data.upcomingTracks.map(trackId => data.jamTracks[trackId]) },
+                { title: "Daily Jam Tracks", tracks: getTracksFromData(data.dailyTracks, data.jamTracks) },
+                { title: "Upcoming Jam Tracks", tracks: getTracksFromData(data.upcomingTracks, data.jamTracks) },
                 { title: "Available Jam Tracks", tracks: Object.values(data.jamTracks) }
             ];
 
@@ -172,6 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error fetching or parsing JSON:", error);
         }
+    }
+
+    // Function to filter out invalid tracks based on trackId existence in jamTracks
+    function getTracksFromData(trackIds, jamTracks) {
+        return trackIds.map(trackId => jamTracks[trackId]).filter(track => track !== undefined);
     }
 
     // Function to check if a track is new (within the last week)
