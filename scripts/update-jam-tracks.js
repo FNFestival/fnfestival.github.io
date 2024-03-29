@@ -55,7 +55,6 @@ async function fetchAvailableTracks() {
 
 // Fetches daily and upcoming jam tracks using the Fortnite client
 async function fetchDailyJamTracks(client) {
-    const currentDate = new Date();
     let jamTracks = { dailyTracks: [], upcomingTracks: [] };
 
     try {
@@ -65,8 +64,10 @@ async function fetchDailyJamTracks(client) {
         const channel = eventFlags?.channels['client-events'];
         const states = channel?.states || [];
 
-        console.log(states.length);
-        console.log(states.flatMap(state => state.activeEvents));
+        const currentDate = new Date();
+        const today = currentDate.getDate();
+        const tomorrow = new Date(currentDate);
+        tomorrow.setDate(currentDate.getDate() + 1);
 
         states
             .flatMap(state => state.activeEvents || [])
@@ -76,9 +77,12 @@ async function fetchDailyJamTracks(client) {
                 const activeSince = new Date(activeEvent.activeSince);
                 const activeUntil = new Date(activeEvent.activeUntil);
 
-                if (activeSince.getDate() <= currentDate.getDate() && activeUntil.getDate() >= currentDate.getDate()) {
+                const activeSinceDay = activeSince.getDate();
+                const activeUntilDay = activeUntil.getDate();
+
+                if (activeSinceDay === today || activeUntilDay === today) {
                     jamTracks.dailyTracks.push(eventType);
-                } else {
+                } else if (activeSinceDay === tomorrow.getDate() || activeUntilDay === tomorrow.getDate()) {
                     jamTracks.upcomingTracks.push(eventType);
                 }
             });
