@@ -65,7 +65,6 @@ async function fetchDailyJamTracks(client) {
         const states = channel?.states || [];
 
         const currentDate = new Date();
-        const today = currentDate.getDate();
         const tomorrow = new Date(currentDate);
         tomorrow.setDate(currentDate.getDate() + 1);
 
@@ -77,12 +76,9 @@ async function fetchDailyJamTracks(client) {
                 const activeSince = new Date(activeEvent.activeSince);
                 const activeUntil = new Date(activeEvent.activeUntil);
 
-                const activeSinceDay = activeSince.getDate();
-                const activeUntilDay = activeUntil.getDate();
-
-                if (activeSinceDay === today || activeUntilDay === today) {
+                if (activeSince <= currentDate && activeUntil >= currentDate) {
                     jamTracks.dailyTracks.push(eventType);
-                } else if (activeSinceDay === tomorrow.getDate() || activeUntilDay === tomorrow.getDate()) {
+                } else if (activeUntil.getDate() === tomorrow.getDate()) {
                     jamTracks.upcomingTracks.push(eventType);
                 }
             });
