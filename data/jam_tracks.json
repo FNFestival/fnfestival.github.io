@@ -1,33 +1,10 @@
 {
   "dailyTracks": [
-    "superfreak",
-    "sucker",
-    "themiddle",
-    "moveslikejagger",
-    "scenario",
-    "transparentsoul",
-    "bustamove",
-    "mood",
-    "applause",
-    "sandstorm",
-    "firework",
-    "themiddle2",
-    "rosesimanbek",
-    "metoo",
-    "surroundsound",
-    "shivers",
-    "numb",
-    "downwiththesickness",
-    "highhopes",
-    "singlesoon"
-  ],
-  "upcomingTracks": [
     "sucker",
     "yourlove9pm",
     "themiddle",
     "transparentsoul",
     "scenario",
-    "ithinkimok",
     "likeag6",
     "theedgeofglory",
     "firework",
@@ -41,8 +18,10 @@
     "whatspoppin",
     "miserybusiness",
     "stupidlove",
-    "astronautintheocean"
+    "astronautintheocean",
+    "ithinkimokay"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
