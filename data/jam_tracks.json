@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "sucker",
-    "yourlove9pm",
-    "themiddle",
-    "transparentsoul",
-    "scenario",
-    "likeag6",
-    "theedgeofglory",
-    "firework",
-    "comeandgo",
-    "xgongiveittoya",
-    "sowhat",
-    "ittakestwo",
-    "feelgoodinc",
-    "shivers",
-    "feelitstill",
-    "whatspoppin",
-    "miserybusiness",
-    "stupidlove",
-    "astronautintheocean",
-    "ithinkimokay"
-  ],
-  "upcomingTracks": [
     "hysteria",
     "superfreak",
     "themiddle",
@@ -43,6 +21,7 @@
     "highhopes",
     "bigenergy"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
