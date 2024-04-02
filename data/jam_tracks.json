@@ -2036,6 +2036,102 @@
       },
       "lastModified": "2024-03-26T14:22:09.294Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/fb3235c79b30773ffb26a0d6cb865c8220ff361d"
+    },
+    "wolves": {
+      "title": "Wolves",
+      "artist": "Selena Gomez w/Marshmello",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/nx9r5f951e8rghxk-512x512-356ba9c65ba9.png",
+      "bpm": 125,
+      "duration": "3m 19s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 3
+      },
+      "lastModified": "2024-04-02T14:34:14.894Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/0eebdcc767fd0df22da5331489287d46e2050769"
+    },
+    "kids": {
+      "title": "Kids",
+      "artist": "MGMT",
+      "releaseYear": 2007,
+      "cover": "https://cdn2.unrealengine.com/4tlifcifwmpe1r2r-512x512-b5f275e06679.jpg",
+      "bpm": 123,
+      "duration": "5m 2s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 1,
+        "guitar": 3
+      },
+      "lastModified": "2024-04-02T14:35:19.445Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/efb065069d22384206b0fc703c6f99734d33411d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "dontyouworrychild": {
+      "title": "Don't You Worry Child",
+      "artist": "Swedish House Mafia ft. John Martin",
+      "releaseYear": 2012,
+      "cover": "https://cdn2.unrealengine.com/tdrzpoqteflnlmpn-512x512-850a0626045c.jpg",
+      "bpm": 129,
+      "duration": "3m 33s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 2,
+        "guitar": 2
+      },
+      "lastModified": "2024-04-02T14:51:29.219Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/15b9e63635e0241e8029cd3f09efeb04866c9c2a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "everlong": {
+      "title": "Everlong",
+      "artist": "Foo Fighters",
+      "releaseYear": 1997,
+      "cover": "https://cdn2.unrealengine.com/lr9gerdw2um6jtvg-512x512-13317e4578f2.jpg",
+      "bpm": 158,
+      "duration": "4m 13s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 6,
+        "vocals": 2,
+        "guitar": 3
+      },
+      "lastModified": "2024-04-02T14:42:41.555Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/78fd3872e0fa5940b2a36654f07f11e7119be4e2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "betrayedaardvark": {
+      "title": "Song",
+      "artist": "Artist",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/7q0lkks954yx6ibd-512x512-4ac104ed992b.jpg",
+      "bpm": 174,
+      "duration": "3m 18s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 2
+      },
+      "lastModified": "2024-04-02T14:36:31.999Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/fc2c276f73ff0824b74648559373cb0d498eeab6?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "iwish": {
+      "title": "I Wish",
+      "artist": "Skee-Lo",
+      "releaseYear": 1995,
+      "cover": "https://cdn2.unrealengine.com/vydnc3nnp79dqlfw-512x512-263168b61af3.jpg",
+      "bpm": 98,
+      "duration": "4m 7s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 1,
+        "vocals": 5,
+        "guitar": 2
+      },
+      "lastModified": "2024-04-02T14:43:37.881Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/5203f9729ed414018251142839f6feb44670a781?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
