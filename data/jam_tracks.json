@@ -21,7 +21,28 @@
     "stupidlove",
     "astronautintheocean"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "hysteria",
+    "superfreak",
+    "carryonwaywardson",
+    "moveslikejagger",
+    "transparentsoul",
+    "scenario",
+    "ithinkimok",
+    "mood",
+    "rainonme",
+    "luciddreams",
+    "themiddle2",
+    "callmemaybe",
+    "feelgoodinc",
+    "metoo",
+    "feelitstill",
+    "ittakestwo",
+    "whatspoppin",
+    "highhopes",
+    "xgongiveittoya",
+    "astronautintheocean"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2041,7 +2062,7 @@
       "title": "Wolves",
       "artist": "Selena Gomez w/Marshmello",
       "releaseYear": 2017,
-      "cover": "https://cdn2.unrealengine.com/nx9r5f951e8rghxk-512x512-356ba9c65ba9.png",
+      "cover": "https://cdn2.unrealengine.com/c4k4umzz46qwnzfh-512x512-4b2c6cfa033f.jpg",
       "bpm": 125,
       "duration": "3m 19s",
       "difficulties": {
@@ -2050,7 +2071,7 @@
         "vocals": 3,
         "guitar": 3
       },
-      "lastModified": "2024-04-02T14:34:14.894Z",
+      "lastModified": "2024-04-02T17:30:37.294Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0eebdcc767fd0df22da5331489287d46e2050769"
     },
     "kids": {
@@ -2100,22 +2121,6 @@
       },
       "lastModified": "2024-04-02T14:42:41.555Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/78fd3872e0fa5940b2a36654f07f11e7119be4e2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
-    },
-    "betrayedaardvark": {
-      "title": "Song",
-      "artist": "Artist",
-      "releaseYear": 2024,
-      "cover": "https://cdn2.unrealengine.com/7q0lkks954yx6ibd-512x512-4ac104ed992b.jpg",
-      "bpm": 174,
-      "duration": "3m 18s",
-      "difficulties": {
-        "bass": 2,
-        "drums": 3,
-        "vocals": 4,
-        "guitar": 2
-      },
-      "lastModified": "2024-04-02T14:36:31.999Z",
-      "previewUrl": "https://p.scdn.co/mp3-preview/fc2c276f73ff0824b74648559373cb0d498eeab6?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "iwish": {
       "title": "I Wish",
