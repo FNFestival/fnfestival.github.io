@@ -1,34 +1,11 @@
 {
   "dailyTracks": [
-    "sucker",
-    "themiddle",
-    "scenario",
-    "mood",
-    "hysteria",
-    "likeag6",
-    "numb",
-    "whatspoppin",
-    "applause",
-    "dontfearthereaper",
-    "yourlove9pm",
-    "bustamove",
-    "rainonme",
-    "firework",
-    "rosesimanbek",
-    "sowhat",
-    "surroundsound",
-    "shivers",
-    "stupidlove",
-    "astronautintheocean"
-  ],
-  "upcomingTracks": [
     "hysteria",
     "superfreak",
     "carryonwaywardson",
     "moveslikejagger",
     "transparentsoul",
     "scenario",
-    "ithinkimok",
     "mood",
     "rainonme",
     "luciddreams",
@@ -41,8 +18,10 @@
     "whatspoppin",
     "highhopes",
     "xgongiveittoya",
-    "astronautintheocean"
+    "astronautintheocean",
+    "ithinkimokay"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
