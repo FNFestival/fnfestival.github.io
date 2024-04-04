@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "hysteria",
-    "superfreak",
-    "carryonwaywardson",
-    "moveslikejagger",
-    "transparentsoul",
-    "scenario",
-    "mood",
-    "rainonme",
-    "luciddreams",
-    "themiddle2",
-    "callmemaybe",
-    "feelgoodinc",
-    "metoo",
-    "feelitstill",
-    "ittakestwo",
-    "whatspoppin",
-    "highhopes",
-    "xgongiveittoya",
-    "astronautintheocean",
-    "ithinkimokay"
-  ],
-  "upcomingTracks": [
     "sucker",
     "yourlove9pm",
     "themiddle",
@@ -43,6 +21,7 @@
     "bigenergy",
     "ithinkimokay"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
