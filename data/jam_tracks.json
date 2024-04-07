@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "wolves",
-    "dontyouworrychild",
-    "kids",
-    "everlong",
-    "theedgeofglory",
-    "betrayedaardvark",
-    "rosesimanbek",
-    "likeag6",
-    "bustamove",
-    "firework",
-    "heartbreaker",
-    "stitches",
-    "good4u",
-    "intoyou",
-    "whatislove",
-    "i_kendrick",
-    "flowers",
-    "closer",
-    "whatsmyageagain",
-    "bigenergy"
-  ],
-  "upcomingTracks": [
     "bustamove",
     "rosesimanbek",
     "dontyouworrychild",
@@ -43,6 +21,7 @@
     "whatsmyageagain",
     "bigenergy"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
