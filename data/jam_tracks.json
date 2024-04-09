@@ -2148,6 +2148,134 @@
       },
       "lastModified": "2024-04-03T14:52:20.468Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/9af7cfbdc269836f4bdb996ba9e28a462d4c6b73?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "whatigot": {
+      "title": "What I Got",
+      "artist": "Sublime",
+      "releaseYear": 1996,
+      "cover": "https://cdn2.unrealengine.com/ytpz9ico8wxdxbx3-512x512-f0af54aaee1b.jpg",
+      "bpm": 96,
+      "duration": "2m 53s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 4
+      },
+      "lastModified": "2024-04-09T14:31:35.992Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b6192a50395f8ce30b5453a6c010d7b83a035280"
+    },
+    "thewaylifegoes": {
+      "title": "The Way Life Goes",
+      "artist": "Lil Uzi Vert ft. Oh Wonder",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/258k0njeblbptlbq-512x512-6ab357fa35f8.jpg",
+      "bpm": 164,
+      "duration": "3m 38s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 1
+      },
+      "lastModified": "2024-04-09T14:30:27.063Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/80d5a005febd46fdf05e905fc18437bd7388075d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "song2": {
+      "title": "Song 2",
+      "artist": "Blur",
+      "releaseYear": 1997,
+      "cover": "https://cdn2.unrealengine.com/v3tlnef96xfnalxe-512x512-7c498af11a3a.jpg",
+      "bpm": 129,
+      "duration": "2m 3s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 1,
+        "guitar": 3
+      },
+      "lastModified": "2024-04-09T14:29:48.261Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2c2b4ad08b6ef072182e9b38c386f54623aef4fc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "paintthetownred": {
+      "title": "Paint The Town Red",
+      "artist": "Doja Cat",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/twdqipiqzvfktfwz-512x512-86fadbabf6c4.jpg",
+      "bpm": 100,
+      "duration": "3m 56s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 2,
+        "vocals": 4,
+        "guitar": 1
+      },
+      "lastModified": "2024-04-09T14:29:26.674Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1d4dc1cd67ba78afec8cfb3e5258a9ab9b707dd8?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "makedamnsure": {
+      "title": "MakeDamnSure",
+      "artist": "Taking Back Sunday",
+      "releaseYear": 2006,
+      "cover": "https://cdn2.unrealengine.com/io1nsmxsspyuujww-512x512-e6c2c7dda58c.jpg",
+      "bpm": 140,
+      "duration": "3m 30s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-04-09T14:28:17.816Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/e638567e589ec50dcdb8ba358c7a42af41da17e7"
+    },
+    "iwannagetbetter": {
+      "title": "I Wanna Get Better",
+      "artist": "Bleachers",
+      "releaseYear": 2014,
+      "cover": "https://cdn2.unrealengine.com/xheo3llklof7ow4a-512x512-adbcf079b4d8.jpg",
+      "bpm": 95,
+      "duration": "3m 27s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 4,
+        "vocals": 4,
+        "guitar": 5
+      },
+      "lastModified": "2024-04-09T14:27:16.223Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/12f5e545d7874ea00ca27ffaf55fc9bbf15fdcb2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "ellabailasola": {
+      "title": "Ella Baila Sola",
+      "artist": "Eslabon Armado, Peso Pluma",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/lagmw82dast9e58h-512x512-abf794b8d3bf.jpg",
+      "bpm": 99,
+      "duration": "2m 49s",
+      "difficulties": {
+        "bass": 5,
+        "drums": 2,
+        "vocals": 3,
+        "guitar": 5
+      },
+      "lastModified": "2024-04-09T14:26:42.805Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/5d39f3e17f1e20e2711d033001e48b8d4249b992?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "boysaliarpt2": {
+      "title": "Boy's A Liar Pt. 2",
+      "artist": "PinkPantheress & Ice Spice",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/tigyr9hgocvm7xaf-512x512-c17c9e7d3cbb.jpg",
+      "bpm": 133,
+      "duration": "2m 17s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 3
+      },
+      "lastModified": "2024-04-09T14:25:47.391Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/543d8d09a5530a1ab94dd0c6f83fc4ee3e0d7f96?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
