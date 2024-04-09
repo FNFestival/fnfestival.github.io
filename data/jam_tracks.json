@@ -4,10 +4,8 @@
     "wolves",
     "applause",
     "bornthisway",
-    "ithinkimok",
     "betrayedaardvark",
     "sowhat",
-    "astronautintheocean",
     "yourlove9pm",
     "mood",
     "heartbreaker",
@@ -19,7 +17,9 @@
     "flowers",
     "closer",
     "whatsmyageagain",
-    "bigenergy"
+    "bigenergy",
+    "astronautintheocean",
+    "ithinkimokay"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -2132,6 +2132,22 @@
       },
       "lastModified": "2024-04-02T18:30:15.541Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/b4ff6b4cad23afb03e708f78e49d92463c0ed731"
+    },
+    "skysurfer": {
+      "title": "Sky Surfer (Neon Rush Remix)",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/xiuayjmaats2atwu-512x512-c6d4a57f7781.jpg",
+      "bpm": 140,
+      "duration": "5m 9s",
+      "difficulties": {
+        "bass": 5,
+        "drums": 5,
+        "vocals": 3,
+        "guitar": 4
+      },
+      "lastModified": "2024-04-03T14:52:20.468Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/9af7cfbdc269836f4bdb996ba9e28a462d4c6b73?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
