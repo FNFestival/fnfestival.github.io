@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "boysaliarpt2",
-    "thewaylifegoes",
-    "iwannagetbetter",
-    "whatigot",
-    "song2",
-    "makedamnsure",
-    "ellabailasola",
-    "paintthetownred",
-    "wolves",
-    "luciddreams",
-    "suddenlyisee",
-    "heatwaves",
-    "sayso",
-    "countingstars",
-    "buddyholly",
-    "holdmecloser",
-    "numb",
-    "miserybusiness",
-    "feelgoodinc",
-    "whatspoppin"
-  ],
-  "upcomingTracks": [
     "hysteria",
     "sucker",
     "iwannagetbetter",
@@ -43,6 +21,7 @@
     "feelgoodinc",
     "whatspoppin"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
