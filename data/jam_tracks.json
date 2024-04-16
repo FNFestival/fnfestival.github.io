@@ -21,7 +21,28 @@
     "feelgoodinc",
     "whatspoppin"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "boysaliarpt2",
+    "thewaylifegoes",
+    "moveslikejagger",
+    "themiddle",
+    "mood",
+    "sandstorm",
+    "firework",
+    "paintthetownred",
+    "yourlove9pm",
+    "everlong",
+    "heatwaves",
+    "suddenlyisee",
+    "sayso",
+    "countingstars",
+    "holdmecloser",
+    "buddyholly",
+    "numb",
+    "miserybusiness",
+    "feelgoodinc",
+    "whatspoppin"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2276,6 +2297,86 @@
       },
       "lastModified": "2024-04-09T14:25:47.391Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/543d8d09a5530a1ab94dd0c6f83fc4ee3e0d7f96?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "migente": {
+      "title": "Mi Gente",
+      "artist": "J. Balvin & Willy William",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/snvyq9y2o6aaxfqz-512x512-10328c96f23e.jpg",
+      "bpm": 105,
+      "duration": "3m 10s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 4,
+        "vocals": 4,
+        "guitar": 0
+      },
+      "lastModified": "2024-04-16T14:25:36.725Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/cf0004fe69d0e7403e9cdacf90593d8df8571268"
+    },
+    "justagirl": {
+      "title": "Just A Girl",
+      "artist": "No Doubt",
+      "releaseYear": 1995,
+      "cover": "https://cdn2.unrealengine.com/itpeltcq2wihibfk-512x512-feb3b9688b30.jpg",
+      "bpm": 108,
+      "duration": "3m 27s",
+      "difficulties": {
+        "bass": 3,
+        "drums": 3,
+        "vocals": 2,
+        "guitar": 4
+      },
+      "lastModified": "2024-04-16T14:26:41.128Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1cd97aefe74cf314ed91011a50adec3cc4e81918"
+    },
+    "santeria": {
+      "title": "Santeria",
+      "artist": "Sublime",
+      "releaseYear": 1996,
+      "cover": "https://cdn2.unrealengine.com/jizd6fjmsymzhnmo-512x512-5c69f9d6c0f5.jpg",
+      "bpm": 90,
+      "duration": "3m 10s",
+      "difficulties": {
+        "bass": 4,
+        "drums": 4,
+        "vocals": 3,
+        "guitar": 4
+      },
+      "lastModified": "2024-04-16T14:27:21.871Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/9bd14340e2c557e2e9cdc454f0820b20dd48100e"
+    },
+    "woman": {
+      "title": "Woman",
+      "artist": "Doja Cat",
+      "releaseYear": 2021,
+      "cover": "https://cdn2.unrealengine.com/7fj7ikcrhkpwsnvv-512x512-c23eea0895e8.jpg",
+      "bpm": 108,
+      "duration": "2m 55s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 4,
+        "vocals": 4,
+        "guitar": 0
+      },
+      "lastModified": "2024-04-16T14:28:02.348Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2ae0b61e45d9a5d6454a3e5ab75f8628dd89aa85?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "xotourllif3": {
+      "title": "XO Tour Llif3",
+      "artist": "Lil Uzi Vert",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/258k0njeblbptlbq-512x512-461c2704f989.jpg",
+      "bpm": 155,
+      "duration": "3m 11s",
+      "difficulties": {
+        "bass": 2,
+        "drums": 3,
+        "vocals": 4,
+        "guitar": 1
+      },
+      "lastModified": "2024-04-16T14:29:30.538Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/115d957b81400862451425d9591dfa938da476da?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
