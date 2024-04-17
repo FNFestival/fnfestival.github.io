@@ -10,28 +10,6 @@
     "paintthetownred",
     "yourlove9pm",
     "everlong",
-    "suddenlyisee",
-    "heatwaves",
-    "sayso",
-    "countingstars",
-    "buddyholly",
-    "holdmecloser",
-    "miserybusiness",
-    "numb",
-    "feelgoodinc",
-    "whatspoppin"
-  ],
-  "upcomingTracks": [
-    "boysaliarpt2",
-    "thewaylifegoes",
-    "moveslikejagger",
-    "themiddle",
-    "mood",
-    "sandstorm",
-    "firework",
-    "paintthetownred",
-    "yourlove9pm",
-    "everlong",
     "heatwaves",
     "suddenlyisee",
     "sayso",
@@ -43,6 +21,7 @@
     "feelgoodinc",
     "whatspoppin"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -670,7 +649,7 @@
       "title": "Winterfest Wish",
       "artist": "Epic Games",
       "releaseYear": 2023,
-      "cover": "https://cdn2.unrealengine.com/v5gqldyjyyk96olf-512x512-73a18ac3ca89.jpg",
+      "cover": "https://cdn2.unrealengine.com/v5gqldyjyyk96olf-jpg-reup-512x512-fd719361bf0f.jpg",
       "bpm": 140,
       "duration": "3m 33s",
       "difficulties": {
@@ -679,7 +658,7 @@
         "vocals": 3,
         "guitar": 2
       },
-      "lastModified": "2024-02-07T15:58:18.227Z",
+      "lastModified": "2024-04-12T19:19:15.530Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/52a2fc28dfdb93d4ad903855c812da73d0020bb1?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "beautifulday": {
@@ -766,7 +745,7 @@
       "title": "Heat Waves",
       "artist": "Glass Animals",
       "releaseYear": 2020,
-      "cover": "https://cdn2.unrealengine.com/1zdiafm243wwzdlu-512x512-50ee1a88b617.jpg",
+      "cover": "https://cdn2.unrealengine.com/1zdiafm243wwzdlu-reup-512x512-da439e1d058f.jpg",
       "bpm": 81,
       "duration": "4m 3s",
       "difficulties": {
@@ -775,7 +754,7 @@
         "vocals": 3,
         "guitar": 4
       },
-      "lastModified": "2024-02-28T18:20:27.857Z",
+      "lastModified": "2024-04-12T19:15:17.433Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/3ad42c65bc41d0845369a662a21d0c1e25df67fa"
     },
     "pompeii": {
