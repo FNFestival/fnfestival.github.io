@@ -179,10 +179,15 @@ h2, p {
     color: white;
     backdrop-filter: blur(20px);
     -webkit-tap-highlight-color: transparent;
+    outline: 0 solid transparent;
+    outline-offset: .5rem;
+    transition: outline-color .15s, outline-offset .15s, outline-width .15s ease-out;
 }
 
 .jam-track:hover {
-    outline: 2px solid white;
+    outline-color: #fffc;
+    outline-offset: .1875rem;
+    outline-width: .2rem;
 }
 
 .jam-track img {
