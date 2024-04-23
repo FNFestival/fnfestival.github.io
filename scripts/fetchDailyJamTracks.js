@@ -18,7 +18,10 @@ export async function fetchDailyJamTracks(client) {
 
             if (states.length > 1) {
                 const upcomingEvents = states[1]?.activeEvents || [];
-                jamTracks.upcomingTracks = getEventTypes(upcomingEvents);
+                const upcomingEventTypes = getEventTypes(upcomingEvents);
+                jamTracks.upcomingTracks = upcomingEventTypes.filter(eventType =>
+                    !jamTracks.dailyTracks.includes(eventType)
+                );
             }
         }
     } catch (error) {
