@@ -1,7 +1,8 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
-    "update-jam-tracks": "node scripts/update-jam-tracks.js"
+    "update-jam-tracks": "node scripts/index.js"
   },
   "dependencies": {
     "fnbr": "^4.0.0",
