@@ -8,7 +8,7 @@ The list of all available jam tracks can be found on the public Fortnite Content
 
 However, in order to retrieve the daily jam tracks, authentication is required. To do this, we use the [`fnbr.js`](https://github.com/fnbrjs/fnbr.js) library and then query the event flags that contain the daily jam tracks.
 
-Using a [GitHub workflow](.github/workflows/update-jam-tracks.yml), we then run [the script](scripts/update-jam-tracks.js) to update the jam tracks every day at 10pm and midnight (UTC).
+Using a [GitHub workflow](.github/workflows/update-jam-tracks.yml), we then run [the script](scripts/index.js) to update the jam tracks every day at 10pm and midnight (UTC).
 
 ## Thanks to
 
