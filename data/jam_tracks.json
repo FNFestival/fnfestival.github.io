@@ -2532,6 +2532,38 @@
       },
       "lastModified": "2024-04-22T16:30:49.598Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/9b07cfc9bbacd2327149cf96346bd966ee77952f"
+    },
+    "getlow": {
+      "title": "Get Low",
+      "artist": "Lil Jon & The East Side Boyz ft. Ying Yang Twins",
+      "releaseYear": 2003,
+      "cover": "https://cdn2.unrealengine.com/jnnkllivbscien6o-512x512-d6db30c2caae.jpg",
+      "bpm": 101,
+      "duration": "5m 35s",
+      "difficulties": {
+        "bass": 0,
+        "drums": 1,
+        "vocals": 5,
+        "guitar": 1
+      },
+      "lastModified": "2024-04-23T18:19:49.092Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/be360a507094a10639c1da4d1e8da31514d744dc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "myexsbestfriend": {
+      "title": "my ex's best friend",
+      "artist": "mgk & blackbear",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/1qzywtib1gskeq1o-400x400-a053ce45a313.png",
+      "bpm": 125,
+      "duration": "2m 24s",
+      "difficulties": {
+        "bass": 1,
+        "drums": 3,
+        "vocals": 3,
+        "guitar": 2
+      },
+      "lastModified": "2024-04-23T18:21:18.968Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/113a9ff1540443e52c751fa0b8620934b20ceae7"
     }
   }
 }
