@@ -17,9 +17,8 @@ export async function fetchDailyJamTracks(client) {
                 const eventType = activeEvent.eventType.split('.')[1];
                 const activeSince = new Date(activeEvent.activeSince);
                 const isDaily = activeSince < currentDate;
-                const isUpcoming = activeSince > currentDate;
 
-                if ((isDaily || isUpcoming) && !jamTracks.dailyTracks.includes(eventType)) {
+                if (!jamTracks.dailyTracks.includes(eventType)) {
                     jamTracks[isDaily ? 'dailyTracks' : 'upcomingTracks'].push(eventType);
                 }
             });
