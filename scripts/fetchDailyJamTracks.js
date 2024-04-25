@@ -8,22 +8,27 @@ export async function fetchDailyJamTracks(client) {
         const channel = eventFlags?.channels['client-events'];
         const states = channel?.states || [];
 
-        const getEventTypes = (events) => events
+        const currentDate = new Date();
+        const tomorrow = new Date(currentDate);
+        tomorrow.setDate(currentDate.getDate() + 1);
+
+        states
+            .flatMap(state => state.activeEvents || [])
             .filter(activeEvent => activeEvent.eventType.startsWith('PilgrimSong.'))
-            .map(activeEvent => activeEvent.eventType.split('.')[1]);
+            .forEach(activeEvent => {
+                const eventType = activeEvent.eventType.split('.')[1];
+                const activeSince = new Date(activeEvent.activeSince);
+                const activeUntil = new Date(activeEvent.activeUntil);
 
-        if (states.length > 0) {
-            const dailyEvents = states[0]?.activeEvents || [];
-            jamTracks.dailyTracks = getEventTypes(dailyEvents);
+                const isDaily = activeUntil >= currentDate;
+                const isUpcoming = activeSince > currentDate && activeSince < tomorrow;
 
-            if (states.length > 1) {
-                const upcomingEvents = states[1]?.activeEvents || [];
-                const upcomingEventTypes = getEventTypes(upcomingEvents);
-                jamTracks.upcomingTracks = upcomingEventTypes.filter(eventType =>
-                    !jamTracks.dailyTracks.includes(eventType)
-                );
-            }
-        }
+                if (isDaily) {
+                    jamTracks.dailyTracks.push(eventType);
+                } else if (isUpcoming) {
+                    jamTracks.upcomingTracks.push(eventType);
+                }
+            });
     } catch (error) {
         console.error('Error fetching daily jam tracks:', error);
     }
