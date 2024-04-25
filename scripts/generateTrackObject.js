@@ -1,4 +1,3 @@
-// Function to format duration from seconds to minutes and seconds
 function formatDuration(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
@@ -17,10 +16,10 @@ export function generateTrackObject(trackData, previewUrl) {
         bpm: track.mt,
         duration,
         difficulties: {
-            bass: track.in.ba,
-            drums: track.in.ds,
             vocals: track.in.vl,
-            guitar: track.in.gr
+            guitar: track.in.gr,
+            bass: track.in.ba,
+            drums: track.in.ds
         },
         lastModified: trackData.lastModified,
         previewUrl
