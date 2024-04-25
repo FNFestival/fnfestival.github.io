@@ -9,8 +9,6 @@ export async function fetchDailyJamTracks(client) {
         const states = channel?.states || [];
 
         const currentDate = new Date();
-        const tomorrow = new Date(currentDate);
-        tomorrow.setDate(currentDate.getDate() + 1);
 
         states
             .flatMap(state => state.activeEvents || [])
@@ -18,15 +16,11 @@ export async function fetchDailyJamTracks(client) {
             .forEach(activeEvent => {
                 const eventType = activeEvent.eventType.split('.')[1];
                 const activeSince = new Date(activeEvent.activeSince);
-                const activeUntil = new Date(activeEvent.activeUntil);
+                const isDaily = activeSince < currentDate;
+                const isUpcoming = activeSince > currentDate;
 
-                const isDaily = activeUntil >= currentDate;
-                const isUpcoming = activeSince > currentDate && activeSince < tomorrow;
-
-                if (isDaily) {
-                    jamTracks.dailyTracks.push(eventType);
-                } else if (isUpcoming) {
-                    jamTracks.upcomingTracks.push(eventType);
+                if ((isDaily || isUpcoming) && !jamTracks.dailyTracks.includes(eventType)) {
+                    jamTracks[isDaily ? 'dailyTracks' : 'upcomingTracks'].push(eventType);
                 }
             });
     } catch (error) {
