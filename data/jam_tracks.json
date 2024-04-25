@@ -1,30 +1,33 @@
 {
   "dailyTracks": [
-    "allthegoodgirls",
-    "allthesmallthings",
-    "badguy",
-    "bustamove",
-    "callmemaybe",
-    "dirtylittlesecret",
-    "gethimback",
-    "happierthanever",
-    "i_kendrick",
-    "intoyou",
-    "ithinkimokay",
-    "iwannagetbetter",
-    "kids",
-    "popular",
     "thereforeiam",
-    "thesearch",
-    "transparentsoul",
-    "wolves",
-    "woman",
-    "xgongiveittoya"
-  ],
-  "upcomingTracks": [
+    "happierthanever",
+    "allthegoodgirls",
     "likeag6",
     "song2",
-    "iwish"
+    "iwish",
+    "iwannagetbetter",
+    "bustamove",
+    "transparentsoul",
+    "badguy",
+    "i_kendrick",
+    "thesearch",
+    "allthesmallthings",
+    "xgongiveittoya",
+    "wolves",
+    "dirtylittlesecret",
+    "woman",
+    "gethimback",
+    "popular",
+    "intoyou"
+  ],
+  "upcomingTracks": [
+    "thewaylifegoes",
+    "boysaliarpt2",
+    "migente",
+    "ellabailasola",
+    "whatigot",
+    "dontyouworrychild"
   ],
   "jamTracks": {
     "butterbarnhoedown": {
@@ -310,7 +313,7 @@
         "vocals": 4,
         "guitar": 4
       },
-      "lastModified": "2024-02-07T17:06:30.310Z",
+      "lastModified": "2024-04-19T11:59:02.564Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/9af7cfbdc269836f4bdb996ba9e28a462d4c6b73?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "gangnamstyle": {
@@ -2406,7 +2409,7 @@
         "vocals": 3,
         "guitar": 2
       },
-      "lastModified": "2024-04-22T16:27:28.099Z",
+      "lastModified": "2024-04-24T13:14:15.658Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/36f41e3d1e62e771fc4ceed91877785935881063"
     },
     "oxytocin": {
