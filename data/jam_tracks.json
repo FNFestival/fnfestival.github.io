@@ -1,13 +1,13 @@
 {
   "dailyTracks": [
-    "allthegoodgirls",
     "thereforeiam",
+    "happierthanever",
     "lightemup",
     "getlow",
     "gangnamstyle",
-    "ellabailasola",
-    "whatigot",
+    "betrayedaardvark",
     "dontyouworrychild",
+    "scenario",
     "badguy",
     "i_kendrick",
     "thesearch",
@@ -19,12 +19,11 @@
     "gethimback",
     "popular",
     "intoyou",
-    "myexsbestfriend",
-    "happierthanever",
-    "betrayedaardvark",
-    "scenario"
+    "myexsbestfriend"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "allthegoodgirls"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
