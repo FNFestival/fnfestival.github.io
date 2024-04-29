@@ -1,13 +1,14 @@
 {
   "dailyTracks": [
-    "happierthanever",
     "allthegoodgirls",
+    "thereforeiam",
     "lightemup",
-    "getlow",
     "gangnamstyle",
-    "betrayedaardvark",
-    "dontyouworrychild",
-    "scenario",
+    "xotourllif3",
+    "makedamnsure",
+    "iwannagetbetter",
+    "transparentsoul",
+    "carryonwaywardson",
     "badguy",
     "i_kendrick",
     "thesearch",
@@ -18,16 +19,22 @@
     "woman",
     "gethimback",
     "popular",
-    "intoyou",
-    "myexsbestfriend",
-    "thereforeiam",
-    "xotourllif3",
-    "makedamnsure",
-    "iwannagetbetter",
-    "transparentsoul",
-    "carryonwaywardson"
+    "intoyou"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "happierthanever",
+    "getlow",
+    "sayso",
+    "shivers",
+    "firework",
+    "comeandgo",
+    "whenicomearound",
+    "withorwithoutyou",
+    "holdmecloser",
+    "cakebytheocean",
+    "countingstars",
+    "myexsbestfriend"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
