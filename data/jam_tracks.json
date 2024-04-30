@@ -19,9 +19,7 @@
     "woman",
     "gethimback",
     "popular",
-    "intoyou"
-  ],
-  "upcomingTracks": [
+    "intoyou",
     "happierthanever",
     "getlow",
     "sayso",
@@ -35,6 +33,7 @@
     "countingstars",
     "myexsbestfriend"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
