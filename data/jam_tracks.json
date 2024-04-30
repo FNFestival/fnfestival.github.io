@@ -1,28 +1,16 @@
 {
   "dailyTracks": [
-    "allthegoodgirls",
     "thereforeiam",
-    "lightemup",
-    "gangnamstyle",
+    "happierthanever",
+    "getlow",
     "xotourllif3",
     "makedamnsure",
     "iwannagetbetter",
     "transparentsoul",
     "carryonwaywardson",
     "badguy",
-    "i_kendrick",
-    "thesearch",
-    "allthesmallthings",
-    "xgongiveittoya",
-    "wolves",
-    "dirtylittlesecret",
-    "woman",
-    "gethimback",
-    "popular",
-    "intoyou",
-    "happierthanever",
-    "getlow",
     "sayso",
+    "wolves",
     "shivers",
     "firework",
     "comeandgo",
@@ -2576,6 +2564,102 @@
       },
       "lastModified": "2024-04-23T18:21:18.968Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/113a9ff1540443e52c751fa0b8620934b20ceae7"
+    },
+    "thisishowwedoit": {
+      "title": "This Is How We Do It",
+      "artist": "Montell Jordan",
+      "releaseYear": 1995,
+      "cover": "https://cdn2.unrealengine.com/uwnf9ph3afs3ykxw-512x512-451744b78a97.jpg",
+      "bpm": 104,
+      "duration": "3m 35s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-04-30T14:25:57.704Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/36211820f7f7f69e874ebc246ee3cfc3aff58000"
+    },
+    "stronger": {
+      "title": "Stronger (What Doesn't Kill You)",
+      "artist": "Kelly Clarkson",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/qmdzfmsgyf8ydgrq-512x512-8a77fed832fe.jpg",
+      "bpm": 116,
+      "duration": "3m 45s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 1
+      },
+      "lastModified": "2024-04-30T14:25:19.874Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4956c3edb0a79489adc21e2d16eb8f7880c94d36?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "killinginthename": {
+      "title": "Killing In The Name",
+      "artist": "Rage Against The Machine",
+      "releaseYear": 1992,
+      "cover": "https://cdn2.unrealengine.com/b8dshwiqtjgwztoo-512x512-4cd245824cb1.jpg",
+      "bpm": 90,
+      "duration": "5m 19s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-04-30T14:24:44.079Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/998d3604b68754c11bc0a9af64291ac1f91fb0d8?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "creaturesinheaven": {
+      "title": "Creatures In Heaven",
+      "artist": "Glass Animals",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/j2kvg4wro3l2xcxv-512x512-f60aec48f9c2.jpg",
+      "bpm": 160,
+      "duration": "3m 47s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-04-30T14:19:19.287Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/23ca2cd75188b4f8a34638c2a044d25c67716f42"
+    },
+    "cheapthrills": {
+      "title": "Cheap Thrills",
+      "artist": "Sia ft. Sean Paul",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/lludqsxh5wbklaeb-512x512-af246f6963ff.png",
+      "bpm": 90,
+      "duration": "3m 41s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 1,
+        "drums": 3
+      },
+      "lastModified": "2024-04-30T14:18:32.222Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4faa4ebd9fbb62047573f9a068eecf1c76cc6991?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "breed": {
+      "title": "Breed",
+      "artist": "Nirvana",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/pvnoyyapku7aau1a-512x512-69c9fb5a174f.jpg",
+      "bpm": 158,
+      "duration": "3m 4s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 4
+      },
+      "lastModified": "2024-04-30T14:15:48.077Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/43632c00e689c99b663314d2b162cd86f8a03d7a"
     }
   }
 }
