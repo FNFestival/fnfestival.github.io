@@ -1,13 +1,14 @@
 {
   "dailyTracks": [
-    "thereforeiam",
     "happierthanever",
+    "allthegoodgirls",
     "getlow",
-    "xotourllif3",
-    "makedamnsure",
-    "iwannagetbetter",
-    "transparentsoul",
-    "carryonwaywardson",
+    "gangnamstyle",
+    "ellabailasola",
+    "song2",
+    "santeria",
+    "iwish",
+    "boysaliarpt2",
     "badguy",
     "sayso",
     "wolves",
@@ -18,17 +19,13 @@
     "withorwithoutyou",
     "holdmecloser",
     "cakebytheocean",
-    "countingstars",
-    "myexsbestfriend",
-    "allthegoodgirls",
-    "gangnamstyle",
-    "ellabailasola",
-    "song2",
-    "santeria",
-    "iwish",
-    "boysaliarpt2"
+    "countingstars"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "thereforeiam",
+    "lightemup",
+    "myexsbestfriend"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2667,6 +2664,22 @@
       },
       "lastModified": "2024-04-30T14:15:48.077Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/43632c00e689c99b663314d2b162cd86f8a03d7a"
+    },
+    "cantinaband": {
+      "title": "Cantina Band",
+      "artist": "John Williams, London Symphony Orchestra",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/vo7fcgauzexehay1-512x512-b33fdda364d9.jpg",
+      "bpm": 131,
+      "duration": "2m 49s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-05-01T16:08:54.839Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/f2baebfa7c0cbe8ac683a3c13c64e60d7f8574d4"
     }
   }
 }
