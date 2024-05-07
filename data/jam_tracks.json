@@ -1,33 +1,27 @@
 {
   "dailyTracks": [
-    "poison",
-    "creaturesinheaven",
+    "stronger",
     "thesearch",
+    "thisishowwedoit",
     "hysteria",
     "bustamove",
     "badguy",
-    "breed",
-    "mrbrightside",
-    "thunder",
+    "bigenergy",
+    "thehandthatfeeds",
+    "dogdaysareover",
     "cantinaband",
     "sayso",
     "wolves",
     "shivers",
     "firework",
     "comeandgo",
-    "whenicomearound",
     "withorwithoutyou",
+    "whenicomearound",
     "holdmecloser",
     "cakebytheocean",
     "countingstars"
   ],
-  "upcomingTracks": [
-    "stronger",
-    "thisishowwedoit",
-    "bigenergy",
-    "thehandthatfeeds",
-    "dogdaysareover"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
