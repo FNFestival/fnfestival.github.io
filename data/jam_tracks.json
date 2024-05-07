@@ -2039,7 +2039,7 @@
     },
     "wolves": {
       "title": "Wolves",
-      "artist": "Selena Gomez w/Marshmello",
+      "artist": "Selena Gomez w/ Marshmello",
       "releaseYear": 2017,
       "cover": "https://cdn2.unrealengine.com/c4k4umzz46qwnzfh-512x512-4b2c6cfa033f.jpg",
       "bpm": 125,
@@ -2050,7 +2050,7 @@
         "bass": 1,
         "drums": 3
       },
-      "lastModified": "2024-04-02T17:30:37.294Z",
+      "lastModified": "2024-05-07T19:50:01.616Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0eebdcc767fd0df22da5331489287d46e2050769"
     },
     "kids": {
@@ -2676,6 +2676,118 @@
       },
       "lastModified": "2024-05-03T14:36:56.158Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/f2baebfa7c0cbe8ac683a3c13c64e60d7f8574d4"
+    },
+    "beforeiforget": {
+      "title": "Before I Forget",
+      "artist": "Slipknot",
+      "releaseYear": 2004,
+      "cover": "https://cdn2.unrealengine.com/9u5gcllaw7gppx4v-512x512-d571f0a36478.jpg",
+      "bpm": 140,
+      "duration": "4m 28s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-05-07T14:30:46.237Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/456bed7cde911014f31c26a07b9235112d20469a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "bringmetolife": {
+      "title": "Bring Me To Life",
+      "artist": "Evanescence",
+      "releaseYear": 2003,
+      "cover": "https://cdn2.unrealengine.com/3fgvzmhbwk6x9lkc-512x512-74f320d93463.jpg",
+      "bpm": 95,
+      "duration": "4m 2s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-05-07T14:32:03.979Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d318a788a3a6a1ecb8cd0f1c924cef18832ff8d2"
+    },
+    "changes": {
+      "title": "Changes",
+      "artist": "2Pac ft. Talent",
+      "releaseYear": 1998,
+      "cover": "https://cdn2.unrealengine.com/ytddehcrdp8q0her-512x512-18bb5624bff7.jpg",
+      "bpm": 111,
+      "duration": "4m 34s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 3,
+        "bass": 1,
+        "drums": 3
+      },
+      "lastModified": "2024-05-07T14:32:44.220Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/74d3075346200319e853ce23a115382514a693d6"
+    },
+    "kissmemore": {
+      "title": "Kiss Me More",
+      "artist": "Doja Cat ft. SZA",
+      "releaseYear": 2021,
+      "cover": "https://cdn2.unrealengine.com/84cwrwlb6fyauct7-512x512-fdbb1081257d.jpg",
+      "bpm": 111,
+      "duration": "3m 34s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-05-07T14:33:26.443Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1bfc24519ab35eca2efbd93e9cf54a841e2a6b95"
+    },
+    "lovinonme": {
+      "title": "Lovin On Me",
+      "artist": "Jack Harlow",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/vslmvckztw0tvttv-512x512-36692a5db8af.jpg",
+      "bpm": 105,
+      "duration": "2m 23s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 0,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-05-07T14:34:05.201Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/eeeb6151d0049367b3ad3db0389e9e3b116c0774?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "starships": {
+      "title": "Starships",
+      "artist": "Nicki Minaj",
+      "releaseYear": 2012,
+      "cover": "https://cdn2.unrealengine.com/nhr9eziomkkwikjo-512x512-fe9184c6d136.jpg",
+      "bpm": 125,
+      "duration": "3m 33s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 2,
+        "drums": 2
+      },
+      "lastModified": "2024-05-07T14:34:46.280Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/394733516cbfb50de32d089428542875e77251ed"
+    },
+    "toxicity": {
+      "title": "Toxicity",
+      "artist": "System Of A Down",
+      "releaseYear": 2001,
+      "cover": "https://cdn2.unrealengine.com/ctsv5lbghp67k0sh-512x512-c55e7fdce53a.jpg",
+      "bpm": 158,
+      "duration": "3m 44s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-05-07T14:35:36.799Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d9b89161dacbb987b360417346591712c4023abd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
