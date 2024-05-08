@@ -21,7 +21,16 @@
     "cakebytheocean",
     "countingstars"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "blindinglights",
+    "poison",
+    "gangnamstyle",
+    "lightemup",
+    "breed",
+    "allthegoodgirls",
+    "thereforeiam",
+    "happierthanever"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2680,7 +2689,7 @@
     "beforeiforget": {
       "title": "Before I Forget",
       "artist": "Slipknot",
-      "releaseYear": 2004,
+      "releaseYear": 2005,
       "cover": "https://cdn2.unrealengine.com/9u5gcllaw7gppx4v-512x512-d571f0a36478.jpg",
       "bpm": 140,
       "duration": "4m 28s",
@@ -2690,7 +2699,7 @@
         "bass": 4,
         "drums": 5
       },
-      "lastModified": "2024-05-07T14:30:46.237Z",
+      "lastModified": "2024-05-08T13:24:32.726Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/456bed7cde911014f31c26a07b9235112d20469a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "bringmetolife": {
@@ -2786,7 +2795,7 @@
         "bass": 4,
         "drums": 5
       },
-      "lastModified": "2024-05-07T14:35:36.799Z",
+      "lastModified": "2024-05-08T13:23:52.936Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/d9b89161dacbb987b360417346591712c4023abd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
