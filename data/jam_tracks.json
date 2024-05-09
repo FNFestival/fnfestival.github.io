@@ -1,14 +1,14 @@
 {
   "dailyTracks": [
-    "killinginthename",
-    "cheapthrills",
-    "cradles",
+    "blindinglights",
+    "poison",
+    "gangnamstyle",
+    "lightemup",
+    "breed",
     "nothingsalright",
-    "emogirl",
-    "superfreak",
-    "justagirl",
-    "dontyouworrychild",
-    "everlong",
+    "allthegoodgirls",
+    "thereforeiam",
+    "happierthanever",
     "cantinaband",
     "sayso",
     "wolves",
@@ -21,16 +21,7 @@
     "cakebytheocean",
     "countingstars"
   ],
-  "upcomingTracks": [
-    "blindinglights",
-    "poison",
-    "gangnamstyle",
-    "lightemup",
-    "breed",
-    "allthegoodgirls",
-    "thereforeiam",
-    "happierthanever"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
