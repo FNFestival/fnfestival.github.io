@@ -2,26 +2,6 @@
   "dailyTracks": [
     "bringmetolife",
     "starships",
-    "kissmemore",
-    "changes",
-    "beforeiforget",
-    "toxicity",
-    "lovinonme",
-    "thehandthatfeeds",
-    "santeria",
-    "cantinaband",
-    "cantfeelmyface",
-    "rainonme",
-    "heartbreaker",
-    "ellabailasola",
-    "betrayedaardvark",
-    "beautifulday",
-    "song2",
-    "bustamove",
-    "surroundsound",
-    "singlesoon"
-  ],
-  "upcomingTracks": [
     "happierthanever",
     "ithinkimokay",
     "themiddle",
@@ -29,8 +9,19 @@
     "cheapthrills",
     "kids",
     "whatigot",
-    "feelgoodinc"
+    "cantinaband",
+    "cantfeelmyface",
+    "rainonme",
+    "heartbreaker",
+    "feelgoodinc",
+    "betrayedaardvark",
+    "beautifulday",
+    "song2",
+    "bustamove",
+    "singlesoon",
+    "surroundsound"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
