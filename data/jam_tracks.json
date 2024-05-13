@@ -1,14 +1,14 @@
 {
   "dailyTracks": [
-    "bringmetolife",
-    "starships",
+    "beforeiforget",
+    "kissmemore",
     "happierthanever",
     "ithinkimokay",
     "themiddle",
-    "stronger",
+    "blindinglights",
+    "creaturesinheaven",
     "cheapthrills",
     "kids",
-    "whatigot",
     "cantinaband",
     "cantfeelmyface",
     "rainonme",
@@ -18,15 +18,10 @@
     "beautifulday",
     "song2",
     "bustamove",
-    "singlesoon",
-    "surroundsound"
+    "surroundsound",
+    "singlesoon"
   ],
-  "upcomingTracks": [
-    "beforeiforget",
-    "kissmemore",
-    "blindinglights",
-    "creaturesinheaven"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
