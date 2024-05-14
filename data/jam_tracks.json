@@ -1,19 +1,19 @@
 {
   "dailyTracks": [
+    "toxicity",
     "beforeiforget",
-    "kissmemore",
-    "happierthanever",
-    "ithinkimokay",
-    "themiddle",
-    "blindinglights",
+    "allthegoodgirls",
+    "stronger",
     "creaturesinheaven",
-    "cheapthrills",
-    "kids",
+    "breed",
+    "mood",
+    "migente",
+    "getlow",
     "cantinaband",
     "cantfeelmyface",
     "rainonme",
-    "heartbreaker",
     "feelgoodinc",
+    "heartbreaker",
     "betrayedaardvark",
     "beautifulday",
     "song2",
@@ -21,15 +21,7 @@
     "surroundsound",
     "singlesoon"
   ],
-  "upcomingTracks": [
-    "toxicity",
-    "allthegoodgirls",
-    "stronger",
-    "breed",
-    "mood",
-    "migente",
-    "getlow"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
