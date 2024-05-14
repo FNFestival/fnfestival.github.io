@@ -21,7 +21,16 @@
     "surroundsound",
     "singlesoon"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "changes",
+    "lovinonme",
+    "sucker",
+    "moveslikejagger",
+    "yourlove9pm",
+    "paintthetownred",
+    "astronautintheocean",
+    "scenario"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2788,6 +2797,86 @@
       },
       "lastModified": "2024-05-08T13:23:52.936Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/d9b89161dacbb987b360417346591712c4023abd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "hailtotheking": {
+      "title": "Hail To The King",
+      "artist": "Avenged Sevenfold",
+      "releaseYear": 2013,
+      "cover": "https://cdn2.unrealengine.com/8513ymd942fke56e-512x512-7171e673769a.jpg",
+      "bpm": 118,
+      "duration": "5m 7s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 6,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-05-14T14:44:13.572Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/658f53ebe57308e7fdfb755ff9ad30c99696eb6f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "heathens": {
+      "title": "Heathens",
+      "artist": "Twenty One Pilots",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/5dg3dmc8valp2tpw-512x512-77830f6dcabd.jpg",
+      "bpm": 90,
+      "duration": "3m 14s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-05-14T14:46:06.248Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/31b8d72a9480d06d28846b843539b8b5e58696db?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "nextsemester": {
+      "title": "Next Semester",
+      "artist": "Twenty One Pilots",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/8dr9tvydqa2q5pnf-512x512-a4fc963f0628.jpg",
+      "bpm": 175,
+      "duration": "3m 56s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 5
+      },
+      "lastModified": "2024-05-14T14:47:07.923Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/10bb2d65a9a9549e304b9ee2105855389c9bacac?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "savage": {
+      "title": "Savage",
+      "artist": "Megan Thee Stallion",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/2xtzfbodqpk2i7ma-512x512-29b5a2cf19d8.jpg",
+      "bpm": 169,
+      "duration": "2m 26s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 0,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-05-14T14:48:32.836Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/275028c7d76bb4b7136b0d98656f2b6a0d4b483f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "stressedout": {
+      "title": "Stressed Out",
+      "artist": "Twenty One Pilots",
+      "releaseYear": 2015,
+      "cover": "https://cdn2.unrealengine.com/11lx5pmkaczdytdf-640x640-ea4c680b60d4.jpg",
+      "bpm": 85,
+      "duration": "3m 29s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 1,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-05-14T14:49:29.318Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d01bb6b4b9952d95d2609632474cda8e632e044d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
