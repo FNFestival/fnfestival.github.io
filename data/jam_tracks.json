@@ -1,8 +1,8 @@
 {
   "dailyTracks": [
+    "bringmetolife",
     "changes",
     "lovinonme",
-    "allthegoodgirls",
     "sucker",
     "mood",
     "moveslikejagger",
@@ -21,9 +21,7 @@
     "surroundsound",
     "singlesoon"
   ],
-  "upcomingTracks": [
-    "bringmetolife"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
