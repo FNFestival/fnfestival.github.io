@@ -2868,6 +2868,54 @@
       },
       "lastModified": "2024-05-14T14:49:29.318Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/d01bb6b4b9952d95d2609632474cda8e632e044d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "thediner": {
+      "title": "THE DINER",
+      "artist": "Billie Eilish",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/j3hqdyzl5i7ep1wl-512x512-2a779c5fac42.jpg",
+      "bpm": 125,
+      "duration": "2m 54s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-05-17T15:20:16.582Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4998bad5832e1767f4abd980b13b57afec817b64"
+    },
+    "chihiro": {
+      "title": "CHIHIRO",
+      "artist": "Billie Eilish",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/j3hqdyzl5i7ep1wl-512x512-76912d823757.jpg",
+      "bpm": 110,
+      "duration": "5m 5s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 4,
+        "bass": 3,
+        "drums": 3
+      },
+      "lastModified": "2024-05-17T18:44:51.859Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2b57d233ddb7137924c7a198741b97e8698023ae"
+    },
+    "lunch": {
+      "title": "LUNCH",
+      "artist": "Billie Eilish",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/j3hqdyzl5i7ep1wl-512x512-46a446bffa12.jpg",
+      "bpm": 125,
+      "duration": "3m 2s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 2,
+        "bass": 2,
+        "drums": 2
+      },
+      "lastModified": "2024-05-17T15:19:49.366Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e"
     }
   }
 }
