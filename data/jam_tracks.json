@@ -1,7 +1,7 @@
 {
   "dailyTracks": [
-    "lunch",
     "chihiro",
+    "lunch",
     "stressedout",
     "hailtotheking",
     "happierthanever",
@@ -19,9 +19,16 @@
     "timeless",
     "sowhat",
     "carryonwaywardson",
-    "sandstorm"
+    "sandstorm",
+    "thediner"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "nextsemester",
+    "myexsbestfriend",
+    "poison",
+    "thisishowwedoit",
+    "changes"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
