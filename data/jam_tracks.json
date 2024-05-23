@@ -22,7 +22,26 @@
     "carryonwaywardson",
     "sandstorm"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "theunforgiven",
+    "dynamite",
+    "rubysoho",
+    "dragula",
+    "myohmy",
+    "beforeiforget",
+    "kissmemore",
+    "starships",
+    "everlong",
+    "dontyouworrychild",
+    "themiddle",
+    "iwannagetbetter",
+    "barbiegirl",
+    "kids",
+    "bringmetolife",
+    "lightemup",
+    "xotourllif3",
+    "blitzkriegbop"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -588,14 +607,14 @@
       "releaseYear": 2017,
       "cover": "https://cdn2.unrealengine.com/kpohymojtu08lftx-512x512-016ded9b240d.jpg",
       "bpm": 84,
-      "duration": "3m 59s",
+      "duration": "3m 8s",
       "difficulties": {
         "vocals": 2,
         "guitar": 2,
         "bass": 0,
         "drums": 2
       },
-      "lastModified": "2024-02-28T18:40:56.891Z",
+      "lastModified": "2024-05-23T16:26:50.373Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/ef62eb257ada5dd10002ebb8aa6ba2889a96dde4"
     },
     "vampire": {
@@ -860,14 +879,14 @@
       "releaseYear": 1987,
       "cover": "https://cdn2.unrealengine.com/1lnpxjbzkozanhyh-512x512-9ff9b9c829e9.jpg",
       "bpm": 110,
-      "duration": "4m 6s",
+      "duration": "5m 1s",
       "difficulties": {
         "vocals": 1,
         "guitar": 3,
         "bass": 0,
         "drums": 4
       },
-      "lastModified": "2024-02-28T15:57:53.466Z",
+      "lastModified": "2024-05-23T16:25:55.800Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/a7e5de3437eecf201cc1817a7b2d8fae96910199"
     },
     "sayso": {
@@ -1068,14 +1087,14 @@
       "releaseYear": 2023,
       "cover": "https://cdn2.unrealengine.com/qegpoyqzsqyjwisf-512x512-f8eb7baf1381.jpg",
       "bpm": 118,
-      "duration": "4m 31s",
+      "duration": "3m 18s",
       "difficulties": {
         "vocals": 3,
         "guitar": 2,
         "bass": 3,
         "drums": 2
       },
-      "lastModified": "2024-04-17T18:04:26.194Z",
+      "lastModified": "2024-05-23T16:26:21.759Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/5184d19d1b7fcc3e7c067e38af45a7cc80851440?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "popular": {
@@ -2917,6 +2936,70 @@
       },
       "lastModified": "2024-05-18T00:32:36.840Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e"
+    },
+    "blitzkriegbop": {
+      "title": "Blitzkrieg Bop",
+      "artist": "Ramones",
+      "releaseYear": 1976,
+      "cover": "https://cdn2.unrealengine.com/ma2sqv3yzupne7qc-512x512-9ee033dfac46.jpg",
+      "bpm": 177,
+      "duration": "2m 15s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-05-21T19:47:23.731Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/e568214b37abb97de52d5380e1b1674f1efe2512?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "dragula": {
+      "title": "Dragula",
+      "artist": "Rob Zombie",
+      "releaseYear": 1998,
+      "cover": "https://cdn2.unrealengine.com/llr0nogdbkcjubzb-512x512-81e94fb25b9e.jpg",
+      "bpm": 125,
+      "duration": "3m 48s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-05-21T19:53:46.577Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4a7c65e9a3b50afd83df27e13b2a88c61cd40ec6"
+    },
+    "fuel": {
+      "title": "Fuel",
+      "artist": "Metallica",
+      "releaseYear": 1997,
+      "cover": "https://cdn2.unrealengine.com/8mwwgfrd21qjrwcd-512x512-cf49bccdf7d8.jpg",
+      "bpm": 107,
+      "duration": "4m 27s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 4
+      },
+      "lastModified": "2024-05-21T20:01:14.801Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d74f3ed17b0ade500e951522ddcefd20a632846c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "rubysoho": {
+      "title": "Ruby Soho",
+      "artist": "Rancid",
+      "releaseYear": 1995,
+      "cover": "https://cdn2.unrealengine.com/7lbrcmjsgyxmayxd-512x512-4c9ac6c33f84.jpg",
+      "bpm": 162,
+      "duration": "2m 41s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-05-21T20:07:29.990Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d0c770430736b3986b3a25f24fb7dabd6d887157?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
