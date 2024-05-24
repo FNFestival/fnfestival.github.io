@@ -1,34 +1,13 @@
 {
   "dailyTracks": [
-    "chihiro",
-    "lunch",
-    "thediner",
-    "hailtotheking",
-    "myexsbestfriend",
-    "poison",
-    "toxicity",
-    "thisishowwedoit",
-    "changes",
-    "happierthanever",
-    "thereforeiam",
-    "superfreak",
-    "stronger",
-    "santeria",
-    "callmemaybe",
-    "welcometoparadise",
-    "partyrockanthem",
-    "timeless",
-    "sowhat",
-    "carryonwaywardson",
-    "sandstorm"
-  ],
-  "upcomingTracks": [
     "theunforgiven",
     "dynamite",
     "rubysoho",
     "dragula",
     "myohmy",
     "beforeiforget",
+    "toxicity",
+    "lunch",
     "kissmemore",
     "starships",
     "everlong",
@@ -42,6 +21,7 @@
     "xotourllif3",
     "blitzkriegbop"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
