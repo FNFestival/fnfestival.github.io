@@ -1,10 +1,7 @@
 {
   "dailyTracks": [
-    "theunforgiven",
-    "dynamite",
     "rubysoho",
     "dragula",
-    "myohmy",
     "beforeiforget",
     "toxicity",
     "lunch",
@@ -19,7 +16,8 @@
     "bringmetolife",
     "lightemup",
     "xotourllif3",
-    "blitzkriegbop"
+    "blitzkriegbop",
+    "fuel"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -2980,6 +2978,54 @@
       },
       "lastModified": "2024-05-21T20:07:29.990Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/d0c770430736b3986b3a25f24fb7dabd6d887157?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "lordofthewasteland": {
+      "title": "Lord of the Wasteland",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/1bui5ftl8vsgud2o-512x512-8c999e27a8f8.jpg",
+      "bpm": 133,
+      "duration": "3m 32s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 4
+      },
+      "lastModified": "2024-05-21T20:14:42.115Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/bc86f0e887811fd26a494db6d29ccf15ce009e9c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fireandsteel": {
+      "title": "Fire and Steel",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/pyujeuv39y5qcfdk-512x512-6ddd3a8151ba.jpg",
+      "bpm": 128,
+      "duration": "3m 0s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 3,
+        "drums": 5
+      },
+      "lastModified": "2024-05-21T20:26:28.816Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6e6b06c0aac44749f30a362e900b2295fc0439fc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "pealikeme": {
+      "title": "Pea Like Me",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/zxsympwleecxms8l-512x512-c0e925173b7f.jpg",
+      "bpm": 145,
+      "duration": "3m 18s",
+      "difficulties": {
+        "vocals": 6,
+        "guitar": 4,
+        "bass": 2,
+        "drums": 4
+      },
+      "lastModified": "2024-05-21T20:50:37.870Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2032b2b044d37786648386fb3afb815ae9c7e1ad?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
