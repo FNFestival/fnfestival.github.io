@@ -1,6 +1,5 @@
 {
   "dailyTracks": [
-    "fuel",
     "rubysoho",
     "dragula",
     "thediner",
@@ -17,9 +16,17 @@
     "bringmetolife",
     "lightemup",
     "xotourllif3",
-    "blitzkriegbop"
+    "blitzkriegbop",
+    "fuel"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "dynamite",
+    "myohmy",
+    "chihiro",
+    "breed",
+    "justagirl",
+    "stressedout"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
