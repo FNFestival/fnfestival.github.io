@@ -1,11 +1,13 @@
 {
   "dailyTracks": [
+    "dynamite",
     "rubysoho",
     "dragula",
-    "thediner",
-    "toxicity",
-    "kissmemore",
-    "cheapthrills",
+    "myohmy",
+    "chihiro",
+    "breed",
+    "justagirl",
+    "stressedout",
     "starships",
     "everlong",
     "dontyouworrychild",
@@ -19,14 +21,7 @@
     "blitzkriegbop",
     "fuel"
   ],
-  "upcomingTracks": [
-    "dynamite",
-    "myohmy",
-    "chihiro",
-    "breed",
-    "justagirl",
-    "stressedout"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
