@@ -1,13 +1,12 @@
 {
   "dailyTracks": [
-    "dynamite",
-    "rubysoho",
-    "dragula",
-    "myohmy",
-    "chihiro",
-    "breed",
-    "justagirl",
+    "lunch",
     "stressedout",
+    "nextsemester",
+    "lovinonme",
+    "savage",
+    "changes",
+    "creaturesinheaven",
     "starships",
     "everlong",
     "dontyouworrychild",
@@ -16,19 +15,12 @@
     "barbiegirl",
     "kids",
     "bringmetolife",
-    "lightemup",
     "xotourllif3",
+    "lightemup",
     "blitzkriegbop",
     "fuel"
   ],
-  "upcomingTracks": [
-    "lunch",
-    "nextsemester",
-    "lovinonme",
-    "savage",
-    "changes",
-    "creaturesinheaven"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
