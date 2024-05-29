@@ -1,14 +1,13 @@
 {
   "dailyTracks": [
     "rubysoho",
-    "dragula",
-    "chihiro",
-    "nextsemester",
-    "lovinonme",
-    "savage",
-    "changes",
-    "creaturesinheaven",
+    "thediner",
     "kissmemore",
+    "blindinglights",
+    "hailtotheking",
+    "justagirl",
+    "thereforeiam",
+    "thisishowwedoit",
     "starships",
     "everlong",
     "dontyouworrychild",
@@ -18,17 +17,10 @@
     "kids",
     "bringmetolife",
     "lightemup",
-    "xotourllif3"
-  ],
-  "upcomingTracks": [
-    "thediner",
-    "blindinglights",
-    "hailtotheking",
-    "justagirl",
-    "thereforeiam",
-    "thisishowwedoit",
+    "xotourllif3",
     "blitzkriegbop"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
