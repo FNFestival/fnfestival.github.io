@@ -20,7 +20,12 @@
     "xotourllif3",
     "blitzkriegbop"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "dragula",
+    "lunch",
+    "chihiro",
+    "fuel"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -2897,7 +2902,7 @@
         "bass": 3,
         "drums": 3
       },
-      "lastModified": "2024-05-18T00:32:03.286Z",
+      "lastModified": "2024-05-29T16:16:19.270Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/2b57d233ddb7137924c7a198741b97e8698023ae"
     },
     "lunch": {
