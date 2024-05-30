@@ -3027,6 +3027,118 @@
       },
       "lastModified": "2024-05-21T20:50:37.870Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/2032b2b044d37786648386fb3afb815ae9c7e1ad?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "beggin": {
+      "title": "Beggin'",
+      "artist": "Måneskin",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/d3ym101tq5lbgyti-512x512-b286cfa565bd.jpg",
+      "bpm": 134,
+      "duration": "3m 34s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 3,
+        "drums": 5
+      },
+      "lastModified": "2024-05-28T19:06:09.499Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/39cd7cd4317a9e4c4fa1277a51eeadb2e300c7de?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "theboyismine": {
+      "title": "the boy is mine",
+      "artist": "Ariana Grande",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/lio1ujykk0r5eq7o-512x512-7f4cd911b67e.jpg",
+      "bpm": 98,
+      "duration": "2m 56s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-05-30T14:30:24.058Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/012f502192036813357d6dd32457f5340a6de4c8"
+    },
+    "yesand": {
+      "title": "yes, and?",
+      "artist": "Ariana Grande",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/pv0qbhlpjfqw64dm-512x512-47f795fa7325.jpg",
+      "bpm": 119,
+      "duration": "3m 36s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-05-30T14:30:49.380Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/0f137d3b1fce534e1c9b3adac096dc724315d5e4"
+    },
+    "bullsonparade": {
+      "title": "Bulls On Parade",
+      "artist": "Rage Against The Machine",
+      "releaseYear": 1996,
+      "cover": "https://cdn2.unrealengine.com/rcdbce6iqqpkpzzz-512x512-ec1485d476af.jpg",
+      "bpm": 169,
+      "duration": "3m 57s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-05-28T19:09:19.437Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/c1626784be02379a8ec2fa5f7d7f735c1eda772b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "positions": {
+      "title": "positions",
+      "artist": "Ariana Grande",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/vlisclqsdifr2kcg-512x512-8d9e364b394f.jpg",
+      "bpm": 144,
+      "duration": "2m 51s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-05-30T14:55:52.755Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/bcab917e186664a542f5fff3ba74708527d525b6"
+    },
+    "sidetoside": {
+      "title": "Side To Side",
+      "artist": "Ariana Grande ft. Nicki Minaj",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/fdpt5nej0cea6z3y-512x512-e4bf36003c76.jpg",
+      "bpm": 159,
+      "duration": "3m 47s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 2,
+        "drums": 4
+      },
+      "lastModified": "2024-05-28T19:20:04.337Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b6fa80ecce583ae9d9b9cbe4315d3373ee846943?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "bandit": {
+      "title": "Bandit",
+      "artist": "Don Toliver",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/z0z5yuit3lfwalkl-512x512-0503c6b455e6.jpg",
+      "bpm": 130,
+      "duration": "2m 23s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 3
+      },
+      "lastModified": "2024-05-28T19:03:55.366Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/08082a5c6306207179dcc44af304b9967c3ca9d0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
