@@ -44,7 +44,7 @@
       "artist": "Epic Games",
       "releaseYear": 2020,
       "cover": "https://cdn2.unrealengine.com/gkorhaajfhipqtmv-512x512-ec70a3de1b54.jpg",
-      "bpm": 138,
+      "bpm": 150,
       "duration": "2m 41s",
       "difficulties": {
         "vocals": 3,
@@ -52,7 +52,7 @@
         "bass": 3,
         "drums": 4
       },
-      "lastModified": "2024-04-17T18:00:42.165Z",
+      "lastModified": "2024-06-04T18:02:27.326Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/59fbc36f9868580c0082c95574d607b3dec4bd1e?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "switchup": {
@@ -1314,7 +1314,7 @@
         "bass": 3,
         "drums": 3
       },
-      "lastModified": "2024-02-21T15:15:36.153Z",
+      "lastModified": "2024-06-04T18:01:24.250Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0e1f4d14825f1a67b816669d4fd15131c097f056"
     },
     "bloodymary": {
