@@ -21,7 +21,16 @@
     "firework",
     "thehandthatfeeds"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "sidetoside",
+    "bullsonparade",
+    "yesand",
+    "dontfearthereaper",
+    "stupidlove",
+    "whatsmyageagain",
+    "suddenlyisee",
+    "allthegoodgirls"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3122,7 +3131,7 @@
         "bass": 2,
         "drums": 4
       },
-      "lastModified": "2024-05-28T19:20:04.337Z",
+      "lastModified": "2024-06-05T18:31:39.715Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/b6fa80ecce583ae9d9b9cbe4315d3373ee846943?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "bandit": {
