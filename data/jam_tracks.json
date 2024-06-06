@@ -3140,6 +3140,102 @@
       },
       "lastModified": "2024-05-28T19:03:55.366Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/08082a5c6306207179dcc44af304b9967c3ca9d0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "circles": {
+      "title": "Circles",
+      "artist": "Post Malone",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/ae9bykr7aalfdxgh-500x500-c29e02cfaf2c.png",
+      "bpm": 120,
+      "duration": "3m 35s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 3,
+        "bass": 1,
+        "drums": 0
+      },
+      "lastModified": "2024-06-04T14:45:03.361Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/193a0924b0f73d211131bf2fb0bddb7202176202"
+    },
+    "masterofpuppets": {
+      "title": "Master of Puppets",
+      "artist": "Metallica",
+      "releaseYear": 1986,
+      "cover": "https://cdn2.unrealengine.com/uugpfcplkorieu6x-512x512-bf296d90ceeb.jpg",
+      "bpm": 105,
+      "duration": "8m 38s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 6,
+        "drums": 5
+      },
+      "lastModified": "2024-06-04T14:49:03.990Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/0fdb849c9a1fa299ac76146ea3337c5c19820c07?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "betternow": {
+      "title": "Better Now",
+      "artist": "Post Malone",
+      "releaseYear": 2018,
+      "cover": "https://cdn2.unrealengine.com/lan9uswyjnjra0ua-512x512-15998a971193.jpg",
+      "bpm": 145,
+      "duration": "3m 50s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 3
+      },
+      "lastModified": "2024-06-04T14:35:07.899Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1aa169aa2705c55c3c5e8d93dea91b682225ae59"
+    },
+    "sabotage": {
+      "title": "Sabotage",
+      "artist": "Beastie Boys",
+      "releaseYear": 1994,
+      "cover": "https://cdn2.unrealengine.com/xkamsyz2nw3ez1md-512x512-6c30d884f2b1.jpg",
+      "bpm": 168,
+      "duration": "3m 0s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 2
+      },
+      "lastModified": "2024-06-04T14:50:55.961Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/48ade18a4f29b0682ef4a0bfd88a6f3e13dde9b4"
+    },
+    "ihadsomehelp": {
+      "title": "I Had Some Help",
+      "artist": "Post Malone ft. Morgan Wallen",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/ebtpshkgsmfqwwpm-512x512-a6919add031e.jpg",
+      "bpm": 128,
+      "duration": "3m 0s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 3
+      },
+      "lastModified": "2024-06-04T18:02:31.658Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/add475b56582a3bdad79050e5d170d2d7033cdb5"
+    },
+    "givemeeverything": {
+      "title": "Give Me Everything",
+      "artist": "Pitbull ft. Ne-Yo, Afrojack & Nayer",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/b4ylitzqrbp8n6qx-512x512-bb87d2b2dffa.jpg",
+      "bpm": 129,
+      "duration": "4m 16s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-06-04T14:46:50.243Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/0959bf37a7c0ff7fb3e7cbe02829c2a050857cd3?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
