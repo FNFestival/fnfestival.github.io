@@ -1,25 +1,25 @@
 {
   "dailyTracks": [
-    "allthesmallthings",
-    "astronautintheocean",
-    "boysaliarpt2",
-    "chihiro",
-    "circles",
-    "closer",
-    "emogirl",
-    "givemeeverything",
-    "good4u",
-    "ithinkimokay",
-    "iwish",
-    "lunch",
+    "applause",
+    "beggin",
+    "bigenergy",
+    "buddyholly",
+    "comeandgo",
+    "entersandman",
+    "flowers",
+    "fuel",
+    "gethimback",
+    "happierthanever",
+    "justdance",
     "masterofpuppets",
-    "mood",
-    "nothingsalright",
-    "stitches",
-    "thediner",
-    "thunder",
-    "whatislove",
-    "woman"
+    "mrbrightside",
+    "numb",
+    "popular",
+    "ridethelightning",
+    "theunforgiven",
+    "whatspoppin",
+    "whereverimayroam",
+    "withorwithoutyou"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -882,7 +882,7 @@
         "bass": 2,
         "drums": 1
       },
-      "lastModified": "2024-02-28T15:55:58.580Z",
+      "lastModified": "2024-06-13T17:12:52.243Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/7131c09d3479d06d84281176255c851d88f6670b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "whenicomearound": {
@@ -1058,7 +1058,7 @@
         "bass": 3,
         "drums": 4
       },
-      "lastModified": "2024-03-11T18:39:56.849Z",
+      "lastModified": "2024-06-10T13:07:29.150Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/7344dde111c3e078c4c7d7c6d0bc1542459cf2fa?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "flowers": {
@@ -1394,7 +1394,7 @@
         "bass": 0,
         "drums": 2
       },
-      "lastModified": "2024-02-28T15:13:36.629Z",
+      "lastModified": "2024-06-13T17:12:07.609Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/68b48f27419f714de23000b982dfb09f840f25c1?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "metoo": {
@@ -1554,7 +1554,7 @@
         "bass": 3,
         "drums": 4
       },
-      "lastModified": "2024-03-05T19:43:25.194Z",
+      "lastModified": "2024-06-10T13:08:42.669Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/f6995ad54d79b7ffaf0da6833409666ada11a173?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "feelitstill": {
@@ -1794,7 +1794,7 @@
         "bass": 5,
         "drums": 4
       },
-      "lastModified": "2024-03-22T13:57:06.922Z",
+      "lastModified": "2024-06-10T13:13:29.344Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/5ad90df7075b38732ff0ef1fb6d415a7d3573ac5?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "astronautintheocean": {
@@ -2146,7 +2146,7 @@
         "bass": 5,
         "drums": 5
       },
-      "lastModified": "2024-04-03T14:52:20.468Z",
+      "lastModified": "2024-06-13T19:11:20.350Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/9af7cfbdc269836f4bdb996ba9e28a462d4c6b73?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "whatigot": {
@@ -2594,7 +2594,7 @@
         "bass": 3,
         "drums": 1
       },
-      "lastModified": "2024-04-30T14:25:19.874Z",
+      "lastModified": "2024-06-10T13:06:22.008Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/4956c3edb0a79489adc21e2d16eb8f7880c94d36?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "killinginthename": {
@@ -2962,7 +2962,7 @@
         "bass": 4,
         "drums": 4
       },
-      "lastModified": "2024-05-21T20:01:14.801Z",
+      "lastModified": "2024-06-10T13:09:46.841Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/d74f3ed17b0ade500e951522ddcefd20a632846c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "rubysoho": {
@@ -3170,7 +3170,7 @@
         "bass": 6,
         "drums": 5
       },
-      "lastModified": "2024-06-04T14:49:03.990Z",
+      "lastModified": "2024-06-10T17:44:58.316Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0fdb849c9a1fa299ac76146ea3337c5c19820c07?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "betternow": {
@@ -3236,6 +3236,150 @@
       },
       "lastModified": "2024-06-04T14:46:50.243Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0959bf37a7c0ff7fb3e7cbe02829c2a050857cd3?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "dreamer": {
+      "title": "Dreamer",
+      "artist": "Epic Games",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/lh65r7ceghc4mjgf-512x512-6756aa962683.png",
+      "bpm": 125,
+      "duration": "3m 52s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-06-11T17:35:34.234Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/caa4bb9e995deb9222bc7a1d16bd5caa37ba857c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "ridethelightning": {
+      "title": "Ride the Lightning",
+      "artist": "Metallica",
+      "releaseYear": 1984,
+      "cover": "https://cdn2.unrealengine.com/ijp0wu0myaju2ppr-512x512-c6c5f0335b7d.jpg",
+      "bpm": 149,
+      "duration": "6m 41s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 6,
+        "drums": 6
+      },
+      "lastModified": "2024-06-11T17:41:57.509Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/609c59546ad2a0b612064530e1134b669b0e3912?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "thenightporter": {
+      "title": "The Night Porter",
+      "artist": "Epic Games",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/bkooul6b175wi7dx-512x512-d61cbaa79dac.jpg",
+      "bpm": 129,
+      "duration": "3m 2s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 3,
+        "drums": 2
+      },
+      "lastModified": "2024-06-11T17:44:38.726Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6e6b06c0aac44749f30a362e900b2295fc0439fc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "theunforgiven": {
+      "title": "The Unforgiven",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/f4ih5ymnpmkib4ij-512x512-650c008923e9.jpg",
+      "bpm": 139,
+      "duration": "6m 8s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 2,
+        "drums": 2
+      },
+      "lastModified": "2024-06-11T17:46:13.242Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8d88612fd8ab8f5176a2c6de3919fa449c981cde?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "whereverimayroam": {
+      "title": "Wherever I May Roam",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/ahs3ob6evstyh9l3-512x512-fd3927d19a60.jpg",
+      "bpm": 132,
+      "duration": "6m 23s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-06-11T17:47:02.153Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2c05f55a9ad01f487b8de80d31a1e1cd9fa8e345?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "entersandman": {
+      "title": "Enter Sandman",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/q33dcfop9hnhne2e-512x512-0bc279976067.jpg",
+      "bpm": 125,
+      "duration": "5m 18s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-06-11T17:37:05.409Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/333dcef73eb5aa95a58ff521fa63d14861dfe2f5?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "somp": {
+      "title": "S.O.M.P.",
+      "artist": "Epic Games",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/xv39dyagy5ebtkb7-512x512-dca1d9a18f75.jpg",
+      "bpm": 120,
+      "duration": "4m 38s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-06-11T17:43:37.009Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/c956d9ded6dc1ad44f499ca5dda2582fccc35060?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "one": {
+      "title": "One",
+      "artist": "Metallica",
+      "releaseYear": 1988,
+      "cover": "https://cdn2.unrealengine.com/nijpaq8p1tvryhwx-512x512-dd3d4979192b.jpg",
+      "bpm": 106,
+      "duration": "7m 22s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 6,
+        "drums": 5
+      },
+      "lastModified": "2024-06-11T17:40:48.135Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6e6f8324c485631dcfe1d23c664c1057428dcc6a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "nevergiveup": {
+      "title": "Never Back Down",
+      "artist": "NickEh30",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/puwzgbcsnosc91nx-512x512-2da8dd887a9f.jpg",
+      "bpm": 142,
+      "duration": "2m 54s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 0,
+        "drums": 4
+      },
+      "lastModified": "2024-06-11T19:48:54.534Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/81238f7cd1636e9ad31c003b6c5bb0406dabe361?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
