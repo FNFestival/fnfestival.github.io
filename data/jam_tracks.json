@@ -1,27 +1,11 @@
 {
   "dailyTracks": [
-    "theunforgiven",
     "ridethelightning",
+    "theunforgiven",
     "whereverimayroam",
     "entersandman",
     "masterofpuppets",
     "fuel",
-    "gangnamstyle",
-    "yourlove9pm",
-    "countingstars",
-    "buddyholly",
-    "thesearch",
-    "whatspoppin",
-    "numb",
-    "justdance",
-    "flowers",
-    "gethimback",
-    "mrbrightside",
-    "bigenergy",
-    "comeandgo",
-    "withorwithoutyou"
-  ],
-  "upcomingTracks": [
     "bornthisway",
     "marchofthepigs",
     "intoyou",
@@ -37,6 +21,7 @@
     "heathens",
     "youdontknowwhatyouvegot"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
