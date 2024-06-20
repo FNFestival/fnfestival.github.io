@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "entersandman",
-    "masterofpuppets",
-    "fuel",
-    "sayso",
-    "changes",
-    "rubysoho",
-    "sowhat",
-    "dragula",
-    "thisishowwedoit",
-    "lovinonme",
-    "scenario",
-    "poison",
-    "ellabailasola",
-    "myexsbestfriend",
-    "santeria",
-    "beforeiforget",
-    "cheapthrills",
-    "believer",
-    "nextsemester",
-    "blitzkriegbop"
-  ],
-  "upcomingTracks": [
     "theunforgiven",
     "ridethelightning",
     "whereverimayroam",
@@ -31,8 +9,19 @@
     "kissmemore",
     "kids",
     "makedamnsure",
-    "callmemaybe"
+    "callmemaybe",
+    "scenario",
+    "ellabailasola",
+    "poison",
+    "myexsbestfriend",
+    "santeria",
+    "beforeiforget",
+    "cheapthrills",
+    "believer",
+    "nextsemester",
+    "blitzkriegbop"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
