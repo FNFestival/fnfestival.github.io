@@ -19,9 +19,20 @@
     "cheapthrills",
     "believer",
     "nextsemester",
-    "blitzkriegbop"
+    "blitzkriegbop",
+    "forwhomthebelltolls",
+    "luxaeterna",
+    "nothingelsematters",
+    "seekanddestroy"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "superfreak",
+    "sabotage",
+    "theboyismine",
+    "killinginthename",
+    "circles",
+    "bandit"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3380,6 +3391,70 @@
       },
       "lastModified": "2024-06-11T19:48:54.534Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/81238f7cd1636e9ad31c003b6c5bb0406dabe361?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "seekanddestroy": {
+      "title": "Seek & Destroy",
+      "artist": "Metallica",
+      "releaseYear": 1983,
+      "cover": "https://cdn2.unrealengine.com/kcg4nfmtwjhyqjza-512x512-78bbc6b41e39.jpg",
+      "bpm": 143,
+      "duration": "6m 55s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 5,
+        "drums": 4
+      },
+      "lastModified": "2024-06-18T14:35:17.984Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d13ca85b2e12c3a9fa4b67cbb976ceff7e5fca42?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "luxaeterna": {
+      "title": "Lux Æterna",
+      "artist": "Metallica",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/qgmhs5hd9eowcqiv-512x512-28633692f677.jpg",
+      "bpm": 130,
+      "duration": "3m 23s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-06-18T14:37:55.319Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b17d97b90d96689a867dd538be7928bef57f24ea?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "nothingelsematters": {
+      "title": "Nothing Else Matters",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/gccgb9poshtyi7cd-512x512-5a23ab27516a.jpg",
+      "bpm": 94,
+      "duration": "6m 26s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-06-18T15:02:49.724Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/830f0b836bc20723462da06d1ff779f7b9499a7e?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "forwhomthebelltolls": {
+      "title": "For Whom The Bell Tolls",
+      "artist": "Metallica",
+      "releaseYear": 1984,
+      "cover": "https://cdn2.unrealengine.com/gcpjoandhak7hccm-512x512-93816f3fa1d8.jpg",
+      "bpm": 118,
+      "duration": "4m 57s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 4,
+        "bass": 3,
+        "drums": 2
+      },
+      "lastModified": "2024-06-18T14:38:45.378Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/e8650ac29782721b2b42943fa8ca3b49f77e0365?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
