@@ -21,7 +21,18 @@
     "hysteria",
     "thehandthatfeeds"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "nothingelsematters",
+    "fuel",
+    "theunforgiven",
+    "luxaeterna",
+    "gangnamstyle",
+    "woman",
+    "xotourllif3",
+    "savage",
+    "ellabailasola",
+    "poison"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -1170,7 +1181,7 @@
         "bass": 4,
         "drums": 3
       },
-      "lastModified": "2024-02-21T14:19:53.127Z",
+      "lastModified": "2024-06-25T15:41:47.649Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0babf4d4a9541ef3f664e3dd87ab51be6f16c610"
     },
     "justdance": {
@@ -1314,7 +1325,7 @@
         "bass": 3,
         "drums": 3
       },
-      "lastModified": "2024-06-04T18:01:24.250Z",
+      "lastModified": "2024-06-25T15:46:30.255Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0e1f4d14825f1a67b816669d4fd15131c097f056"
     },
     "bloodymary": {
@@ -1858,7 +1869,7 @@
         "bass": 5,
         "drums": 6
       },
-      "lastModified": "2024-03-19T15:20:54.542Z",
+      "lastModified": "2024-06-25T15:37:55.049Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/ad97ce828e504498e211b6525c5ccee86642786b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     },
     "ithinkimokay": {
