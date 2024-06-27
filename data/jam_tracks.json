@@ -21,7 +21,26 @@
     "thehandthatfeeds",
     "hysteria"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "twentyfourkmagic",
+    "dakiti",
+    "cantstopthefeeling",
+    "blueberryfaygo",
+    "weliketoparty",
+    "luxaeterna",
+    "theunforgiven",
+    "whereverimayroam",
+    "killinginthename",
+    "lovinonme",
+    "kissmemore",
+    "blitzkriegbop",
+    "gangnamstyle",
+    "makedamnsure",
+    "changes",
+    "rubysoho",
+    "thisishowwedoit",
+    "boysaliarpt2"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3444,6 +3463,86 @@
       },
       "lastModified": "2024-06-18T14:38:45.378Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/e8650ac29782721b2b42943fa8ca3b49f77e0365?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "blueberryfaygo": {
+      "title": "Blueberry Faygo",
+      "artist": "Lil Mosey",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/2jhbcifbdgipjk6y-512x512-9edb2c855240.jpg",
+      "bpm": 99,
+      "duration": "3m 1s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-06-21T20:07:13.176Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2f17668dbf5bd1c349bbc6cccbc917535cd33b76"
+    },
+    "weliketoparty": {
+      "title": "We Like To Party! (The Vengabus)",
+      "artist": "Vengaboys",
+      "releaseYear": 1998,
+      "cover": "https://cdn2.unrealengine.com/jcrfpiwse9u08ug1-512x512-a8be45bfa799.jpg",
+      "bpm": 136,
+      "duration": "3m 45s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-06-21T20:10:51.014Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/3e58ec0bb474e323b57291f25fc726cedbba2dca"
+    },
+    "cantstopthefeeling": {
+      "title": "Can't Stop The Feeling!",
+      "artist": "Justin Timberlake",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/nh5clp7mrlbq4jq5-512x512-aea608b60771.jpg",
+      "bpm": 113,
+      "duration": "4m 2s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 2,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-06-21T20:08:20.542Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8c1a80768ba7415ad1c439b10be01fc2fb2b6eb1?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "twentyfourkmagic": {
+      "title": "24K Magic",
+      "artist": "Bruno Mars",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/pzyvvgrpta0kuwkd-512x512-29920193d083.jpg",
+      "bpm": 107,
+      "duration": "3m 50s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 2
+      },
+      "lastModified": "2024-06-24T13:04:14.043Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/3a76820d510fa5f84abb413e9d13815bcc86da0f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "dakiti": {
+      "title": "DÁKITI",
+      "artist": "Bad Bunny and Jhayco",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/9qitcnelclcvz6cb-512x512-2f358eee4958.jpg",
+      "bpm": 110,
+      "duration": "3m 27s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 0,
+        "drums": 1
+      },
+      "lastModified": "2024-06-21T20:09:37.447Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/78f5e89d6384301b40fd9e5a659152a33dac6646?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
