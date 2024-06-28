@@ -21,7 +21,13 @@
     "thisishowwedoit",
     "boysaliarpt2"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "seekanddestroy",
+    "nothingelsematters",
+    "ridethelightning",
+    "entersandman",
+    "toxicity"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3474,7 +3480,7 @@
         "bass": 0,
         "drums": 3
       },
-      "lastModified": "2024-06-21T20:10:51.014Z",
+      "lastModified": "2024-06-28T13:29:04.508Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/3e58ec0bb474e323b57291f25fc726cedbba2dca"
     },
     "cantstopthefeeling": {
