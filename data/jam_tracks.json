@@ -1,32 +1,11 @@
 {
   "dailyTracks": [
-    "ridethelightning",
-    "masterofpuppets",
-    "seekanddestroy",
-    "forwhomthebelltolls",
-    "sowhat",
-    "song2",
-    "pompeii",
-    "mood",
-    "luciddreams",
-    "dontfearthereaper",
-    "partyrockanthem",
-    "migente",
-    "cradles",
-    "whatigot",
-    "ihadsomehelp",
-    "sucker",
-    "metoo",
-    "dontyouworrychild",
-    "thehandthatfeeds",
-    "hysteria"
-  ],
-  "upcomingTracks": [
     "twentyfourkmagic",
     "dakiti",
     "cantstopthefeeling",
     "blueberryfaygo",
     "weliketoparty",
+    "forwhomthebelltolls",
     "luxaeterna",
     "theunforgiven",
     "whereverimayroam",
@@ -38,9 +17,11 @@
     "makedamnsure",
     "changes",
     "rubysoho",
+    "sucker",
     "thisishowwedoit",
     "boysaliarpt2"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
