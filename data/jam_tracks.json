@@ -3524,6 +3524,102 @@
       },
       "lastModified": "2024-06-21T20:09:37.447Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/78f5e89d6384301b40fd9e5a659152a33dac6646?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "toosweet": {
+      "title": "Too Sweet",
+      "artist": "Hozier",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/9985aknkxrjbktwu-512x512-c0e9a80e7148.jpg",
+      "bpm": 117,
+      "duration": "4m 14s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 1,
+        "drums": 4
+      },
+      "lastModified": "2024-06-24T13:17:24.114Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/e526daac5ec6c4594ab3760cc48cee835379802d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "allthestars": {
+      "title": "All The Stars",
+      "artist": "Kendrick Lamar ft. SZA",
+      "releaseYear": 2018,
+      "cover": "https://cdn2.unrealengine.com/wkqbbao5odakbueu-512x512-f6b854bf1855.jpg",
+      "bpm": 97,
+      "duration": "3m 55s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-06-24T13:16:33.247Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/330c6d6e5bfcc1bc831b6948b57ce9c98e7558bf"
+    },
+    "hollabackgirl": {
+      "title": "Hollaback Girl",
+      "artist": "Gwen Stefani",
+      "releaseYear": 2004,
+      "cover": "https://cdn2.unrealengine.com/980ki6uqfhx3mtng-512x512-740fca941cb7.jpg",
+      "bpm": 110,
+      "duration": "3m 22s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 1
+      },
+      "lastModified": "2024-06-21T20:16:13.183Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/d1804eaf5e9bdcbcb6f546b31de4544c99385866"
+    },
+    "humble": {
+      "title": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "releaseYear": 2017,
+      "cover": "https://cdn2.unrealengine.com/sxty8qoicvfbs2z4-512x512-502959fd5ebd.jpg",
+      "bpm": 150,
+      "duration": "3m 0s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-06-21T20:17:19.777Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4e6df1ccb505e0d8a8f79086c321762a2b84bfd8"
+    },
+    "sexyandiknowit": {
+      "title": "Sexy And I Know It",
+      "artist": "LMFAO",
+      "releaseYear": 2011,
+      "cover": "https://cdn2.unrealengine.com/2ead1crvti38siu2-512x512-2d0ef227a2dd.jpg",
+      "bpm": 130,
+      "duration": "3m 21s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 2,
+        "drums": 1
+      },
+      "lastModified": "2024-06-21T20:18:05.075Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/dd70b7db98aa5b41e43172e64c39737acacd04b1"
+    },
+    "dynamite": {
+      "title": "Dynamite",
+      "artist": "BTS",
+      "releaseYear": 2020,
+      "cover": "https://cdn2.unrealengine.com/vhrehxelvjlnnajl-512x512-b05f2955a110.jpg",
+      "bpm": 114,
+      "duration": "3m 19s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 1
+      },
+      "lastModified": "2024-06-21T20:14:04.331Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/98e266fea9df84fa3e5ca84934c513211e89489b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
