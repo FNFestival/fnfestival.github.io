@@ -1,16 +1,16 @@
 {
   "dailyTracks": [
-    "allthestars",
-    "dynamite",
     "hollabackgirl",
+    "dynamite",
     "humble",
-    "sexyandiknowit",
-    "toosweet",
-    "fuel",
-    "whereverimayroam",
-    "seekanddestroy",
+    "luxaeterna",
+    "nothingelsematters",
+    "ridethelightning",
+    "theunforgiven",
+    "basketcase",
+    "mrbrightside",
+    "withorwithoutyou",
     "lovinonme",
-    "toxicity",
     "kissmemore",
     "blitzkriegbop",
     "gangnamstyle",
@@ -21,15 +21,7 @@
     "thisishowwedoit",
     "boysaliarpt2"
   ],
-  "upcomingTracks": [
-    "luxaeterna",
-    "nothingelsematters",
-    "ridethelightning",
-    "theunforgiven",
-    "basketcase",
-    "mrbrightside",
-    "withorwithoutyou"
-  ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
