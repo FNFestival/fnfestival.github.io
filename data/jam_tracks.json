@@ -1,28 +1,7 @@
 {
   "dailyTracks": [
-    "sexyandiknowit",
-    "toosweet",
-    "allthestars",
-    "masterofpuppets",
-    "forwhomthebelltolls",
-    "nothingelsematters",
-    "whereverimayroam",
-    "marchofthepigs",
-    "welcometoparadise",
-    "sandstorm",
-    "lovinonme",
-    "kissmemore",
-    "blitzkriegbop",
-    "gangnamstyle",
-    "makedamnsure",
-    "changes",
-    "rubysoho",
-    "sucker",
-    "thisishowwedoit",
-    "boysaliarpt2"
-  ],
-  "upcomingTracks": [
     "humble",
+    "allthestars",
     "hollabackgirl",
     "luxaeterna",
     "entersandman",
@@ -30,8 +9,19 @@
     "seekanddestroy",
     "i_kendrick",
     "hysteria",
-    "ellabailasola"
+    "ellabailasola",
+    "lovinonme",
+    "kissmemore",
+    "blitzkriegbop",
+    "gangnamstyle",
+    "makedamnsure",
+    "changes",
+    "rubysoho",
+    "thisishowwedoit",
+    "sucker",
+    "boysaliarpt2"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
