@@ -21,7 +21,27 @@
     "thisishowwedoit",
     "boysaliarpt2"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "uptownfunk",
+    "heybrother",
+    "titimepregunto",
+    "gimmethelight",
+    "masterofpuppets",
+    "theunforgiven",
+    "whereverimayroam",
+    "nothingsalright",
+    "yesand",
+    "twentyfourkmagic",
+    "ihadsomehelp",
+    "bullsonparade",
+    "dragula",
+    "breed",
+    "killinginthename",
+    "bringmetolife",
+    "toxicity",
+    "luciddreams",
+    "thehills"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3620,6 +3640,70 @@
       },
       "lastModified": "2024-06-21T20:14:04.331Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/98e266fea9df84fa3e5ca84934c513211e89489b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "gimmethelight": {
+      "title": "Gimme The Light",
+      "artist": "Sean Paul",
+      "releaseYear": 2002,
+      "cover": "https://cdn2.unrealengine.com/gi5jxz6oqajcapie-512x512-c1767fa6fe45.jpg",
+      "bpm": 107,
+      "duration": "3m 52s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-06-26T18:13:16.824Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/016bbb821081ec4ca4fb1339b23a52c8d76a5181?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "heybrother": {
+      "title": "Hey Brother",
+      "artist": "Avicii",
+      "releaseYear": 2013,
+      "cover": "https://cdn2.unrealengine.com/tuj3ro8qdzogygwp-512x512-d216b666ccaf.jpg",
+      "bpm": 125,
+      "duration": "4m 17s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-06-26T18:14:22.499Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b0f7ab0efb90d7df8535784a2187034e70d0ab24"
+    },
+    "uptownfunk": {
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson ft. Bruno Mars",
+      "releaseYear": 2014,
+      "cover": "https://cdn2.unrealengine.com/xurfccwjy3t6dtwg-512x512-33a2d693a0f9.jpg",
+      "bpm": 115,
+      "duration": "4m 34s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 4,
+        "drums": 3
+      },
+      "lastModified": "2024-06-26T18:12:14.429Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b8ebdee8d388a387abcbd9f6c370b8b12b5ff864"
+    },
+    "titimepregunto": {
+      "title": "Tití Me Preguntó",
+      "artist": "Bad Bunny",
+      "releaseYear": 2022,
+      "cover": "https://cdn2.unrealengine.com/snrzzb5ocdstxj3m-512x512-fd80314166db.jpg",
+      "bpm": 111,
+      "duration": "4m 5s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 3
+      },
+      "lastModified": "2024-06-26T18:15:16.878Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/53a6217761f8fdfcff92189cafbbd1cc21fdb813?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
