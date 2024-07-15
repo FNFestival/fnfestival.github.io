@@ -21,7 +21,18 @@
     "luciddreams",
     "thehills"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "titimepregunto",
+    "gimmethelight",
+    "entersandman",
+    "ridethelightning",
+    "nothingelsematters",
+    "rosesimanbek",
+    "mood",
+    "saveyourtears",
+    "applause",
+    "bloodymary"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3682,7 +3693,7 @@
         "bass": 1,
         "drums": 3
       },
-      "lastModified": "2024-06-26T18:15:16.878Z",
+      "lastModified": "2024-07-15T13:53:41.598Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/53a6217761f8fdfcff92189cafbbd1cc21fdb813?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
