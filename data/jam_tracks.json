@@ -21,7 +21,17 @@
     "heartbreaker",
     "basketcase"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "walkemdown",
+    "sexyandiknowit",
+    "sowhat",
+    "luxaeterna",
+    "ridethelightning",
+    "forwhomthebelltolls",
+    "twentyfourkmagic",
+    "superfreak",
+    "justdance"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3764,6 +3774,38 @@
       },
       "lastModified": "2024-07-16T18:11:05.951Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/48e3201996af61c4e48bb5f8dbdd004db4a6a63b"
+    },
+    "infernoisland": {
+      "title": "Inferno Island (Molten Mix)",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/sgrz1vl0itrrogcw-512x512-063f2c671df6.jpg",
+      "bpm": 123,
+      "duration": "3m 1s",
+      "difficulties": {
+        "vocals": 0,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-19T14:13:42.286Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/75f76e991bb547c4c7e13f07993ea283622b890f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "holiday": {
+      "title": "Holiday",
+      "artist": "Green Day",
+      "releaseYear": 2004,
+      "cover": "https://cdn2.unrealengine.com/bjxf1h0lmwn38bjk-512x512-49581a94e014.jpg",
+      "bpm": 147,
+      "duration": "3m 59s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-07-18T17:53:10.853Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/322f461996396ac53bbb8a33b459e352ddf5d2c0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
