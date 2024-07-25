@@ -3796,6 +3796,70 @@
       },
       "lastModified": "2024-07-18T17:53:10.853Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/322f461996396ac53bbb8a33b459e352ddf5d2c0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "theboysareback": {
+      "title": "The Boys Are Back In Town",
+      "artist": "Thin Lizzy",
+      "releaseYear": 1976,
+      "cover": "https://cdn2.unrealengine.com/ov6ieyvtvw0q3kja-512x512-ec4239f7f5e8.jpg",
+      "bpm": 160,
+      "duration": "4m 50s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 3
+      },
+      "lastModified": "2024-07-23T15:30:28.332Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/753aaed7d16ec2dac0ff8af05123177a44c19351"
+    },
+    "thefinalcountdown": {
+      "title": "The Final Countdown",
+      "artist": "Europe",
+      "releaseYear": 1986,
+      "cover": "https://cdn2.unrealengine.com/e7cf27do7xpaki2b-512x512-7734c7da0e35.jpg",
+      "bpm": 117,
+      "duration": "5m 30s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 3
+      },
+      "lastModified": "2024-07-23T15:32:12.566Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/eaa4589de811f47326f5a15013ed58bd62a9e96a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "unsainted": {
+      "title": "Unsainted",
+      "artist": "Slipknot",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/klwikr5dubsxnxrq-512x512-dee8d0dd4633.jpg",
+      "bpm": 102,
+      "duration": "4m 24s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-07-23T15:33:42.144Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "would": {
+      "title": "Would?",
+      "artist": "Alice In Chains",
+      "releaseYear": 1992,
+      "cover": "https://cdn2.unrealengine.com/qs4xbbf79elcejds-512x512-3f0fcfcbd1ab.jpg",
+      "bpm": 104,
+      "duration": "3m 31s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-23T15:35:07.272Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1343c561e5b037af86835365ee0bb9718c20ae11?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
