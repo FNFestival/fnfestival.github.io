@@ -1,28 +1,7 @@
 {
   "dailyTracks": [
-    "would",
-    "unsainted",
-    "fuel",
-    "ridethelightning",
-    "forwhomthebelltolls",
-    "whatsmyageagain",
-    "whatislove",
-    "sandstorm",
-    "justagirl",
-    "sabotage",
-    "circles",
-    "starships",
-    "good4u",
-    "sidetoside",
-    "cantstopthefeeling",
-    "humble",
-    "blueberryfaygo",
-    "sexyandiknowit",
-    "badromance",
-    "chihiro"
-  ],
-  "upcomingTracks": [
     "thefinalcountdown",
+    "would",
     "seekanddestroy",
     "nothingelsematters",
     "theunforgiven",
@@ -31,8 +10,18 @@
     "walkemdown",
     "beforeiforget",
     "betternow",
+    "circles",
+    "sabotage",
+    "starships",
+    "sidetoside",
+    "humble",
+    "cantstopthefeeling",
+    "blueberryfaygo",
+    "sexyandiknowit",
+    "badromance",
     "thediner"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
