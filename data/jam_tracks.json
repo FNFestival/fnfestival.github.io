@@ -21,7 +21,26 @@
     "cantstopthefeeling",
     "sabotage"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "fadetoblack",
+    "battery",
+    "sadbuttrue",
+    "masterofpuppets",
+    "fuel",
+    "entersandman",
+    "betternow",
+    "beggin",
+    "dynamite",
+    "creaturesinheaven",
+    "theboyismine",
+    "allthegoodgirls",
+    "stupidlove",
+    "xotourllif3",
+    "mrbrightside",
+    "toxicity",
+    "changes",
+    "shivers"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3860,6 +3879,54 @@
       },
       "lastModified": "2024-07-23T15:35:07.272Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/1343c561e5b037af86835365ee0bb9718c20ae11?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "battery": {
+      "title": "Battery",
+      "artist": "Metallica",
+      "releaseYear": 1986,
+      "cover": "https://cdn2.unrealengine.com/g6g91cdjohbwfqac-512x512-3a770b5f6161.jpg",
+      "bpm": 98,
+      "duration": "5m 12s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 6,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-07-30T16:08:07.350Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/f8609b4123738dfa7da086f353a42e4a91e1b796?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "sadbuttrue": {
+      "title": "Sad But True",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/axabzkzv92vf8euo-512x512-8e5c46c64d4c.jpg",
+      "bpm": 89,
+      "duration": "5m 29s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-30T16:11:46.032Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b524a437eaa3b3798fe2e651cfda5de7d4443f88?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fadetoblack": {
+      "title": "Fade to Black",
+      "artist": "Metallica",
+      "releaseYear": 1984,
+      "cover": "https://cdn2.unrealengine.com/ic3zit5iz7opnhrw-512x512-8186073b0a55.jpg",
+      "bpm": 113,
+      "duration": "6m 52s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-07-30T16:10:14.173Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8f6f499c2a82f84a967fc14b9c1f60344b85b2ff?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
