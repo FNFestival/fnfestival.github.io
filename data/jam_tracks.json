@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "theboysareback",
-    "whereverimayroam",
-    "seekanddestroy",
-    "sowhat",
-    "allthestars",
-    "circles",
-    "humble",
-    "blueberryfaygo",
-    "badromance",
-    "sexyandiknowit",
-    "lunch",
-    "unsainted",
-    "ridethelightning",
-    "beforeiforget",
-    "savage",
-    "paintthetownred",
-    "starships",
-    "sidetoside",
-    "cantstopthefeeling",
-    "sabotage"
-  ],
-  "upcomingTracks": [
     "fadetoblack",
     "battery",
     "sadbuttrue",
@@ -30,17 +8,20 @@
     "entersandman",
     "betternow",
     "beggin",
+    "beforeiforget",
     "dynamite",
     "creaturesinheaven",
     "theboyismine",
     "allthegoodgirls",
     "stupidlove",
+    "sexyandiknowit",
     "xotourllif3",
     "mrbrightside",
     "toxicity",
     "changes",
     "shivers"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
