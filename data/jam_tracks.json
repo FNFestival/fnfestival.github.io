@@ -21,7 +21,17 @@
     "changes",
     "shivers"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "fadetoblack",
+    "luxaeterna",
+    "theunforgiven",
+    "thefinalcountdown",
+    "heybrother",
+    "toosweet",
+    "uptownfunk",
+    "butter",
+    "titimepregunto"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3908,6 +3918,22 @@
       },
       "lastModified": "2024-07-30T16:10:14.173Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/8f6f499c2a82f84a967fc14b9c1f60344b85b2ff?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fallguys": {
+      "title": "Everybody Falls (Chill Mix)",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/ejxurqq0a50qctea-512x512-f4d1e9ab8623.jpg",
+      "bpm": 136,
+      "duration": "3m 34s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 4
+      },
+      "lastModified": "2024-07-31T14:39:39.139Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/77e27c4d66ba8017ff144e5d9960d780c2a6dca2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
