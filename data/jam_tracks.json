@@ -21,7 +21,28 @@
     "changes",
     "shivers"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "panda",
+    "daynnite",
+    "blackbeatles",
+    "fadetoblack",
+    "battery",
+    "luxaeterna",
+    "dontfearthereaper",
+    "makedamnsure",
+    "thisishowwedoit",
+    "ihadsomehelp",
+    "rosesimanbek",
+    "killinginthename",
+    "feelgoodinc",
+    "marchofthepigs",
+    "downwiththesickness",
+    "poison",
+    "<span>aintnorestforthewicked</span>",
+    "paradisecity",
+    "sweetchildomine",
+    "welcometothejungle"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -3924,6 +3945,118 @@
       },
       "lastModified": "2024-07-31T14:39:39.139Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/77e27c4d66ba8017ff144e5d9960d780c2a6dca2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "aintnorestforthewicked": {
+      "title": "Ain't No Rest For The Wicked",
+      "artist": "Cage The Elephant",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/m0gjb61r2ita5ylk-512x512-330628506c69.jpg",
+      "bpm": 156,
+      "duration": "2m 58s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-08-06T19:19:00.434Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/ada37d5b27a8c23c77d3f66c7f81d656ec3deefc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "blackbeatles": {
+      "title": "Black Beatles",
+      "artist": "Rae Sremmurd ft. Gucci Mane",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/heo0pzx0ovwbpmzj-512x512-e38c44fb0d49.jpg",
+      "bpm": 146,
+      "duration": "4m 27s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:20:07.721Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b593c86473427fe43dde55b7ed7c5c85c89d23c4"
+    },
+    "daynnite": {
+      "title": "Day 'N' Nite",
+      "artist": "Kid Cudi",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/unslw6fiprz5630h-512x512-c64246ef7b46.jpg",
+      "bpm": 138,
+      "duration": "3m 44s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 2,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-08-06T19:22:26.829Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b5adfa9b47f00f2e375b2f734656e7795615bacf"
+    },
+    "sweetchildomine": {
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/rwmy1dk3aqklj6as-512x512-bbd970e5aea5.jpg",
+      "bpm": 127,
+      "duration": "5m 57s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 3,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:25:51.899Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/a941cdd2c0c74206aaa6d7e459e4fdf1d738deaa"
+    },
+    "panda": {
+      "title": "Panda",
+      "artist": "Desiigner",
+      "releaseYear": 2015,
+      "cover": "https://cdn2.unrealengine.com/mdllyoxljxni0rru-512x512-b0e62cdce531.jpg",
+      "bpm": 145,
+      "duration": "3m 49s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:23:29.416Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2a18383da5e192a5cb582fd4488a81bda5973f5e"
+    },
+    "paradisecity": {
+      "title": "Paradise City",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/c4qb3iquma52lxlm-512x512-a0458ae62f2d.jpg",
+      "bpm": 100,
+      "duration": "6m 51s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 6,
+        "bass": 5,
+        "drums": 4
+      },
+      "lastModified": "2024-08-06T19:24:57.772Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6c99e08ad1885d08023354ac96b546ffe3dee44b"
+    },
+    "welcometothejungle": {
+      "title": "Welcome To The Jungle",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/sdg1w0obgx0m9f0h-512x512-568091543e5d.jpg",
+      "bpm": 124,
+      "duration": "4m 34s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 4
+      },
+      "lastModified": "2024-08-06T19:26:44.862Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4625797f3517e8945e9b191119bcc0b67491cfd1"
     }
   }
 }
