@@ -1,27 +1,5 @@
 {
   "dailyTracks": [
-    "fadetoblack",
-    "luxaeterna",
-    "theunforgiven",
-    "thefinalcountdown",
-    "heybrother",
-    "toosweet",
-    "uptownfunk",
-    "butter",
-    "titimepregunto",
-    "dynamite",
-    "creaturesinheaven",
-    "theboyismine",
-    "allthegoodgirls",
-    "stupidlove",
-    "sexyandiknowit",
-    "xotourllif3",
-    "mrbrightside",
-    "toxicity",
-    "changes",
-    "shivers"
-  ],
-  "upcomingTracks": [
     "forwhomthebelltolls",
     "sadbuttrue",
     "whereverimayroam",
@@ -30,8 +8,20 @@
     "bandit",
     "iwish",
     "cantstopthefeeling",
-    "getlow"
+    "getlow",
+    "dynamite",
+    "creaturesinheaven",
+    "theboyismine",
+    "allthegoodgirls",
+    "sexyandiknowit",
+    "stupidlove",
+    "mrbrightside",
+    "xotourllif3",
+    "toxicity",
+    "changes",
+    "shivers"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
