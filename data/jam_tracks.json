@@ -1,25 +1,25 @@
 {
   "dailyTracks": [
-    "abcdefu",
-    "butter",
-    "letyoudown",
-    "walkemdown",
-    "ridewitme",
-    "ridethelightning",
-    "masterofpuppets",
-    "cheapthrills",
-    "myexsbestfriend",
-    "beggin",
-    "buddyholly",
-    "cantfeelmyface",
-    "sevennationarmy",
-    "carryonwaywardson",
-    "themiddle",
-    "transparentsoul",
-    "everlong",
-    "callmemaybe",
-    "heartbreaker",
-    "basketcase"
+    "panda",
+    "daynnite",
+    "blackbeatles",
+    "fadetoblack",
+    "battery",
+    "luxaeterna",
+    "dontfearthereaper",
+    "makedamnsure",
+    "thisishowwedoit",
+    "ihadsomehelp",
+    "rosesimanbek",
+    "killinginthename",
+    "feelgoodinc",
+    "marchofthepigs",
+    "downwiththesickness",
+    "poison",
+    "<span>aintnorestforthewicked</span>",
+    "paradisecity",
+    "sweetchildomine",
+    "welcometothejungle"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -2441,7 +2441,7 @@
       "title": "Change",
       "artist": "Epic Games",
       "releaseYear": 2024,
-      "cover": "https://cdn2.unrealengine.com/9j3le7yl9ck6te48-512x512-efb264632d4c.jpg",
+      "cover": "https://cdn2.unrealengine.com/im23fifqs1nz8zvh-512x512-96936e749c87.jpg",
       "bpm": 90,
       "duration": "3m 7s",
       "difficulties": {
@@ -2450,7 +2450,7 @@
         "bass": 4,
         "drums": 4
       },
-      "lastModified": "2024-04-22T16:20:12.185Z",
+      "lastModified": "2024-08-02T16:20:48.588Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/65c2741417ff629103d05f472252d92e911492aa"
     },
     "findthefury": {
@@ -3764,6 +3764,278 @@
       },
       "lastModified": "2024-07-16T18:11:05.951Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/48e3201996af61c4e48bb5f8dbdd004db4a6a63b"
+    },
+    "infernoisland": {
+      "title": "Inferno Island (Molten Mix)",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/sgrz1vl0itrrogcw-512x512-063f2c671df6.jpg",
+      "bpm": 123,
+      "duration": "3m 1s",
+      "difficulties": {
+        "vocals": 0,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-19T14:13:42.286Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/75f76e991bb547c4c7e13f07993ea283622b890f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "holiday": {
+      "title": "Holiday",
+      "artist": "Green Day",
+      "releaseYear": 2004,
+      "cover": "https://cdn2.unrealengine.com/bjxf1h0lmwn38bjk-512x512-49581a94e014.jpg",
+      "bpm": 147,
+      "duration": "3m 59s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-07-18T17:53:10.853Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/322f461996396ac53bbb8a33b459e352ddf5d2c0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "theboysareback": {
+      "title": "The Boys Are Back In Town",
+      "artist": "Thin Lizzy",
+      "releaseYear": 1976,
+      "cover": "https://cdn2.unrealengine.com/ov6ieyvtvw0q3kja-512x512-ec4239f7f5e8.jpg",
+      "bpm": 160,
+      "duration": "4m 50s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 3
+      },
+      "lastModified": "2024-07-23T15:30:28.332Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/753aaed7d16ec2dac0ff8af05123177a44c19351"
+    },
+    "thefinalcountdown": {
+      "title": "The Final Countdown",
+      "artist": "Europe",
+      "releaseYear": 1986,
+      "cover": "https://cdn2.unrealengine.com/e7cf27do7xpaki2b-512x512-7734c7da0e35.jpg",
+      "bpm": 117,
+      "duration": "5m 30s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 3
+      },
+      "lastModified": "2024-07-23T15:32:12.566Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/eaa4589de811f47326f5a15013ed58bd62a9e96a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "unsainted": {
+      "title": "Unsainted",
+      "artist": "Slipknot",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/klwikr5dubsxnxrq-512x512-dee8d0dd4633.jpg",
+      "bpm": 102,
+      "duration": "4m 24s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 4,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-07-23T15:33:42.144Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "would": {
+      "title": "Would?",
+      "artist": "Alice In Chains",
+      "releaseYear": 1992,
+      "cover": "https://cdn2.unrealengine.com/qs4xbbf79elcejds-512x512-3f0fcfcbd1ab.jpg",
+      "bpm": 104,
+      "duration": "3m 31s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 3,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-23T15:35:07.272Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1343c561e5b037af86835365ee0bb9718c20ae11?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "battery": {
+      "title": "Battery",
+      "artist": "Metallica",
+      "releaseYear": 1986,
+      "cover": "https://cdn2.unrealengine.com/g6g91cdjohbwfqac-512x512-3a770b5f6161.jpg",
+      "bpm": 98,
+      "duration": "5m 12s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 6,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-07-30T16:08:07.350Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/f8609b4123738dfa7da086f353a42e4a91e1b796?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "sadbuttrue": {
+      "title": "Sad But True",
+      "artist": "Metallica",
+      "releaseYear": 1991,
+      "cover": "https://cdn2.unrealengine.com/axabzkzv92vf8euo-512x512-8e5c46c64d4c.jpg",
+      "bpm": 89,
+      "duration": "5m 29s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 3,
+        "drums": 4
+      },
+      "lastModified": "2024-07-30T16:11:46.032Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b524a437eaa3b3798fe2e651cfda5de7d4443f88?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fadetoblack": {
+      "title": "Fade to Black",
+      "artist": "Metallica",
+      "releaseYear": 1984,
+      "cover": "https://cdn2.unrealengine.com/ic3zit5iz7opnhrw-512x512-8186073b0a55.jpg",
+      "bpm": 113,
+      "duration": "6m 52s",
+      "difficulties": {
+        "vocals": 1,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 5
+      },
+      "lastModified": "2024-07-30T16:10:14.173Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/8f6f499c2a82f84a967fc14b9c1f60344b85b2ff?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fallguys": {
+      "title": "Everybody Falls (Chill Mix)",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/ejxurqq0a50qctea-512x512-f4d1e9ab8623.jpg",
+      "bpm": 136,
+      "duration": "3m 34s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 4
+      },
+      "lastModified": "2024-07-31T14:39:39.139Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/77e27c4d66ba8017ff144e5d9960d780c2a6dca2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "aintnorestforthewicked": {
+      "title": "Ain't No Rest For The Wicked",
+      "artist": "Cage The Elephant",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/m0gjb61r2ita5ylk-512x512-330628506c69.jpg",
+      "bpm": 156,
+      "duration": "2m 58s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-08-06T19:19:00.434Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/ada37d5b27a8c23c77d3f66c7f81d656ec3deefc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "blackbeatles": {
+      "title": "Black Beatles",
+      "artist": "Rae Sremmurd ft. Gucci Mane",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/heo0pzx0ovwbpmzj-512x512-e38c44fb0d49.jpg",
+      "bpm": 146,
+      "duration": "4m 27s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:20:07.721Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b593c86473427fe43dde55b7ed7c5c85c89d23c4"
+    },
+    "daynnite": {
+      "title": "Day 'N' Nite",
+      "artist": "Kid Cudi",
+      "releaseYear": 2008,
+      "cover": "https://cdn2.unrealengine.com/unslw6fiprz5630h-512x512-c64246ef7b46.jpg",
+      "bpm": 138,
+      "duration": "3m 44s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 2,
+        "bass": 0,
+        "drums": 2
+      },
+      "lastModified": "2024-08-06T19:22:26.829Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b5adfa9b47f00f2e375b2f734656e7795615bacf"
+    },
+    "sweetchildomine": {
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/rwmy1dk3aqklj6as-512x512-bbd970e5aea5.jpg",
+      "bpm": 127,
+      "duration": "5m 57s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 5,
+        "bass": 3,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:25:51.899Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/a941cdd2c0c74206aaa6d7e459e4fdf1d738deaa"
+    },
+    "panda": {
+      "title": "Panda",
+      "artist": "Desiigner",
+      "releaseYear": 2015,
+      "cover": "https://cdn2.unrealengine.com/mdllyoxljxni0rru-512x512-b0e62cdce531.jpg",
+      "bpm": 145,
+      "duration": "3m 49s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 0,
+        "bass": 0,
+        "drums": 3
+      },
+      "lastModified": "2024-08-06T19:23:29.416Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/2a18383da5e192a5cb582fd4488a81bda5973f5e"
+    },
+    "paradisecity": {
+      "title": "Paradise City",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/c4qb3iquma52lxlm-512x512-a0458ae62f2d.jpg",
+      "bpm": 100,
+      "duration": "6m 51s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 6,
+        "bass": 5,
+        "drums": 4
+      },
+      "lastModified": "2024-08-06T19:24:57.772Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/6c99e08ad1885d08023354ac96b546ffe3dee44b"
+    },
+    "welcometothejungle": {
+      "title": "Welcome To The Jungle",
+      "artist": "Guns N' Roses",
+      "releaseYear": 1987,
+      "cover": "https://cdn2.unrealengine.com/sdg1w0obgx0m9f0h-512x512-568091543e5d.jpg",
+      "bpm": 124,
+      "duration": "4m 34s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 5,
+        "bass": 4,
+        "drums": 4
+      },
+      "lastModified": "2024-08-06T19:26:44.862Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/4625797f3517e8945e9b191119bcc0b67491cfd1"
     }
   }
 }
