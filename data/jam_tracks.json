@@ -1,34 +1,27 @@
 {
   "dailyTracks": [
-    "welcometothejungle",
-    "surroundsound",
-    "stupidlove",
-    "song2",
-    "singlesoon",
-    "popular",
-    "panda",
     "okidoki",
-    "migente",
-    "holdmecloser",
-    "highhopes",
-    "givemeeverything",
-    "flowers",
-    "feelgoodinc",
-    "ellabailasola",
-    "countingstars",
     "cairo",
-    "betrayedaardvark",
-    "basketcase",
-    "aintnorestforthewicked"
-  ],
-  "upcomingTracks": [
     "sweetchildomine",
     "dakiti",
+    "migente",
     "sidetoside",
     "lovinonme",
     "likeag6",
-    "takemybreath"
+    "takemybreath",
+    "feelgoodinc",
+    "basketcase",
+    "flowers",
+    "popular",
+    "stupidlove",
+    "song2",
+    "highhopes",
+    "betrayedaardvark",
+    "countingstars",
+    "holdmecloser",
+    "surroundsound"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
