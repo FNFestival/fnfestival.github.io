@@ -4228,6 +4228,86 @@
       },
       "lastModified": "2024-08-13T21:00:53.821Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/0092d994adfb469875064f91db144e4c12f45346"
+    },
+    "tusa": {
+      "title": "Tusa",
+      "artist": "Karol G ft. Nicki Minaj",
+      "releaseYear": 2019,
+      "cover": "https://cdn2.unrealengine.com/gpx6iy5fz6q0rpjb-512x512-6ae101eff2c7.jpg",
+      "bpm": 101,
+      "duration": "3m 21s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 0,
+        "bass": 1,
+        "drums": 0
+      },
+      "lastModified": "2024-08-20T18:29:48.618Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb"
+    },
+    "replay": {
+      "title": "Replay",
+      "artist": "Iyaz",
+      "releaseYear": 2009,
+      "cover": "https://cdn2.unrealengine.com/gtdjm3m8znvruycn-512x512-9d636a8fdc9a.jpg",
+      "bpm": 91,
+      "duration": "3m 8s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 0,
+        "drums": 4
+      },
+      "lastModified": "2024-08-20T19:01:53.153Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/fbc52df880d479ab0e34ee46bcc817a9f8b52a35?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "stickseason": {
+      "title": "Stick Season",
+      "artist": "Noah Kahan",
+      "releaseYear": 2022,
+      "cover": "https://cdn2.unrealengine.com/8vuru5uze8sdbejg-512x512-c2ca689c5ae0.jpg",
+      "bpm": 118,
+      "duration": "3m 4s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 4,
+        "drums": 0
+      },
+      "lastModified": "2024-08-20T19:02:14.172Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/0495eca339f32d0acaa62ca9be55d2b815ccc4e3"
+    },
+    "espresso": {
+      "title": "Espresso",
+      "artist": "Sabrina Carpenter",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/kvwe2rkqkec4jkof-512x512-8f64501dcc8f.jpg",
+      "bpm": 104,
+      "duration": "2m 59s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 2,
+        "drums": 1
+      },
+      "lastModified": "2024-08-20T18:34:41.392Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/c4f4406777deb17f09c0237b22044a8b18d986a4"
+    },
+    "provenza": {
+      "title": "PROVENZA (REMIX)",
+      "artist": "Karol G ft. Tiësto",
+      "releaseYear": 2023,
+      "cover": "https://cdn2.unrealengine.com/kfzepityukk6hjco-512x512-a3b247281c40.jpg",
+      "bpm": 128,
+      "duration": "3m 7s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 1,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-08-20T19:01:15.531Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261"
     }
   }
 }
