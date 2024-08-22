@@ -1,27 +1,7 @@
 {
   "dailyTracks": [
-    "okidoki",
     "cairo",
-    "twentyfourkmagic",
-    "beggin",
-    "kissmemore",
-    "welcometothejungle",
-    "panda",
-    "unsainted",
-    "beautifulday",
-    "basketcase",
-    "fadetoblack",
-    "stupidlove",
-    "flowers",
-    "popular",
-    "song2",
-    "highhopes",
-    "betrayedaardvark",
-    "countingstars",
-    "holdmecloser",
-    "surroundsound"
-  ],
-  "upcomingTracks": [
+    "okidoki",
     "bornthisway",
     "happierthanever",
     "numb",
@@ -29,8 +9,19 @@
     "allofme",
     "daynnite",
     "would",
-    "bringmetolife"
+    "bringmetolife",
+    "basketcase",
+    "flowers",
+    "stupidlove",
+    "song2",
+    "highhopes",
+    "betrayedaardvark",
+    "popular",
+    "holdmecloser",
+    "countingstars",
+    "surroundsound"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
