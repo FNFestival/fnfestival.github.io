@@ -21,7 +21,12 @@
     "mood",
     "miserybusiness"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "saveyourtears",
+    "dogdaysareover",
+    "nothingsalright",
+    "dontyouworrychild"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
