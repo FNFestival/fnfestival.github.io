@@ -21,7 +21,25 @@
     "metoo",
     "miserybusiness"
   ],
-  "upcomingTracks": [],
+  "upcomingTracks": [
+    "maps",
+    "fly",
+    "broccoli",
+    "intheend",
+    "wheneverwherever",
+    "espresso",
+    "ridewitme",
+    "breed",
+    "thesearch",
+    "weliketoparty",
+    "uptownfunk",
+    "hollabackgirl",
+    "cheapthrills",
+    "superfreak",
+    "santeria",
+    "lessthan",
+    "zombie"
+  ],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
@@ -4308,6 +4326,70 @@
       },
       "lastModified": "2024-08-20T19:01:15.531Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261"
+    },
+    "intheend": {
+      "title": "In The End",
+      "artist": "Linkin Park",
+      "releaseYear": 2000,
+      "cover": "https://cdn2.unrealengine.com/adbjhevyueggqgur-512x512-83a260a1e1a3.jpg",
+      "bpm": 105,
+      "duration": "3m 39s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 1,
+        "bass": 2,
+        "drums": 4
+      },
+      "lastModified": "2024-08-27T19:21:05.233Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/b5ee275ca337899f762b1c1883c11e24a04075b0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "broccoli": {
+      "title": "Broccoli",
+      "artist": "DRAM ft. Lil Yachty",
+      "releaseYear": 2016,
+      "cover": "https://cdn2.unrealengine.com/aywqms9qo3hfulvt-512x512-b6a389f2a8f5.jpg",
+      "bpm": 146,
+      "duration": "3m 43s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 1
+      },
+      "lastModified": "2024-08-27T19:15:44.445Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/72ead3dff2729ca0e0b7fa4b692a73aaa5231f4d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "wheneverwherever": {
+      "title": "Whenever, Wherever",
+      "artist": "Shakira",
+      "releaseYear": 2001,
+      "cover": "https://cdn2.unrealengine.com/qwmw6ogicflnpupp-512x512-97ca053dff36.jpg",
+      "bpm": 110,
+      "duration": "3m 22s",
+      "difficulties": {
+        "vocals": 4,
+        "guitar": 3,
+        "bass": 2,
+        "drums": 3
+      },
+      "lastModified": "2024-08-27T19:22:07.747Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/93dc52d836150fba41afeb6df2e9167875c7d8fb?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "fly": {
+      "title": "Fly",
+      "artist": "Quavo and Lenny Kravitz",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/swrchxdzho24t0hk-512x512-c75ae83edfa3.jpg",
+      "bpm": 160,
+      "duration": "2m 35s",
+      "difficulties": {
+        "vocals": 3,
+        "guitar": 2,
+        "bass": 1,
+        "drums": 2
+      },
+      "lastModified": "2024-08-28T15:29:12.093Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/7e3ca80769c5e72678f6c93dec3f9b9e70a6e8c2"
     }
   }
 }
