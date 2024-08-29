@@ -1,35 +1,27 @@
 {
   "dailyTracks": [
-    "tusa",
     "provenza",
-    "replay",
+    "tusa",
     "okidoki",
-    "comeandgo",
-    "themiddle2",
-    "applause",
-    "justdance",
-    "pompeii",
-    "sucker",
-    "thewaylifegoes",
-    "lightemup",
-    "hailtotheking",
-    "circles",
-    "astronautintheocean",
-    "mood",
-    "chihiro",
-    "timeless",
-    "metoo",
-    "miserybusiness"
-  ],
-  "upcomingTracks": [
     "youdontknowwhatyouvegot",
     "ithinkimokay",
     "iwannagetbetter",
     "woman",
     "vampire",
     "highwaytune",
-    "boysaliarpt2"
+    "boysaliarpt2",
+    "thewaylifegoes",
+    "lightemup",
+    "hailtotheking",
+    "chihiro",
+    "circles",
+    "astronautintheocean",
+    "mood",
+    "timeless",
+    "metoo",
+    "miserybusiness"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
