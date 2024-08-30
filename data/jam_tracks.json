@@ -1,33 +1,14 @@
 {
   "dailyTracks": [
-    "provenza",
-    "tusa",
-    "okidoki",
-    "youdontknowwhatyouvegot",
-    "ithinkimokay",
-    "iwannagetbetter",
-    "woman",
-    "vampire",
-    "highwaytune",
-    "boysaliarpt2",
-    "thewaylifegoes",
-    "lightemup",
-    "hailtotheking",
-    "chihiro",
-    "circles",
-    "astronautintheocean",
-    "mood",
-    "timeless",
-    "metoo",
-    "miserybusiness"
-  ],
-  "upcomingTracks": [
     "maps",
     "fly",
     "broccoli",
     "intheend",
     "wheneverwherever",
+    "tusa",
+    "provenza",
     "espresso",
+    "okidoki",
     "ridewitme",
     "breed",
     "thesearch",
@@ -40,6 +21,7 @@
     "lessthan",
     "zombie"
   ],
+  "upcomingTracks": [],
   "jamTracks": {
     "butterbarnhoedown": {
       "title": "Butter Barn Hoedown",
