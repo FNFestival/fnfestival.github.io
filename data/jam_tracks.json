@@ -19,7 +19,9 @@
     "superfreak",
     "lessthan",
     "santeria",
-    "zombie"
+    "zombie",
+    "beyondtheflame",
+    "imawinner"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -4372,6 +4374,38 @@
       },
       "lastModified": "2024-08-28T15:29:12.093Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/7e3ca80769c5e72678f6c93dec3f9b9e70a6e8c2"
+    },
+    "beyondtheflame": {
+      "title": "Beyond the Flame",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/1zdjkpgzyzltqki0-512x512-be5f13f0940d.jpg",
+      "bpm": 90,
+      "duration": "4m 30s",
+      "difficulties": {
+        "vocals": 2,
+        "guitar": 6,
+        "bass": 4,
+        "drums": 6
+      },
+      "lastModified": "2024-08-30T18:51:35.916Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/7b380d654da78a1ba1bfb79daffb8919259fa80f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "imawinner": {
+      "title": "I'm a Winner",
+      "artist": "Epic Games",
+      "releaseYear": 2024,
+      "cover": "https://cdn2.unrealengine.com/1owynpe5l4qe1joh-512x512-8fd2cd8d26ba.jpg",
+      "bpm": 155,
+      "duration": "3m 37s",
+      "difficulties": {
+        "vocals": 5,
+        "guitar": 4,
+        "bass": 1,
+        "drums": 4
+      },
+      "lastModified": "2024-09-04T15:05:39.187Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/01c5f57608cdfcf0434e155bf61c846562356827?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
