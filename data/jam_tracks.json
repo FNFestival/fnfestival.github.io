@@ -5231,5 +5231,99 @@
     "difficulties": {},
     "lastModified": "2024-09-04T22:11:30.265Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/1221617836a4e3d55370b1fced7fc49b5db9fe3f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "dontletmedown": {
+    "title": "Don't Let Me Down",
+    "artist": "The Chainsmokers ft. Daya",
+    "releaseYear": 2016,
+    "cover": "https://cdn2.unrealengine.com/ecajdkqlk44frjeg-512x512-8240ce443bf2.jpg",
+    "bpm": 160,
+    "duration": "3m 29s",
+    "difficulties": {
+      "vocals": 1,
+      "guitar": 2,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-09-05T13:51:29.116Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9a50ae903e75de33dc7856e8600e523fcde3f319"
+  },
+  "betteroffalone": {
+    "title": "Better Off Alone",
+    "artist": "Alice Deejay",
+    "releaseYear": 1998,
+    "cover": "https://cdn2.unrealengine.com/wxj9erythq8urw6k-512x512-abc8b26371ad.jpg",
+    "bpm": 137,
+    "duration": "3m 39s",
+    "difficulties": {
+      "vocals": 0,
+      "guitar": 2,
+      "bass": 1,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-09-05T15:01:03.670Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/1351f3e191f38f51ff88a1e29e6fe552db539c36"
+  },
+  "apple": {
+    "title": "Apple",
+    "artist": "Charli xcx",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/tg9ervxpjbz6zww6-512x512-16b50aeec442.jpg",
+    "bpm": 126,
+    "duration": "2m 32s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 4,
+      "bass": 3,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-09-05T18:07:06.435Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "hottogo": {
+    "title": "HOT TO GO!",
+    "artist": "Chappell Roan",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/qmgxtlbtwqlk0ozk-512x512-74457e698961.jpg",
+    "duration": "3m 9s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 3,
+      "drums": 3,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-09-05T13:49:24.987Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/75ffd47fee75208bb0bd42858de25e23b0b13091"
+  },
+  "whatdoyoumean": {
+    "title": "What Do You Mean?",
+    "artist": "Justin Bieber",
+    "releaseYear": 2015,
+    "cover": "https://cdn2.unrealengine.com/jminqpohef5wzxge-512x512-d7aeba5b1330.jpg",
+    "bpm": 125,
+    "duration": "3m 28s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 1,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-09-05T14:15:10.812Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/408d55c4d5d6383a57b93361b6e58d5e8916ebe3"
   }
 }
