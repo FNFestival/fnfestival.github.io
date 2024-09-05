@@ -22,10 +22,10 @@ async function main() {
     const client = new Client({ auth });
 
     // Fetch daily and upcoming jam tracks
-    const { dailyTracks, upcomingTracks } = await fetchDailyJamTracks(client);
+    const dailyTracks = await fetchDailyJamTracks(client);
 
     // Update jam tracks data
-    await updateJamTracks(availableTracksData, dailyTracks, upcomingTracks);
+    await updateJamTracks(availableTracksData, dailyTracks);
 }
 
 main();

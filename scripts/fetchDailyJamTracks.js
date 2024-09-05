@@ -1,5 +1,5 @@
 export async function fetchDailyJamTracks(client) {
-    let jamTracks = { dailyTracks: [], upcomingTracks: [] };
+    const dailyTracks = [];
 
     try {
         await client.login();
@@ -9,8 +9,6 @@ export async function fetchDailyJamTracks(client) {
         const states = channel?.states || [];
 
         const currentDate = new Date();
-        const tomorrowDate = new Date();
-        tomorrowDate.setDate(currentDate.getDate() + 1);
 
         states
             .flatMap(state => state.activeEvents || [])
@@ -20,21 +18,14 @@ export async function fetchDailyJamTracks(client) {
                 const activeSince = new Date(activeEvent.activeSince);
                 const activeUntil = new Date(activeEvent.activeUntil);
                 const isDaily = activeSince < currentDate && activeUntil > currentDate;
-                const isUpcoming = activeSince.getDate() === tomorrowDate.getDate() &&
-                    activeSince.getMonth() === tomorrowDate.getMonth() &&
-                    activeSince.getFullYear() === tomorrowDate.getFullYear();
 
-                if (!jamTracks.dailyTracks.includes(eventType)) {
-                    if (isDaily) {
-                        jamTracks.dailyTracks.push(eventType);
-                    } else if (isUpcoming) {
-                        jamTracks.upcomingTracks.push(eventType);
-                    }
+                if (isDaily && !dailyTracks.includes(eventType)) {
+                    dailyTracks.push(eventType);
                 }
             });
     } catch (error) {
         console.error('Error fetching daily jam tracks:', error);
     }
 
-    return jamTracks;
+    return { dailyTracks };
 }

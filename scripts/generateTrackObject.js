@@ -19,7 +19,10 @@ export function generateTrackObject(trackData, previewUrl) {
             vocals: track.in.vl,
             guitar: track.in.gr,
             bass: track.in.ba,
-            drums: track.in.ds
+            drums: track.in.ds,
+            'plastic-bass': track.in.pb,
+            'plastic-drums': track.in.pd,
+            'plastic-guitar': track.in.pg
         },
         lastModified: trackData.lastModified,
         previewUrl

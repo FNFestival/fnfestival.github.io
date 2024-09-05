@@ -13,21 +13,30 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://cdn2.unrealengine.com" crossorigin>
     <link rel="preconnect" href="https://p.scdn.co" crossorigin>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script type="module" src="assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css?v2">
+    <script type="module" src="assets/js/scripts.js?v2"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <img src="assets/images/fn-logo.svg" alt="Fortnite Logo" draggable="false">
-            <p translate="no">Festival</p>
+    <header class="header">
+        <div class="container">
+            <img id="logo" src="assets/images/logo.png" alt="Fortnite Festival Logo" draggable="false">
+            <div class="search-wrapper">
+                <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
+                <span id="trackCount" class="track-count"></span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/FNFestival/fnfestival.github.io" target="_blank">GitHub</a>
+            </div>
         </div>
-        <div class="content">
-            <!-- Jam tracks will be added dynamically here -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <!-- Jam tracks will be added dynamically here -->
+            </div>
         </div>
-    </div>
-
-    <div id="myModal" class="modal">
+    </main>
+    <div id="trackModal" class="modal">
         <span class="modal-close">&times;</span>
         <div class="modal-content">
             <div class="modal-header">
@@ -36,14 +45,20 @@
                     <h2 id="modalTitle" translate="no"></h2>
                     <p id="modalArtist" translate="no"></p>
                 </div>
+                <button id="playPreviewButton" class="play-button">
+                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                    <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                    </svg>
+                </button>
             </div>
             <div class="modal-body">
-                <div class="modal-details" id="modalDetails"></div>
-                <div class="modal-difficulties" id="modalDifficulties"></div>
+                <div id="modalDetails" class="modal-details"></div>
+                <div id="modalDifficulties" class="modal-difficulties"></div>
             </div>
         </div>
     </div>
-
-    <audio id="trackPreview"></audio>
 </body>
 </html>

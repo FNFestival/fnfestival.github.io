@@ -4,14 +4,15 @@ import { generateTrackObject } from './generateTrackObject.js';
 
 const JAM_TRACKS_FILE = 'data/jam_tracks.json';
 
-export async function updateJamTracks(availableTracksData, dailyTracks, upcomingTracks) {
+export async function updateJamTracks(availableTracksData, dailyTracks) {
     try {
         // Read existing jam tracks data from file
         let jamTracksData = {};
         try {
             jamTracksData = JSON.parse(await fs.readFile(JAM_TRACKS_FILE, 'utf-8'));
         } catch (error) {
-            throw new Error('Error reading jam tracks file:', error);
+            // If the file doesn't exist or has issues, start with an empty object
+            jamTracksData = {};
         }
 
         // Process available tracks and generate the track object
@@ -21,22 +22,22 @@ export async function updateJamTracks(availableTracksData, dailyTracks, upcoming
             if (!trackData.track) continue;
 
             // Check if track already has a preview URL in the existing data
-            const existingTrack = jamTracksData.jamTracks[trackData.track.sn];
+            const existingTrack = jamTracksData[trackData.track.sn];
             const previewUrl = existingTrack?.previewUrl || await fetchPreviewUrl(trackData.track);
 
             // Generate jam track object
-            jamTracks[trackData.track.sn] = generateTrackObject(trackData, previewUrl);
+            const trackObject = generateTrackObject(trackData, previewUrl);
+
+            // Mark as featured if it's in dailyTracks
+            if (dailyTracks.includes(trackId)) {
+                trackObject.featured = true;
+            }
+
+            jamTracks[trackData.track.sn] = trackObject;
         }
 
-        // Construct updated jam tracks data
-        const updatedJamTracksData = {
-            dailyTracks,
-            upcomingTracks,
-            jamTracks
-        };
-
         // Write updated jam tracks data to file
-        await fs.writeFile(JAM_TRACKS_FILE, JSON.stringify(updatedJamTracksData, null, 2));
+        await fs.writeFile(JAM_TRACKS_FILE, JSON.stringify(jamTracks, null, 2));
 
         console.log('Jam tracks updated successfully.');
         process.exit(0);
