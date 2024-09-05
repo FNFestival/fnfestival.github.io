@@ -77,13 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTracks(tracks, clearExisting = true) {
         if (clearExisting) contentElement.innerHTML = '';
 
-        const currentTime = new Date();
-
         tracks.forEach(track => {
             const trackElement = document.createElement('div');
             trackElement.classList.add('jam-track');
-
-            const lastModifiedTime = new Date(track.lastModified);
 
             trackElement.innerHTML = `
                 <img src="${track.cover}" alt="${track.title} Cover">
