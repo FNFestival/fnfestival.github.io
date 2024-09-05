@@ -27,5 +27,5 @@ export async function fetchDailyJamTracks(client) {
         console.error('Error fetching daily jam tracks:', error);
     }
 
-    return { dailyTracks };
+    return dailyTracks;
 }
