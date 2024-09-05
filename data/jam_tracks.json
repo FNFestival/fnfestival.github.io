@@ -1,15 +1,17 @@
 {
   "dailyTracks": [
-    "fly",
-    "wheneverwherever",
+    "beyondtheflame",
+    "imawinner",
+    "maps",
+    "broccoli",
     "okidoki",
-    "changes",
-    "tusa",
-    "provenza",
-    "withorwithoutyou",
-    "whatsmyageagain",
-    "badguy",
-    "cantfeelmyface",
+    "bigenergy",
+    "partyrockanthem",
+    "hysteria",
+    "ittakestwo",
+    "cairo",
+    "believer",
+    "bullsonparade",
     "breed",
     "ridewitme",
     "weliketoparty",
@@ -19,9 +21,7 @@
     "superfreak",
     "lessthan",
     "santeria",
-    "zombie",
-    "beyondtheflame",
-    "imawinner"
+    "zombie"
   ],
   "upcomingTracks": [],
   "jamTracks": {
@@ -4406,6 +4406,15 @@
       },
       "lastModified": "2024-09-04T15:05:39.187Z",
       "previewUrl": "https://p.scdn.co/mp3-preview/01c5f57608cdfcf0434e155bf61c846562356827?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    },
+    "comingsoon": {
+      "title": "Coming Soon",
+      "artist": "",
+      "cover": "https://cdn2.unrealengine.com/fnsp-05-elegantlily-facebook-profile-512x512-512x512-d3959c300b4f.jpg",
+      "duration": "NaNm NaNs",
+      "difficulties": {},
+      "lastModified": "2024-09-04T22:11:30.265Z",
+      "previewUrl": "https://p.scdn.co/mp3-preview/1221617836a4e3d55370b1fced7fc49b5db9fe3f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
     }
   }
 }
