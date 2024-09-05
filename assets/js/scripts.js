@@ -150,19 +150,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const labelContainer = document.createElement('div');
         labelContainer.classList.add('label-container');
 
-        if (track.featured) {
-            const featuredLabel = document.createElement('span');
-            featuredLabel.classList.add('featured-label');
-            featuredLabel.textContent = 'Featured';
-            labelContainer.appendChild(featuredLabel);
-        }
-
         const sevenDaysInMillis = 7 * 24 * 60 * 60 * 1000;
         if (Date.now() - new Date(track.lastModified) < sevenDaysInMillis) {
             const newLabel = document.createElement('span');
             newLabel.classList.add('new-label');
             newLabel.textContent = 'New';
             labelContainer.appendChild(newLabel);
+        }
+
+        if (track.featured) {
+            const featuredLabel = document.createElement('span');
+            featuredLabel.classList.add('featured-label');
+            featuredLabel.textContent = 'Featured';
+            labelContainer.appendChild(featuredLabel);
         }
 
         return labelContainer;
