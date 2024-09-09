@@ -354,7 +354,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-02-28T18:44:03.822Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/4ed443643fee0e9e3217630789a03b7a8f58b4a7"
+    "previewUrl": "https://p.scdn.co/mp3-preview/4ed443643fee0e9e3217630789a03b7a8f58b4a7",
+    "featured": true
   },
   "gowiththeflow": {
     "title": "Go With The Flow",
@@ -2159,8 +2160,7 @@
       "plastic-guitar": 6
     },
     "lastModified": "2024-03-19T14:21:37.390Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/189d19a38bab3a4ee0e6401f77903e3696bb522e?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/189d19a38bab3a4ee0e6401f77903e3696bb522e?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "dontfearthereaper": {
     "title": "(Don't Fear) The Reaper",
@@ -2713,7 +2713,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-04-16T14:26:41.128Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/1cd97aefe74cf314ed91011a50adec3cc4e81918"
+    "previewUrl": "https://p.scdn.co/mp3-preview/1cd97aefe74cf314ed91011a50adec3cc4e81918",
+    "featured": true
   },
   "santeria": {
     "title": "Santeria",
@@ -2827,8 +2828,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-04-24T13:14:15.658Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/36f41e3d1e62e771fc4ceed91877785935881063",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/36f41e3d1e62e771fc4ceed91877785935881063"
   },
   "oxytocin": {
     "title": "Oxytocin",
@@ -2980,7 +2980,8 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-04-22T16:30:49.598Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9b07cfc9bbacd2327149cf96346bd966ee77952f"
+    "previewUrl": "https://p.scdn.co/mp3-preview/9b07cfc9bbacd2327149cf96346bd966ee77952f",
+    "featured": true
   },
   "getlow": {
     "title": "Get Low",
@@ -2999,7 +3000,8 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-04-23T18:19:49.092Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/be360a507094a10639c1da4d1e8da31514d744dc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/be360a507094a10639c1da4d1e8da31514d744dc?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "myexsbestfriend": {
     "title": "my ex's best friend",
@@ -5023,8 +5025,7 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-08-20T18:29:48.618Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb"
   },
   "replay": {
     "title": "Replay",
@@ -5100,7 +5101,8 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-08-20T19:01:15.531Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261"
+    "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261",
+    "featured": true
   },
   "intheend": {
     "title": "In The End",
@@ -5244,8 +5246,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-06T13:17:49.886Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9a50ae903e75de33dc7856e8600e523fcde3f319",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/9a50ae903e75de33dc7856e8600e523fcde3f319"
   },
   "betteroffalone": {
     "title": "Better Off Alone",
@@ -5264,8 +5265,7 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-05T15:01:03.670Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/1351f3e191f38f51ff88a1e29e6fe552db539c36",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/1351f3e191f38f51ff88a1e29e6fe552db539c36"
   },
   "apple": {
     "title": "Apple",
@@ -5324,7 +5324,6 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-05T14:15:10.812Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/408d55c4d5d6383a57b93361b6e58d5e8916ebe3",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/408d55c4d5d6383a57b93361b6e58d5e8916ebe3"
   }
 }
