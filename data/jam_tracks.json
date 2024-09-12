@@ -5220,15 +5220,6 @@
     "previewUrl": "https://p.scdn.co/mp3-preview/7b380d654da78a1ba1bfb79daffb8919259fa80f?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
-  "comingsoon": {
-    "title": "Coming Soon",
-    "artist": "",
-    "cover": "https://cdn2.unrealengine.com/fnsp-05-elegantlily-facebook-profile-512x512-512x512-d3959c300b4f.jpg",
-    "duration": "NaNm NaNs",
-    "difficulties": {},
-    "lastModified": "2024-09-04T22:11:30.265Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/1221617836a4e3d55370b1fced7fc49b5db9fe3f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
-  },
   "dontletmedown": {
     "title": "Don't Let Me Down",
     "artist": "The Chainsmokers ft. Daya",
@@ -5325,5 +5316,62 @@
     "lastModified": "2024-09-05T14:15:10.812Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/408d55c4d5d6383a57b93361b6e58d5e8916ebe3",
     "featured": true
+  },
+  "bigpoppa": {
+    "title": "Big Poppa",
+    "artist": "The Notorious B.I.G.",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/oioxxxtslgrpcwiz-512x512-72a067e95e4a.jpg",
+    "bpm": 169,
+    "duration": "4m 15s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 0,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 1,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-09-11T13:22:33.264Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/7674508c1c15cb2a27323eba7c6ef99256a58300?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "juicy": {
+    "title": "Juicy",
+    "artist": "The Notorious B.I.G.",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/wmujd816qpcjf7pq-512x512-a65f5ab95512.jpg",
+    "bpm": 98,
+    "duration": "4m 45s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 4,
+      "bass": 2,
+      "drums": 1,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 5
+    },
+    "lastModified": "2024-09-11T13:23:37.582Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/bf2e9935d13f644f3e1386cd3a3f33109f80d3dd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "notoriousthugs": {
+    "title": "Notorious Thugs",
+    "artist": "The Notorious B.I.G.",
+    "releaseYear": 1997,
+    "cover": "https://cdn2.unrealengine.com/xefitxdzpyb3xxie-512x512-2df8a7736b3c.jpg",
+    "bpm": 155,
+    "duration": "6m 5s",
+    "difficulties": {
+      "vocals": 6,
+      "guitar": 3,
+      "bass": 0,
+      "drums": 4,
+      "plastic-bass": 1,
+      "plastic-drums": 4,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-09-11T13:24:32.845Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d37cab09c1caf85bc052f4e49eafdda08a1a582a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
