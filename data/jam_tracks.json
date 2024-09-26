@@ -125,7 +125,7 @@
       "plastic-bass": 1,
       "plastic-drums": 2
     },
-    "lastModified": "2024-02-07T16:06:44.437Z",
+    "lastModified": "2024-09-14T02:12:05.302Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/98a77b4baede8388453ed7975f1578370ca9e872?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "badguy": {
@@ -4062,7 +4062,7 @@
       "plastic-drums": 2,
       "plastic-guitar": 4
     },
-    "lastModified": "2024-08-07T17:08:37.458Z",
+    "lastModified": "2024-09-19T06:46:06.789Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/e8650ac29782721b2b42943fa8ca3b49f77e0365?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "blueberryfaygo": {
@@ -5449,5 +5449,62 @@
     },
     "lastModified": "2024-09-17T19:35:48.406Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/27390b5ac85b9dd997e8ae98a3356f0dd4a61f51?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "fighter": {
+    "title": "Fighter",
+    "artist": "Christina Aguilera",
+    "releaseYear": 2002,
+    "cover": "https://cdn2.unrealengine.com/o7ymhqgk4actsbdp-512x512-94eab43ff15f.jpg",
+    "bpm": 95,
+    "duration": "4m 9s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 4,
+      "bass": 2,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-09-24T19:17:55.687Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/83101230e43a0a13f0442047392f5eef188c75c8?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "toxic": {
+    "title": "Toxic",
+    "artist": "Britney Spears",
+    "releaseYear": 2003,
+    "cover": "https://cdn2.unrealengine.com/vpgfjudlh68ijwfl-745x745-21b331d4b891.jpg",
+    "bpm": 143,
+    "duration": "3m 23s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 3,
+      "drums": 1,
+      "plastic-bass": 3,
+      "plastic-drums": 1,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-09-26T14:39:18.867Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "sexyback": {
+    "title": "SexyBack",
+    "artist": "Justin Timberlake ft. Timbaland",
+    "releaseYear": 2006,
+    "cover": "https://cdn2.unrealengine.com/9rouoafa2fzoozcq-512x512-2e48f6ab50a5.jpg",
+    "bpm": 117,
+    "duration": "3m 55s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 2,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-09-24T20:45:30.450Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3093705825f1c799e2de0064a2c775ef5c56d503?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
