@@ -5505,5 +5505,62 @@
     "lastModified": "2024-09-24T20:45:30.450Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3093705825f1c799e2de0064a2c775ef5c56d503?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
+  },
+  "dynamite2": {
+    "title": "Dynamite",
+    "artist": "Taio Cruz",
+    "releaseYear": 2009,
+    "cover": "https://cdn2.unrealengine.com/v6eymnewamjihkgt-512x512-22a718e61163.jpg",
+    "bpm": 120,
+    "duration": "3m 23s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 5,
+      "bass": 2,
+      "drums": 2,
+      "plastic-bass": 3,
+      "plastic-drums": 2,
+      "plastic-guitar": 5
+    },
+    "lastModified": "2024-10-01T19:12:59.255Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/f994bfa635fafe159f70b621f7a9ad09a1a6ccd4"
+  },
+  "thebusiness": {
+    "title": "The Business",
+    "artist": "Tiësto",
+    "releaseYear": 2020,
+    "cover": "https://cdn2.unrealengine.com/tt9wtkwt9ogfzish-512x512-b55239e56fdc.jpg",
+    "bpm": 120,
+    "duration": "2m 47s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-01T19:15:10.946Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e516723e41dab08c241fc981aeed21407f322d72?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "pumpupthejam": {
+    "title": "Pump Up The Jam",
+    "artist": "Technotronic",
+    "releaseYear": 1989,
+    "cover": "https://cdn2.unrealengine.com/nlwgczcdres07p3f-512x512-d75fcf9e337d.jpg",
+    "bpm": 125,
+    "duration": "3m 41s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 5,
+      "plastic-bass": 1,
+      "plastic-drums": 5,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-10-01T19:36:08.032Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/82a1c5bc4cbf4aa75fe052a88c800f1096c0bf7b"
   }
 }
