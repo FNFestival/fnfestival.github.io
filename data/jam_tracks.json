@@ -355,7 +355,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-19T03:45:02.551Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/4ed443643fee0e9e3217630789a03b7a8f58b4a7"
+    "previewUrl": "https://p.scdn.co/mp3-preview/4ed443643fee0e9e3217630789a03b7a8f58b4a7",
+    "featured": true
   },
   "gowiththeflow": {
     "title": "Go With The Flow",
@@ -640,7 +641,8 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-13T07:05:44.837Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/30a8d26fa2b2e9a5a01007d71783510180e677ab"
+    "previewUrl": "https://p.scdn.co/mp3-preview/30a8d26fa2b2e9a5a01007d71783510180e677ab",
+    "featured": true
   },
   "thesearch": {
     "title": "The Search",
@@ -2693,7 +2695,8 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-09-19T02:07:34.461Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/cf0004fe69d0e7403e9cdacf90593d8df8571268"
+    "previewUrl": "https://p.scdn.co/mp3-preview/cf0004fe69d0e7403e9cdacf90593d8df8571268",
+    "featured": true
   },
   "justagirl": {
     "title": "Just A Girl",
@@ -2712,7 +2715,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-19T02:14:47.286Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/1cd97aefe74cf314ed91011a50adec3cc4e81918"
+    "previewUrl": "https://p.scdn.co/mp3-preview/1cd97aefe74cf314ed91011a50adec3cc4e81918",
+    "featured": true
   },
   "santeria": {
     "title": "Santeria",
@@ -3170,8 +3174,7 @@
       "plastic-guitar": 5
     },
     "lastModified": "2024-09-19T04:02:54.055Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/456bed7cde911014f31c26a07b9235112d20469a?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/456bed7cde911014f31c26a07b9235112d20469a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "bringmetolife": {
     "title": "Bring Me To Life",
@@ -3399,8 +3402,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-19T06:01:57.260Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/4998bad5832e1767f4abd980b13b57afec817b64",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/4998bad5832e1767f4abd980b13b57afec817b64"
   },
   "chihiro": {
     "title": "CHIHIRO",
@@ -3419,8 +3421,7 @@
       "plastic-guitar": 4
     },
     "lastModified": "2024-09-19T05:59:34.924Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/2b57d233ddb7137924c7a198741b97e8698023ae",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/2b57d233ddb7137924c7a198741b97e8698023ae"
   },
   "lunch": {
     "title": "LUNCH",
@@ -3439,8 +3440,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-19T06:00:42.135Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e"
   },
   "blitzkriegbop": {
     "title": "Blitzkrieg Bop",
@@ -3649,8 +3649,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-19T06:14:01.601Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c1626784be02379a8ec2fa5f7d7f735c1eda772b?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c1626784be02379a8ec2fa5f7d7f735c1eda772b?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "positions": {
     "title": "positions",
@@ -4549,8 +4548,7 @@
       "plastic-guitar": 5
     },
     "lastModified": "2024-09-20T02:37:00.505Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "would": {
     "title": "Would?",
@@ -4930,7 +4928,8 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-09-23T06:03:37.485Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/607358745dcd9b5ef7fa19414b2fd2b2c17532ee"
+    "previewUrl": "https://p.scdn.co/mp3-preview/607358745dcd9b5ef7fa19414b2fd2b2c17532ee",
+    "featured": true
   },
   "forlatveria": {
     "title": "For Latveria",
@@ -5006,7 +5005,8 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-20T02:48:12.983Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0092d994adfb469875064f91db144e4c12f45346"
+    "previewUrl": "https://p.scdn.co/mp3-preview/0092d994adfb469875064f91db144e4c12f45346",
+    "featured": true
   },
   "tusa": {
     "title": "Tusa",
@@ -5025,8 +5025,7 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-09-20T02:49:51.352Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb"
   },
   "replay": {
     "title": "Replay",
@@ -5103,8 +5102,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-23T06:29:12.859Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/9b2263462e535461d5470a41f47862533c23d261"
   },
   "intheend": {
     "title": "In The End",
@@ -5465,7 +5463,8 @@
       "plastic-guitar": 4
     },
     "lastModified": "2024-09-24T19:17:55.687Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/83101230e43a0a13f0442047392f5eef188c75c8?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/83101230e43a0a13f0442047392f5eef188c75c8?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "toxic": {
     "title": "Toxic",
@@ -5484,7 +5483,8 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-26T14:39:18.867Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "sexyback": {
     "title": "SexyBack",
