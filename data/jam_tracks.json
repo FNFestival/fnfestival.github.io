@@ -1249,7 +1249,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-18T02:49:42.050Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/5184d19d1b7fcc3e7c067e38af45a7cc80851440?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/5184d19d1b7fcc3e7c067e38af45a7cc80851440?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "popular": {
     "title": "Popular",
@@ -1268,8 +1269,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-18T02:51:19.165Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/3bb12d1f2bdfd7eaf80d8502fe28806a422d8e5c",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/3bb12d1f2bdfd7eaf80d8502fe28806a422d8e5c"
   },
   "bloom": {
     "title": "Bloom",
@@ -1669,7 +1669,8 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-18T06:43:02.243Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/36d85482bb5b1c01e4572288d1982f0fb41d133e"
+    "previewUrl": "https://p.scdn.co/mp3-preview/36d85482bb5b1c01e4572288d1982f0fb41d133e",
+    "featured": true
   },
   "whatsmyageagain": {
     "title": "What's My Age Again?",
@@ -5000,8 +5001,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-20T02:48:12.983Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0092d994adfb469875064f91db144e4c12f45346",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/0092d994adfb469875064f91db144e4c12f45346"
   },
   "tusa": {
     "title": "Tusa",
@@ -5020,7 +5020,8 @@
       "plastic-guitar": 0
     },
     "lastModified": "2024-09-20T02:49:51.352Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb"
+    "previewUrl": "https://p.scdn.co/mp3-preview/c8b6de0fb7a1dc5033701b050be581fa11d0d0cb",
+    "featured": true
   },
   "replay": {
     "title": "Replay",
@@ -5077,8 +5078,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-23T06:15:29.302Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c4f4406777deb17f09c0237b22044a8b18d986a4",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c4f4406777deb17f09c0237b22044a8b18d986a4"
   },
   "provenza": {
     "title": "PROVENZA (REMIX)",
@@ -5270,7 +5270,8 @@
       "plastic-guitar": 4
     },
     "lastModified": "2024-09-23T03:47:49.470Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "hottogo": {
     "title": "HOT TO GO!",
@@ -5365,8 +5366,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-23T06:26:11.871Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/d37cab09c1caf85bc052f4e49eafdda08a1a582a?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/d37cab09c1caf85bc052f4e49eafdda08a1a582a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "sayitproud": {
     "title": "Say It Proud",
@@ -5539,8 +5539,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-10-01T19:15:10.946Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/e516723e41dab08c241fc981aeed21407f322d72?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/e516723e41dab08c241fc981aeed21407f322d72?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "pumpupthejam": {
     "title": "Pump Up The Jam",
