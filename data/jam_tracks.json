@@ -5561,5 +5561,24 @@
     },
     "lastModified": "2024-10-01T19:36:08.032Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/82a1c5bc4cbf4aa75fe052a88c800f1096c0bf7b"
+  },
+  "oceanbreezebeats": {
+    "title": "Ocean Breeze Beats",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/xiuiv86rerbnlnof-512x512-2e1a19a7a7a0.jpg",
+    "bpm": 124,
+    "duration": "4m 3s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 2,
+      "bass": 4,
+      "drums": 4,
+      "plastic-bass": 4,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-08T14:53:14.219Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/98a88a138144404ca1f230155b370a72a5e2f383?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
