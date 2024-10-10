@@ -5118,7 +5118,7 @@
       "plastic-drums": 4,
       "plastic-guitar": 1
     },
-    "lastModified": "2024-09-23T06:20:24.077Z",
+    "lastModified": "2024-10-10T15:46:03.506Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b5ee275ca337899f762b1c1883c11e24a04075b0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "broccoli": {
@@ -5539,7 +5539,7 @@
       "plastic-drums": 2,
       "plastic-guitar": 2
     },
-    "lastModified": "2024-10-01T19:15:10.946Z",
+    "lastModified": "2024-10-10T04:39:00.359Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/e516723e41dab08c241fc981aeed21407f322d72?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -5559,7 +5559,7 @@
       "plastic-drums": 5,
       "plastic-guitar": 1
     },
-    "lastModified": "2024-10-01T19:36:08.032Z",
+    "lastModified": "2024-10-10T04:36:55.574Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/82a1c5bc4cbf4aa75fe052a88c800f1096c0bf7b"
   },
   "oceanbreezebeats": {
@@ -5580,5 +5580,100 @@
     },
     "lastModified": "2024-10-08T14:53:14.219Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/98a88a138144404ca1f230155b370a72a5e2f383?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "sayitaintso": {
+    "title": "Say It Ain't So",
+    "artist": "Weezer",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/tqr4gncddpoik7hp-512x512-0b0ae1124921.png",
+    "bpm": 152,
+    "duration": "4m 20s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-10-08T14:45:08.262Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/17adc497b3bfb73e83cf713f1dd6b9a711abb59b"
+  },
+  "fellonblackdays": {
+    "title": "Fell On Black Days",
+    "artist": "Soundgarden",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/dd1w3zngkgol9il9-512x512-8a1475d1ee46.jpg",
+    "bpm": 101,
+    "duration": "4m 43s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 5,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 2,
+      "plastic-drums": 3,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-10-08T14:39:19.205Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c8ca28381018ebf9789a20d5e6e397eab1cea719"
+  },
+  "undone": {
+    "title": "Undone - The Sweater Song",
+    "artist": "Weezer",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/cfs1uz02pyuyfmw2-512x512-dca4f3fcd2a4.png",
+    "bpm": 161,
+    "duration": "5m 7s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-08T14:46:47.751Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/08457f1a2600d548c20a69a692792ef3362d2bed"
+  },
+  "happy": {
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "releaseYear": 2013,
+    "cover": "https://cdn2.unrealengine.com/ifquzjbto0sapodh-512x512-9e1bc0a97725.jpg",
+    "bpm": 160,
+    "duration": "3m 53s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 1,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-10-08T20:54:53.569Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/5e0c8e5d899dea532d697fb20a851450e9614cfc?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "buryafriend": {
+    "title": "bury a friend",
+    "artist": "Billie Eilish",
+    "releaseYear": 2019,
+    "cover": "https://cdn2.unrealengine.com/sstp9lqzpa1mjjzs-512x512-3d3099bd129e.png",
+    "bpm": 120,
+    "duration": "3m 8s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-10-10T04:26:50.525Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28"
   }
 }
