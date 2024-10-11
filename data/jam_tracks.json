@@ -5574,7 +5574,7 @@
       "plastic-drums": 3,
       "plastic-guitar": 2
     },
-    "lastModified": "2024-10-08T14:53:14.219Z",
+    "lastModified": "2024-10-10T05:21:21.865Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/98a88a138144404ca1f230155b370a72a5e2f383?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "sayitaintso": {
@@ -5675,6 +5675,102 @@
     },
     "lastModified": "2024-10-10T04:26:50.525Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28",
+    "featured": true
+  },
+  "tropicalheat": {
+    "title": "Tropical Heat",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/infernoisland-art-512x512-8bda0fef5668.jpg",
+    "bpm": 125,
+    "duration": "4m 13s",
+    "difficulties": {
+      "vocals": 1,
+      "guitar": 4,
+      "bass": 3,
+      "drums": 5,
+      "plastic-bass": 3,
+      "plastic-drums": 5,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-10-10T05:24:24.855Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/926cc098c3096634a4b1e53fe9d0d2d48fa3f8a2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "paradisepulse": {
+    "title": "Paradise Pulse",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/diniibeas2fp0z7j-512x512-95454d4d8045.jpg",
+    "bpm": 125,
+    "duration": "4m 3s",
+    "difficulties": {
+      "vocals": 1,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-10T05:23:01.637Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/926cc098c3096634a4b1e53fe9d0d2d48fa3f8a2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "infernoisland2": {
+    "title": "Inferno Island",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/ohgou12h18cs2zua-512x512-bb90e4fedeef.jpg",
+    "bpm": 123,
+    "duration": "3m 46s",
+    "difficulties": {
+      "vocals": 1,
+      "guitar": 4,
+      "bass": 4,
+      "drums": 5,
+      "plastic-bass": 5,
+      "plastic-drums": 5,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-10-10T05:20:09.207Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6739778b3fab4a572ca10ef8bcdfdc77599b66d2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "sizzlinsunshine": {
+    "title": "Sizzlin' Sunshine",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/jlf6ty8dyuephj2s-512x512-ba53afe1ad5c.jpg",
+    "bpm": 125,
+    "duration": "4m 13s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 3,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-10-10T05:23:37.749Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/926cc098c3096634a4b1e53fe9d0d2d48fa3f8a2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "nightmareschoice": {
+    "title": "Nightmare's Choice",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/4mdmtnrtjcwejh3d-512x512-ccaa46a0856b.jpg",
+    "bpm": 156,
+    "duration": "3m 19s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 2,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-10-08T14:51:26.062Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c6160eafc299c3cb797836b2ddb1a0a251807df4?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   }
 }
