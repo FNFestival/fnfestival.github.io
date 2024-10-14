@@ -1537,7 +1537,8 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-18T06:13:25.680Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0e1f4d14825f1a67b816669d4fd15131c097f056"
+    "previewUrl": "https://p.scdn.co/mp3-preview/0e1f4d14825f1a67b816669d4fd15131c097f056",
+    "featured": true
   },
   "bloodymary": {
     "title": "Bloody Mary",
@@ -2643,7 +2644,8 @@
       "plastic-guitar": 4
     },
     "lastModified": "2024-09-19T01:54:01.752Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/12f5e545d7874ea00ca27ffaf55fc9bbf15fdcb2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/12f5e545d7874ea00ca27ffaf55fc9bbf15fdcb2?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "ellabailasola": {
     "title": "Ella Baila Sola",
@@ -5060,8 +5062,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-23T06:33:30.975Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0495eca339f32d0acaa62ca9be55d2b815ccc4e3",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/0495eca339f32d0acaa62ca9be55d2b815ccc4e3"
   },
   "espresso": {
     "title": "Espresso",
@@ -5674,8 +5675,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-10-10T04:26:50.525Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28"
   },
   "tropicalheat": {
     "title": "Tropical Heat",
