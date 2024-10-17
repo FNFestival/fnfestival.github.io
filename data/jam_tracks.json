@@ -5791,5 +5791,81 @@
     "lastModified": "2024-10-15T14:41:11.011Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/fda145d12a84306269e306b96f2837deecbd829d",
     "featured": true
+  },
+  "somebodytoldme": {
+    "title": "Somebody Told Me",
+    "artist": "The Killers",
+    "releaseYear": 2004,
+    "cover": "https://cdn2.unrealengine.com/xb8yjsvt4r2yuyvs-512x512-d21e48ada1a1.jpg",
+    "bpm": 138,
+    "duration": "3m 21s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 3,
+      "drums": 4,
+      "plastic-bass": 3,
+      "plastic-drums": 4,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-10-15T15:22:43.331Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9d5dccc54383f11aace0193ad05d28f6573be190"
+  },
+  "thesoundofsilence": {
+    "title": "The Sound of Silence",
+    "artist": "Disturbed",
+    "releaseYear": 2015,
+    "cover": "https://cdn2.unrealengine.com/xxrtnopr5kud2w7o-512x512-7591716fdd72.jpg",
+    "bpm": 84,
+    "duration": "4m 13s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 0,
+      "plastic-bass": 1,
+      "plastic-drums": 0,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-17T14:53:47.167Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/89937a0bc7a8870ddd4f4228efcfccc6a243ddf7?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "nightmare": {
+    "title": "Nightmare",
+    "artist": "Avenged Sevenfold",
+    "releaseYear": 2010,
+    "cover": "https://cdn2.unrealengine.com/yx8lxazycxvoa9oc-512x512-6cd9dd17403f.jpg",
+    "bpm": 130,
+    "duration": "6m 10s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 5,
+      "bass": 6,
+      "drums": 5,
+      "plastic-bass": 4,
+      "plastic-drums": 5,
+      "plastic-guitar": 5
+    },
+    "lastModified": "2024-10-16T12:22:53.998Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c781eca2ae8f1196661b5dfb2314e85a7dd104d1?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "imnotokay": {
+    "title": "I'm Not Okay (I Promise)",
+    "artist": "My Chemical Romance",
+    "releaseYear": 2004,
+    "cover": "https://cdn2.unrealengine.com/fuiym90lwlyoapqg-512x512-823eb203838b.jpg",
+    "bpm": 90,
+    "duration": "3m 11s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 3,
+      "drums": 4,
+      "plastic-bass": 3,
+      "plastic-drums": 4,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-10-15T18:11:21.821Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6c81f58d2b451d404fd885cb2dd1d88ef04db4ff?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
