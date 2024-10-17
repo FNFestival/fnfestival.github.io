@@ -623,8 +623,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-14T02:02:41.513Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/7ffe8447e8884c77eac5ecc3214540e688a59afe",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/7ffe8447e8884c77eac5ecc3214540e688a59afe"
   },
   "thehills": {
     "title": "The Hills",
@@ -1042,8 +1041,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-18T02:13:30.177Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/ce95ec4b7666e7efe290782e449bd96ba8f7a4e5?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/ce95ec4b7666e7efe290782e449bd96ba8f7a4e5?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "welcometoparadise": {
     "title": "Welcome to Paradise",
@@ -1786,7 +1784,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-18T07:04:09.730Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/08cec59d36ac30ae9ce1e2944f206251859844af?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/08cec59d36ac30ae9ce1e2944f206251859844af?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "miserybusiness": {
     "title": "Misery Business",
@@ -5405,7 +5404,8 @@
       "plastic-guitar": 3
     },
     "lastModified": "2024-09-23T03:45:05.921Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/2e9359e821b18414235d870a4d2671f4337c8682?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "previewUrl": "https://p.scdn.co/mp3-preview/2e9359e821b18414235d870a4d2671f4337c8682?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "boulevardofbrokendreams": {
     "title": "Boulevard of Broken Dreams",
@@ -5615,8 +5615,7 @@
       "plastic-guitar": 4
     },
     "lastModified": "2024-10-08T14:39:19.205Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c8ca28381018ebf9789a20d5e6e397eab1cea719",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/c8ca28381018ebf9789a20d5e6e397eab1cea719"
   },
   "undone": {
     "title": "Undone - The Sweater Song",
@@ -5674,7 +5673,8 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-10-10T04:26:50.525Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28"
+    "previewUrl": "https://p.scdn.co/mp3-preview/b821adc1d6ef642032f778e894500b75b930ff28",
+    "featured": true
   },
   "tropicalheat": {
     "title": "Tropical Heat",
@@ -5770,6 +5770,26 @@
     },
     "lastModified": "2024-10-08T14:51:26.062Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/c6160eafc299c3cb797836b2ddb1a0a251807df4?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
+  },
+  "feather": {
+    "title": "Feather",
+    "artist": "Sabrina Carpenter",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/yilvqaqmf3aqnbiy-512x512-f747b207081e.jpg",
+    "bpm": 124,
+    "duration": "3m 6s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 1,
+      "drums": 1,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-10-15T14:41:11.011Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/fda145d12a84306269e306b96f2837deecbd829d",
     "featured": true
   }
 }
