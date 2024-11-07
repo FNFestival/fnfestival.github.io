@@ -5980,7 +5980,7 @@
       "plastic-drums": 1,
       "plastic-guitar": 2
     },
-    "lastModified": "2024-11-02T12:14:48.881Z",
+    "lastModified": "2024-11-05T18:49:34.838Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/65c2741417ff629103d05f472252d92e911492aa"
   },
   "youngwildandfree": {
@@ -6229,5 +6229,100 @@
     },
     "lastModified": "2024-11-02T12:17:23.434Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/0be5f48a05364d3c03d2231f27ced528959206b2"
+  },
+  "milliondollarbaby": {
+    "title": "MILLION DOLLAR BABY",
+    "artist": "Tommy Richman",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/djwhqjvootwixenb-512x512-e4ce28242ee6.jpg",
+    "bpm": 138,
+    "duration": "2m 6s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 3,
+      "drums": 2,
+      "plastic-bass": 3,
+      "plastic-drums": 2,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-04T16:45:51.348Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c5c9eeb40ca98441ab1d0767fdc417afa2af9695"
+  },
+  "industrybaby": {
+    "title": "Industry Baby",
+    "artist": "Lil Nas X ft. Jack Harlow",
+    "releaseYear": 2021,
+    "cover": "https://cdn2.unrealengine.com/wqfrivnsedrgbufm-512x512-53294c7fb561.jpg",
+    "bpm": 150,
+    "duration": "3m 36s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 0,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 2,
+      "plastic-guitar": 0
+    },
+    "lastModified": "2024-11-04T16:40:41.924Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/2bfa1aca3b507df2cc3aac0b37bbc05b74c096cd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "forthenight": {
+    "title": "For The Night",
+    "artist": "Pop Smoke w/ Lil Baby & DaBaby",
+    "releaseYear": 2020,
+    "cover": "https://cdn2.unrealengine.com/1ik481ipnhxgz3cw-512x512-5d6a8a2f0952.jpg",
+    "bpm": 126,
+    "duration": "3m 16s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 2,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 1,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-07T16:46:48.591Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/a12197997b0baf968bf85d23f688f02c1579776f"
+  },
+  "superbass": {
+    "title": "Super Bass",
+    "artist": "Nicki Minaj",
+    "releaseYear": 2010,
+    "cover": "https://cdn2.unrealengine.com/cqlmvxqn3mnhszek-512x512-dc8534543d88.jpg",
+    "bpm": 127,
+    "duration": "3m 23s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 2,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-04T16:46:44.937Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/35b028e2715bda58ffaabb3b8bde86f40d9288e6"
+  },
+  "walkthisway": {
+    "title": "Walk This Way",
+    "artist": "Run DMC ft. Aerosmith",
+    "releaseYear": 1986,
+    "cover": "https://cdn2.unrealengine.com/osinqsilqi2u2d15-512x512-91f359ee8cf5.jpg",
+    "bpm": 106,
+    "duration": "5m 15s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 4,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 1,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-11-04T16:48:53.027Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/434a86dcf5206c271a08b63481b87e32a5d4b648?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
