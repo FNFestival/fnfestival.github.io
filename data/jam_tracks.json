@@ -6324,5 +6324,100 @@
     },
     "lastModified": "2024-11-04T16:48:53.027Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/434a86dcf5206c271a08b63481b87e32a5d4b648?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "rightround": {
+    "title": "Right Round",
+    "artist": "Flo Rida, Kesha",
+    "releaseYear": 2009,
+    "cover": "https://cdn2.unrealengine.com/iyzazjtcal10nrzb-512x512-fe6c32c6bcd1.jpg",
+    "bpm": 125,
+    "duration": "3m 27s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 4,
+      "bass": 0,
+      "drums": 2,
+      "plastic-bass": 0,
+      "plastic-drums": 2,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-11-13T19:48:48.249Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/04b3f3daf9f2e977daef0d8cceb58d74aa58759d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "allidoiswin": {
+    "title": "All I Do Is Win",
+    "artist": "DJ Khaled ft. T-Pain, Ludacris, Snoop Dogg & Rick Ross",
+    "releaseYear": 2010,
+    "cover": "https://cdn2.unrealengine.com/3xl7clgbj2txrvdc-512x512-f7783107dbe3.jpg",
+    "bpm": 150,
+    "duration": "3m 50s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-13T19:47:39.697Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0ff2ae5b44d752553e4289bb369153f06ff74ebd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "inhamood": {
+    "title": "In Ha Mood",
+    "artist": "Ice Spice",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/bm7krspplzdm3bkm-512x512-0ba86aca7902.jpg",
+    "bpm": 141,
+    "duration": "2m 4s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 3,
+      "plastic-guitar": 0
+    },
+    "lastModified": "2024-11-13T19:48:07.641Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c689b2b0a0eb47f29bba2d86c7cdf18166fb19a8"
+  },
+  "leanback": {
+    "title": "Lean Back",
+    "artist": "Terror Squad ft. Remy & Fat Joe",
+    "releaseYear": 2004,
+    "cover": "https://cdn2.unrealengine.com/x02yig074eer1xrz-512x512-05f55809bbc3.jpg",
+    "bpm": 95,
+    "duration": "4m 12s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 3,
+      "bass": 0,
+      "drums": 1,
+      "plastic-bass": 1,
+      "plastic-drums": 1,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-11-13T19:48:20.441Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/393004db32d3e1c0241346c9cdde6df1905f62d5"
+  },
+  "ohshhh": {
+    "title": "Oh Shhh...",
+    "artist": "Ice Spice ft. Travis Scott",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/g5zxa2cwjslimosv-512x512-fcb0741e2c78.jpg",
+    "bpm": 143,
+    "duration": "2m 46s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 4,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-13T19:48:36.864Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/180bd6d79598834a04902339353691750a42697e"
   }
 }
