@@ -6424,5 +6424,81 @@
     "lastModified": "2024-11-13T19:48:36.864Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/180bd6d79598834a04902339353691750a42697e",
     "featured": true
+  },
+  "armedanddangerous": {
+    "title": "Armed And Dangerous",
+    "artist": "Juice WRLD",
+    "releaseYear": 2018,
+    "cover": "https://cdn2.unrealengine.com/rsfq6nrfqwhqyutm-512x512-b9e0bb0d79d7.jpg",
+    "bpm": 130,
+    "duration": "3m 2s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 2,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-19T16:53:33.066Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/674ca5c6fcf14caa538f1b999888549e023ceddd"
+  },
+  "wishingwell": {
+    "title": "Wishing Well",
+    "artist": "Juice WRLD",
+    "releaseYear": 2020,
+    "cover": "https://cdn2.unrealengine.com/7ujv65ot1gifjd67-512x512-4b958f29cc8c.jpg",
+    "bpm": 150,
+    "duration": "3m 16s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 1,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-21T15:01:50.778Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/68d8145a16fd9072be92d8004880dfab0f4dafdc"
+  },
+  "beautifulthings": {
+    "title": "Beautiful Things",
+    "artist": "Benson Boone",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/lrl6eyn78imy3spx-512x512-3f85661856b5.jpg",
+    "bpm": 140,
+    "duration": "3m 1s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-19T16:54:39.983Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e213f23e6fe5938299eebbe364d06c1682a6619f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+  },
+  "myhouse": {
+    "title": "My House",
+    "artist": "Flo Rida",
+    "releaseYear": 2015,
+    "cover": "https://cdn2.unrealengine.com/ya73q0xxf7w7siep-512x512-a9d8586dcf55.jpg",
+    "bpm": 94,
+    "duration": "3m 14s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 1,
+      "bass": 0,
+      "drums": 1,
+      "plastic-bass": 0,
+      "plastic-drums": 1,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-19T16:55:49.404Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3bf2d48a92c9a21ddb14d8aae379488ff0604aff?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   }
 }
