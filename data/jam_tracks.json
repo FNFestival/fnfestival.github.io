@@ -6503,5 +6503,119 @@
     "lastModified": "2024-11-19T16:55:49.404Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3bf2d48a92c9a21ddb14d8aae379488ff0604aff?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
+  },
+  "wildones": {
+    "title": "Wild Ones",
+    "artist": "Flo Rida ft. Sia",
+    "releaseYear": 2012,
+    "cover": "https://cdn2.unrealengine.com/jr9jicewojjux4k8-512x512-6c4b899e3241.jpg",
+    "bpm": 127,
+    "duration": "3m 54s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-26T20:17:45.339Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/2050910310ca788d6d86304eb0566413df385f7c"
+  },
+  "backstreetsback": {
+    "title": "Everybody (Backstreet's Back)",
+    "artist": "Backstreet Boys",
+    "releaseYear": 1997,
+    "cover": "https://cdn2.unrealengine.com/p1rfqaf7yfkhilkj-512x512-937a1b792d8b.jpg",
+    "bpm": 108,
+    "duration": "3m 48s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-26T20:44:33.217Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/f478363d1e7d378ce3f982a2542c386fd10b4e8d"
+  },
+  "ftcu": {
+    "title": "FTCU",
+    "artist": "Nicki Minaj",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/m7slgzehkowaj7qq-512x512-bd2b817eace1.jpg",
+    "bpm": 145,
+    "duration": "2m 44s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 0,
+      "bass": 1,
+      "drums": 3,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 0
+    },
+    "lastModified": "2024-11-26T20:12:00.754Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c7bb59bb3ff6d3989868d7b43becb4bd22fd2a75"
+  },
+  "alleyezonme": {
+    "title": "All Eyez On Me",
+    "artist": "2Pac ft. Big Syke",
+    "releaseYear": 1996,
+    "cover": "https://cdn2.unrealengine.com/jpwjvrri6e7jshds-512x512-3fa38488f64f.jpg",
+    "bpm": 93,
+    "duration": "5m 11s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-26T20:44:06.460Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/2af0fc45a3f400af9998296d9d5c0efaf2376614"
+  },
+  "leanwitme": {
+    "title": "Lean Wit Me",
+    "artist": "Juice WRLD",
+    "releaseYear": 2018,
+    "cover": "https://cdn2.unrealengine.com/du5quw7v45kpfick-512x512-757bd0087948.jpg",
+    "bpm": 82,
+    "duration": "2m 59s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 2,
+      "plastic-bass": 1,
+      "plastic-drums": 2,
+      "plastic-guitar": 1
+    },
+    "lastModified": "2024-11-26T20:14:38.318Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/06755f4c18c933703bff62749fb6cd9b454b8ffe"
+  },
+  "heyya": {
+    "title": "Hey Ya!",
+    "artist": "Outkast",
+    "releaseYear": 2003,
+    "cover": "https://cdn2.unrealengine.com/mtdmhphzyxvaeurs-512x512-16ece77fc1bb.jpg",
+    "bpm": 159,
+    "duration": "4m 1s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 0,
+      "plastic-bass": 2,
+      "plastic-drums": 0,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-26T20:44:56.568Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d24b3c4135ced9157b0ea3015a6bcc048e0c2e3a"
   }
 }
