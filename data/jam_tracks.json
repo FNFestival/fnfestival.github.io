@@ -6616,5 +6616,43 @@
     "lastModified": "2024-11-26T20:44:56.568Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d24b3c4135ced9157b0ea3015a6bcc048e0c2e3a",
     "featured": true
+  },
+  "emptyoutyourpockets": {
+    "title": "Empty Out Your Pockets",
+    "artist": "Juice WRLD",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/qqc6brjlw9dhwjts-512x512-7bc243432c09.jpg",
+    "bpm": 92,
+    "duration": "2m 21s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 2,
+      "bass": 0,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-30T20:40:57.971Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e25129f17fa5197f6d7bc13be1cea28e7ff4f578"
+  },
+  "barbarian": {
+    "title": "Barbarian",
+    "artist": "Juice WRLD",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/perx0pvqomlqv9wp-512x512-c82c8cd7bbec.jpg",
+    "bpm": 140,
+    "duration": "2m 37s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 3,
+      "bass": 0,
+      "drums": 4,
+      "plastic-bass": 0,
+      "plastic-drums": 4,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-30T20:40:05.258Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/240d072ab4c06501d4a9668d5e99c441e0bc3b47"
   }
 }
