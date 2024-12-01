@@ -2029,8 +2029,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-09-18T07:16:54.163Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/f5452ebf843f4c126eacc038fbfdc9502bf0a9b5",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/f5452ebf843f4c126eacc038fbfdc9502bf0a9b5"
   },
   "rosesimanbek": {
     "title": "Roses (Imanbek Remix)",
@@ -4487,8 +4486,7 @@
       "plastic-guitar": 1
     },
     "lastModified": "2024-09-20T02:56:44.042Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/ea295ac5934a84378cb21d0f904fefff545af974?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/ea295ac5934a84378cb21d0f904fefff545af974?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "theboysareback": {
     "title": "The Boys Are Back In Town",
@@ -6634,7 +6632,8 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-11-30T20:40:57.971Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/e25129f17fa5197f6d7bc13be1cea28e7ff4f578"
+    "previewUrl": "https://p.scdn.co/mp3-preview/e25129f17fa5197f6d7bc13be1cea28e7ff4f578",
+    "featured": true
   },
   "barbarian": {
     "title": "Barbarian",
@@ -6653,6 +6652,7 @@
       "plastic-guitar": 2
     },
     "lastModified": "2024-11-30T20:40:05.258Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/240d072ab4c06501d4a9668d5e99c441e0bc3b47"
+    "previewUrl": "https://p.scdn.co/mp3-preview/240d072ab4c06501d4a9668d5e99c441e0bc3b47",
+    "featured": true
   }
 }
