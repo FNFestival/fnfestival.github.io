@@ -6654,5 +6654,62 @@
     "lastModified": "2024-11-30T20:40:05.258Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/240d072ab4c06501d4a9668d5e99c441e0bc3b47",
     "featured": true
+  },
+  "catsprowl": {
+    "title": "Cat's Prowl",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/krzr2iicapkc4a6m-512x512-098b1c2f49be.jpg",
+    "bpm": 166,
+    "duration": "2m 52s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 1,
+      "drums": 5,
+      "plastic-bass": 2,
+      "plastic-drums": 5,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-11-26T20:33:51.784Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3e746dcd3c5a3a64372d9efc4e366b574cf5440e"
+  },
+  "nightrosessong": {
+    "title": "Night Rose's Song",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/rqmcgvgmwp6likyj-512x512-87d60a0e0810.jpg",
+    "bpm": 126,
+    "duration": "3m 33s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 3,
+      "drums": 5,
+      "plastic-bass": 3,
+      "plastic-drums": 5,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-11-26T20:34:57.076Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/34fe700c914c3b95f41acf539b151ca1d4c17f81"
+  },
+  "breakthecurse": {
+    "title": "Break The Curse",
+    "artist": "Epic Games",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/rochkuyy4hlfcmbe-512x512-70096a32626c.jpg",
+    "bpm": 155,
+    "duration": "3m 35s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 5,
+      "bass": 4,
+      "drums": 5,
+      "plastic-bass": 4,
+      "plastic-drums": 4,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-11-26T20:26:23.254Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e87dc0efbfaaec832909dc439a37a3620b5d71bf"
   }
 }
