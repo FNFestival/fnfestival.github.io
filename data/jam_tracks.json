@@ -6711,5 +6711,100 @@
     },
     "lastModified": "2024-11-26T20:26:23.254Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/e87dc0efbfaaec832909dc439a37a3620b5d71bf"
+  },
+  "takeonme": {
+    "title": "Take On Me",
+    "artist": "a-ha",
+    "releaseYear": 1985,
+    "cover": "https://cdn2.unrealengine.com/v98fk9v8bihihdia-512x512-6164d9e2c7bf.jpg",
+    "bpm": 169,
+    "duration": "3m 52s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 2,
+      "plastic-drums": 4,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-03T20:20:25.536Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d1427dd0a300eeccfc53b99a2ebf3c664a67414a"
+  },
+  "bangbang": {
+    "title": "Bang Bang",
+    "artist": "Jessie J, Nicki Minaj, Ariana Grande",
+    "releaseYear": 2014,
+    "cover": "https://cdn2.unrealengine.com/sr3ypyjxbegwg7yj-512x512-4dc7c605a09e.jpg",
+    "bpm": 150,
+    "duration": "3m 21s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 1,
+      "bass": 1,
+      "drums": 4,
+      "plastic-bass": 1,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-12-03T20:16:53.214Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e6f9a45cb4bf45d8d041d999f5904ed1d248cc15"
+  },
+  "ghost": {
+    "title": "Ghost",
+    "artist": "Justin Bieber",
+    "releaseYear": 2021,
+    "cover": "https://cdn2.unrealengine.com/jaoit9ryjph2jb9r-512x512-a3e4b6317e45.jpg",
+    "bpm": 154,
+    "duration": "2m 35s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 1,
+      "plastic-bass": 2,
+      "plastic-drums": 1,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-03T20:17:57.602Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/10746d0627d5dd428001083030cf6726c5e92c67"
+  },
+  "nightdancer": {
+    "title": "NIGHT DANCER",
+    "artist": "imase",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/vjrtwhve3ang4twh-512x512-2103bb197da1.jpg",
+    "bpm": 117,
+    "duration": "3m 34s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 4,
+      "plastic-bass": 2,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-03T20:19:38.303Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/d0a9cf1664408608a9289d4a0e46138191509413"
+  },
+  "thebrave": {
+    "title": "The Brave",
+    "artist": "YOASOBI",
+    "releaseYear": 2023,
+    "cover": "https://cdn2.unrealengine.com/cvgevmvoklxznbtx-512x512-4bcadb0995a1.jpg",
+    "bpm": 104,
+    "duration": "3m 18s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 6,
+      "bass": 5,
+      "drums": 5,
+      "plastic-bass": 5,
+      "plastic-drums": 5,
+      "plastic-guitar": 6
+    },
+    "lastModified": "2024-12-03T20:21:43.474Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/8c679a5a4d67a0c70b70456688c3f923ab1933b8"
   }
 }
