@@ -6805,5 +6805,62 @@
     "lastModified": "2024-12-03T20:21:43.474Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8c679a5a4d67a0c70b70456688c3f923ab1933b8",
     "featured": true
+  },
+  "birdsofafeather": {
+    "title": "BIRDS OF A FEATHER",
+    "artist": "Billie Eilish",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/g2pfqu60ytm3iovt-512x512-9ad9922152f3.jpg",
+    "bpm": 105,
+    "duration": "3m 34s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 2,
+      "bass": 2,
+      "drums": 3,
+      "plastic-bass": 2,
+      "plastic-drums": 3,
+      "plastic-guitar": 2
+    },
+    "lastModified": "2024-12-10T18:14:38.088Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/2899f0275fc029d456d924a60ae6f747bda1ed80"
+  },
+  "disease": {
+    "title": "Disease",
+    "artist": "Lady Gaga",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/qlcdwbxz0jgcyrhw-512x512-58017092f8d3.jpg",
+    "bpm": 101,
+    "duration": "3m 50s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 2,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-10T18:17:29.856Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9ee698ab8f99d26e0f40dc431a531428747cc410"
+  },
+  "dancingintheflames": {
+    "title": "Dancing in the Flames",
+    "artist": "The Weeknd",
+    "releaseYear": 2024,
+    "cover": "https://cdn2.unrealengine.com/9icisivdktftsgui-512x512-d3d5673c4d47.jpg",
+    "bpm": 117,
+    "duration": "3m 44s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 5,
+      "bass": 3,
+      "drums": 4,
+      "plastic-bass": 3,
+      "plastic-drums": 4,
+      "plastic-guitar": 5
+    },
+    "lastModified": "2024-12-11T15:23:51.380Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/4bef2c96b5e7a47483c843e8ea8c04ff3ea065e1"
   }
 }
