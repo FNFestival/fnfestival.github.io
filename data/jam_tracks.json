@@ -6834,5 +6834,100 @@
     },
     "lastModified": "2024-12-11T15:23:51.380Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/4bef2c96b5e7a47483c843e8ea8c04ff3ea065e1"
+  },
+  "getbusy": {
+    "title": "Get Busy",
+    "artist": "Sean Paul",
+    "releaseYear": 2002,
+    "cover": "https://cdn2.unrealengine.com/czlpttjfwc90exqu-512x512-5d3c10b7ab82.jpg",
+    "bpm": 100,
+    "duration": "3m 42s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 3,
+      "bass": 0,
+      "drums": 2,
+      "plastic-bass": 0,
+      "plastic-drums": 2,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-17T17:54:57.254Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/3f23870df8d59c6733d19a72dbbbd5261300c0ee"
+  },
+  "thediaryofjane": {
+    "title": "The Diary Of Jane",
+    "artist": "Breaking Benjamin",
+    "releaseYear": 2006,
+    "cover": "https://cdn2.unrealengine.com/xlrovhkuclsschbt-512x512-057fd492613c.jpg",
+    "bpm": 167,
+    "duration": "3m 22s",
+    "difficulties": {
+      "vocals": 2,
+      "guitar": 3,
+      "bass": 4,
+      "drums": 5,
+      "plastic-bass": 4,
+      "plastic-drums": 4,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-17T17:59:52.463Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/97a0255d215d3b2b92e532b6adf743fce87f3bb9"
+  },
+  "africa": {
+    "title": "Africa",
+    "artist": "Toto",
+    "releaseYear": 1982,
+    "cover": "https://cdn2.unrealengine.com/lqei99l8rdxfojkt-512x512-5cbed05dd7c7.jpg",
+    "bpm": 93,
+    "duration": "4m 50s",
+    "difficulties": {
+      "vocals": 3,
+      "guitar": 4,
+      "bass": 2,
+      "drums": 2,
+      "plastic-bass": 2,
+      "plastic-drums": 2,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-17T17:48:03.673Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/86d951a680c33cca769822e0ef854c1b20301b32"
+  },
+  "fireball": {
+    "title": "Fireball",
+    "artist": "Pitbull ft. John Ryan",
+    "releaseYear": 2014,
+    "cover": "https://cdn2.unrealengine.com/xbsdjxppygpdftg6-512x512-0eeac79b5ac9.jpg",
+    "bpm": 123,
+    "duration": "3m 59s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 3,
+      "bass": 3,
+      "drums": 2,
+      "plastic-bass": 3,
+      "plastic-drums": 3,
+      "plastic-guitar": 3
+    },
+    "lastModified": "2024-12-17T17:51:26.705Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/42a121cd0edbcf4ac9b6b2e85d2671360ae153dd"
+  },
+  "hipsdontlie": {
+    "title": "Hips Don't Lie",
+    "artist": "Shakira ft. Wyclef Jean",
+    "releaseYear": 2006,
+    "cover": "https://cdn2.unrealengine.com/7vuajgrxcghpenoj-512x512-e7f9645a8d6b.jpg",
+    "bpm": 100,
+    "duration": "3m 41s",
+    "difficulties": {
+      "vocals": 4,
+      "guitar": 4,
+      "bass": 1,
+      "drums": 3,
+      "plastic-bass": 0,
+      "plastic-drums": 3,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-12-17T17:58:20.273Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/5b6e1e86c34dec5882de81ff959bdb8575ef6e2b"
   }
 }
