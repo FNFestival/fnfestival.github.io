@@ -6948,5 +6948,24 @@
     },
     "lastModified": "2024-12-17T18:19:01.085Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/fe6d4d2ba9c4d5624bd2cb9909cd76fb573ac399"
+  },
+  "alliwantforchristmas": {
+    "title": "All I Want For Christmas Is You",
+    "artist": "Mariah Carey",
+    "releaseYear": 1994,
+    "cover": "https://cdn2.unrealengine.com/z9fhvg0mzohgzb4j-512x512-8259b400dbab.jpg",
+    "bpm": 150,
+    "duration": "4m 1s",
+    "difficulties": {
+      "vocals": 5,
+      "guitar": 4,
+      "bass": 3,
+      "drums": 3,
+      "plastic-bass": 3,
+      "plastic-drums": 2,
+      "plastic-guitar": 4
+    },
+    "lastModified": "2024-12-17T18:12:00.497Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/6b1557cd25d543940a3decd85a7bf2bc136c51f8"
   }
 }
