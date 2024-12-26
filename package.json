@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "auth": "node authenticate.js",
     "update-jam-tracks": "node scripts/index.js"
   },
   "dependencies": {
