@@ -202,13 +202,18 @@ main {
 .featured-label,
 .new-label {
     background-color: rgba(255, 215, 0, 0.9);
-    color: #000;
     padding: 2px 6px;
     border-radius: 8px;
-    font-size: 10px;
-    font-weight: bold;
     transform: skewX(-14deg);
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-label svg,
+.new-label svg {
+    fill: #000;
 }
 
 .new-label {
@@ -316,23 +321,37 @@ main {
 }
 
 .play-button {
+    display: none;
+}
+
+.mute-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 0;
+    margin-left: auto;
 }
 
-.play-icon,
-.pause-icon {
+.mute-icon,
+.unmute-icon {
     fill: white;
     width: 32px;
     height: 32px;
 }
 
-.pause-icon {
+.unmute-icon {
     display: none;
+}
+
+.mute-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
 .modal-body {

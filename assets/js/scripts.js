@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const trackCount = document.getElementById('trackCount');
     const contentElement = document.querySelector('.content');
-    const playButton = document.getElementById('playPreviewButton');
     const logo = document.getElementById('logo');
+    const muteButton = document.getElementById('muteButton');
 
     let tracksData = [];
     let loadedTracks = 0;
@@ -12,22 +12,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialLoad = 50;
     const audio = new Audio();
     audio.volume = 0.5;
+    let isMuted = localStorage.getItem('isMuted') === 'true';
+    let currentPreviewUrl = '';
+
+    audio.muted = isMuted;
+    updateMuteIcon();
+
+    function updateMuteIcon() {
+        const muteIcon = muteButton.querySelector('.mute-icon');
+        const unmuteIcon = muteButton.querySelector('.unmute-icon');
+        if (isMuted) {
+            muteIcon.style.display = 'block';
+            unmuteIcon.style.display = 'none';
+        } else {
+            muteIcon.style.display = 'none';
+            unmuteIcon.style.display = 'block';
+        }
+    }
+
+    function toggleMute() {
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        localStorage.setItem('isMuted', isMuted);
+        updateMuteIcon();
+        if (!isMuted && currentPreviewUrl) {
+            audio.play();
+        }
+    }
 
     function playPreview(previewUrl) {
-        const playIcon = playButton.querySelector('.play-icon');
-        const pauseIcon = playButton.querySelector('.pause-icon');
-
         if (audio.src !== previewUrl) {
             audio.src = previewUrl;
+            currentPreviewUrl = previewUrl;
         }
-        if (audio.paused) {
+        if (!isMuted) {
             audio.play();
-            playIcon.style.display = 'none';
-            pauseIcon.style.display = 'block';
-        } else {
-            audio.pause();
-            playIcon.style.display = 'block';
-            pauseIcon.style.display = 'none';
         }
     }
 
@@ -46,11 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
 
-        playButton.style.display = previewUrl ? 'block' : 'none';
-        playButton.onclick = () => playPreview(track.previewUrl);
-
         modal.style.display = 'block';
         document.body.classList.add('modal-open');
+
+        if (previewUrl) {
+            playPreview(previewUrl);
+        }
     }
 
     function closeModal() {
@@ -60,19 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
             audio.pause();
         }
         audio.src = '';
-
-        // Reset icon visibility
-        const playIcon = playButton.querySelector('.play-icon');
-        const pauseIcon = playButton.querySelector('.pause-icon');
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
+        currentPreviewUrl = '';
     }
 
     function handleAudioEnd() {
-        const playIcon = playButton.querySelector('.play-icon');
-        const pauseIcon = playButton.querySelector('.pause-icon');
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
+        // No need to handle play/pause icons
     }
 
     function renderTracks(tracks, clearExisting = true) {
@@ -151,14 +163,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Date.now() - new Date(track.lastModified) < sevenDaysInMillis) {
             const newLabel = document.createElement('span');
             newLabel.classList.add('new-label');
-            newLabel.textContent = 'New';
+            newLabel.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg>
+            `;
             labelContainer.appendChild(newLabel);
         }
 
         if (track.featured) {
             const featuredLabel = document.createElement('span');
             featuredLabel.classList.add('featured-label');
-            featuredLabel.textContent = 'Featured';
+            featuredLabel.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                </svg>
+            `;
             labelContainer.appendChild(featuredLabel);
         }
 
@@ -201,5 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
     logo.addEventListener('click', () => location.reload());
     searchInput.addEventListener('input', filterTracks);
     audio.addEventListener('ended', handleAudioEnd);
+    muteButton.addEventListener('click', toggleMute);
     loadTracks();
 });
