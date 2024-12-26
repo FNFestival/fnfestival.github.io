@@ -390,13 +390,13 @@ main {
     margin-right: 10px;
 }
 
-.bass { background-position: 0 0; }
+.guitar { background-position: 0 0; }
 .drums { background-position: -30px 0; }
-.guitar { background-position: -60px 0; }
+.bass { background-position: -60px 0; }
 .vocals { background-position: -90px 0; }
-.plastic-bass { background-position: -120px 0; }
+.plastic-guitar { background-position: -120px 0; }
 .plastic-drums { background-position: -150px 0; }
-.plastic-guitar { background-position: -180px 0; }
+.plastic-bass { background-position: -180px 0; }
 
 .difficulty-bars {
     display: flex;
