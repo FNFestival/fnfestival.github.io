@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentElement = document.querySelector('.content');
     const playButton = document.getElementById('playPreviewButton');
     const logo = document.getElementById('logo');
-    
+
     let tracksData = [];
     let loadedTracks = 0;
     const tracksPerPage = 10;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, lastModified, previewUrl } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastModified, previewUrl } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Release Year: ${releaseYear}</p>
             <p>BPM: ${bpm}</p>
             <p>Duration: ${duration}</p>
+            <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
             <p>Last Modified: ${new Date(lastModified).toLocaleString()}</p>
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
@@ -172,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tracksData.sort((a, b) => {
                     if (a.featured && !b.featured) return -1;
                     if (!a.featured && b.featured) return 1;
-                    return new Date(b.lastModified) - new Date(a.lastModified);
+                    return new Date(b.createdAt) - new Date(a.createdAt);
                 });
 
                 renderTracks(tracksData.slice(0, initialLoad));

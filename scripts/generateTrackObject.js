@@ -24,6 +24,7 @@ export function generateTrackObject(trackData, previewUrl) {
             'plastic-drums': track.in.pd,
             'plastic-guitar': track.in.pg
         },
+        createdAt: trackData.createdAt || new Date().toISOString(),
         lastModified: trackData.lastModified,
         previewUrl
     };
