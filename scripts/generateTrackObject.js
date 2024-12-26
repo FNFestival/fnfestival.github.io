@@ -4,7 +4,7 @@ function formatDuration(seconds) {
     return `${minutes}m ${remainingSeconds}s`;
 }
 
-export function generateTrackObject(trackData, previewUrl) {
+export function generateTrackObject(trackData, previewUrl, createdAt) {
     const { track } = trackData;
     const duration = formatDuration(track.dn);
 
@@ -24,7 +24,7 @@ export function generateTrackObject(trackData, previewUrl) {
             'plastic-drums': track.in.pd,
             'plastic-guitar': track.in.pg
         },
-        createdAt: trackData.createdAt || new Date().toISOString(),
+        createdAt: createdAt || new Date().toISOString(),
         lastModified: trackData.lastModified,
         previewUrl
     };
