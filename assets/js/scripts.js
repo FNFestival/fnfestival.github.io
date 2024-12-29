@@ -83,10 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPreviewUrl = '';
     }
 
-    function handleAudioEnd() {
-        // No need to handle play/pause icons
-    }
-
     function renderTracks(tracks, clearExisting = true) {
         if (clearExisting) contentElement.innerHTML = '';
 
@@ -221,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.modal-close').addEventListener('click', closeModal);
     logo.addEventListener('click', () => location.reload());
     searchInput.addEventListener('input', filterTracks);
-    audio.addEventListener('ended', handleAudioEnd);
     muteButton.addEventListener('click', toggleMute);
     loadTracks();
 });
