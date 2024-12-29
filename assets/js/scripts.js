@@ -254,7 +254,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.modal-close').addEventListener('click', closeModal);
-    logo.addEventListener('click', () => location.reload());
+    logo.addEventListener('click', () => {
+        window.location.href = '/';
+    });
     searchInput.addEventListener('input', filterTracks);
     muteButton.addEventListener('click', toggleMute);
     loadTracks();
