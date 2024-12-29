@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openModal(track) {
-        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastModified, previewUrl } = track;
+        const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
 
         modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>BPM: ${bpm}</p>
             <p>Duration: ${duration}</p>
             <p>Created At: ${new Date(createdAt).toLocaleString()}</p>
-            <p>Last Modified: ${new Date(lastModified).toLocaleString()}</p>
+            <p>Last Featured: ${lastFeatured ? new Date(lastFeatured).toLocaleString() : 'N/A'}</p>
         `;
         generateDifficultyBars(difficulties, modal.querySelector('#modalDifficulties'));
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterTracks() {
         const query = searchInput.value.toLowerCase();
         const filteredTracks = tracksData.filter(track =>
-            track.title.toLowerCase().includes(query) || 
+            track.title.toLowerCase().includes(query) ||
             track.artist.toLowerCase().includes(query)
         );
 

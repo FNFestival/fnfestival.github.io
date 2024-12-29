@@ -24,6 +24,7 @@ export async function updateJamTracks(availableTracksData, dailyTracks) {
             // Check if track already has a preview URL in the existing data
             const existingTrack = jamTracksData[trackData.track.sn];
             const createdAt = existingTrack?.createdAt;
+            const lastFeatured = existingTrack?.lastFeatured || null;
 
             let previewUrl = null;
             if (trackData.track.an.trim() !== 'Epic Games') {
@@ -31,11 +32,12 @@ export async function updateJamTracks(availableTracksData, dailyTracks) {
             }
 
             // Generate jam track object
-            const trackObject = generateTrackObject(trackData, previewUrl, createdAt);
+            const trackObject = generateTrackObject(trackData, previewUrl, createdAt, lastFeatured);
 
             // Mark as featured if it's in dailyTracks
             if (dailyTracks.includes(trackId)) {
                 trackObject.featured = true;
+                trackObject.lastFeatured = new Date().toISOString();
             }
 
             jamTracks[trackData.track.sn] = trackObject;
