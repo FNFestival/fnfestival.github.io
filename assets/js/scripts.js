@@ -220,7 +220,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.observe(sentinel);
                 }
 
-                trackCount.textContent = `Total: ${tracksData.length}`;
+                trackCount.textContent = searchQuery ? `Found: ${tracksData.filter(track =>
+                    track.title.toLowerCase().includes(searchQuery) ||
+                    track.artist.toLowerCase().includes(searchQuery)
+                ).length}` : `Total: ${tracksData.length}`;
             });
     }
 
