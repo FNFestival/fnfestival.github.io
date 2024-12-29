@@ -79,6 +79,28 @@ a:hover {
     backdrop-filter: blur(20px);
 }
 
+.header-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(34, 34, 34, .8);
+    color: white;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 65px;
+    backdrop-filter: blur(20px);
+}
+
+.header-info .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -132,6 +154,11 @@ a:hover {
     color: #aaa;
 }
 
+.countdown {
+    font-size: 14px;
+    color: #aaa;
+}
+
 .header .links a {
     color: white;
     text-decoration: none;
@@ -143,7 +170,7 @@ a:hover {
 
 /* Content */
 main {
-    margin-top: 80px;
+    margin-top: 125px;
 }
 
 .content {
@@ -244,9 +271,15 @@ main {
         width: 100%;
     }
 
-    .track-count {
-        margin-top: 10px;
-        text-align: center;
+    .header-info {
+        position: relative;
+        top: 0;
+        backdrop-filter: none;
+    }
+
+    .header-info .container {
+        flex-direction: column;
+        align-items: center;
     }
 
     main {

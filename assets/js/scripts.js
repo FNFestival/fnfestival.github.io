@@ -224,6 +224,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function updateCountdown() {
+        const now = new Date();
+        const nextUpdate = new Date();
+        nextUpdate.setUTCHours(0, 0, 0, 0);
+        if (now >= nextUpdate) {
+            nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
+        }
+        const diff = nextUpdate - now;
+        const threshold = 2 * 60 * 1000;
+        const displayDiff = diff > threshold ? diff : threshold;
+        const hours = Math.floor(displayDiff / (1000 * 60 * 60));
+        const minutes = Math.floor((displayDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((displayDiff % (1000 * 60)) / 1000);
+        document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
     // Event listeners
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
