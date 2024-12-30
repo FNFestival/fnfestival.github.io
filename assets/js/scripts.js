@@ -235,12 +235,16 @@ document.addEventListener('DOMContentLoaded', () => {
             nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
         }
         const diff = nextUpdate - now;
-        const threshold = 2 * 60 * 1000;
-        const displayDiff = diff > threshold ? diff : threshold;
-        const hours = Math.floor(displayDiff / (1000 * 60 * 60));
-        const minutes = Math.floor((displayDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((displayDiff % (1000 * 60)) / 1000);
-        document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
+        const threshold = 2 * 60 * 1000; // 2 minutes in milliseconds
+        const displayDiff = diff > threshold ? diff : 0;
+        if (displayDiff === 0) {
+            document.getElementById('countdown').textContent = 'Updating tracks, this may take up to 2 minutes...';
+        } else {
+            const hours = Math.floor(displayDiff / (1000 * 60 * 60));
+            const minutes = Math.floor((displayDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((displayDiff % (1000 * 60)) / 1000);
+            document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
+        }
     }
 
     setInterval(updateCountdown, 1000);
