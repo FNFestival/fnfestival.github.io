@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.volume = 0.5;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let currentPreviewUrl = '';
+    let sawUpdateMessage = false;
 
     audio.muted = isMuted;
     updateMuteIcon();
@@ -231,20 +232,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date();
         const nextUpdate = new Date();
         nextUpdate.setUTCHours(0, 0, 0, 0);
-        if (now >= nextUpdate) {
+
+        // Check if we're in the update window (00:00-00:02 UTC)
+        const updateStart = new Date(nextUpdate);
+        const updateEnd = new Date(nextUpdate);
+        updateEnd.setUTCMinutes(2);
+
+        if (now >= updateStart && now <= updateEnd) {
+            document.getElementById('countdown').textContent = 'Updating tracks, this may take up to 2 minutes...';
+            sawUpdateMessage = true;
+            return;
+        }
+
+        // If we just left the update window and saw the message, reload the page
+        if (sawUpdateMessage && now > updateEnd) {
+            window.location.reload();
+            return;
+        }
+
+        // Reset the flag if we're past the update window
+        if (now > updateEnd) {
+            sawUpdateMessage = false;
+        }
+
+        // If we're past today's update window, set next update to tomorrow
+        if (now > updateEnd) {
             nextUpdate.setUTCDate(nextUpdate.getUTCDate() + 1);
         }
+
         const diff = nextUpdate - now;
-        const threshold = 2 * 60 * 1000; // 2 minutes in milliseconds
-        const displayDiff = diff > threshold ? diff : 0;
-        if (displayDiff === 0) {
-            document.getElementById('countdown').textContent = 'Updating tracks, this may take up to 2 minutes...';
-        } else {
-            const hours = Math.floor(displayDiff / (1000 * 60 * 60));
-            const minutes = Math.floor((displayDiff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((displayDiff % (1000 * 60)) / 1000);
-            document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
-        }
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
     }
 
     setInterval(updateCountdown, 1000);
