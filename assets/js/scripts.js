@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             url.searchParams.delete('q');
         }
-        window.history.pushState({}, '', url);
+        window.history.replaceState({}, '', url);
     }
 
     function loadMoreTracks(entries, observer) {
