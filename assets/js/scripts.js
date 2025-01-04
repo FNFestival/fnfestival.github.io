@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         labelContainer.classList.add('label-container');
 
         const sevenDaysInMillis = 7 * 24 * 60 * 60 * 1000;
-        if (Date.now() - new Date(track.lastModified) < sevenDaysInMillis) {
+        if (Date.now() - new Date(track.createdAt) < sevenDaysInMillis) {
             const newLabel = document.createElement('span');
             newLabel.classList.add('new-label');
             newLabel.innerHTML = `
