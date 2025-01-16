@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contentElement = document.querySelector('.content');
     const logo = document.getElementById('logo');
     const muteButton = document.getElementById('muteButton');
+    const filterSelect = document.getElementById('filterSelect');
 
     let tracksData = [];
     let loadedTracks = 0;
@@ -109,35 +110,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function filterTracks() {
         const query = searchInput.value.toLowerCase();
-        const filteredTracks = tracksData.filter(track =>
-            track.title.toLowerCase().includes(query) ||
-            track.artist.toLowerCase().includes(query)
-        );
+        const filterValue = filterSelect.value;
 
-        trackCount.textContent = query ? `Found: ${filteredTracks.length}` : `Total: ${tracksData.length}`;
-        renderTracks(filteredTracks);
+        let filteredTracks = tracksData.filter(track => {
+            const matchesSearch = track.title.toLowerCase().includes(query) ||
+                                track.artist.toLowerCase().includes(query);
 
-        // Update URL with search query parameter
-        const url = new URL(window.location);
-        if (query) {
-            url.searchParams.set('q', query);
+            if (!matchesSearch) return false;
+
+            switch (filterValue) {
+                case 'featured':
+                    return track.featured;
+                case 'rotated':
+                    const oneDayAgo = new Date();
+                    oneDayAgo.setUTCHours(0, 0, 0, 0);
+                    const twoDaysAgo = new Date(oneDayAgo);
+                    twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
+                    return track.lastFeatured &&
+                           new Date(track.lastFeatured) >= twoDaysAgo &&
+                           new Date(track.lastFeatured) < oneDayAgo &&
+                           !track.featured;
+                default:
+                    return true;
+            }
+        });
+
+        // Sort filtered tracks
+        filteredTracks.sort((a, b) => {
+            if (filterValue === 'rotated') {
+                return new Date(b.lastFeatured) - new Date(a.lastFeatured);
+            } else {
+                if (a.featured && !b.featured) return -1;
+                if (!a.featured && b.featured) return 1;
+                return new Date(b.createdAt) - new Date(a.createdAt);
+            }
+        });
+
+        trackCount.textContent = query || filterValue !== 'all'
+            ? `Found: ${filteredTracks.length}`
+            : `Total: ${tracksData.length}`;
+
+        // Reset loaded tracks counter
+        loadedTracks = 0;
+
+        // Show all results at once for filtered/search views, or initial batch for main view
+        if (query || filterValue !== 'all') {
+            renderTracks(filteredTracks);
         } else {
-            url.searchParams.delete('q');
+            // For main view, show initial batch and set up infinite scroll
+            renderTracks(filteredTracks.slice(0, initialLoad));
+
+            // Only set up infinite scroll if there are more tracks to load
+            if (filteredTracks.length > initialLoad) {
+                loadedTracks = initialLoad;
+                setupInfiniteScroll(filteredTracks);
+            }
         }
+
+        // Update URL parameters
+        const url = new URL(window.location);
+        if (query) url.searchParams.set('q', query);
+        else url.searchParams.delete('q');
+        if (filterValue !== 'all') url.searchParams.set('filter', filterValue);
+        else url.searchParams.delete('filter');
         window.history.replaceState({}, '', url);
     }
 
-    function loadMoreTracks(entries, observer) {
-        if (entries[0].isIntersecting) {
-            observer.unobserve(entries[0].target);
-            renderTracks(tracksData.slice(loadedTracks, loadedTracks + tracksPerPage), false);
-            loadedTracks += tracksPerPage;
-
-            const newSentinel = document.createElement('div');
-            newSentinel.style.height = '1px';
-            contentElement.appendChild(newSentinel);
-            observer.observe(newSentinel);
+    function setupInfiniteScroll(tracks) {
+        // Remove any existing sentinel
+        const existingSentinel = contentElement.querySelector('.sentinel');
+        if (existingSentinel) {
+            existingSentinel.remove();
         }
+
+        const sentinel = document.createElement('div');
+        sentinel.className = 'sentinel';
+        sentinel.style.height = '1px';
+        contentElement.appendChild(sentinel);
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting &&
+                filterSelect.value === 'all' &&
+                !searchInput.value &&
+                loadedTracks < tracks.length) {
+
+                observer.unobserve(entries[0].target);
+                const nextBatch = tracks.slice(loadedTracks, loadedTracks + tracksPerPage);
+                renderTracks(nextBatch, false);
+                loadedTracks += tracksPerPage;
+
+                if (loadedTracks < tracks.length) {
+                    const newSentinel = document.createElement('div');
+                    newSentinel.className = 'sentinel';
+                    newSentinel.style.height = '1px';
+                    contentElement.appendChild(newSentinel);
+                    observer.observe(newSentinel);
+                }
+            }
+        });
+
+        observer.observe(sentinel);
     }
 
     function generateDifficultyBars(difficulties, container) {
@@ -197,34 +269,15 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 tracksData = Object.values(data);
-                tracksData.sort((a, b) => {
-                    if (a.featured && !b.featured) return -1;
-                    if (!a.featured && b.featured) return 1;
-                    return new Date(b.createdAt) - new Date(a.createdAt);
-                });
 
-                // Check for search query parameter in URL
                 const urlParams = new URLSearchParams(window.location.search);
                 const searchQuery = urlParams.get('q');
-                if (searchQuery) {
-                    searchInput.value = searchQuery;
-                    filterTracks();
-                } else {
-                    renderTracks(tracksData.slice(0, initialLoad));
-                    loadedTracks = initialLoad;
+                const filterValue = urlParams.get('filter');
 
-                    const sentinel = document.createElement('div');
-                    sentinel.style.height = '1px';
-                    contentElement.appendChild(sentinel);
+                if (searchQuery) searchInput.value = searchQuery;
+                if (filterValue) filterSelect.value = filterValue;
 
-                    const observer = new IntersectionObserver(loadMoreTracks);
-                    observer.observe(sentinel);
-                }
-
-                trackCount.textContent = searchQuery ? `Found: ${tracksData.filter(track =>
-                    track.title.toLowerCase().includes(searchQuery) ||
-                    track.artist.toLowerCase().includes(searchQuery)
-                ).length}` : `Total: ${tracksData.length}`;
+                filterTracks(); // This will handle all sorting and initial rendering
             });
     }
 
@@ -283,5 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     searchInput.addEventListener('input', filterTracks);
     muteButton.addEventListener('click', toggleMute);
+    filterSelect.addEventListener('change', filterTracks);
     loadTracks();
 });
