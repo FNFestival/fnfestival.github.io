@@ -130,6 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
                            new Date(track.lastFeatured) >= twoDaysAgo &&
                            new Date(track.lastFeatured) < oneDayAgo &&
                            !track.featured;
+                case 'new':
+                    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+                    return new Date(track.createdAt) > sevenDaysAgo;
                 default:
                     return true;
             }
@@ -139,6 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
         filteredTracks.sort((a, b) => {
             if (filterValue === 'rotated') {
                 return new Date(b.lastFeatured) - new Date(a.lastFeatured);
+            } else if (filterValue === 'new') {
+                return new Date(b.createdAt) - new Date(a.createdAt);
             } else {
                 if (a.featured && !b.featured) return -1;
                 if (!a.featured && b.featured) return 1;
