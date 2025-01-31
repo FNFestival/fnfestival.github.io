@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tracksPerPage = 10;
     const initialLoad = 50;
     const audio = new Audio();
-    audio.volume = 0.5;
+    audio.volume = 0.25;
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let currentPreviewUrl = '';
     let sawUpdateMessage = false;
