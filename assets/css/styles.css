@@ -217,6 +217,12 @@ main {
     max-height: 80px;
     border-radius: 10px;
     margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.jam-track img.loaded {
+    opacity: 1;
 }
 
 .jam-track:hover {
@@ -359,6 +365,12 @@ main {
     width: 80px;
     height: 80px;
     border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-header img.loaded {
+    opacity: 1;
 }
 
 .track-info {
@@ -555,4 +567,36 @@ main {
     .modal-next {
         right: 10px;
     }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    min-width: 80px;
+    min-height: 80px;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(236, 237, 238, .1);
+    position: relative;
+    margin-right: 10px;
+}
+
+.loading-spinner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

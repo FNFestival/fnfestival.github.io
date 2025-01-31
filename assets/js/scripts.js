@@ -62,7 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderModal(track) {
         const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
 
-        modal.querySelector('#modalCover').src = cover;
+        const modalCover = modal.querySelector('#modalCover');
+        modalCover.classList.remove('loaded');
+        modalCover.style.opacity = '0';
+
+        const tempImage = new Image();
+        tempImage.src = cover;
+        tempImage.onload = () => {
+            modalCover.src = cover;
+            modalCover.classList.add('loaded');
+        };
+
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
         modal.querySelector('#modalDetails').innerHTML = `
@@ -105,13 +115,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const trackElement = document.createElement('div');
             trackElement.classList.add('jam-track');
 
+            const loadingSpinner = document.createElement('div');
+            loadingSpinner.className = 'loading-spinner';
+
+            const img = new Image();
+            img.src = track.cover;
+            img.alt = `${track.title} Cover`;
+            img.style.display = 'none';
+
+            img.onload = () => {
+                loadingSpinner.remove();
+                img.style.display = '';
+                img.classList.add('loaded');
+            };
+
             trackElement.innerHTML = `
-                <img src="${track.cover}" alt="${track.title} Cover">
                 <div>
                     <h2>${track.title}</h2>
                     <p>${track.artist}</p>
                 </div>
             `;
+
+            trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
+            trackElement.insertBefore(img, trackElement.firstChild);
 
             const labels = generateLabels(track);
             trackElement.appendChild(labels);
