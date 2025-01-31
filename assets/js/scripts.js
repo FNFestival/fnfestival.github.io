@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let isMuted = localStorage.getItem('isMuted') === 'true';
     let currentPreviewUrl = '';
     let sawUpdateMessage = false;
+    let currentTrackIndex = -1;
+    let currentFilteredTracks = [];
 
     audio.muted = isMuted;
     updateMuteIcon();
@@ -53,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openModal(track) {
+        currentTrackIndex = currentFilteredTracks.findIndex(t => t.title === track.title && t.artist === track.artist);
+        renderModal(track);
+    }
+
+    function renderModal(track) {
         const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
 
         modal.querySelector('#modalCover').src = cover;
@@ -73,6 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (previewUrl) {
             playPreview(previewUrl);
         }
+
+        // Update navigation buttons visibility
+        const prevButton = modal.querySelector('.modal-prev');
+        const nextButton = modal.querySelector('.modal-next');
+        prevButton.style.display = currentTrackIndex > 0 ? 'block' : 'none';
+        nextButton.style.display = currentTrackIndex < currentFilteredTracks.length - 1 ? 'block' : 'none';
     }
 
     function closeModal() {
@@ -150,6 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return new Date(b.createdAt) - new Date(a.createdAt);
             }
         });
+
+        // Store current filtered tracks
+        currentFilteredTracks = filteredTracks;
 
         trackCount.textContent = query || filterValue !== 'all'
             ? `Found: ${filteredTracks.length}`
@@ -269,6 +285,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return labelContainer;
     }
 
+    function navigateModal(direction) {
+        const newIndex = currentTrackIndex + direction;
+        if (newIndex >= 0 && newIndex < currentFilteredTracks.length) {
+            currentTrackIndex = newIndex;
+            renderModal(currentFilteredTracks[newIndex]);
+        }
+    }
+
     function loadTracks() {
         fetch(`data/jam_tracks.json?_=${Date.now()}`)
             .then(response => response.json())
@@ -325,22 +349,55 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('countdown').textContent = `Next update in: ${hours}h ${minutes}m ${seconds}s`;
     }
 
+    // Initialize countdown timer
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Event listeners
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
+    // Modal event listeners
+    const modalEvents = {
+        close: () => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.querySelector('.modal-close').addEventListener('click', closeModal);
+        },
+        navigation: () => {
+            modal.querySelector('.modal-prev').addEventListener('click', () => navigateModal(-1));
+            modal.querySelector('.modal-next').addEventListener('click', () => navigateModal(1));
+        },
+        keyboard: () => {
+            document.addEventListener('keydown', (e) => {
+                if (modal.style.display === 'block') {
+                    switch (e.key) {
+                        case 'ArrowLeft': navigateModal(-1); break;
+                        case 'ArrowRight': navigateModal(1); break;
+                        case 'Escape': closeModal(); break;
+                    }
+                }
+            });
         }
-    });
+    };
 
-    document.querySelector('.modal-close').addEventListener('click', closeModal);
-    logo.addEventListener('click', () => {
-        window.location.href = '/';
-    });
-    searchInput.addEventListener('input', filterTracks);
-    muteButton.addEventListener('click', toggleMute);
-    filterSelect.addEventListener('change', filterTracks);
+    // Header event listeners
+    const headerEvents = {
+        logo: () => {
+            logo.addEventListener('click', () => window.location.href = '/');
+        },
+        search: () => {
+            searchInput.addEventListener('input', filterTracks);
+        },
+        filter: () => {
+            filterSelect.addEventListener('change', filterTracks);
+        },
+        audio: () => {
+            muteButton.addEventListener('click', toggleMute);
+        }
+    };
+
+    // Initialize all event listeners
+    Object.values(modalEvents).forEach(init => init());
+    Object.values(headerEvents).forEach(init => init());
+
+    // Load initial data
     loadTracks();
 });
