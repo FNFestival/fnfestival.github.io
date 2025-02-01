@@ -365,12 +365,7 @@ main {
     width: 80px;
     height: 80px;
     border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.modal-header img.loaded {
-    opacity: 1;
+    background-color: rgba(236, 237, 238, .1);
 }
 
 .track-info {

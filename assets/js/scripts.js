@@ -62,17 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderModal(track) {
         const { title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
 
-        const modalCover = modal.querySelector('#modalCover');
-        modalCover.classList.remove('loaded');
-        modalCover.style.opacity = '0';
-
-        const tempImage = new Image();
-        tempImage.src = cover;
-        tempImage.onload = () => {
-            modalCover.src = cover;
-            modalCover.classList.add('loaded');
-        };
-
+        modal.querySelector('#modalCover').src = cover;
         modal.querySelector('#modalTitle').textContent = title;
         modal.querySelector('#modalArtist').textContent = artist;
         modal.querySelector('#modalDetails').innerHTML = `
