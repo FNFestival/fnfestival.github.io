@@ -292,8 +292,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-01-22T00:01:22.151Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0fe7e82ed5aac1d08d786724a18cc3011e99ad7a"
+    "lastFeatured": "2025-03-20T00:01:30.507Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0fe7e82ed5aac1d08d786724a18cc3011e99ad7a",
+    "featured": true
   },
   "dogdaysareover": {
     "title": "Dog Days Are Over",
@@ -953,8 +954,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.454Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/977c8d1d535253a9a4e1061cf4585b624dd205c4",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/977c8d1d535253a9a4e1061cf4585b624dd205c4"
   },
   "marchofthepigs": {
     "title": "March Of The Pigs",
@@ -1034,8 +1034,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/8b5805a0fb24641ff34f1649ab448a16c219f073",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/8b5805a0fb24641ff34f1649ab448a16c219f073"
   },
   "withorwithoutyou": {
     "title": "With Or Without You",
@@ -1254,8 +1253,9 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": "https://p.scdn.co/mp3-preview/0c97ec263c3b7f2eae3592e1b8b79da0c40638ac?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/0c97ec263c3b7f2eae3592e1b8b79da0c40638ac?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "makeitknown": {
     "title": "Make It Known",
@@ -1334,7 +1334,7 @@
       "plastic-guitar": 1
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3bb12d1f2bdfd7eaf80d8502fe28806a422d8e5c",
     "featured": true
   },
@@ -1455,7 +1455,7 @@
       "plastic-guitar": 1
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/95cc6f61db841d49e062c94e68a62a89da0c46c4",
     "featured": true
   },
@@ -1596,8 +1596,9 @@
       "plastic-guitar": 0
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": "https://p.scdn.co/mp3-preview/8b5efa214e9ec3bf84e224dbc62e5c6923c3bb7a"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/8b5efa214e9ec3bf84e224dbc62e5c6923c3bb7a",
+    "featured": true
   },
   "rainonme": {
     "title": "Rain On Me",
@@ -2077,8 +2078,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/85ba40ef782e993bac9ee1c945f90c123b11ffec",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/85ba40ef782e993bac9ee1c945f90c123b11ffec"
   },
   "sandstorm": {
     "title": "Sandstorm",
@@ -2118,8 +2118,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/5524bcb363f648a35571d9507d2d585bc9a0adc9",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/5524bcb363f648a35571d9507d2d585bc9a0adc9"
   },
   "firework": {
     "title": "Firework",
@@ -2138,7 +2137,7 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/f5452ebf843f4c126eacc038fbfdc9502bf0a9b5",
     "featured": true
   },
@@ -2400,8 +2399,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/7a486bf71e7c934be7b84f145bf8abf8303143db",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/7a486bf71e7c934be7b84f145bf8abf8303143db"
   },
   "themiddle": {
     "title": "The Middle",
@@ -2740,8 +2738,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-03-16T00:01:20.212Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/1d4dc1cd67ba78afec8cfb3e5258a9ab9b707dd8?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/1d4dc1cd67ba78afec8cfb3e5258a9ab9b707dd8?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "makedamnsure": {
     "title": "MakeDamnSure",
@@ -2880,8 +2879,9 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-02-04T00:01:15.430Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9bd14340e2c557e2e9cdc454f0820b20dd48100e"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9bd14340e2c557e2e9cdc454f0820b20dd48100e",
+    "featured": true
   },
   "woman": {
     "title": "Woman",
@@ -3380,8 +3380,9 @@
       "plastic-guitar": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": null,
-    "previewUrl": "https://p.scdn.co/mp3-preview/74d3075346200319e853ce23a115382514a693d6"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/74d3075346200319e853ce23a115382514a693d6",
+    "featured": true
   },
   "kissmemore": {
     "title": "Kiss Me More",
@@ -3461,8 +3462,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/d9b89161dacbb987b360417346591712c4023abd?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/d9b89161dacbb987b360417346591712c4023abd?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "hailtotheking": {
     "title": "Hail To The King",
@@ -3621,8 +3621,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-02-05T00:01:32.796Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/c3a85474a1fc40d876b6bd15c240197e2f974e6e",
+    "featured": true
   },
   "blitzkriegbop": {
     "title": "Blitzkrieg Bop",
@@ -3662,8 +3663,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/4a7c65e9a3b50afd83df27e13b2a88c61cd40ec6",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/4a7c65e9a3b50afd83df27e13b2a88c61cd40ec6"
   },
   "fuel": {
     "title": "Fuel",
@@ -3682,7 +3682,7 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d74f3ed17b0ade500e951522ddcefd20a632846c?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -4024,8 +4024,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/0959bf37a7c0ff7fb3e7cbe02829c2a050857cd3?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/0959bf37a7c0ff7fb3e7cbe02829c2a050857cd3?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "dreamer": {
     "title": "Dreamer",
@@ -4145,8 +4144,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/333dcef73eb5aa95a58ff521fa63d14861dfe2f5?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/333dcef73eb5aa95a58ff521fa63d14861dfe2f5?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "somp": {
     "title": "S.O.M.P.",
@@ -4785,8 +4783,9 @@
       "plastic-guitar": 5
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-02-27T00:01:10.134Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/cd1a8cd8f5d7e08aed985c345e191bb0dda4793a?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "would": {
     "title": "Would?",
@@ -4845,7 +4844,7 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b524a437eaa3b3798fe2e651cfda5de7d4443f88?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -5006,7 +5005,7 @@
       "plastic-guitar": 6
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/6c99e08ad1885d08023354ac96b546ffe3dee44b",
     "featured": true
   },
@@ -5308,8 +5307,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/fbc52df880d479ab0e34ee46bcc817a9f8b52a35?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/fbc52df880d479ab0e34ee46bcc817a9f8b52a35?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "stickseason": {
     "title": "Stick Season",
@@ -5389,8 +5387,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/b5ee275ca337899f762b1c1883c11e24a04075b0?cid=ace3af5515b3429d8fbf1bb99bcd1310",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/b5ee275ca337899f762b1c1883c11e24a04075b0?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "broccoli": {
     "title": "Broccoli",
@@ -5549,8 +5546,9 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-15T00:01:09.713Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d?cid=ace3af5515b3429d8fbf1bb99bcd1310",
+    "featured": true
   },
   "hottogo": {
     "title": "HOT TO GO!",
@@ -5850,8 +5848,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/82a1c5bc4cbf4aa75fe052a88c800f1096c0bf7b",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/82a1c5bc4cbf4aa75fe052a88c800f1096c0bf7b"
   },
   "oceanbreezebeats": {
     "title": "Ocean Breeze Beats",
@@ -6090,8 +6087,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-13T00:01:55.432Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/fda145d12a84306269e306b96f2837deecbd829d"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/fda145d12a84306269e306b96f2837deecbd829d",
+    "featured": true
   },
   "somebodytoldme": {
     "title": "Somebody Told Me",
@@ -6150,7 +6148,7 @@
       "plastic-guitar": 5
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/c781eca2ae8f1196661b5dfb2314e85a7dd104d1?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -6591,7 +6589,7 @@
       "plastic-guitar": 0
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/2bfa1aca3b507df2cc3aac0b37bbc05b74c096cd?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -6652,7 +6650,7 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/434a86dcf5206c271a08b63481b87e32a5d4b648?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -6673,7 +6671,7 @@
       "plastic-guitar": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/04b3f3daf9f2e977daef0d8cceb58d74aa58759d?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -6714,7 +6712,7 @@
       "plastic-guitar": 0
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/c689b2b0a0eb47f29bba2d86c7cdf18166fb19a8",
     "featured": true
   },
@@ -6775,7 +6773,7 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/674ca5c6fcf14caa538f1b999888549e023ceddd",
     "featured": true
   },
@@ -6796,7 +6794,7 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/68d8145a16fd9072be92d8004880dfab0f4dafdc",
     "featured": true
   },
@@ -6837,7 +6835,7 @@
       "plastic-guitar": 1
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.455Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3bf2d48a92c9a21ddb14d8aae379488ff0604aff?cid=ace3af5515b3429d8fbf1bb99bcd1310",
     "featured": true
   },
@@ -6859,8 +6857,7 @@
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
     "lastFeatured": "2025-03-19T00:01:04.455Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/2050910310ca788d6d86304eb0566413df385f7c",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/2050910310ca788d6d86304eb0566413df385f7c"
   },
   "backstreetsback": {
     "title": "Everybody (Backstreet's Back)",
@@ -6959,7 +6956,7 @@
       "plastic-guitar": 2
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d24b3c4135ced9157b0ea3015a6bcc048e0c2e3a",
     "featured": true
   },
@@ -7120,7 +7117,7 @@
       "plastic-guitar": 3
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/10746d0627d5dd428001083030cf6726c5e92c67",
     "featured": true
   },
@@ -7161,7 +7158,7 @@
       "plastic-guitar": 6
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8c679a5a4d67a0c70b70456688c3f923ab1933b8",
     "featured": true
   },
@@ -7222,8 +7219,9 @@
       "plastic-guitar": 5
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-08T00:01:53.905Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/4bef2c96b5e7a47483c843e8ea8c04ff3ea065e1"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/4bef2c96b5e7a47483c843e8ea8c04ff3ea065e1",
+    "featured": true
   },
   "getbusy": {
     "title": "Get Busy",
@@ -7262,7 +7260,7 @@
       "plastic-guitar": 3
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/97a0255d215d3b2b92e532b6adf743fce87f3bb9",
     "featured": true
   },
@@ -7724,8 +7722,7 @@
     },
     "createdAt": "2025-01-14T15:53:38.102Z",
     "lastFeatured": "2025-03-19T00:01:04.456Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/ba545b6bcbfb0f62a5f40d9dbdc95a33571635f6",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/ba545b6bcbfb0f62a5f40d9dbdc95a33571635f6"
   },
   "dexting": {
     "title": "Dexting",
@@ -7824,8 +7821,9 @@
       "plastic-guitar": 3
     },
     "createdAt": "2025-01-14T15:53:39.986Z",
-    "lastFeatured": "2025-03-17T00:01:33.004Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/e015ea09e3afbcde697903b5111178b808ed61e5"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/e015ea09e3afbcde697903b5111178b808ed61e5",
+    "featured": true
   },
   "cherrycordial": {
     "title": "Cherry Cordial",
@@ -8004,8 +8002,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2025-01-24T00:02:27.565Z",
-    "lastFeatured": "2025-03-13T00:01:55.432Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/87c4c3435b531616e2d642009a18eb711f87be4e"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/87c4c3435b531616e2d642009a18eb711f87be4e",
+    "featured": true
   },
   "somebodythatiusedtoknow": {
     "title": "Somebody That I Used To Know",
@@ -8064,8 +8063,9 @@
       "plastic-guitar": 2
     },
     "createdAt": "2025-01-31T00:02:19.524Z",
-    "lastFeatured": "2025-03-09T00:01:17.835Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/9eb4dfc6513c63f93e8cf44a202ea0e3cd3cf11f"
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
+    "previewUrl": "https://p.scdn.co/mp3-preview/9eb4dfc6513c63f93e8cf44a202ea0e3cd3cf11f",
+    "featured": true
   },
   "partylikearockstar": {
     "title": "Party Like A Rock Star",
@@ -8144,7 +8144,7 @@
       "plastic-guitar": 5
     },
     "createdAt": "2025-02-07T00:02:00.430Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3bd133cbf1fb988c0235d0a383fffcf05f5756e8",
     "featured": true
   },
@@ -8165,7 +8165,7 @@
       "plastic-guitar": 5
     },
     "createdAt": "2025-02-07T00:02:01.926Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/88313f8d242e33ffe0e9eba2838608fadf2a590a",
     "featured": true
   },
@@ -8186,7 +8186,7 @@
       "plastic-guitar": 3
     },
     "createdAt": "2025-02-14T00:01:23.432Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/1c5db91080b8b9b6ccef484b5da12f280d89b81f",
     "featured": true
   },
@@ -8208,8 +8208,7 @@
     },
     "createdAt": "2025-02-14T00:01:24.277Z",
     "lastFeatured": "2025-03-19T00:01:04.456Z",
-    "previewUrl": "https://p.scdn.co/mp3-preview/165c0f2946ed4018a9d435901ba67200d4325e76",
-    "featured": true
+    "previewUrl": "https://p.scdn.co/mp3-preview/165c0f2946ed4018a9d435901ba67200d4325e76"
   },
   "losecontrol": {
     "title": "Lose Control",
@@ -8368,7 +8367,7 @@
       "plastic-guitar": 3
     },
     "createdAt": "2025-02-28T00:01:14.507Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/befdb5c50a81420c5309e64cbb80ae4832b2089b",
     "featured": true
   },
@@ -8509,7 +8508,7 @@
       "plastic-guitar": 3
     },
     "createdAt": "2025-03-14T00:01:15.233Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8b85c5bb409d90992e7646fbe28eea1891592d15",
     "featured": true
   },
@@ -8530,7 +8529,7 @@
       "plastic-guitar": 4
     },
     "createdAt": "2025-03-14T00:01:15.751Z",
-    "lastFeatured": "2025-03-19T00:01:04.456Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b56ce8c209cf8dd61d685b16465fb90c15cadcf6",
     "featured": true
   },
@@ -8591,7 +8590,7 @@
       "plastic-guitar": 1
     },
     "createdAt": "2025-03-19T00:01:05.370Z",
-    "lastFeatured": "2025-03-19T00:01:05.370Z",
+    "lastFeatured": "2025-03-20T00:01:30.508Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d72636d23beb0e3c283ec8150b8f50f9b5b0d8a3",
     "featured": true
   },
