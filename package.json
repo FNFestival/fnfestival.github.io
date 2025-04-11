@@ -2,8 +2,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "auth": "node authenticate.js",
-    "update-jam-tracks": "node scripts/index.js"
+    "auth": "node scripts/authenticate.js",
+    "update": "node scripts/update-jam-tracks.js"
   },
   "dependencies": {
     "fnbr": "^4.1.0",
