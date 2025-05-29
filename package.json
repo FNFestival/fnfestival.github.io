@@ -13,6 +13,6 @@
     "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {
-    "vite": "^6.3.3"
+    "vite": "^6.3.5"
   }
 }
