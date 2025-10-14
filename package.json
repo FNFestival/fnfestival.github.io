@@ -9,10 +9,10 @@
     "update": "node scripts/update-jam-tracks.js"
   },
   "dependencies": {
-    "fnbr": "^4.1.0",
+    "fnbr": "^4.1.2",
     "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {
-    "vite": "^6.3.5"
+    "vite": "^7.1.9"
   }
 }
