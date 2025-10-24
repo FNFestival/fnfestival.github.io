@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     favorites: JSON.parse(localStorage.getItem('favoriteTracks') || '[]'),
     loopTimeout: null,
     countdownInterval: null,
-    pendingAudioPlay: false,
     fadeInterval: null,
     infiniteScrollHandler: null,
     forceFilteredView: false
@@ -143,23 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, stepTime);
   }
 
-  function playPreview(previewUrl) {
-    if (state.loopTimeout) {
-      clearTimeout(state.loopTimeout);
-      state.loopTimeout = null;
-    }
-
-    if (audio.src !== previewUrl) {
-      audio.src = previewUrl;
-      state.currentPreviewUrl = previewUrl;
-    }
-
-    audio.play().catch(err => {
-      console.error('Failed to play audio:', err);
-    });
-    fadeIn(CONFIG.fadeDuration);
-  }
-
   function setupAudioLoop() {
     if (state.loopTimeout) {
       clearTimeout(state.loopTimeout);
@@ -177,17 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
               if (state.currentPreviewUrl && elements.modal.style.display === 'flex') {
                 audio.currentTime = 0;
                 audio.play().then(() => {
-                  state.pendingAudioPlay = false;
                   fadeIn(CONFIG.fadeDuration);
                   // Setup the next loop
                   setupAudioLoop();
                 }).catch(err => {
-                  if (err.name === 'NotAllowedError') {
-                    console.log('Waiting for user interaction to resume audio...');
-                    state.pendingAudioPlay = true;
-                  } else {
-                    console.error('Error playing audio:', err);
-                  }
+                  console.error('Error playing audio:', err);
                 });
               }
             }, CONFIG.loopDelay);
@@ -295,19 +271,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (playPromise !== undefined) {
         playPromise.then(() => {
           console.log('Audio playing successfully');
-          state.pendingAudioPlay = false;
           fadeIn(CONFIG.fadeDuration);
           setupAudioLoop();
         }).catch(err => {
           // Ignore AbortError (happens when switching tracks quickly)
           if (err.name !== 'AbortError') {
-            if (err.name === 'NotAllowedError') {
-              console.log('Waiting for user interaction to play audio...');
-              state.pendingAudioPlay = true;
-            } else {
-              console.error('Failed to play audio:', err);
-              console.log('Preview URL:', previewUrl);
-            }
+            console.error('Failed to play audio:', err);
+            console.log('Preview URL:', previewUrl);
           }
         });
       }
@@ -1163,26 +1133,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Event Listeners
   function initializeEventListeners() {
-    // Retry audio play on user interaction if pending
-    const retryAudioPlay = () => {
-      if (state.pendingAudioPlay && elements.modal.style.display === 'flex' && state.currentPreviewUrl) {
-        audio.play().then(() => {
-          console.log('Audio playing after user interaction');
-          state.pendingAudioPlay = false;
-          fadeIn(CONFIG.fadeDuration);
-          setupAudioLoop();
-        }).catch(err => {
-          if (err.name !== 'NotAllowedError') {
-            console.error('Failed to play audio:', err);
-          }
-        });
-      }
-    };
-
-    // Listen for user interactions to retry audio
-    document.addEventListener('click', retryAudioPlay, { once: false });
-    document.addEventListener('keydown', retryAudioPlay, { once: false });
-
     // Audio events
     audio.addEventListener('loadedmetadata', () => {
       if (elements.modal.style.display === 'flex' && state.currentPreviewUrl) {
