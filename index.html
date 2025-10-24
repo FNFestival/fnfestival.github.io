@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://github.com/FNFestival.png">
     <title>Fortnite Festival</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="512x512">
     <link rel="preconnect" href="https://cdn2.unrealengine.com" crossorigin>
     <link rel="preconnect" href="https://p.scdn.co" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,38 +19,47 @@
 <body>
     <header class="header">
         <div class="container">
-            <img id="logo" src="assets/images/logo.png" alt="Fortnite Festival Logo" draggable="false">
-            <div class="search-wrapper">
-                <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
-            </div>
-            <div class="links">
-                <a href="https://github.com/FNFestival/fnfestival.github.io" target="_blank">GitHub</a>
+            <div class="header-top">
+                <img id="logo" src="assets/images/logo.png" alt="Fortnite Festival Logo" draggable="false">
+                <div class="search-wrapper">
+                    <select id="filterSelect" class="custom-select">
+                        <option value="all">All</option>
+                        <option value="featured">Featured</option>
+                        <option value="rotated">Rotated</option>
+                        <option value="new">New</option>
+                        <option value="favorites">Favorites</option>
+                    </select>
+                    <input type="search" id="searchInput" placeholder="Search tracks..." aria-label="Search Tracks">
+                </div>
+                <div class="links">
+                    <button id="randomButton" title="Open random track">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.318 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 1 6.444 8a9.624 9.624 0 0 1-1.318-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                            <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                        </svg>
+                    </button>
+                    <a href="https://github.com/FNFestival/fnfestival.github.io" target="_blank" title="View on GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
-    <div class="header-info">
-        <div class="container">
-            <span id="trackCount" class="track-count"></span>
-            <span id="countdown" class="countdown"></span>
-        </div>
-    </div>
     <main>
         <div class="container">
-            <div class="filter-wrapper">
-                <select id="filterSelect" class="custom-select">
-                    <option value="all">All Tracks</option>
-                    <option value="featured">Currently Featured</option>
-                    <option value="rotated">Recently Rotated</option>
-                    <option value="new">Recently Added</option>
-                </select>
-            </div>
             <div class="content">
                 <!-- Jam tracks will be added dynamically here -->
             </div>
         </div>
     </main>
     <div id="trackModal" class="modal">
-        <span class="modal-close">&times;</span>
+        <button class="modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+        </button>
         <button class="modal-nav modal-prev">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
@@ -65,17 +74,34 @@
             <div class="modal-header">
                 <img id="modalCover" src="" alt="Jam Track Cover" draggable="false">
                 <div class="track-info">
-                    <h2 id="modalTitle" translate="no"></h2>
-                    <p id="modalArtist" translate="no"></p>
+                    <div class="marquee-container">
+                        <h2 id="modalTitle" class="marquee-text" translate="no"></h2>
+                    </div>
+                    <div class="marquee-container">
+                        <p id="modalArtist" class="marquee-text" translate="no"></p>
+                    </div>
+                    <div id="modalLabels" class="track-labels"></div>
                 </div>
-                <button id="muteButton" class="mute-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mute-icon" viewBox="0 0 16 16">
-                        <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06M6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="unmute-icon" viewBox="0 0 16 16">
-                        <path d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11M12.025 8a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8"/>
-                    </svg>
-                </button>
+                <div class="modal-controls">
+                    <button id="favoriteButton" class="favorite-button" title="Add to favorites (F)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="heart-outline" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="heart-filled" viewBox="0 0 16 16" style="display: none;">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                        </svg>
+                    </button>
+                    <button id="muteButton" class="mute-button" title="Mute/Unmute (M)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="volume-icon" viewBox="0 0 16 16">
+                            <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                            <path d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="muted-icon" viewBox="0 0 16 16" style="display: none;">
+                            <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="modal-body">
                 <div id="modalDetails" class="modal-details"></div>
@@ -83,5 +109,15 @@
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copyright">
+                &copy; 2024-2025 <strong>FNFestival.co</strong>
+            </p>
+            <p class="footer-legal">
+                Not affiliated with Epic Games or Fortnite. All trademarks belong to their respective owners.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
