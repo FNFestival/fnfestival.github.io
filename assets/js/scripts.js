@@ -380,13 +380,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (textWidth > containerWidth + 5) {
         // Calculate distance needed to scroll the overflow
         const scrollDistance = textWidth - containerWidth;
-        
+
         // Scale duration based on text length (35px per second)
         const baseDuration = Math.max(5, Math.min(18, scrollDistance / 35));
-        
+
         // Stagger animations with random delay
         const randomDelay = Math.random() * 2;
-        
+
         // Apply all styles at once
         textElement.style.cssText += `
           --scroll-distance: -${scrollDistance}px;
@@ -552,7 +552,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.tracksData.forEach(track => {
       const createdTime = new Date(track.createdAt).getTime();
       const lastFeaturedTime = track.lastFeatured ? new Date(track.lastFeatured).getTime() : 0;
-      
+
       const isNew = createdTime > sevenDaysAgo;
       const isFeatured = lastFeaturedTime >= oneDayAgo;
       const isRotated = lastFeaturedTime < oneDayAgo && lastFeaturedTime >= sevenDaysAgo;
@@ -569,7 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sort each category
     const newTracks = categories.new;
-    
+
     const dailyRotation = categories.featured.sort((a, b) => {
       const dateA = a.lastFeatured ? new Date(a.lastFeatured).getTime() : 0;
       const dateB = b.lastFeatured ? new Date(b.lastFeatured).getTime() : 0;
@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const populateSection = (selector, tracks, limit = 6) => {
       const grid = elements.content.querySelector(selector);
       if (!grid) return;
-      
+
       const fragment = document.createDocumentFragment();
       const limitedTracks = tracks.slice(0, limit);
       limitedTracks.forEach(track => fragment.appendChild(createTrackElement(track)));
