@@ -182,7 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderModal(track) {
-    const { id, title, artist, releaseYear, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl } = track;
+    // Only destructure what we actually use
+    const { id, title, artist, cover, bpm, duration, difficulties, createdAt, lastFeatured, previewUrl, releaseYear } = track;
 
     elements.modal.querySelector('#modalCover').src = cover;
     elements.modal.querySelector('#modalTitle').textContent = title;
@@ -217,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="detail-value">${duration}</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">BPM</span>
+          <span class="detail-label">BPM/Tempo</span>
           <span class="detail-value">${bpm}</span>
         </div>
         <div class="detail-item">
@@ -371,33 +372,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset animation
     stopMarquee(textElement);
 
-    // Use multiple RAF calls for more accurate measurements
     requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        const containerWidth = container.clientWidth;
-        const textWidth = textElement.scrollWidth;
+      const containerWidth = container.clientWidth;
+      const textWidth = textElement.scrollWidth;
 
-        // Add small buffer (5px) to prevent unnecessary scrolling
-        if (textWidth > containerWidth + 5) {
-          // Calculate exact distance to scroll (just the overflow amount)
-          const scrollDistance = textWidth - containerWidth;
-          textElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
+      // Add small buffer to prevent unnecessary scrolling
+      if (textWidth > containerWidth + 5) {
+        // Calculate distance needed to scroll the overflow
+        const scrollDistance = textWidth - containerWidth;
+        
+        // Scale duration based on text length (35px per second)
+        const baseDuration = Math.max(5, Math.min(18, scrollDistance / 35));
+        
+        // Stagger animations with random delay
+        const randomDelay = Math.random() * 2;
+        
+        // Apply all styles at once
+        textElement.style.cssText += `
+          --scroll-distance: -${scrollDistance}px;
+          --marquee-delay: ${randomDelay}s;
+          --marquee-duration: ${baseDuration}s;
+        `;
 
-          // Scale duration based on text length - longer text = more time
-          // Base: 35px per second for comfortable reading speed
-          const pixelsPerSecond = 35;
-          const baseDuration = Math.max(5, Math.min(18, scrollDistance / pixelsPerSecond));
-
-          // Add random delay (0-2s) to stagger animations
-          const randomDelay = Math.random() * 2;
-          textElement.style.setProperty('--marquee-delay', `${randomDelay}s`);
-          textElement.style.setProperty('--marquee-duration', `${baseDuration}s`);
-
-          // Force reflow to restart animation
-          void textElement.offsetWidth;
-          textElement.classList.add('scrolling');
-        }
-      });
+        // Force reflow to restart animation
+        void textElement.offsetWidth;
+        textElement.classList.add('scrolling');
+      }
     });
   }
 
@@ -475,6 +475,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = sanitizeInput(rawQuery).toLowerCase();
     const filterValue = elements.filterSelect.value;
 
+    // Update filter cache before filtering
+    updateFilterCache();
+
     const filteredTracks = state.tracksData.filter(track => {
       const matchesSearch = track.title.toLowerCase().includes(query) ||
                 track.artist.toLowerCase().includes(query);
@@ -489,24 +492,37 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTrackDisplay(query, filterValue, updateHistory);
   }
 
+  // Cache time values for filter performance
+  const filterTimeCache = {
+    now: 0,
+    oneDayAgo: 0,
+    sevenDaysAgo: 0,
+    favoritesSet: new Set()
+  };
+
+  function updateFilterCache() {
+    const now = Date.now();
+    filterTimeCache.now = now;
+    filterTimeCache.oneDayAgo = now - (24 * 60 * 60 * 1000);
+    filterTimeCache.sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
+    filterTimeCache.favoritesSet = new Set(state.favorites);
+  }
+
   function applyFilter(track, filterValue) {
     switch (filterValue) {
       case 'featured':
-        return track.featured;
+        // Featured: lastFeatured within last 24 hours
+        if (!track.lastFeatured) return false;
+        return new Date(track.lastFeatured).getTime() >= filterTimeCache.oneDayAgo;
       case 'rotated':
-        const oneDayAgo = new Date();
-        oneDayAgo.setUTCHours(0, 0, 0, 0);
-        const twoDaysAgo = new Date(oneDayAgo);
-        twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
-        return track.lastFeatured &&
-             new Date(track.lastFeatured) >= twoDaysAgo &&
-             new Date(track.lastFeatured) < oneDayAgo &&
-             !track.featured;
+        // Recently rotated: lastFeatured between 1-7 days ago (NOT in last 24 hours)
+        if (!track.lastFeatured) return false;
+        const lastFeaturedTime = new Date(track.lastFeatured).getTime();
+        return lastFeaturedTime < filterTimeCache.oneDayAgo && lastFeaturedTime >= filterTimeCache.sevenDaysAgo;
       case 'new':
-        const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        return new Date(track.createdAt) > sevenDaysAgo;
+        return new Date(track.createdAt).getTime() > filterTimeCache.sevenDaysAgo;
       case 'favorites':
-        return state.favorites.includes(track.id);
+        return filterTimeCache.favoritesSet.has(track.id);
       default:
         return true;
     }
@@ -514,58 +530,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Homepage Rendering
   function renderHomepage() {
-    const now = new Date();
-    const sevenDaysAgo = new Date(now - 7 * 24 * 60 * 60 * 1000);
+    const now = Date.now();
+    const oneDayMs = 24 * 60 * 60 * 1000;
+    const sevenDaysMs = 7 * oneDayMs;
+    const oneDayAgo = now - oneDayMs;
+    const sevenDaysAgo = now - sevenDaysMs;
 
-    // Categorize tracks
-    const newTracks = state.tracksData.filter(track =>
-      new Date(track.createdAt) > sevenDaysAgo
-    );
+    // Create Set for O(1) favorite lookups
+    const favoritesSet = new Set(state.favorites);
 
-    const dailyRotation = state.tracksData
-      .filter(track => track.featured)
-      .sort((a, b) => {
-        // Sort by lastFeatured date, most recent first (tracks added today/yesterday first)
-        const dateA = a.lastFeatured ? new Date(a.lastFeatured) : new Date(0);
-        const dateB = b.lastFeatured ? new Date(b.lastFeatured) : new Date(0);
-        return dateB - dateA;
-      });
+    // Initialize category buckets
+    const categories = {
+      new: [],
+      featured: [],
+      rotated: [],
+      favorites: [],
+      other: []
+    };
 
-    const rotatedOut = state.tracksData
-      .filter(track => {
-        if (!track.lastFeatured || track.featured) return false;
-        const lastFeaturedDate = new Date(track.lastFeatured);
-        const sevenDaysAgo = new Date(now - 7 * 24 * 60 * 60 * 1000);
-        return lastFeaturedDate >= sevenDaysAgo;
-      })
-      .sort((a, b) => {
-        // Sort by lastFeatured date, most recently rotated out first
-        const dateA = new Date(a.lastFeatured);
-        const dateB = new Date(b.lastFeatured);
-        return dateB - dateA;
-      });
+    // Categorize all tracks in a single pass
+    state.tracksData.forEach(track => {
+      const createdTime = new Date(track.createdAt).getTime();
+      const lastFeaturedTime = track.lastFeatured ? new Date(track.lastFeatured).getTime() : 0;
+      
+      const isNew = createdTime > sevenDaysAgo;
+      const isFeatured = lastFeaturedTime >= oneDayAgo;
+      const isRotated = lastFeaturedTime < oneDayAgo && lastFeaturedTime >= sevenDaysAgo;
+      const isFavorite = favoritesSet.has(track.id);
 
-    const favoriteTracks = state.tracksData
-      .filter(track => state.favorites.includes(track.id))
-      .sort((a, b) => {
-        // Sort by when they were added to favorites (reverse order of favorites array)
-        const indexA = state.favorites.indexOf(a.id);
-        const indexB = state.favorites.indexOf(b.id);
-        return indexB - indexA; // Newest favorites first
-      });
+      if (isNew) categories.new.push(track);
+      if (isFeatured) categories.featured.push(track);
+      if (isRotated) categories.rotated.push(track);
+      if (isFavorite) categories.favorites.push(track);
+      if (!isNew && !isFeatured && !isRotated && !isFavorite) {
+        categories.other.push(track);
+      }
+    });
 
-    const otherTracks = state.tracksData
-      .filter(track => {
-        const isNew = new Date(track.createdAt) > sevenDaysAgo;
-        const isFeatured = track.featured;
-        const wasRotated = !track.featured && track.lastFeatured;
-        const isFavorite = state.favorites.includes(track.id);
-        return !isNew && !isFeatured && !wasRotated && !isFavorite;
-      })
-      .sort((a, b) => {
-        // Sort by createdAt, newest first
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      });
+    // Sort each category
+    const newTracks = categories.new;
+    
+    const dailyRotation = categories.featured.sort((a, b) => {
+      const dateA = a.lastFeatured ? new Date(a.lastFeatured).getTime() : 0;
+      const dateB = b.lastFeatured ? new Date(b.lastFeatured).getTime() : 0;
+      return dateB - dateA;
+    });
+
+    const rotatedOut = categories.rotated.sort((a, b) => {
+      const dateA = new Date(a.lastFeatured).getTime();
+      const dateB = new Date(b.lastFeatured).getTime();
+      return dateB - dateA;
+    });
+
+    const favoriteTracks = categories.favorites.sort((a, b) => {
+      const indexA = state.favorites.indexOf(a.id);
+      const indexB = state.favorites.indexOf(b.id);
+      return indexB - indexA;
+    });
+
+    const otherTracks = categories.other.sort((a, b) => {
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
 
     // Calculate countdown
     const nextUpdate = new Date();
@@ -643,11 +668,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ${rotatedOut.length > 0 ? `
         <div class="track-section">
           <div class="section-header" tabindex="0" role="button" data-filter="rotated">
-            <h2>Rotated Out</h2>
+            <h2>Recently Rotated</h2>
             <span class="section-count">${rotatedOut.length}</span>
           </div>
           <div class="tracks-grid" data-section="rotated"></div>
-          ${rotatedOut.length > 6 ? '<button class="show-all-btn" data-filter="rotated">Show All Rotated Out</button>' : ''}
+          ${rotatedOut.length > 6 ? '<button class="show-all-btn" data-filter="rotated">Show All Recently Rotated</button>' : ''}
         </div>
       ` : ''}
 
@@ -672,34 +697,22 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-    // Populate sections
-    if (newTracks.length > 0) {
-      const newGrid = elements.content.querySelector('[data-section="new"]');
-      const limitedNew = newTracks.slice(0, 6);
-      limitedNew.forEach(track => newGrid.appendChild(createTrackElement(track)));
-    }
+    // Populate sections using document fragments to batch DOM updates
+    const populateSection = (selector, tracks, limit = 6) => {
+      const grid = elements.content.querySelector(selector);
+      if (!grid) return;
+      
+      const fragment = document.createDocumentFragment();
+      const limitedTracks = tracks.slice(0, limit);
+      limitedTracks.forEach(track => fragment.appendChild(createTrackElement(track)));
+      grid.appendChild(fragment);
+    };
 
-    if (dailyRotation.length > 0) {
-      const dailyGrid = elements.content.querySelector('[data-section="daily"]');
-      const limitedDaily = dailyRotation.slice(0, 6);
-      limitedDaily.forEach(track => dailyGrid.appendChild(createTrackElement(track)));
-    }
-
-    if (rotatedOut.length > 0) {
-      const rotatedGrid = elements.content.querySelector('[data-section="rotated"]');
-      const limitedRotated = rotatedOut.slice(0, 6);
-      limitedRotated.forEach(track => rotatedGrid.appendChild(createTrackElement(track)));
-    }
-
-    if (favoriteTracks.length > 0) {
-      const favoritesGrid = elements.content.querySelector('[data-section="favorites"]');
-      const limitedFavorites = favoriteTracks.slice(0, 6);
-      limitedFavorites.forEach(track => favoritesGrid.appendChild(createTrackElement(track)));
-    }
-
-    const otherGrid = elements.content.querySelector('[data-section="other"]');
-    const limitedOther = otherTracks.slice(0, 6);
-    limitedOther.forEach(track => otherGrid.appendChild(createTrackElement(track)));
+    if (newTracks.length > 0) populateSection('[data-section="new"]', newTracks);
+    if (dailyRotation.length > 0) populateSection('[data-section="daily"]', dailyRotation);
+    if (rotatedOut.length > 0) populateSection('[data-section="rotated"]', rotatedOut);
+    if (favoriteTracks.length > 0) populateSection('[data-section="favorites"]', favoriteTracks);
+    populateSection('[data-section="other"]', otherTracks);
 
     // Section header click handlers
     elements.content.querySelectorAll('.section-header').forEach(header => {
@@ -814,14 +827,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function sortTracks(tracks, filterValue) {
+    const now = Date.now();
+    const oneDayAgo = now - 24 * 60 * 60 * 1000;
+
     return tracks.sort((a, b) => {
-      if (filterValue === 'rotated') {
+      if (filterValue === 'rotated' || filterValue === 'featured') {
         return new Date(b.lastFeatured) - new Date(a.lastFeatured);
       } else if (filterValue === 'new') {
         return new Date(b.createdAt) - new Date(a.createdAt);
       } else {
-        if (a.featured && !b.featured) return -1;
-        if (!a.featured && b.featured) return 1;
+        // For 'all' filter, prioritize currently featured tracks
+        const aIsFeatured = a.lastFeatured && new Date(a.lastFeatured).getTime() >= oneDayAgo;
+        const bIsFeatured = b.lastFeatured && new Date(b.lastFeatured).getTime() >= oneDayAgo;
+
+        if (aIsFeatured && !bIsFeatured) return -1;
+        if (!aIsFeatured && bIsFeatured) return 1;
         return new Date(b.createdAt) - new Date(a.createdAt);
       }
     });
@@ -953,28 +973,49 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = '';
     const maxBars = 7;
 
-    // Instrument name mapping
-    const instrumentNames = {
-      'guitar': 'Lead',
-      'drums': 'Drums',
-      'bass': 'Bass',
-      'vocals': 'Vocals',
-      'plasticGuitar': 'Guitar',
-      'plasticDrums': 'Drums',
-      'plasticBass': 'Bass',
-      'plastic-guitar': 'Guitar',
-      'plastic-drums': 'Drums',
-      'plastic-bass': 'Bass'
-    };
+    // Helper function to convert instrument key to display name
+    function getInstrumentDisplayName(key) {
+      // Handle plastic/pro instruments
+      if (key.startsWith('plastic')) {
+        const baseInstrument = key.replace(/^plastic-?/i, '');
+        const capitalizedBase = baseInstrument.charAt(0).toUpperCase() + baseInstrument.slice(1);
 
-    // Sort instruments in a logical order
-    const instrumentOrder = ['guitar', 'plasticGuitar', 'plastic-guitar', 'bass', 'plasticBass', 'plastic-bass', 'drums', 'plasticDrums', 'plastic-drums', 'vocals'];
+        if (capitalizedBase === 'Guitar') {
+          return 'Pro Lead';
+        }
 
-    const sortedEntries = Object.entries(difficulties).sort((a, b) => {
-      const indexA = instrumentOrder.indexOf(a[0]);
-      const indexB = instrumentOrder.indexOf(b[0]);
-      return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+        return `Pro ${capitalizedBase}`;
+      }
+
+      if (key === 'guitar') {
+        return 'Lead';
+      }
+
+      return key.charAt(0).toUpperCase() + key.slice(1);
+    }
+
+    // Separate regular and pro instruments, then interleave for 2-column layout
+    const regular = [];
+    const pro = [];
+
+    Object.entries(difficulties).forEach(([key, level]) => {
+      (key.startsWith('plastic') ? pro : regular).push([key, level]);
     });
+
+    // Sort by instrument type: vocals, guitar, bass, drums
+    const getInstrumentType = (key) => key.replace(/^plastic/, '').toLowerCase();
+    const order = { vocals: 0, guitar: 1, bass: 2, drums: 3 };
+    const sortByType = (a, b) => (order[getInstrumentType(a[0])] ?? 999) - (order[getInstrumentType(b[0])] ?? 999);
+
+    regular.sort(sortByType);
+    pro.sort(sortByType);
+
+    // Interleave: regular[0], pro[0], regular[1], pro[1], ...
+    const sortedEntries = [];
+    for (let i = 0; i < Math.max(regular.length, pro.length); i++) {
+      if (regular[i]) sortedEntries.push(regular[i]);
+      if (pro[i]) sortedEntries.push(pro[i]);
+    }
 
     sortedEntries.forEach(([instrument, level]) => {
       const difficultyElement = document.createElement('div');
@@ -984,7 +1025,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `<div class="difficulty-bar"><span class="${i <= level ? 'active' : ''}"></span></div>`
       ).join('');
 
-      const instrumentName = instrumentNames[instrument] || instrument.charAt(0).toUpperCase() + instrument.slice(1).replace(/([A-Z])/g, ' $1').trim();
+      const instrumentName = getInstrumentDisplayName(instrument);
 
       difficultyElement.innerHTML = `
         <div class="instrument-name">${instrumentName}</div>
@@ -1022,7 +1063,11 @@ document.addEventListener('DOMContentLoaded', () => {
       labelContainer.appendChild(newLabel);
     }
 
-    if (track.featured) {
+    // Check if track is currently featured (lastFeatured within last 24 hours)
+    const isFeaturedNow = track.lastFeatured &&
+      (Date.now() - new Date(track.lastFeatured).getTime()) < 24 * 60 * 60 * 1000;
+
+    if (isFeaturedNow) {
       const featuredLabel = document.createElement('span');
       featuredLabel.classList.add('featured-label');
       if (isModal) {
@@ -1069,6 +1114,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Data Loading
   function loadTracks() {
+    // Show loading spinner
+    elements.content.innerHTML = `
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading jam tracks...</p>
+      </div>
+    `;
+
     // Calculate cache-friendly timestamp (last update at 00:02 UTC)
     const now = new Date();
     const lastUpdate = new Date();
@@ -1082,7 +1135,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cacheTimestamp = lastUpdate.getTime();
 
     fetch(`data/jam_tracks.json?v=${cacheTimestamp}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         // Convert object to array and add ID to each track
         state.tracksData = Object.entries(data).map(([id, track]) => ({
@@ -1094,6 +1152,13 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => {
         console.error('Error loading tracks:', error);
+        elements.content.innerHTML = `
+          <div class="error-container">
+            <h2>Failed to load tracks</h2>
+            <p>${error.message}</p>
+            <button onclick="location.reload()">Retry</button>
+          </div>
+        `;
       });
   }
 
