@@ -87,38 +87,65 @@ async function updateJamTracks(availableTracksData, dailyTracks) {
       console.log('No existing jam tracks file, starting fresh');
     }
 
-    // Process tracks
+    const now = new Date().toISOString();
+    const dailyTracksSet = new Set(dailyTracks);
+
+    // Process all tracks
     const jamTracks = {};
+    const previewUrlPromises = [];
+
     for (const [trackId, trackData] of Object.entries(availableTracksData)) {
       if (!trackData.track) continue;
 
-      const existingTrack = existingData[trackData.track.sn];
-      const previewUrl = trackData.track.an.trim() !== 'Epic Games' ?
-        (existingTrack?.previewUrl || await fetchPreviewUrl(trackData.track)) : null;
+      const track = trackData.track;
+      const trackSn = track.sn;
+      const existingTrack = existingData[trackSn];
 
-      jamTracks[trackData.track.sn] = {
-        id: trackData.track.sn,
-        title: trackData.track.tt.trim(),
-        artist: trackData.track.an.trim(),
-        releaseYear: trackData.track.ry,
-        cover: trackData.track.au,
-        bpm: trackData.track.mt,
-        duration: formatDuration(trackData.track.dn),
+      // Cache trimmed strings
+      const artistName = track.an.trim();
+      const trackTitle = track.tt.trim();
+
+      // Determine if we need to fetch preview URL
+      const needsPreviewUrl = artistName !== 'Epic Games' && !existingTrack?.previewUrl;
+
+      jamTracks[trackSn] = {
+        id: trackSn,
+        title: trackTitle,
+        artist: artistName,
+        releaseYear: track.ry,
+        cover: track.au,
+        bpm: track.mt,
+        duration: formatDuration(track.dn),
         difficulties: {
-          vocals: trackData.track.in.vl,
-          guitar: trackData.track.in.gr,
-          bass: trackData.track.in.ba,
-          drums: trackData.track.in.ds,
-          'plastic-bass': trackData.track.in.pb,
-          'plastic-drums': trackData.track.in.pd,
-          'plastic-guitar': trackData.track.in.pg
+          vocals: track.in.vl,
+          bass: track.in.ba,
+          guitar: track.in.gr,
+          drums: track.in.ds,
+          plasticBass: track.in.pb,
+          plasticGuitar: track.in.pg,
+          plasticDrums: track.in.pd
         },
-        createdAt: existingTrack?.createdAt || new Date().toISOString(),
-        lastFeatured: dailyTracks.includes(trackId) ?
-          new Date().toISOString() : existingTrack?.lastFeatured || null,
-        featured: dailyTracks.includes(trackId),
-        previewUrl
+        createdAt: existingTrack?.createdAt || now,
+        lastFeatured: dailyTracksSet.has(trackId) ? now : existingTrack?.lastFeatured || null,
+        previewUrl: existingTrack?.previewUrl || null
       };
+
+      // Queue preview URL fetch for parallel execution
+      if (needsPreviewUrl) {
+        previewUrlPromises.push(
+          fetchPreviewUrl(track).then(url => {
+            if (url) {
+              jamTracks[trackSn].previewUrl = url;
+            }
+          })
+        );
+      }
+    }
+
+    // Fetch all preview URLs in parallel
+    if (previewUrlPromises.length > 0) {
+      console.log(`Fetching ${previewUrlPromises.length} preview URLs...`);
+      await Promise.all(previewUrlPromises);
     }
 
     // Save updated data
