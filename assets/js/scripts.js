@@ -916,7 +916,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterValue && filterValue !== 'all') url.searchParams.set('filter', filterValue);
     else url.searchParams.delete('filter');
 
-    window.history.pushState({ query, filterValue }, '', url);
+    window.history.replaceState({ query, filterValue }, '', url);
   }
 
   // Infinite Scroll
