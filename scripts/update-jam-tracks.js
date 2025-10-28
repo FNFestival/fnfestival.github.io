@@ -29,9 +29,9 @@ async function main() {
     }
   });
 
-  // Fetch daily tracks and update data
-  const dailyTracks = await fetchDailyJamTracks(client);
-  await updateJamTracks(availableTracksData, dailyTracks);
+  // Fetch daily tracks and season info, then update data
+  const { dailyTracks, seasonEnd } = await fetchDailyJamTracks(client);
+  await updateJamTracks(availableTracksData, dailyTracks, seasonEnd);
 }
 
 async function fetchAvailableJamTracks() {
@@ -54,7 +54,18 @@ async function fetchDailyJamTracks(client) {
     const states = eventFlags?.channels['client-events']?.states || [];
     const currentDate = new Date();
 
-    return states
+    // Find season end date
+    let seasonEnd = null;
+    const seasonEvent = states
+      .flatMap(state => state.activeEvents || [])
+      .find(event => event.eventType.startsWith('EventFlag.Event_SparksS'));
+
+    if (seasonEvent) {
+      seasonEnd = seasonEvent.activeUntil;
+    }
+
+    // Get daily tracks
+    const dailyTracks = states
       .flatMap(state => state.activeEvents || [])
       .filter(event => event.eventType.startsWith('PilgrimSong.'))
       .map(event => event.eventType.split('.')[1])
@@ -68,21 +79,27 @@ async function fetchDailyJamTracks(client) {
         const activeEvent = event.activeEvents.find(e =>
           e.eventType === `PilgrimSong.${eventType}`
         );
-        return new Date(activeEvent.activeSince) < currentDate &&
+        return new Date(activeEvent.activeSince) <= currentDate &&
                new Date(activeEvent.activeUntil) > currentDate;
       });
+
+    return { dailyTracks, seasonEnd };
   } catch (error) {
     console.error('Error fetching daily jam tracks:', error);
-    return [];
+    return { dailyTracks: [], seasonEnd: null };
   }
 }
 
-async function updateJamTracks(availableTracksData, dailyTracks) {
+async function updateJamTracks(availableTracksData, dailyTracks, seasonEnd) {
   try {
     // Read existing data
     let existingData = {};
     try {
-      existingData = JSON.parse(await fs.readFile(JAM_TRACKS_FILE, 'utf-8'));
+      const fileContent = await fs.readFile(JAM_TRACKS_FILE, 'utf-8');
+      existingData = JSON.parse(fileContent);
+      if (existingData._metadata) {
+        delete existingData._metadata;
+      }
     } catch (error) {
       console.log('No existing jam tracks file, starting fresh');
     }
@@ -148,9 +165,19 @@ async function updateJamTracks(availableTracksData, dailyTracks) {
       await Promise.all(previewUrlPromises);
     }
 
+    // Prepare final data with metadata
+    const finalData = {
+      _metadata: {
+        seasonEnd: seasonEnd,
+        lastUpdated: now
+      },
+      ...jamTracks
+    };
+
     // Save updated data
-    await fs.writeFile(JAM_TRACKS_FILE, JSON.stringify(jamTracks, null, 2));
+    await fs.writeFile(JAM_TRACKS_FILE, JSON.stringify(finalData, null, 2));
     console.log('Jam tracks updated successfully.');
+    console.log(`Season ends: ${seasonEnd || 'Unknown'}`);
     process.exit(0);
   } catch (error) {
     console.error('Error updating jam tracks:', error);

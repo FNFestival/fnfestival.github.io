@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     countdownInterval: null,
     fadeInterval: null,
     infiniteScrollHandler: null,
-    forceFilteredView: false
+    forceFilteredView: false,
+    seasonEnd: null
   };
 
   // Constants
@@ -40,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loopDelay: 3000,
     fadeDuration: 500
   };
+
+  const MS_PER_DAY = 24 * 60 * 60 * 1000;
+  const MS_PER_WEEK = 7 * MS_PER_DAY;
 
   // Audio setup
   const audio = new Audio();
@@ -492,37 +496,50 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTrackDisplay(query, filterValue, updateHistory);
   }
 
-  // Cache time values for filter performance
-  const filterTimeCache = {
+  // Cache for filter performance
+  const filterCache = {
     now: 0,
+    today: 0,
     oneDayAgo: 0,
     sevenDaysAgo: 0,
     favoritesSet: new Set()
   };
 
+  // Helper function to check if a track is featured today
+  function isFeaturedToday(track, todayTimestamp = null) {
+    if (!track.lastFeatured) return false;
+    const featuredDate = new Date(track.lastFeatured);
+    featuredDate.setUTCHours(0, 0, 0, 0);
+    const today = todayTimestamp || filterCache.today;
+    return featuredDate.getTime() === today;
+  }
+
   function updateFilterCache() {
     const now = Date.now();
-    filterTimeCache.now = now;
-    filterTimeCache.oneDayAgo = now - (24 * 60 * 60 * 1000);
-    filterTimeCache.sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
-    filterTimeCache.favoritesSet = new Set(state.favorites);
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+
+    filterCache.now = now;
+    filterCache.today = today.getTime();
+    filterCache.oneDayAgo = now - MS_PER_DAY;
+    filterCache.sevenDaysAgo = now - MS_PER_WEEK;
+    filterCache.favoritesSet = new Set(state.favorites);
   }
 
   function applyFilter(track, filterValue) {
     switch (filterValue) {
       case 'featured':
-        // Featured: lastFeatured within last 24 hours
-        if (!track.lastFeatured) return false;
-        return new Date(track.lastFeatured).getTime() >= filterTimeCache.oneDayAgo;
+        // Featured: lastFeatured is from today
+        return isFeaturedToday(track);
       case 'rotated':
-        // Recently rotated: lastFeatured between 1-7 days ago (NOT in last 24 hours)
+        // Recently rotated: lastFeatured between 1-7 days ago
         if (!track.lastFeatured) return false;
         const lastFeaturedTime = new Date(track.lastFeatured).getTime();
-        return lastFeaturedTime < filterTimeCache.oneDayAgo && lastFeaturedTime >= filterTimeCache.sevenDaysAgo;
+        return lastFeaturedTime < filterCache.today && lastFeaturedTime >= filterCache.sevenDaysAgo;
       case 'new':
-        return new Date(track.createdAt).getTime() > filterTimeCache.sevenDaysAgo;
+        return new Date(track.createdAt).getTime() > filterCache.sevenDaysAgo;
       case 'favorites':
-        return filterTimeCache.favoritesSet.has(track.id);
+        return filterCache.favoritesSet.has(track.id);
       default:
         return true;
     }
@@ -531,10 +548,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Homepage Rendering
   function renderHomepage() {
     const now = Date.now();
-    const oneDayMs = 24 * 60 * 60 * 1000;
-    const sevenDaysMs = 7 * oneDayMs;
-    const oneDayAgo = now - oneDayMs;
-    const sevenDaysAgo = now - sevenDaysMs;
+    const sevenDaysAgo = now - MS_PER_WEEK;
+
+    // Get start of today in UTC
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+    const todayStart = today.getTime();
 
     // Create Set for O(1) favorite lookups
     const favoritesSet = new Set(state.favorites);
@@ -551,11 +570,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Categorize all tracks in a single pass
     state.tracksData.forEach(track => {
       const createdTime = new Date(track.createdAt).getTime();
-      const lastFeaturedTime = track.lastFeatured ? new Date(track.lastFeatured).getTime() : 0;
 
+      // Check if track is featured today
+      const isFeatured = isFeaturedToday(track, todayStart);
+
+      // Check if track was rotated (featured in past 7 days, but not today)
+      const isRotated = track.lastFeatured && !isFeatured &&
+                        new Date(track.lastFeatured).getTime() >= sevenDaysAgo;
       const isNew = createdTime > sevenDaysAgo;
-      const isFeatured = lastFeaturedTime >= oneDayAgo;
-      const isRotated = lastFeaturedTime < oneDayAgo && lastFeaturedTime >= sevenDaysAgo;
       const isFavorite = favoritesSet.has(track.id);
 
       if (isNew) categories.new.push(track);
@@ -619,11 +641,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Season countdown
-    const seasonEnd = new Date('2025-11-29T08:00:00Z');
-    const timeUntilSeasonEnd = seasonEnd - now;
-    const daysUntilSeasonEnd = Math.floor(timeUntilSeasonEnd / (1000 * 60 * 60 * 24));
-    const hoursUntilSeasonEnd = Math.floor((timeUntilSeasonEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const seasonCountdownText = `${daysUntilSeasonEnd}d ${hoursUntilSeasonEnd}h`;
+    let seasonCountdownText = 'Unknown';
+    if (state.seasonEnd) {
+      const seasonEnd = new Date(state.seasonEnd);
+      const timeUntilSeasonEnd = seasonEnd - now;
+      const daysUntilSeasonEnd = Math.floor(timeUntilSeasonEnd / (1000 * 60 * 60 * 24));
+      const hoursUntilSeasonEnd = Math.floor((timeUntilSeasonEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      seasonCountdownText = `${daysUntilSeasonEnd}d ${hoursUntilSeasonEnd}h`;
+    }
 
     elements.content.innerHTML = `
       <div class="info-section">
@@ -816,8 +841,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Season countdown
-      if (seasonCountdownEl) {
-        const seasonEnd = new Date('2025-11-29T08:00:00Z');
+      if (seasonCountdownEl && state.seasonEnd) {
+        const seasonEnd = new Date(state.seasonEnd);
         const timeUntilSeasonEnd = seasonEnd - now;
         const daysUntilSeasonEnd = Math.floor(timeUntilSeasonEnd / (1000 * 60 * 60 * 24));
         const hoursUntilSeasonEnd = Math.floor((timeUntilSeasonEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -827,8 +852,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function sortTracks(tracks, filterValue) {
-    const now = Date.now();
-    const oneDayAgo = now - 24 * 60 * 60 * 1000;
+    // Get start of today in UTC for featured check
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+    const todayStart = today.getTime();
 
     return tracks.sort((a, b) => {
       if (filterValue === 'rotated' || filterValue === 'featured') {
@@ -836,9 +863,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (filterValue === 'new') {
         return new Date(b.createdAt) - new Date(a.createdAt);
       } else {
-        // For 'all' filter, prioritize currently featured tracks
-        const aIsFeatured = a.lastFeatured && new Date(a.lastFeatured).getTime() >= oneDayAgo;
-        const bIsFeatured = b.lastFeatured && new Date(b.lastFeatured).getTime() >= oneDayAgo;
+        // For 'all' filter, prioritize currently featured tracks (featured today)
+        const aIsFeatured = isFeaturedToday(a, todayStart);
+        const bIsFeatured = isFeaturedToday(b, todayStart);
 
         if (aIsFeatured && !bIsFeatured) return -1;
         if (!aIsFeatured && bIsFeatured) return 1;
@@ -1040,7 +1067,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const labelContainer = document.createElement('div');
     labelContainer.classList.add('label-container');
 
-    const sevenDaysInMillis = 7 * 24 * 60 * 60 * 1000;
+    const sevenDaysInMillis = MS_PER_WEEK;
     const isNew = Date.now() - new Date(track.createdAt) < sevenDaysInMillis;
 
     if (isNew) {
@@ -1063,11 +1090,8 @@ document.addEventListener('DOMContentLoaded', () => {
       labelContainer.appendChild(newLabel);
     }
 
-    // Check if track is currently featured (lastFeatured within last 24 hours)
-    const isFeaturedNow = track.lastFeatured &&
-      (Date.now() - new Date(track.lastFeatured).getTime()) < 24 * 60 * 60 * 1000;
-
-    if (isFeaturedNow) {
+    // Check if track is currently featured today
+    if (isFeaturedToday(track)) {
       const featuredLabel = document.createElement('span');
       featuredLabel.classList.add('featured-label');
       if (isModal) {
@@ -1142,6 +1166,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
       })
       .then(data => {
+        // Extract metadata if present
+        if (data._metadata) {
+          state.seasonEnd = data._metadata.seasonEnd;
+          delete data._metadata;
+        }
+
         // Convert object to array and add ID to each track
         state.tracksData = Object.entries(data).map(([id, track]) => ({
           ...track,
