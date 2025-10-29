@@ -1,4 +1,4 @@
-import { copyFileSync, cpSync } from 'fs';
+import { cpSync } from 'fs';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
@@ -16,7 +16,6 @@ export default defineConfig({
     {
       name: 'copy-files',
       closeBundle() {
-        copyFileSync('CNAME', 'dist/CNAME');
         cpSync('data', 'dist/data', { recursive: true });
       },
     },
