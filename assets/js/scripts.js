@@ -749,8 +749,8 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.filterSelect.value = filterValue;
         elements.searchInput.value = '';
 
-        // Set flag to force all tracks view if clicking "Other Tracks"
-        state.forceFilteredView = (filterValue === 'all');
+        // Set flag to force filtered view and push to history
+        state.forceFilteredView = true;
         filterTracks();
         state.forceFilteredView = false;
       });
@@ -762,8 +762,8 @@ document.addEventListener('DOMContentLoaded', () => {
           elements.filterSelect.value = filterValue;
           elements.searchInput.value = '';
 
-          // Set flag to force all tracks view if clicking "Other Tracks"
-          state.forceFilteredView = (filterValue === 'all');
+          // Set flag to force filtered view and push to history
+          state.forceFilteredView = true;
           filterTracks();
           state.forceFilteredView = false;
         }
@@ -780,8 +780,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Set flag to force all tracks view
-        state.forceFilteredView = (filterValue === 'all');
+        // Set flag to force filtered view and push to history
+        state.forceFilteredView = true;
         filterTracks();
         state.forceFilteredView = false;
       });
@@ -886,8 +886,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll to top when displaying new results
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    // Determine if we should show homepage or filtered view
+    const shouldShowHomepage = !query && filterValue === 'all' && !state.forceFilteredView;
+
     // Show homepage when no filter/search (unless forced to show filtered view)
-    if (!query && filterValue === 'all' && !state.forceFilteredView) {
+    if (shouldShowHomepage) {
       renderHomepage();
     } else {
       // Show filtered results
@@ -943,7 +946,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterValue && filterValue !== 'all') url.searchParams.set('filter', filterValue);
     else url.searchParams.delete('filter');
 
-    window.history.replaceState({ query, filterValue }, '', url);
+    // Use pushState only when clicking section headers/buttons, replaceState for search/filter changes
+    // This is controlled by the caller through state.forceFilteredView or explicit navigation
+    const shouldPush = state.forceFilteredView || (
+      // Push state when navigating from homepage to filtered view
+      !elements.searchInput.value && 
+      elements.content.querySelector('.info-section') && 
+      (filterValue !== 'all' || query)
+    );
+
+    if (shouldPush) {
+      window.history.pushState({ query, filterValue }, '', url);
+    } else {
+      window.history.replaceState({ query, filterValue }, '', url);
+    }
   }
 
   // Infinite Scroll
