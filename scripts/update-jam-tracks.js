@@ -83,6 +83,9 @@ async function fetchDailyJamTracks(client) {
                new Date(activeEvent.activeUntil) > currentDate;
       });
 
+    // Log daily tracks
+    console.log(dailyTracks);
+
     return { dailyTracks, seasonEnd };
   } catch (error) {
     console.error('Error fetching daily jam tracks:', error);
