@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInterval: null,
     infiniteScrollHandler: null,
     forceFilteredView: false,
-    seasonEnd: null
+    seasonEnd: null,
+    historyTimeout: null
   };
 
   // Constants
@@ -933,7 +934,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update URL with search and filter parameters
     if (updateHistory) {
-      updateURL(query, filterValue);
+      // Use immediate update for section navigation, debounced for search/filter
+      const immediate = state.forceFilteredView || filterValue !== 'all';
+      debouncedUpdateURL(query, filterValue, immediate);
     }
   }
 
@@ -946,19 +949,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterValue && filterValue !== 'all') url.searchParams.set('filter', filterValue);
     else url.searchParams.delete('filter');
 
-    // Use pushState only when clicking section headers/buttons, replaceState for search/filter changes
-    // This is controlled by the caller through state.forceFilteredView or explicit navigation
-    const shouldPush = state.forceFilteredView || (
-      // Push state when navigating from homepage to filtered view
-      !elements.searchInput.value && 
-      elements.content.querySelector('.info-section') && 
-      (filterValue !== 'all' || query)
-    );
+    // Always use pushState, but it will be debounced for search inputs
+    window.history.pushState({ query, filterValue }, '', url);
+  }
 
-    if (shouldPush) {
-      window.history.pushState({ query, filterValue }, '', url);
+  function debouncedUpdateURL(query, filterValue, immediate = false) {
+    // Clear any pending history update
+    if (state.historyTimeout) {
+      clearTimeout(state.historyTimeout);
+      state.historyTimeout = null;
+    }
+
+    if (immediate || state.forceFilteredView) {
+      // Update URL immediately for section clicks and filter changes
+      updateURL(query, filterValue);
     } else {
-      window.history.replaceState({ query, filterValue }, '', url);
+      // Debounce URL updates for search typing (500ms delay)
+      state.historyTimeout = setTimeout(() => {
+        updateURL(query, filterValue);
+        state.historyTimeout = null;
+      }, 500);
     }
   }
 
