@@ -18,7 +18,7 @@ export default defineConfig({
       closeBundle() {
         copyFileSync('CNAME', 'dist/CNAME');
         cpSync('data', 'dist/data', { recursive: true });
-      }
-    }
-  ]
+      },
+    },
+  ],
 });
