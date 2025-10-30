@@ -1212,7 +1212,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="error-container">
             <h2>Failed to load tracks</h2>
             <p>${error.message}</p>
-            <button onclick="location.reload()">Retry</button>
+            <button class="show-all-btn" onclick="location.reload()">Retry</button>
           </div>
         `;
       });
