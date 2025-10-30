@@ -68,23 +68,18 @@ async function fetchDailyJamTracks(client) {
     const dailyTracks = states
       .flatMap(state => state.activeEvents || [])
       .filter(event => event.eventType.startsWith('PilgrimSong.'))
-      .map(event => event.eventType.split('.')[1])
-      .filter(eventType => {
-        const event = states.find(s =>
-          s.activeEvents?.some(e =>
-            e.eventType === `PilgrimSong.${eventType}`
-          )
-        );
-        if (!event) return false;
-        const activeEvent = event.activeEvents.find(e =>
-          e.eventType === `PilgrimSong.${eventType}`
-        );
-        return new Date(activeEvent.activeSince) <= currentDate &&
-               new Date(activeEvent.activeUntil) > currentDate;
-      });
-
-    // Log daily tracks
-    console.log(dailyTracks);
+      .map(event => ({
+        id: event.eventType.split('.')[1],
+        activeSince: event.activeSince,
+        activeUntil: event.activeUntil
+      }))
+      .filter(event => {
+        const activeSince = new Date(event.activeSince);
+        const activeUntil = new Date(event.activeUntil);
+        const isActive = activeSince <= currentDate && activeUntil > currentDate;
+        return isActive;
+      })
+      .map(event => event.id);
 
     return { dailyTracks, seasonEnd };
   } catch (error) {
