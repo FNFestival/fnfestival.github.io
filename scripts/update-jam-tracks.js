@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import SpotifyWebApi from 'spotify-web-api-node';
 
 // Constants
-const JAM_TRACKS_FILE = 'data/jam_tracks.json';
+const JAM_TRACKS_FILE = 'data/tracks.json';
 const API_URL = 'https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks';
 
 // Spotify setup
