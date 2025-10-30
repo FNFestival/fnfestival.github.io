@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Run script to update jam tracks
-        run: npm run update
+        run: npm run update:tracks
         env:
           FNBR_ACCOUNT_ID: ${{ secrets.FNBR_ACCOUNT_ID }}
           FNBR_DEVICE_ID: ${{ secrets.FNBR_DEVICE_ID }}

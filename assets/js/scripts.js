@@ -1184,7 +1184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cacheTimestamp = lastUpdate.getTime();
 
-    fetch(`data/jam_tracks.json?v=${cacheTimestamp}`)
+    fetch(`data/tracks.json?v=${cacheTimestamp}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

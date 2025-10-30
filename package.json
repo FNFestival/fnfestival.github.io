@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "auth": "node scripts/authenticate.js",
-    "update": "node scripts/update-jam-tracks.js"
+    "update:tracks": "node scripts/update-jam-tracks.js"
   },
   "dependencies": {
     "fnbr": "^4.1.2",
