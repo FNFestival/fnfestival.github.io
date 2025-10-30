@@ -8,7 +8,7 @@ The list of all available jam tracks can be found on the public Fortnite Content
 
 However, in order to retrieve the daily jam tracks, authentication is required. To do this, we use the [`fnbr.js`](https://github.com/fnbrjs/fnbr.js) library and then query the event flags that contain the daily jam tracks.
 
-Using a [GitHub workflow](.github/workflows/update-jam-tracks.yml), we then run [the script](scripts/index.js) to update the jam tracks every day at midnight (0:00 UTC). We use a Cloudflare Worker to trigger the workflow because GitHub Action cronjobs are too delayed.
+The jam tracks are automatically updated daily at midnight (0:00 UTC) using a [GitHub workflow](.github/workflows/update-jam-tracks.yml) that runs [the update script](scripts/update-jam-tracks.js). Because GitHub Action cron jobs are unreliable and often delayed, we use a Cloudflare Worker to trigger the workflow on schedule.
 
 ## Authentication
 
@@ -19,7 +19,40 @@ To retrieve the daily jam tracks, authentication with the Fortnite client/Epic G
 3. After logging in, you will receive a JSON response containing the authorization code.
 4. Enter the authorization code when prompted.
 5. A `deviceAuth.json` file will be created, containing the `accountId`, `deviceId`, and `secret`.
-6. Set these values as environment variables for the GitHub Action.
+6. Set these values as secrets in your GitHub repository settings for the automated workflow.
+
+## Updating Tracks
+
+### Automated Updates (GitHub Actions)
+
+The tracks are automatically updated via GitHub Actions. The workflow requires the following repository secrets:
+- `FNBR_ACCOUNT_ID`
+- `FNBR_DEVICE_ID`
+- `FNBR_SECRET`
+- `SPOTIFY_CLIENT_ID`
+- `SPOTIFY_CLIENT_SECRET`
+
+These values come from the `deviceAuth.json` file created during authentication.
+
+### Manual Updates (Windows)
+
+To manually update tracks on Windows:
+
+1. Set the required environment variables using the values from `deviceAuth.json`:
+   ```cmd
+   set FNBR_ACCOUNT_ID=your_account_id
+   set FNBR_DEVICE_ID=your_device_id
+   set FNBR_SECRET=your_secret
+   set SPOTIFY_CLIENT_ID=your_spotify_client_id
+   set SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+   ```
+
+2. Run the update script:
+   ```cmd
+   npm run update:tracks
+   ```
+
+The script will fetch the latest tracks and update `data/tracks.json`.
 
 This process allows the script to connect to the Epic Games/Fortnite endpoints and request the events for Fortnite, including the daily jam tracks.
 
