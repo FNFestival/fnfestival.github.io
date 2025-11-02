@@ -1,7 +1,7 @@
 {
   "_metadata": {
-    "seasonEnd": "2025-11-29T09:00:00.000Z",
-    "lastUpdated": "2025-11-01T00:01:48.239Z"
+    "seasonEnd": null,
+    "lastUpdated": "2025-11-02T00:01:47.536Z"
   },
   "butterbarnhoedown": {
     "id": "butterbarnhoedown",
@@ -11737,5 +11737,26 @@
     "createdAt": "2025-10-22T00:01:32.066Z",
     "lastFeatured": "2025-10-30T00:32:20.800Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/50c7dbdb7d3e86153d7cc2b2ba28fad29fa0ce6e"
+  },
+  "simpsonstheme": {
+    "id": "simpsonstheme",
+    "title": "The Simpsons Main Title Theme (non-union re-record)",
+    "artist": "Danny Elfman",
+    "releaseYear": 2019,
+    "cover": "https://cdn2.unrealengine.com/bl0iiohxaylblfhc-512x512-e0d0574ac91b.jpg",
+    "bpm": 172,
+    "duration": "1m 21s",
+    "difficulties": {
+      "vocals": 5,
+      "bass": 1,
+      "guitar": 6,
+      "drums": 5,
+      "plasticBass": 2,
+      "plasticGuitar": 5,
+      "plasticDrums": 4
+    },
+    "createdAt": "2025-11-02T00:01:47.536Z",
+    "lastFeatured": null,
+    "previewUrl": "https://p.scdn.co/mp3-preview/35e0eab3b2e0942ef458abfed4591963f5b1fb05"
   }
 }
