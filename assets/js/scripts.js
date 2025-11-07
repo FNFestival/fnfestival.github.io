@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     infiniteScrollHandler: null,
     forceFilteredView: false,
     seasonEnd: null,
-    historyTimeout: null
+    historyTimeout: null,
+    wasUpdating: false
   };
 
   // Constants
@@ -821,19 +822,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const updateEnd = new Date(updateStart);
       updateEnd.setUTCMinutes(2);
 
-      if (now >= updateStart && now <= updateEnd) {
+      const isUpdating = now >= updateStart && now <= updateEnd;
+
+      if (isUpdating) {
         countdownEl.textContent = 'Updating...';
+        state.wasUpdating = true;
       } else {
+        // If we were updating and now we're not, reload tracks
+        if (state.wasUpdating) {
+          state.wasUpdating = false;
+          clearInterval(state.countdownInterval);
+          loadTracks();
+          return;
+        }
+
         const timeUntilUpdate = nextUpdate - now;
         const hoursLeft = Math.floor(timeUntilUpdate / (1000 * 60 * 60));
         const minutesLeft = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
         const secondsLeft = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
 
-        if (minutesLeft === 0 && hoursLeft === 0) {
-          countdownEl.textContent = `${secondsLeft}s`;
-        } else {
-          countdownEl.textContent = `${hoursLeft}h ${minutesLeft}m`;
-        }
+        countdownEl.textContent = `${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
       }
 
       // Season countdown
