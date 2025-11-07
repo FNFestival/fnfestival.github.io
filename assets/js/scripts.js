@@ -635,7 +635,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutesLeft = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
       const secondsLeft = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
 
-      countdownText = `${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
+      if (minutesLeft === 0 && hoursLeft === 0) {
+        countdownText = `${secondsLeft}s`;
+      } else {
+        countdownText = `${hoursLeft}h ${minutesLeft}m`;
+      }
     }
 
     // Season countdown
@@ -839,9 +843,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeUntilUpdate = nextUpdate - now;
         const hoursLeft = Math.floor(timeUntilUpdate / (1000 * 60 * 60));
         const minutesLeft = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
-        const secondsLeft = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
 
-        countdownEl.textContent = `${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
+        countdownEl.textContent = `${hoursLeft}h ${minutesLeft}m`;
       }
 
       // Season countdown
