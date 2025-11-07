@@ -634,11 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const minutesLeft = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
       const secondsLeft = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
 
-      if (minutesLeft === 0 && hoursLeft === 0) {
-        countdownText = `${secondsLeft}s`;
-      } else {
-        countdownText = `${hoursLeft}h ${minutesLeft}m`;
-      }
+      countdownText = `${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
     }
 
     // Season countdown
@@ -675,7 +671,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>New Tracks</h2>
             <span class="section-count">${newTracks.length}</span>
           </div>
-          <p class="section-description">New tracks are usually announced on Tuesday and arrive with the Thursday shop reset.</p>
           <div class="tracks-grid" data-section="new"></div>
         </div>
       ` : ''}
