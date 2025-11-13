@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "seasonEnd": "2025-11-30T03:00:00.000Z",
-    "lastUpdated": "2025-11-12T00:01:59.936Z"
+    "lastUpdated": "2025-11-13T00:00:59.902Z"
   },
   "butterbarnhoedown": {
     "id": "butterbarnhoedown",
@@ -269,7 +269,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-06T00:01:46.700Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/6316f6cf12631da62c5b786421b25e66c3ab4ea6"
   },
   "cradles": {
@@ -332,7 +332,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d1c97f83c052039d9e5105ed70261a5c59fd7f53"
   },
   "emogirl": {
@@ -634,7 +634,7 @@
     "title": "Suddenly I See",
     "artist": "KT Tunstall",
     "releaseYear": 2004,
-    "cover": "https://cdn2.unrealengine.com/3wgqfrhqos7fksqf-512x512-85f998cad423.png",
+    "cover": "https://cdn2.unrealengine.com/3wgqfrhqos7fksqf-512x512-1aed842f9d4c.jpg",
     "bpm": 100,
     "duration": "3m 23s",
     "difficulties": {
@@ -1046,7 +1046,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/ad7c58ed22e3994993b90b43b2fb4e509cebd81f?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "good4u": {
@@ -1067,7 +1067,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b842388e0a8bb4c8667f77d645b25fdcd50961c1"
   },
   "gethimback": {
@@ -1823,7 +1823,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3edd9208dd6295b18f32c9be5dfcbd21290b913c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "surroundsound": {
@@ -2146,7 +2146,7 @@
     "title": "Come & Go",
     "artist": "Juice WRLD w/ Marshmello",
     "releaseYear": 2020,
-    "cover": "https://cdn2.unrealengine.com/jrfn0gyh1upctc6u-512x512-2119227153f6.png",
+    "cover": "https://cdn2.unrealengine.com/jrfn0gyh1upctc6u-512x512-b3e6b8188f31.jpg",
     "bpm": 145,
     "duration": "3m 25s",
     "difficulties": {
@@ -2243,7 +2243,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/f5452ebf843f4c126eacc038fbfdc9502bf0a9b5"
   },
   "rosesimanbek": {
@@ -2327,7 +2327,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/5ad90df7075b38732ff0ef1fb6d415a7d3573ac5?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "astronautintheocean": {
@@ -2356,7 +2356,7 @@
     "title": "Call Me Maybe",
     "artist": "Carly Rae Jepsen",
     "releaseYear": 2011,
-    "cover": "https://cdn2.unrealengine.com/k965npoxrrlqlbhn-512x512-4bf856e7e5cd.png",
+    "cover": "https://cdn2.unrealengine.com/k965npoxrrlqlbhn-512x512-7fb60b906bf3.jpg",
     "bpm": 120,
     "duration": "3m 18s",
     "difficulties": {
@@ -2377,7 +2377,7 @@
     "title": "Carry on Wayward Son",
     "artist": "Kansas",
     "releaseYear": 1976,
-    "cover": "https://cdn2.unrealengine.com/oxjxl9yq5qefpu0l-512x512-17165a6f0ee8.png",
+    "cover": "https://cdn2.unrealengine.com/oxjxl9yq5qefpu0l-512x512-7e2acf6d34a4.jpg",
     "bpm": 124,
     "duration": "5m 25s",
     "difficulties": {
@@ -2398,7 +2398,7 @@
     "title": "(Don't Fear) The Reaper",
     "artist": "Blue Öyster Cult",
     "releaseYear": 1976,
-    "cover": "https://cdn2.unrealengine.com/ctzomncwaembo4i9-512x512-4f2be6de1f0e.png",
+    "cover": "https://cdn2.unrealengine.com/pxzj2cufnycowlt3-512x512-d2aa9b99008e.jpg",
     "bpm": 141,
     "duration": "5m 22s",
     "difficulties": {
@@ -2684,7 +2684,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/efb065069d22384206b0fc703c6f99734d33411d?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "dontyouworrychild": {
@@ -3272,7 +3272,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/a3f7228db24537c07bf3b0d303dbd11637763ba2?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "thereforeiam": {
@@ -3322,7 +3322,7 @@
     "title": "my ex's best friend",
     "artist": "mgk & blackbear",
     "releaseYear": 2020,
-    "cover": "https://cdn2.unrealengine.com/1qzywtib1gskeq1o-400x400-a053ce45a313.png",
+    "cover": "https://cdn2.unrealengine.com/1qzywtib1gskeq1o-512x512-751548751a9d.jpg",
     "bpm": 125,
     "duration": "2m 24s",
     "difficulties": {
@@ -3427,7 +3427,7 @@
     "title": "Cheap Thrills",
     "artist": "Sia ft. Sean Paul",
     "releaseYear": 2016,
-    "cover": "https://cdn2.unrealengine.com/lludqsxh5wbklaeb-512x512-af246f6963ff.png",
+    "cover": "https://cdn2.unrealengine.com/jjbgnbqcdu08uk8m-512x512-d71eceab15e4.jpg",
     "bpm": 90,
     "duration": "3m 41s",
     "difficulties": {
@@ -3440,7 +3440,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/eb1c84bfde1083003adee606c8bf63a4a407d20e?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "breed": {
@@ -3755,7 +3755,7 @@
       "plasticDrums": 0
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/4998bad5832e1767f4abd980b13b57afec817b64"
   },
   "chihiro": {
@@ -3818,7 +3818,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/e568214b37abb97de52d5380e1b1674f1efe2512?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "dragula": {
@@ -4099,7 +4099,7 @@
     "title": "Circles",
     "artist": "Post Malone",
     "releaseYear": 2019,
-    "cover": "https://cdn2.unrealengine.com/ae9bykr7aalfdxgh-500x500-c29e02cfaf2c.png",
+    "cover": "https://cdn2.unrealengine.com/ae9bykr7aalfdxgh-512x512-baee6b967149.jpg",
     "bpm": 120,
     "duration": "3m 35s",
     "difficulties": {
@@ -4196,7 +4196,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2024-12-26T04:08:19.835Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8ed845ad602ffb2baac6fc760e564896d764f294?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "givemeeverything": {
@@ -4225,7 +4225,7 @@
     "title": "Dreamer",
     "artist": "Epic Games",
     "releaseYear": 2016,
-    "cover": "https://cdn2.unrealengine.com/lh65r7ceghc4mjgf-512x512-6756aa962683.png",
+    "cover": "https://cdn2.unrealengine.com/lh65r7ceghc4mjgf-512x512-0cb53a1476a3.jpg",
     "bpm": 125,
     "duration": "3m 52s",
     "difficulties": {
@@ -4553,7 +4553,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8f4eee79e9574c8db62ebbdbbb5f14d6f9ed5fba?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "twentyfourkmagic": {
@@ -4847,7 +4847,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/e13e3bf98cefdca448a1b31ee123a890be0e113c?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "walkemdown": {
@@ -5267,7 +5267,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/4625797f3517e8945e9b191119bcc0b67491cfd1"
   },
   "keeppoppin": {
@@ -5687,7 +5687,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/93dc52d836150fba41afeb6df2e9167875c7d8fb?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "fly": {
@@ -5729,7 +5729,7 @@
       "plasticDrums": 5
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": null
   },
   "imawinner": {
@@ -5981,7 +5981,7 @@
       "plasticDrums": 0
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/c5a93c0c3653c44d63c2d0e4ca0bc7a18865fc5a?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "september": {
@@ -6002,7 +6002,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/27390b5ac85b9dd997e8ae98a3356f0dd4a61f51?cid=ace3af5515b3429d8fbf1bb99bcd1310"
   },
   "fighter": {
@@ -6157,7 +6157,7 @@
     "title": "Say It Ain't So",
     "artist": "Weezer",
     "releaseYear": 1994,
-    "cover": "https://cdn2.unrealengine.com/tqr4gncddpoik7hp-512x512-0b0ae1124921.png",
+    "cover": "https://cdn2.unrealengine.com/tqr4gncddpoik7hp-512x512-0edcb3a79569.jpg",
     "bpm": 152,
     "duration": "4m 20s",
     "difficulties": {
@@ -6191,7 +6191,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/c8ca28381018ebf9789a20d5e6e397eab1cea719"
   },
   "undone": {
@@ -6199,7 +6199,7 @@
     "title": "Undone - The Sweater Song",
     "artist": "Weezer",
     "releaseYear": 1994,
-    "cover": "https://cdn2.unrealengine.com/cfs1uz02pyuyfmw2-512x512-dca4f3fcd2a4.png",
+    "cover": "https://cdn2.unrealengine.com/cfs1uz02pyuyfmw2-512x512-2626e1e1ac33.jpg",
     "bpm": 161,
     "duration": "5m 7s",
     "difficulties": {
@@ -6241,7 +6241,7 @@
     "title": "bury a friend",
     "artist": "Billie Eilish",
     "releaseYear": 2019,
-    "cover": "https://cdn2.unrealengine.com/sstp9lqzpa1mjjzs-512x512-3d3099bd129e.png",
+    "cover": "https://cdn2.unrealengine.com/sstp9lqzpa1mjjzs-512x512-28352ffe135c.jpg",
     "bpm": 120,
     "duration": "3m 8s",
     "difficulties": {
@@ -7325,7 +7325,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2024-12-26T04:08:19.836Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/240d072ab4c06501d4a9668d5e99c441e0bc3b47"
   },
   "catsprowl": {
@@ -7829,7 +7829,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-01-03T00:01:50.157Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/73e60ce56281d0fe085ac00ab64b6f14772754b5"
   },
   "fatlip": {
@@ -8165,7 +8165,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-01-14T15:53:39.579Z",
-    "lastFeatured": null,
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/99c9902cfc477cee0de0fcd491c32244fceb521f"
   },
   "miku": {
@@ -8228,7 +8228,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-01-14T15:53:40.455Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/3d63184820bf27e2ba0caf45f43db0b167f524ea"
   },
   "magicalcureloveshot": {
@@ -8270,7 +8270,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-01-17T00:01:01.474Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/16d353203889bd30097912a96e2788a097e5e328"
   },
   "beautyandabeat": {
@@ -8585,7 +8585,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-02-14T00:01:24.277Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/165c0f2946ed4018a9d435901ba67200d4325e76"
   },
   "losecontrol": {
@@ -8606,7 +8606,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-02-14T00:01:24.634Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/51e51cc257e4186893b1923abf42fdaabbeeda37"
   },
   "wholetthedogsout": {
@@ -8648,7 +8648,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-02-21T00:01:02.237Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/5913e001770fc660ad684c374a3948d447f140b1"
   },
   "dontcrossme": {
@@ -8942,7 +8942,7 @@
       "plasticDrums": 6
     },
     "createdAt": "2025-03-15T00:01:10.507Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/6bb25d181b5ec9d10874794d95dc063db3ccf63c"
   },
   "aintitfun": {
@@ -8984,7 +8984,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-03-19T00:01:05.370Z",
-    "lastFeatured": "2025-09-21T00:01:35.830Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d72636d23beb0e3c283ec8150b8f50f9b5b0d8a3"
   },
   "stillintoyou": {
@@ -9110,7 +9110,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-04-02T00:01:42.380Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/887b2e1f195333800d3c8a7537097cc7bd7bdc3d"
   },
   "stacysmom": {
@@ -9194,7 +9194,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2025-04-09T00:01:38.813Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/81cc48794bef6a2832b50acff69a68ac331b35ff"
   },
   "thefutureme": {
@@ -9467,7 +9467,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-04-16T00:01:38.884Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/d46b76a3887bc80ea67b6eeeb51c532405ba9f18"
   },
   "ifuthinkimpretty": {
@@ -9488,7 +9488,7 @@
       "plasticDrums": 0
     },
     "createdAt": "2025-04-16T00:01:39.520Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/8c539af37b0d047987c37ce4ff59ce16b15746bd"
   },
   "wildones2": {
@@ -9572,7 +9572,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2025-04-23T00:01:14.893Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/59f68f3e96233e3c352659053dd48039790cd965"
   },
   "hotinherre": {
@@ -9992,7 +9992,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-05-28T00:00:57.015Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/efdd213308e7efa3d4e2f883cda1b2a059ab32a3"
   },
   "afraid": {
@@ -10042,7 +10042,7 @@
     "title": "Sunflower - Spider-Man: Into the Spider-Verse",
     "artist": "Post Malone w/ Swae Lee",
     "releaseYear": 2018,
-    "cover": "https://cdn2.unrealengine.com/c4u30ugitxvun3js-500x500-1c22bc97b0f6.png",
+    "cover": "https://cdn2.unrealengine.com/c4u30ugitxvun3js-512x512-e5f0992f6961.jpg",
     "bpm": 90,
     "duration": "2m 39s",
     "difficulties": {
@@ -10202,7 +10202,7 @@
       "plasticDrums": 1
     },
     "createdAt": "2025-06-11T00:01:16.706Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/02687a01e9ec00f4e947f39e910c7e0c6fa83e10"
   },
   "apt": {
@@ -10349,7 +10349,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-06-19T00:01:43.117Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/07cebc34d49ff7a0f1ce21e4902ebbf3238f6788"
   },
   "leavethedooropen": {
@@ -10496,7 +10496,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-07-09T00:01:49.350Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/663c0b487fce5c988d695cba4c20916a56760bdb"
   },
   "monster": {
@@ -10538,7 +10538,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2025-07-16T00:01:36.672Z",
-    "lastFeatured": "2025-10-25T02:53:24.425Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/93046e987d8c5bfdbeea2768ac1a8ecea17bd7e0"
   },
   "lockedoutofheaven": {
@@ -10895,7 +10895,7 @@
       "plasticDrums": 5
     },
     "createdAt": "2025-08-20T00:00:38.775Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/a85b2b678a439454732b92ea06925291aa7b0945"
   },
   "clinteastwood": {
@@ -11189,7 +11189,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2025-09-10T00:00:55.712Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/53c1eaa675b034a0e933a558a826756d7ddc852b"
   },
   "bumbum": {
@@ -11210,7 +11210,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2025-09-10T00:00:56.466Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/26d8c1f205bcad8de1bc6e79c869da13e832e280"
   },
   "wildberrylillet": {
@@ -11231,7 +11231,7 @@
       "plasticDrums": 2
     },
     "createdAt": "2025-09-17T00:01:36.455Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/4a9505a3530d790c56bf64623903e7e9d848bc75"
   },
   "cheguei": {
@@ -11336,7 +11336,7 @@
       "plasticDrums": 3
     },
     "createdAt": "2025-09-24T00:01:41.581Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/ff562c6476072347c5cdf032b783027cc5d24cbc"
   },
   "instantcrush": {
@@ -11399,7 +11399,7 @@
       "plasticDrums": 6
     },
     "createdAt": "2025-10-01T00:01:36.064Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/b4f39bdb362a2dacfc434a7034fea58643af6dfe"
   },
   "letmeholdyou": {
@@ -11756,7 +11756,7 @@
       "plasticDrums": 4
     },
     "createdAt": "2025-11-02T00:01:47.536Z",
-    "lastFeatured": "2025-11-12T00:01:59.936Z",
+    "lastFeatured": "2025-11-13T00:00:59.902Z",
     "previewUrl": "https://p.scdn.co/mp3-preview/35e0eab3b2e0942ef458abfed4591963f5b1fb05"
   },
   "abominablefrink": {
