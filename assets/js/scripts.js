@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadedTracks: 0,
     currentTrackIndex: -1,
     currentFilteredTracks: [],
+    currentDisplayedTracks: [],
     isMuted: localStorage.getItem('isMuted') === 'true',
     sawUpdateMessage: false,
     currentPreviewUrl: '',
@@ -29,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     forceFilteredView: false,
     seasonEnd: null,
     historyTimeout: null,
-    wasUpdating: false
+    wasUpdating: false,
+    viewMode: localStorage.getItem('viewMode') || 'compact',
+    difficultySortOrder: localStorage.getItem('difficultySortOrder') || 'none',
+    difficultyFilterInstrument: localStorage.getItem('difficultyFilterInstrument') || 'all'
   };
 
   // Constants
@@ -177,13 +181,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, timeUntilLoop);
     }
-  }    // Modal Functions
+  }
+
+  // Modal Functions
   function openModal(track) {
-    state.currentTrackIndex = state.currentFilteredTracks.findIndex(t =>
+    // Use the stored displayed tracks for navigation order
+    if (state.currentDisplayedTracks.length === 0) {
+      state.currentDisplayedTracks = [track];
+    }
+
+    state.currentTrackIndex = state.currentDisplayedTracks.findIndex(t =>
       t.title === track.title && t.artist === track.artist
     );
-    state.currentTrack = track;
 
+    // If track not found in displayed tracks, add it
+    if (state.currentTrackIndex === -1) {
+      state.currentDisplayedTracks = [track];
+      state.currentTrackIndex = 0;
+    }
+
+    state.currentTrack = track;
     renderModal(track);
   }
 
@@ -277,19 +294,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (playPromise !== undefined) {
         playPromise.then(() => {
-          console.log('Audio playing successfully');
           fadeIn(CONFIG.fadeDuration);
           setupAudioLoop();
         }).catch(err => {
           // Ignore AbortError (happens when switching tracks quickly)
           if (err.name !== 'AbortError') {
             console.error('Failed to play audio:', err);
-            console.log('Preview URL:', previewUrl);
           }
         });
       }
-    } else {
-      console.warn('No preview URL for track:', title);
     }
 
     updateModalNavigation();
@@ -323,8 +336,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateModalNavigation() {
     const prevButton = elements.modal.querySelector('.modal-prev');
     const nextButton = elements.modal.querySelector('.modal-next');
+
+    const hasTracks = state.currentDisplayedTracks && state.currentDisplayedTracks.length > 0;
+    const validIndex = state.currentTrackIndex >= 0 && state.currentTrackIndex < state.currentDisplayedTracks.length;
+
+    if (!hasTracks || !validIndex) {
+      prevButton.style.display = 'none';
+      nextButton.style.display = 'none';
+      return;
+    }
+
     prevButton.style.display = state.currentTrackIndex > 0 ? 'block' : 'none';
-    nextButton.style.display = state.currentTrackIndex < state.currentFilteredTracks.length - 1 ? 'block' : 'none';
+    nextButton.style.display = state.currentTrackIndex < state.currentDisplayedTracks.length - 1 ? 'block' : 'none';
   }
 
   function closeModal() {
@@ -347,19 +370,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function navigateModal(direction) {
-    const newIndex = state.currentTrackIndex + direction;
-    if (newIndex >= 0 && newIndex < state.currentFilteredTracks.length) {
-      // Clear loop timeout before navigating
-      if (state.loopTimeout) {
-        clearTimeout(state.loopTimeout);
-        state.loopTimeout = null;
-      }
-
-      state.currentTrackIndex = newIndex;
-      state.currentTrack = state.currentFilteredTracks[newIndex];
-
-      renderModal(state.currentFilteredTracks[newIndex]);
+    if (!state.currentDisplayedTracks || state.currentDisplayedTracks.length === 0) {
+      return;
     }
+
+    const newIndex = state.currentTrackIndex + direction;
+
+    // Strict boundary check
+    if (newIndex < 0 || newIndex >= state.currentDisplayedTracks.length) {
+      return; // Don't navigate beyond bounds
+    }
+
+    // Clear loop timeout before navigating
+    if (state.loopTimeout) {
+      clearTimeout(state.loopTimeout);
+      state.loopTimeout = null;
+    }
+
+    // Stop any existing fade
+    if (state.fadeInterval) {
+      clearInterval(state.fadeInterval);
+      state.fadeInterval = null;
+    }
+
+    // Stop current audio immediately
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = 0;
+
+    state.currentTrackIndex = newIndex;
+    state.currentTrack = state.currentDisplayedTracks[newIndex];
+
+    renderModal(state.currentDisplayedTracks[newIndex]);
   }
 
   // Marquee Animation
@@ -431,9 +473,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function createTrackElement(track) {
+  function createTrackElement(track, viewMode = state.viewMode) {
     const trackElement = document.createElement('div');
     trackElement.classList.add('jam-track');
+    if (viewMode === 'detailed') {
+      trackElement.classList.add('jam-track-detailed');
+    }
 
     const loadingSpinner = document.createElement('div');
     loadingSpinner.className = 'loading-spinner';
@@ -449,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
       img.classList.add('loaded');
     };
 
-    trackElement.innerHTML = `
+    let trackContentHTML = `
       <div class="track-text-content">
         <div class="marquee-container">
           <h2 class="marquee-text" translate="no">${track.title}</h2>
@@ -460,9 +505,27 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
+    if (viewMode === 'detailed') {
+      trackContentHTML += `<div class="track-difficulties"></div>`;
+    }
+
+    trackElement.innerHTML = trackContentHTML;
+
     trackElement.insertBefore(loadingSpinner, trackElement.firstChild);
     trackElement.insertBefore(img, trackElement.firstChild);
-    trackElement.appendChild(generateLabels(track));
+
+    // Add labels before difficulties
+    const textContent = trackElement.querySelector('.track-text-content');
+    if (textContent) {
+      textContent.appendChild(generateLabels(track));
+    }
+
+    if (viewMode === 'detailed') {
+      const difficultiesContainer = trackElement.querySelector('.track-difficulties');
+      const instrumentFilter = state.difficultyFilterInstrument !== 'all' ? state.difficultyFilterInstrument : null;
+      generateDifficultyBars(track.difficulties, difficultiesContainer, instrumentFilter);
+    }
+
     trackElement.addEventListener('click', () => openModal(track));
 
     return trackElement;
@@ -592,18 +655,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Sort each category
-    const newTracks = categories.new;
+    const newTracks = categories.new.sort((a, b) => {
+      const dateComp = new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+      if (dateComp !== 0) return dateComp;
+      return a.title.localeCompare(b.title);
+    });
 
     const dailyRotation = categories.featured.sort((a, b) => {
       const dateA = a.lastFeatured ? new Date(a.lastFeatured).getTime() : 0;
       const dateB = b.lastFeatured ? new Date(b.lastFeatured).getTime() : 0;
-      return dateB - dateA;
+      if (dateB !== dateA) return dateB - dateA;
+      return a.title.localeCompare(b.title);
     });
 
     const rotatedOut = categories.rotated.sort((a, b) => {
       const dateA = new Date(a.lastFeatured).getTime();
       const dateB = new Date(b.lastFeatured).getTime();
-      return dateB - dateA;
+      if (dateB !== dateA) return dateB - dateA;
+      return a.title.localeCompare(b.title);
     });
 
     const favoriteTracks = categories.favorites.sort((a, b) => {
@@ -655,7 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.content.innerHTML = `
       <div class="info-section">
         <div class="track-stats">
-          <div class="stat">
+          <div class="stat stat-clickable" id="totalTracksStat" tabindex="0" role="button">
             <span class="stat-value">${state.tracksData.length}</span>
             <span class="stat-label">Total Tracks</span>
           </div>
@@ -730,7 +799,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const fragment = document.createDocumentFragment();
       const limitedTracks = tracks.slice(0, limit);
-      limitedTracks.forEach(track => fragment.appendChild(createTrackElement(track)));
+      limitedTracks.forEach(track => fragment.appendChild(createTrackElement(track, 'compact')));
       grid.appendChild(fragment);
     };
 
@@ -739,6 +808,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rotatedOut.length > 0) populateSection('[data-section="rotated"]', rotatedOut);
     if (favoriteTracks.length > 0) populateSection('[data-section="favorites"]', favoriteTracks);
     populateSection('[data-section="other"]', otherTracks);
+
+    // Store the displayed tracks in the order they appear on homepage for modal navigation
+    state.currentDisplayedTracks = [
+      ...newTracks.slice(0, 6),
+      ...dailyRotation.slice(0, 6),
+      ...rotatedOut.slice(0, 6),
+      ...favoriteTracks.slice(0, 6),
+      ...otherTracks.slice(0, 6)
+    ];
 
     // Section header click handlers
     elements.content.querySelectorAll('.section-header').forEach(header => {
@@ -787,6 +865,27 @@ document.addEventListener('DOMContentLoaded', () => {
         state.forceFilteredView = false;
       });
     });
+
+    // Total tracks stat click handler
+    const totalTracksStat = elements.content.querySelector('#totalTracksStat');
+    if (totalTracksStat) {
+      const handleTotalTracksClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        elements.filterSelect.value = 'all';
+        elements.searchInput.value = '';
+        state.forceFilteredView = true;
+        filterTracks();
+        state.forceFilteredView = false;
+      };
+
+      totalTracksStat.addEventListener('click', handleTotalTracksClick);
+      totalTracksStat.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleTotalTracksClick();
+        }
+      });
+    }
 
     // Start countdown timer
     startHomepageCountdown();
@@ -866,9 +965,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return tracks.sort((a, b) => {
       if (filterValue === 'rotated' || filterValue === 'featured') {
-        return new Date(b.lastFeatured) - new Date(a.lastFeatured);
+        // Sort by lastFeatured date, most recent first
+        const dateA = a.lastFeatured ? new Date(a.lastFeatured).getTime() : 0;
+        const dateB = b.lastFeatured ? new Date(b.lastFeatured).getTime() : 0;
+        if (dateB !== dateA) return dateB - dateA;
+        return a.title.localeCompare(b.title);
       } else if (filterValue === 'new') {
-        return new Date(b.createdAt) - new Date(a.createdAt);
+        const dateComp = new Date(b.createdAt) - new Date(a.createdAt);
+        if (dateComp !== 0) return dateComp;
+        return a.title.localeCompare(b.title);
+      } else if (filterValue === 'favorites') {
+        // Sort by favorites array order (most recently added first)
+        const indexA = state.favorites.indexOf(a.id);
+        const indexB = state.favorites.indexOf(b.id);
+        return indexB - indexA;
       } else {
         // For 'all' filter, prioritize currently featured tracks (featured today)
         const aIsFeatured = isFeaturedToday(a, todayStart);
@@ -909,18 +1019,65 @@ document.addEventListener('DOMContentLoaded', () => {
         : filterValue === 'favorites' ? 'Your Favorites'
         : 'All Tracks';
 
+      // Apply difficulty sorting and filtering
+      let displayTracks = applyDifficultyFiltersAndSort([...state.currentFilteredTracks]);
+      // Store the displayed tracks for modal navigation
+      state.currentDisplayedTracks = displayTracks;
+
       elements.content.innerHTML = `
         <div class="page-header">
-          <h1>${resultText}</h1>
-          <p class="track-count">${state.currentFilteredTracks.length} tracks</p>
+          <div class="page-header-content">
+            <div>
+              <h1>${resultText}</h1>
+              <p class="track-count">${displayTracks.length} tracks</p>
+            </div>
+            <div class="view-controls">
+              <div class="control-group">
+                <label for="instrumentFilter">Instrument:</label>
+                <select id="instrumentFilter" class="custom-select compact">
+                  <option value="all">All</option>
+                  <option value="vocals">Vocals</option>
+                  <option value="guitar">Lead</option>
+                  <option value="bass">Bass</option>
+                  <option value="drums">Drums</option>
+                  <option value="plastic-guitar">Pro Lead</option>
+                  <option value="plastic-bass">Pro Bass</option>
+                  <option value="plastic-drums">Pro Drums</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="difficultySort">Sort by Difficulty:</label>
+                <select id="difficultySort" class="custom-select compact">
+                  <option value="none">Default</option>
+                  <option value="asc">Easiest First</option>
+                  <option value="desc">Hardest First</option>
+                </select>
+              </div>
+              <div class="control-group">
+                <label for="viewToggle">View:</label>
+                <div class="view-toggle" id="viewToggle">
+                  <button id="compactViewBtn" class="view-toggle-btn ${state.viewMode === 'compact' ? 'active' : ''}" title="Compact View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"/>
+                    </svg>
+                  </button>
+                  <button id="detailedViewBtn" class="view-toggle-btn ${state.viewMode === 'detailed' ? 'active' : ''}" title="Detailed View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tracks-grid"></div>
+        <div class="tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}"></div>
       `;
 
       const grid = elements.content.querySelector('.tracks-grid');
-      const tracksToShow = state.currentFilteredTracks.slice(0, CONFIG.initialLoad);
+      const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
       tracksToShow.forEach(track => {
-        grid.appendChild(createTrackElement(track));
+        grid.appendChild(createTrackElement(track, state.viewMode));
       });
 
       // Start marquee for loaded tracks
@@ -931,11 +1088,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Set loaded tracks count
-      state.loadedTracks = Math.min(CONFIG.initialLoad, state.currentFilteredTracks.length);
+      state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
 
-      if (state.currentFilteredTracks.length > CONFIG.initialLoad) {
-        setupInfiniteScroll(state.currentFilteredTracks, grid);
+      if (displayTracks.length > CONFIG.initialLoad) {
+        setupInfiniteScroll(displayTracks, grid);
       }
+
+      // Setup view control event listeners
+      setupViewControls();
     }
 
     // Update URL with search and filter parameters
@@ -943,6 +1103,147 @@ document.addEventListener('DOMContentLoaded', () => {
       // Use immediate update for section navigation, debounced for search/filter
       const immediate = state.forceFilteredView || filterValue !== 'all';
       debouncedUpdateURL(query, filterValue, immediate);
+    }
+  }
+
+  function applyDifficultyFiltersAndSort(tracks) {
+    let filtered = tracks;
+
+    // Filter by instrument if not 'all'
+    if (state.difficultyFilterInstrument !== 'all') {
+      const normalizedInstrument = normalizeInstrumentKey(state.difficultyFilterInstrument);
+      filtered = tracks.filter(track => {
+        return track.difficulties && track.difficulties[normalizedInstrument] !== undefined;
+      });
+    }
+
+    // Sort by difficulty if not 'none'
+    if (state.difficultySortOrder !== 'none' && state.difficultyFilterInstrument !== 'all') {
+      const normalizedInstrument = normalizeInstrumentKey(state.difficultyFilterInstrument);
+      filtered.sort((a, b) => {
+        const diffA = a.difficulties?.[normalizedInstrument] ?? -1;
+        const diffB = b.difficulties?.[normalizedInstrument] ?? -1;
+        return state.difficultySortOrder === 'asc' ? diffA - diffB : diffB - diffA;
+      });
+    }
+
+    return filtered;
+  }
+
+  function setupViewControls() {
+    const compactBtn = document.getElementById('compactViewBtn');
+    const detailedBtn = document.getElementById('detailedViewBtn');
+    const instrumentFilter = document.getElementById('instrumentFilter');
+    const difficultySort = document.getElementById('difficultySort');
+
+    if (!compactBtn || !detailedBtn) return;
+
+    // Set initial values
+    if (instrumentFilter) instrumentFilter.value = state.difficultyFilterInstrument;
+    if (difficultySort) difficultySort.value = state.difficultySortOrder;
+
+    // View mode toggle
+    compactBtn.addEventListener('click', () => {
+      if (state.viewMode !== 'compact') {
+        state.viewMode = 'compact';
+        localStorage.setItem('viewMode', 'compact');
+        refreshCurrentView();
+      }
+    });
+
+    detailedBtn.addEventListener('click', () => {
+      if (state.viewMode !== 'detailed') {
+        state.viewMode = 'detailed';
+        localStorage.setItem('viewMode', 'detailed');
+        refreshCurrentView();
+      }
+    });
+
+    // Instrument filter
+    if (instrumentFilter) {
+      instrumentFilter.addEventListener('change', (e) => {
+        state.difficultyFilterInstrument = e.target.value;
+        localStorage.setItem('difficultyFilterInstrument', e.target.value);
+
+        // Reset sort to none if switching to 'all'
+        if (e.target.value === 'all' && state.difficultySortOrder !== 'none') {
+          state.difficultySortOrder = 'none';
+          localStorage.setItem('difficultySortOrder', 'none');
+          if (difficultySort) difficultySort.value = 'none';
+        }
+
+        refreshCurrentView();
+      });
+    }
+
+    // Difficulty sort
+    if (difficultySort) {
+      difficultySort.addEventListener('change', (e) => {
+        state.difficultySortOrder = e.target.value;
+        localStorage.setItem('difficultySortOrder', e.target.value);
+
+        // If sorting by difficulty but no instrument selected, default to guitar
+        if (e.target.value !== 'none' && state.difficultyFilterInstrument === 'all') {
+          state.difficultyFilterInstrument = 'guitar';
+          localStorage.setItem('difficultyFilterInstrument', 'guitar');
+          if (instrumentFilter) instrumentFilter.value = 'guitar';
+        }
+
+        refreshCurrentView();
+      });
+    }
+  }
+
+  function refreshCurrentView() {
+    // Re-render the current filtered view without going back to homepage
+    const query = elements.searchInput.value;
+    const filterValue = elements.filterSelect.value;
+
+    // Apply difficulty filters and sort
+    let displayTracks = applyDifficultyFiltersAndSort([...state.currentFilteredTracks]);
+
+    const grid = elements.content.querySelector('.tracks-grid');
+    if (!grid) return;
+
+    // Clear grid
+    grid.innerHTML = '';
+    grid.className = `tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}`;
+
+    // Update track count
+    const trackCount = elements.content.querySelector('.track-count');
+    if (trackCount) {
+      trackCount.textContent = `${displayTracks.length} tracks`;
+    }
+
+    // Re-render tracks
+    const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
+    tracksToShow.forEach(track => {
+      grid.appendChild(createTrackElement(track, state.viewMode));
+    });
+
+    // Restart marquee
+    requestAnimationFrame(() => {
+      grid.querySelectorAll('.jam-track').forEach(trackElement => {
+        marqueeObserver.observe(trackElement);
+      });
+    });
+
+    // Update button states
+    const compactBtn = document.getElementById('compactViewBtn');
+    const detailedBtn = document.getElementById('detailedViewBtn');
+    if (compactBtn && detailedBtn) {
+      compactBtn.classList.toggle('active', state.viewMode === 'compact');
+      detailedBtn.classList.toggle('active', state.viewMode === 'detailed');
+    }
+
+    // Reset loaded tracks and infinite scroll
+    state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+    if (state.infiniteScrollHandler) {
+      window.removeEventListener('scroll', state.infiniteScrollHandler);
+      state.infiniteScrollHandler = null;
+    }
+    if (displayTracks.length > CONFIG.initialLoad) {
+      setupInfiniteScroll(displayTracks, grid);
     }
   }
 
@@ -1028,7 +1329,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Helper Functions
-  function generateDifficultyBars(difficulties, container) {
+  function normalizeInstrumentKey(key) {
+    // Convert kebab-case to camelCase (e.g., 'plastic-guitar' -> 'plasticGuitar')
+    if (key.includes('-')) {
+      return key.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+    }
+    return key;
+  }
+
+  function generateDifficultyBars(difficulties, container, filterInstrument = null) {
     container.innerHTML = '';
     const maxBars = 7;
 
@@ -1079,6 +1388,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sortedEntries.forEach(([instrument, level]) => {
       const difficultyElement = document.createElement('div');
       difficultyElement.classList.add('difficulty');
+
+      // Highlight if this matches the filter instrument
+      if (filterInstrument && filterInstrument !== 'all' && instrument === normalizeInstrumentKey(filterInstrument)) {
+        difficultyElement.classList.add('difficulty-highlight');
+      }
 
       const barsHTML = Array.from({ length: maxBars }, (_, i) =>
         `<div class="difficulty-bar"><span class="${i <= level ? 'active' : ''}"></span></div>`
