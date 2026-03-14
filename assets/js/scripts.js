@@ -27,13 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     countdownInterval: null,
     fadeInterval: null,
     infiniteScrollHandler: null,
+    infiniteScrollEl: null,
     forceFilteredView: false,
     seasonEnd: null,
     historyTimeout: null,
     wasUpdating: false,
     viewMode: localStorage.getItem('viewMode') || 'compact',
     difficultySortOrder: localStorage.getItem('difficultySortOrder') || 'none',
-    difficultyFilterInstrument: localStorage.getItem('difficultyFilterInstrument') || 'all'
+    difficultyFilterInstrument: localStorage.getItem('difficultyFilterInstrument') || 'all',
+    tableSortColumn: null,
+    tableSortDir: 'asc'
   };
 
   // Constants
@@ -1032,26 +1035,29 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="track-count">${displayTracks.length} tracks</p>
             </div>
             <div class="view-controls">
-              <div class="control-group">
-                <label for="instrumentFilter">Instrument:</label>
-                <select id="instrumentFilter" class="custom-select compact">
-                  <option value="all">All</option>
-                  <option value="vocals">Vocals</option>
-                  <option value="guitar">Lead</option>
-                  <option value="bass">Bass</option>
-                  <option value="drums">Drums</option>
-                  <option value="plastic-guitar">Pro Lead</option>
-                  <option value="plastic-bass">Pro Bass</option>
-                  <option value="plastic-drums">Pro Drums</option>
-                </select>
-              </div>
-              <div class="control-group">
-                <label for="difficultySort">Sort by Difficulty:</label>
-                <select id="difficultySort" class="custom-select compact">
-                  <option value="none">Default</option>
-                  <option value="asc">Easiest First</option>
-                  <option value="desc">Hardest First</option>
-                </select>
+              <div class="grid-view-controls" ${state.viewMode === 'table' ? 'style="display:none"' : ''}>
+                <div class="control-group">
+                  <label for="instrumentFilter">Instrument:</label>
+                  <select id="instrumentFilter" class="custom-select compact">
+                    <option value="all">All</option>
+                    <option value="vocals">Vocals</option>
+                    <option value="guitar">Lead</option>
+                    <option value="bass">Bass</option>
+                    <option value="drums">Drums</option>
+                    <option value="plastic-guitar">Pro Lead</option>
+                    <option value="plastic-bass">Pro Bass</option>
+                    <option value="plastic-drums">Pro Drums</option>
+                    <option value="plastic-vocals">Pro Vocals</option>
+                  </select>
+                </div>
+                <div class="control-group">
+                  <label for="difficultySort">Sort by Difficulty:</label>
+                  <select id="difficultySort" class="custom-select compact">
+                    <option value="none">Default</option>
+                    <option value="asc">Easiest First</option>
+                    <option value="desc">Hardest First</option>
+                  </select>
+                </div>
               </div>
               <div class="control-group">
                 <label for="viewToggle">View:</label>
@@ -1066,32 +1072,65 @@ document.addEventListener('DOMContentLoaded', () => {
                       <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                     </svg>
                   </button>
+                  <button id="tableViewBtn" class="view-toggle-btn ${state.viewMode === 'table' ? 'active' : ''}" title="Table View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-4 0v-3H2v2a1 1 0 0 0 1 1zm-4-4h4V8H2zm0-4h4V4H2zm5-3v3h4V4zm4 4H7v3h4z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}"></div>
+        ${state.viewMode === 'table' ? buildTableHTML() : `<div class="tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}"></div>`}
       `;
 
-      const grid = elements.content.querySelector('.tracks-grid');
-      const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
-      tracksToShow.forEach(track => {
-        grid.appendChild(createTrackElement(track, state.viewMode));
-      });
-
-      // Start marquee for loaded tracks
-      requestAnimationFrame(() => {
-        grid.querySelectorAll('.jam-track').forEach(trackElement => {
-          marqueeObserver.observe(trackElement);
+      if (state.viewMode === 'table') {
+        const wrapper = elements.content.querySelector('.tracks-table-wrapper');
+        const headerH = document.querySelector('.header').offsetHeight;
+        wrapper.style.maxHeight = `calc(100dvh - ${headerH + 20}px)`;
+        wrapper.querySelector('thead').addEventListener('click', (e) => {
+          const th = e.target.closest('th[data-sort]');
+          if (!th) return;
+          const col = th.dataset.sort;
+          if (state.tableSortColumn === col) {
+            if (state.tableSortDir === 'desc') {
+              state.tableSortColumn = null;
+            } else {
+              state.tableSortDir = 'desc';
+            }
+          } else {
+            state.tableSortColumn = col;
+            state.tableSortDir = 'asc';
+          }
+          refreshCurrentView();
         });
-      });
+        const tbody = wrapper.querySelector('tbody');
+        const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
+        tracksToShow.forEach(track => tbody.appendChild(createTableRow(track)));
+        state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+        if (displayTracks.length > CONFIG.initialLoad) {
+          setupInfiniteScroll(displayTracks, tbody, createTableRow);
+        }
+        applyTableColumnVisibility(wrapper, state.difficultyFilterInstrument);
+      } else {
+        const grid = elements.content.querySelector('.tracks-grid');
+        const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
+        tracksToShow.forEach(track => {
+          grid.appendChild(createTrackElement(track, state.viewMode));
+        });
 
-      // Set loaded tracks count
-      state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+        // Start marquee for loaded tracks
+        requestAnimationFrame(() => {
+          grid.querySelectorAll('.jam-track').forEach(trackElement => {
+            marqueeObserver.observe(trackElement);
+          });
+        });
 
-      if (displayTracks.length > CONFIG.initialLoad) {
-        setupInfiniteScroll(displayTracks, grid);
+        state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+        if (displayTracks.length > CONFIG.initialLoad) {
+          setupInfiniteScroll(displayTracks, grid);
+        }
       }
 
       // Setup view control event listeners
@@ -1109,16 +1148,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyDifficultyFiltersAndSort(tracks) {
     let filtered = tracks;
 
-    // Filter by instrument if not 'all'
-    if (state.difficultyFilterInstrument !== 'all') {
+    // In table view, instrument filter controls column visibility, not row filtering
+    if (state.difficultyFilterInstrument !== 'all' && state.viewMode !== 'table') {
       const normalizedInstrument = normalizeInstrumentKey(state.difficultyFilterInstrument);
       filtered = tracks.filter(track => {
         return track.difficulties && track.difficulties[normalizedInstrument] !== undefined;
       });
     }
 
-    // Sort by difficulty if not 'none'
-    if (state.difficultySortOrder !== 'none' && state.difficultyFilterInstrument !== 'all') {
+    // Table view uses column-header sort instead
+    if (state.difficultySortOrder !== 'none' && state.difficultyFilterInstrument !== 'all' && state.viewMode !== 'table') {
       const normalizedInstrument = normalizeInstrumentKey(state.difficultyFilterInstrument);
       filtered.sort((a, b) => {
         const diffA = a.difficulties?.[normalizedInstrument] ?? -1;
@@ -1133,6 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setupViewControls() {
     const compactBtn = document.getElementById('compactViewBtn');
     const detailedBtn = document.getElementById('detailedViewBtn');
+    const tableBtn = document.getElementById('tableViewBtn');
     const instrumentFilter = document.getElementById('instrumentFilter');
     const difficultySort = document.getElementById('difficultySort');
 
@@ -1158,6 +1198,16 @@ document.addEventListener('DOMContentLoaded', () => {
         refreshCurrentView();
       }
     });
+
+    if (tableBtn) {
+      tableBtn.addEventListener('click', () => {
+        if (state.viewMode !== 'table') {
+          state.viewMode = 'table';
+          localStorage.setItem('viewMode', 'table');
+          refreshCurrentView();
+        }
+      });
+    }
 
     // Instrument filter
     if (instrumentFilter) {
@@ -1195,19 +1245,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function refreshCurrentView() {
-    // Re-render the current filtered view without going back to homepage
-    const query = elements.searchInput.value;
-    const filterValue = elements.filterSelect.value;
-
-    // Apply difficulty filters and sort
     let displayTracks = applyDifficultyFiltersAndSort([...state.currentFilteredTracks]);
-
-    const grid = elements.content.querySelector('.tracks-grid');
-    if (!grid) return;
-
-    // Clear grid
-    grid.innerHTML = '';
-    grid.className = `tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}`;
 
     // Update track count
     const trackCount = elements.content.querySelector('.track-count');
@@ -1215,35 +1253,104 @@ document.addEventListener('DOMContentLoaded', () => {
       trackCount.textContent = `${displayTracks.length} tracks`;
     }
 
-    // Re-render tracks
-    const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
-    tracksToShow.forEach(track => {
-      grid.appendChild(createTrackElement(track, state.viewMode));
-    });
-
-    // Restart marquee
-    requestAnimationFrame(() => {
-      grid.querySelectorAll('.jam-track').forEach(trackElement => {
-        marqueeObserver.observe(trackElement);
-      });
-    });
-
     // Update button states
     const compactBtn = document.getElementById('compactViewBtn');
     const detailedBtn = document.getElementById('detailedViewBtn');
-    if (compactBtn && detailedBtn) {
-      compactBtn.classList.toggle('active', state.viewMode === 'compact');
-      detailedBtn.classList.toggle('active', state.viewMode === 'detailed');
+    const tableBtn = document.getElementById('tableViewBtn');
+    if (compactBtn) compactBtn.classList.toggle('active', state.viewMode === 'compact');
+    if (detailedBtn) detailedBtn.classList.toggle('active', state.viewMode === 'detailed');
+    if (tableBtn) tableBtn.classList.toggle('active', state.viewMode === 'table');
+
+    // Show/hide grid-only controls
+    const gridViewControls = elements.content.querySelector('.grid-view-controls');
+    if (gridViewControls) gridViewControls.style.display = state.viewMode === 'table' ? 'none' : '';
+
+    // Clear infinite scroll handler
+    if (state.infiniteScrollHandler) {
+      const prevScrollEl = state.infiniteScrollEl || window;
+      prevScrollEl.removeEventListener('scroll', state.infiniteScrollHandler);
+      state.infiniteScrollHandler = null;
+      state.infiniteScrollEl = null;
     }
 
-    // Reset loaded tracks and infinite scroll
-    state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
-    if (state.infiniteScrollHandler) {
-      window.removeEventListener('scroll', state.infiniteScrollHandler);
-      state.infiniteScrollHandler = null;
-    }
-    if (displayTracks.length > CONFIG.initialLoad) {
-      setupInfiniteScroll(displayTracks, grid);
+    if (state.viewMode === 'table') {
+      // Apply column sort if active
+      if (state.tableSortColumn) {
+        displayTracks = sortTracksByColumn(displayTracks, state.tableSortColumn, state.tableSortDir);
+      }
+
+      // Replace grid with table if needed
+      const existingGrid = elements.content.querySelector('.tracks-grid');
+      if (existingGrid) existingGrid.remove();
+      let wrapper = elements.content.querySelector('.tracks-table-wrapper');
+      if (!wrapper) {
+        const temp = document.createElement('div');
+        temp.innerHTML = buildTableHTML();
+        elements.content.appendChild(temp.firstElementChild);
+        wrapper = elements.content.querySelector('.tracks-table-wrapper');
+        // Size wrapper to fill viewport below the fixed header
+        const headerH = document.querySelector('.header').offsetHeight;
+        wrapper.style.maxHeight = `calc(100dvh - ${headerH + 20}px)`;
+        // Bind sort click handler once on this wrapper
+        wrapper.querySelector('thead').addEventListener('click', (e) => {
+          const th = e.target.closest('th[data-sort]');
+          if (!th) return;
+          const col = th.dataset.sort;
+          if (state.tableSortColumn === col) {
+            if (state.tableSortDir === 'desc') {
+              state.tableSortColumn = null;
+            } else {
+              state.tableSortDir = 'desc';
+            }
+          } else {
+            state.tableSortColumn = col;
+            state.tableSortDir = 'asc';
+          }
+          refreshCurrentView();
+        });
+      }
+      const tbody = wrapper.querySelector('tbody');
+      tbody.innerHTML = '';
+      const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
+      tracksToShow.forEach(track => tbody.appendChild(createTableRow(track)));
+      state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+      if (displayTracks.length > CONFIG.initialLoad) {
+        setupInfiniteScroll(displayTracks, tbody, createTableRow);
+      }
+      // Apply column visibility based on instrument filter
+      applyTableColumnVisibility(wrapper, state.difficultyFilterInstrument);
+      // Update sort indicators
+      wrapper.querySelectorAll('th[data-sort]').forEach(th => {
+        const ind = th.querySelector('.sort-indicator');
+        if (!ind) return;
+        if (th.dataset.sort === state.tableSortColumn) {
+          ind.textContent = state.tableSortDir === 'asc' ? ' ▲' : ' ▼';
+          th.classList.add('sort-active');
+        } else {
+          ind.textContent = '';
+          th.classList.remove('sort-active');
+        }
+      });
+    } else {
+      // Replace table with grid if needed
+      const existingTable = elements.content.querySelector('.tracks-table-wrapper');
+      if (existingTable) existingTable.remove();
+      let grid = elements.content.querySelector('.tracks-grid');
+      if (!grid) {
+        grid = document.createElement('div');
+        elements.content.appendChild(grid);
+      }
+      grid.innerHTML = '';
+      grid.className = `tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}`;
+      const tracksToShow = displayTracks.slice(0, CONFIG.initialLoad);
+      tracksToShow.forEach(track => grid.appendChild(createTrackElement(track, state.viewMode)));
+      requestAnimationFrame(() => {
+        grid.querySelectorAll('.jam-track').forEach(el => marqueeObserver.observe(el));
+      });
+      state.loadedTracks = Math.min(CONFIG.initialLoad, displayTracks.length);
+      if (displayTracks.length > CONFIG.initialLoad) {
+        setupInfiniteScroll(displayTracks, grid);
+      }
     }
   }
 
@@ -1280,55 +1387,174 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Infinite Scroll
-  function setupInfiniteScroll(tracks, container) {
+  function setupInfiniteScroll(tracks, container, creator = null) {
+    const createItem = creator || ((track) => createTrackElement(track, state.viewMode));
+    // For table tbody, scroll within the wrapper; otherwise scroll the window
+    const scrollEl = container.tagName === 'TBODY'
+      ? container.closest('.tracks-table-wrapper')
+      : window;
     let isLoading = false;
 
     const loadMoreTracks = () => {
       if (isLoading || state.loadedTracks >= tracks.length) return;
 
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const containerBottom = container.offsetTop + container.offsetHeight;
-      const distanceFromBottom = containerBottom - scrollPosition;
+      const scrollBottom = scrollEl === window
+        ? window.scrollY + window.innerHeight
+        : scrollEl.scrollTop + scrollEl.clientHeight;
+      const contentHeight = scrollEl === window
+        ? container.offsetTop + container.offsetHeight
+        : container.offsetHeight;
+      const distanceFromBottom = contentHeight - scrollBottom;
 
-      // Load more when within 800px of the bottom
       if (distanceFromBottom < 800) {
         isLoading = true;
 
         const nextBatch = tracks.slice(state.loadedTracks, state.loadedTracks + CONFIG.tracksPerPage);
-
-        nextBatch.forEach(track => {
-          container.appendChild(createTrackElement(track));
-        });
-
+        nextBatch.forEach(track => container.appendChild(createItem(track)));
         state.loadedTracks += CONFIG.tracksPerPage;
 
-        // Start marquee for newly added tracks
         requestAnimationFrame(() => {
           const startIndex = container.children.length - nextBatch.length;
           for (let i = startIndex; i < container.children.length; i++) {
             const trackElement = container.children[i];
-            if (trackElement.classList.contains('jam-track')) {
+            if (trackElement.classList.contains('jam-track') || trackElement.classList.contains('jam-track-row')) {
               marqueeObserver.observe(trackElement);
             }
           }
         });
 
         isLoading = false;
-
-        // Check again in case we need to load more
         setTimeout(() => loadMoreTracks(), 100);
       }
     };
 
-    // Store the scroll handler so we can remove it later
     state.infiniteScrollHandler = loadMoreTracks;
-    window.addEventListener('scroll', loadMoreTracks, { passive: true });
-
-    // Initial check in case content doesn't fill the screen
+    state.infiniteScrollEl = scrollEl;
+    scrollEl.addEventListener('scroll', loadMoreTracks, { passive: true });
     setTimeout(() => loadMoreTracks(), 100);
   }
 
   // Helper Functions
+  function buildTableHTML() {
+    return `
+      <div class="tracks-table-wrapper">
+        <table class="tracks-table">
+          <thead>
+            <tr>
+              <th class="th-cover"></th>
+              <th class="th-title th-sortable" data-sort="title">Track <span class="sort-indicator"></span></th>
+              <th class="th-num th-sortable" data-sort="bpm">BPM <span class="sort-indicator"></span></th>
+              <th class="th-num th-sortable" data-sort="duration">Dur <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="vocals" data-col="vocals" title="Vocals">Vcl <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="guitar" data-col="guitar" title="Lead">Ld <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="bass" data-col="bass" title="Bass">Bs <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="drums" data-col="drums" title="Drums">Dr <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="plasticVocals" data-col="plasticVocals" title="Pro Vocals">P.Vc <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="plasticGuitar" data-col="plasticGuitar" title="Pro Lead">P.Ld <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="plasticBass" data-col="plasticBass" title="Pro Bass">P.Bs <span class="sort-indicator"></span></th>
+              <th class="th-diff th-sortable" data-sort="plasticDrums" data-col="plasticDrums" title="Pro Drums">P.Dr <span class="sort-indicator"></span></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function sortTracksByColumn(tracks, col, dir) {
+    const parseDuration = s => {
+      if (typeof s !== 'string') return 0;
+      const m = s.match(/(?:(\d+)m\s*)?(?:(\d+)s)?/);
+      if (m && (m[1] || m[2])) return (parseInt(m[1] || 0) * 60) + parseInt(m[2] || 0);
+      // fallback: "m:ss" format
+      const parts = s.split(':').map(Number);
+      return parts.length === 2 ? parts[0] * 60 + (parts[1] || 0) : parts[0] || 0;
+    };
+    return [...tracks].sort((a, b) => {
+      let vA, vB;
+      if (col === 'title') {
+        vA = (a.title || '').toLowerCase();
+        vB = (b.title || '').toLowerCase();
+      } else if (col === 'bpm') {
+        vA = a.bpm || 0;
+        vB = b.bpm || 0;
+      } else if (col === 'duration') {
+        vA = parseDuration(a.duration);
+        vB = parseDuration(b.duration);
+      } else {
+        vA = a.difficulties?.[col] ?? -1;
+        vB = b.difficulties?.[col] ?? -1;
+      }
+      if (vA < vB) return dir === 'asc' ? -1 : 1;
+      if (vA > vB) return dir === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+
+  function applyTableColumnVisibility(scope, instrument) {
+    const diffCols = ['vocals', 'guitar', 'bass', 'drums', 'plasticVocals', 'plasticGuitar', 'plasticBass', 'plasticDrums'];
+    const selected = instrument !== 'all' ? normalizeInstrumentKey(instrument) : null;
+    diffCols.forEach(col => {
+      const show = !selected || col === selected;
+      scope.querySelectorAll(`[data-col="${col}"]`).forEach(el => {
+        el.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
+  function createTableRow(track) {
+    const tr = document.createElement('tr');
+    tr.classList.add('jam-track-row');
+
+    // Cover cell
+    const tdCover = document.createElement('td');
+    tdCover.className = 'td-cover';
+    const spinner = document.createElement('div');
+    spinner.className = 'loading-spinner';
+    const img = new Image();
+    img.src = track.cover;
+    img.alt = '';
+    img.style.display = 'none';
+    img.onload = () => { spinner.remove(); img.style.display = ''; img.classList.add('loaded'); };
+    tdCover.appendChild(spinner);
+    tdCover.appendChild(img);
+    tr.appendChild(tdCover);
+
+    // Title + artist cell (labels omitted in table view)
+    const tdTitle = document.createElement('td');
+    tdTitle.className = 'td-title';
+    tdTitle.innerHTML = `
+      <div class="marquee-container"><span class="marquee-text" translate="no">${track.title}</span></div>
+      <div class="marquee-container"><span class="marquee-text td-artist" translate="no">${track.artist}</span></div>
+    `;
+    tr.appendChild(tdTitle);
+
+    // Numeric + difficulty cells
+    const d = track.difficulties || {};
+    const dv = (v) => v != null ? v : '–';
+    [
+      ['td-num', track.bpm, null],
+      ['td-num', track.duration, null],
+      ['td-diff', dv(d.vocals), 'vocals'],
+      ['td-diff', dv(d.guitar), 'guitar'],
+      ['td-diff', dv(d.bass), 'bass'],
+      ['td-diff', dv(d.drums), 'drums'],
+      ['td-diff', dv(d.plasticVocals), 'plasticVocals'],
+      ['td-diff', dv(d.plasticGuitar), 'plasticGuitar'],
+      ['td-diff', dv(d.plasticBass), 'plasticBass'],
+      ['td-diff', dv(d.plasticDrums), 'plasticDrums']
+    ].forEach(([cls, val, col]) => {
+      const td = document.createElement('td');
+      td.className = cls;
+      if (col) td.dataset.col = col;
+      td.textContent = val;
+      tr.appendChild(td);
+    });
+
+    tr.addEventListener('click', () => openModal(track));
+    return tr;
+  }
+
   function normalizeInstrumentKey(key) {
     // Convert kebab-case to camelCase (e.g., 'plastic-guitar' -> 'plasticGuitar')
     if (key.includes('-')) {
@@ -1343,6 +1569,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper function to convert instrument key to display name
     function getInstrumentDisplayName(key) {
+      if (key === 'plasticVocals') return 'Pro Vocals';
+
       // Handle plastic/pro instruments
       if (key.startsWith('plastic')) {
         const baseInstrument = key.replace(/^plastic-?/i, '');
@@ -1370,8 +1598,11 @@ document.addEventListener('DOMContentLoaded', () => {
       (key.startsWith('plastic') ? pro : regular).push([key, level]);
     });
 
-    // Sort by instrument type: vocals, guitar, bass, drums
-    const getInstrumentType = (key) => key.replace(/^plastic/, '').toLowerCase();
+    // Sort by instrument type: vocals, guitar, bass, drums; plasticVocals sorts last (after pro drums)
+    const getInstrumentType = (key) => {
+      if (key === 'plasticVocals') return 'plasticvocals'; // not in order map -> sorts at 999
+      return key.replace(/^plastic/, '').toLowerCase();
+    };
     const order = { vocals: 0, guitar: 1, bass: 2, drums: 3 };
     const sortByType = (a, b) => (order[getInstrumentType(a[0])] ?? 999) - (order[getInstrumentType(b[0])] ?? 999);
 
@@ -1597,6 +1828,20 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.modal.querySelector('.modal-prev').addEventListener('click', () => navigateModal(-1));
     elements.modal.querySelector('.modal-next').addEventListener('click', () => navigateModal(1));
 
+    // Cover art lightbox
+    const modalCover = document.getElementById('modalCover');
+    modalCover.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!state.currentTrack) return;
+      const lightbox = document.getElementById('coverLightbox');
+      document.getElementById('lightboxImage').src = state.currentTrack.cover;
+      lightbox.classList.add('open');
+    });
+
+    document.getElementById('coverLightbox').addEventListener('click', () => {
+      document.getElementById('coverLightbox').classList.remove('open');
+    });
+
     // Favorite button
     elements.favoriteButton.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -1633,6 +1878,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keyboard events
     document.addEventListener('keydown', (e) => {
+      // Dismiss lightbox first if open
+      const lightbox = document.getElementById('coverLightbox');
+      if (lightbox.classList.contains('open')) {
+        if (e.key === 'Escape') lightbox.classList.remove('open');
+        return;
+      }
+
       // Prevent hotkeys when typing in input fields
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
         return;

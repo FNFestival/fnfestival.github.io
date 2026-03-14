@@ -1,17 +1,10 @@
 import fnbr from 'fnbr';
 import fs from 'fs/promises';
-import SpotifyWebApi from 'spotify-web-api-node';
 
 // Constants
 const JAM_TRACKS_FILE = 'data/tracks.json';
 const API_URL = 'https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks';
-
-// Spotify setup
-const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.SPOTIFY_CLIENT_ID,
-  clientSecret: process.env.SPOTIFY_CLIENT_SECRET
-});
-let spotifyAuthenticated = false;
+const PREVIEW_BATCH_SIZE = 10;
 
 async function main() {
   // Fetch available tracks
@@ -85,6 +78,8 @@ async function fetchDailyJamTracks(client) {
   } catch (error) {
     console.error('Error fetching daily jam tracks:', error);
     return { dailyTracks: [], seasonEnd: null };
+  } finally {
+    await client.logout().catch(() => {});
   }
 }
 
@@ -136,6 +131,7 @@ async function updateJamTracks(availableTracksData, dailyTracks, seasonEnd) {
           bass: track.in.ba,
           guitar: track.in.gr,
           drums: track.in.ds,
+          plasticVocals: track.in.bd,
           plasticBass: track.in.pb,
           plasticGuitar: track.in.pg,
           plasticDrums: track.in.pd
@@ -157,10 +153,12 @@ async function updateJamTracks(availableTracksData, dailyTracks, seasonEnd) {
       }
     }
 
-    // Fetch all preview URLs in parallel
+    // Fetch preview URLs in batches to avoid hammering the API
     if (previewUrlPromises.length > 0) {
       console.log(`Fetching ${previewUrlPromises.length} preview URLs...`);
-      await Promise.all(previewUrlPromises);
+      for (let i = 0; i < previewUrlPromises.length; i += PREVIEW_BATCH_SIZE) {
+        await Promise.all(previewUrlPromises.slice(i, i + PREVIEW_BATCH_SIZE));
+      }
     }
 
     // Prepare final data with metadata
@@ -185,32 +183,12 @@ async function updateJamTracks(availableTracksData, dailyTracks, seasonEnd) {
 
 async function fetchPreviewUrl(track) {
   try {
-    if (!spotifyAuthenticated) {
-      const data = await spotifyApi.clientCredentialsGrant();
-      spotifyApi.setAccessToken(data.body['access_token']);
-      spotifyAuthenticated = true;
-    }
-
-    const searchResult = await spotifyApi.searchTracks(
-      `${track.an.trim()} - ${track.tt.trim()}`,
-      { limit: 1 }
+    const query = encodeURIComponent(`${track.an.trim()} ${track.tt.trim()}`);
+    const response = await fetch(
+      `https://itunes.apple.com/search?term=${query}&media=music&entity=song&limit=1`
     );
-
-    const trackId = searchResult.body.tracks.items[0]?.id;
-    if (!trackId) return null;
-
-    const trackDetails = await spotifyApi.getTrack(trackId);
-    let previewUrl = trackDetails.body.preview_url;
-
-    if (!previewUrl) {
-      const embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
-      const embedPage = await fetch(embedUrl);
-      const embedHtml = await embedPage.text();
-      const match = embedHtml.match(/"audioPreview":{"url":"([^"]+)"/);
-      if (match) previewUrl = match[1];
-    }
-
-    return previewUrl;
+    const data = await response.json();
+    return data.results?.[0]?.previewUrl ?? null;
   } catch (error) {
     console.error('Error fetching preview URL:', error);
     return null;
