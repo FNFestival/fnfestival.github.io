@@ -1,0 +1,223 @@
+@use 'variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $bg;
+  z-index: 100;
+  border-bottom: 1px solid $border;
+
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    max-height: 40px;
+    cursor: pointer;
+  }
+
+  input[type="search"] {
+    padding: 11px 16px;
+    border-radius: $radius-lg;
+    border: 1px solid $border;
+    background: $bg-input;
+    color: $text;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+
+    &::placeholder {
+      color: $text-dimmer;
+    }
+
+    &:focus {
+      background: $bg-input-hover;
+      border-color: $border-focus;
+    }
+
+    @media (min-width: 993px) {
+      width: 300px;
+    }
+  }
+
+  .custom-select {
+    font: inherit;
+    font-size: 14px;
+    background-color: $bg-input;
+    color: $text;
+    border: 1px solid $border;
+    padding: 11px 38px 11px 16px;
+    border-radius: $radius-lg;
+    cursor: pointer;
+    @include select-arrow;
+    height: 46px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+
+    &:focus {
+      background-color: $bg-input-hover;
+      @include select-arrow;
+      border-color: $border-focus;
+    }
+
+    option {
+      font-family: $font-system;
+      background-color: #2a2a2a;
+      font-size: 16px;
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    button,
+    a {
+      color: $text;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      background: $bg-input;
+      border: 1px solid $border;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      font: inherit;
+
+      &:hover {
+        background: $bg-input-hover;
+        text-decoration: none;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.track-count,
+.countdown {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+// Interactive focus rings for header elements
+.header input[type="search"],
+.header .custom-select,
+.header .links a,
+.header .links button {
+  @include no-focus-ring;
+
+  &:focus,
+  &:hover {
+    @include focus-ring;
+  }
+}
+
+// Mobile
+@media (max-width: $bp-tablet) {
+  .header {
+    position: relative;
+
+    .container {
+      gap: 12px;
+      position: relative;
+    }
+
+    img {
+      max-height: 36px;
+      flex-shrink: 0;
+    }
+
+    .links {
+      margin-left: auto;
+      flex-shrink: 0;
+      gap: 6px;
+
+      button,
+      a {
+        padding: 8px;
+        font-size: 14px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .custom-select {
+      flex: 0 0 auto;
+      min-width: 100px;
+      font-size: 16px;
+    }
+
+    input[type="search"] {
+      flex: 1;
+      min-width: 200px;
+      font-size: 16px;
+    }
+  }
+
+  .header-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header-bottom {
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    order: 10;
+  }
+
+  main {
+    margin-top: 10px;
+  }
+}

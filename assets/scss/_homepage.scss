@@ -1,0 +1,263 @@
+@use 'variables' as *;
+
+// Info section
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+// Stats bar
+.track-stats {
+  display: flex;
+  gap: 12px;
+
+  .stat {
+    flex: 1;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: $radius-md;
+  }
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-clickable {
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: $radius-lg;
+  transition: background 0.2s, outline 0.15s, outline-offset 0.15s ease-out;
+  @include no-focus-ring;
+
+  &:hover,
+  &:focus {
+    background: $bg-input;
+    @include focus-ring;
+  }
+}
+
+.stat-value {
+  font-size: 24px;
+  font-variation-settings: $font-variation-bold;
+  color: $text;
+}
+
+.stat-label {
+  font-size: 12px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Track sections
+.track-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: $radius-md;
+  padding: 4px 8px 4px 0;
+  @include no-focus-ring;
+
+  &:hover,
+  &:focus {
+    @include focus-ring;
+
+    h2 {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    font-variation-settings: $font-variation-bold;
+    transition: color 0.2s;
+  }
+}
+
+.section-count {
+  font-size: 16px;
+  font-variation-settings: $font-variation-semibold;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.show-all-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: $radius-lg;
+  color: $text;
+  font-family: $font-heading;
+  font-size: 16px;
+  font-variation-settings: $font-variation-semibold;
+  cursor: pointer;
+  @include no-focus-ring;
+
+  &:hover,
+  &:focus {
+    background: $bg-card-hover;
+    @include focus-ring;
+  }
+}
+
+// Page header (filtered views)
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.page-header {
+  h1 {
+    font-size: 32px;
+    font-variation-settings: $font-variation-bold;
+    margin: 0 0 8px;
+  }
+
+  .track-count {
+    font-size: 16px;
+    opacity: 0.6;
+  }
+}
+
+// View controls
+.view-controls {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp-mobile) {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.grid-view-controls {
+  display: contents;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 11px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-variation-settings: $font-variation-semibold;
+  }
+
+  @media (max-width: $bp-mobile) {
+    width: 100%;
+  }
+}
+
+.custom-select.compact {
+  font-family: $font-heading;
+  font-size: 13px;
+  padding: 8px 32px 8px 12px;
+  height: auto;
+  min-width: 140px;
+  background-color: $bg-input;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  font-variation-settings: $font-variation-normal;
+  color: $text;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  @include select-arrow;
+  background-position: right 8px center;
+  @include no-focus-ring;
+  transition: outline 0.15s, outline-offset 0.15s ease-out, background-color 0.2s, border-color 0.2s;
+
+  option {
+    font-family: $font-system;
+    background-color: #2a2a2a;
+    color: $text;
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-input-hover;
+    background-position: right 8px center;
+    border-color: $border-focus;
+    @include focus-ring;
+  }
+
+  @media (max-width: $bp-mobile) {
+    width: 100%;
+  }
+}
+
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: $bg-input;
+  padding: 2px;
+  border-radius: $radius-md;
+  border: 1px solid $border;
+  width: fit-content;
+}
+
+.view-toggle-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 6px 10px;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include no-focus-ring;
+
+  &:hover,
+  &:focus {
+    background: $bg-input;
+    color: rgba(255, 255, 255, 0.9);
+    @include focus-ring;
+  }
+
+  &.active {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: $text;
+  }
+}

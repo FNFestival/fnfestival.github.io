@@ -12,6 +12,7 @@
     "fnbr": "^4.2.0"
   },
   "devDependencies": {
+    "sass": "^1.99.0",
     "vite": "^8.0.8"
   }
 }

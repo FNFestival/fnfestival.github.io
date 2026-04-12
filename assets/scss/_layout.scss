@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+main {
+  margin-top: 110px;
+
+  @media (max-width: $bp-mobile) {
+    margin-top: 0;
+  }
+}
+
+.content {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px 60px;
+
+  @media (min-width: $bp-desktop) {
+    max-width: 1400px;
+  }
+}
+
+.footer {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.9;
+
+  strong {
+    font-variation-settings: $font-variation-bold;
+  }
+}
+
+.footer-legal {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.6;
+  line-height: 1.6;
+}

@@ -1,0 +1,67 @@
+// Colors
+$bg: #0f0f0f;
+$bg-card: rgba(255, 255, 255, 0.06);
+$bg-card-hover: rgba(255, 255, 255, 0.1);
+$bg-input: rgba(255, 255, 255, 0.08);
+$bg-input-hover: rgba(255, 255, 255, 0.12);
+$border: rgba(255, 255, 255, 0.08);
+$border-focus: rgba(255, 255, 255, 0.2);
+$text: #fff;
+$text-muted: #bbb;
+$text-dim: rgba(255, 255, 255, 0.6);
+$text-dimmer: rgba(255, 255, 255, 0.5);
+
+$color-new: rgba(0, 150, 255, 0.9);
+$color-featured: rgba(255, 215, 0, 0.9);
+$color-favorite: rgba(255, 50, 100, 0.9);
+
+// Focus outline
+$focus-outline: 0.15rem solid rgba(255, 255, 255, 0.8);
+$focus-outline-offset: 0.1875rem;
+
+// Typography
+$font-heading: 'HeadingNowVariable', Arial, sans-serif;
+$font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-variation-normal: "wdth" 668, "wght" 500;
+$font-variation-semibold: "wdth" 668, "wght" 600;
+$font-variation-bold: "wdth" 668, "wght" 700;
+
+// Radii
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 20px;
+
+// Breakpoints
+$bp-mobile: 768px;
+$bp-tablet: 992px;
+$bp-desktop: 1400px;
+
+// Mixins
+@mixin focus-ring {
+  outline: $focus-outline;
+  outline-offset: $focus-outline-offset;
+}
+
+@mixin no-focus-ring {
+  outline: 0 solid transparent;
+  outline-offset: 0.5rem;
+  transition: outline 0.15s, outline-offset 0.15s ease-out;
+}
+
+@mixin glass($alpha: 0.08) {
+  background: rgba(255, 255, 255, $alpha);
+  border: 1px solid $border;
+  backdrop-filter: blur(10px);
+}
+
+@mixin select-arrow {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}

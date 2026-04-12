@@ -1,0 +1,66 @@
+@use 'variables' as *;
+
+@font-face {
+  font-family: 'HeadingNowVariable';
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: url('../fonts/HeadingNowVariable.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-heading;
+  font-variation-settings: $font-variation-normal;
+  background: $bg;
+  color: $text;
+  overflow-x: hidden;
+  user-select: none;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

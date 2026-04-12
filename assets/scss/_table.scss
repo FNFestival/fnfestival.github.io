@@ -1,0 +1,111 @@
+@use 'variables' as *;
+
+.tracks-table-wrapper {
+  overflow: auto;
+  max-height: calc(100dvh - 130px);
+  border-radius: $radius-lg;
+  border: 1px solid $border;
+}
+
+.tracks-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #111;
+    box-shadow: 0 1px 0 $border;
+  }
+
+  th {
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 11px;
+    font-variation-settings: $font-variation-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+  }
+}
+
+.th-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+
+  &:hover { color: rgba(255, 255, 255, 0.8); }
+  &.sort-active { color: rgba(255, 255, 255, 0.9); }
+}
+
+.sort-indicator {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.th-cover { width: 56px; }
+.th-diff  { text-align: center; }
+
+.jam-track-row {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover { background: $bg-card; }
+}
+
+.td-cover {
+  padding: 6px 4px 6px 10px;
+  width: 56px;
+
+  .loading-spinner {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: $radius-sm;
+    margin-right: 0;
+  }
+
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.loaded { opacity: 1; }
+  }
+}
+
+.td-title {
+  padding: 6px 12px;
+  min-width: 160px;
+  max-width: 260px;
+
+  .marquee-container { max-width: 240px; }
+}
+
+.td-artist {
+  font-size: 12px;
+  color: $text-muted;
+}
+
+.td-num {
+  padding: 6px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.td-diff {
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 13px;
+  font-variation-settings: $font-variation-semibold;
+  white-space: nowrap;
+}
