@@ -162,17 +162,20 @@
 
 @container (max-width: 330px) {
   .track-labels:has(> :nth-child(2)) {
-    gap: 4px;
+    gap: 3px;
+    margin-top: 3px;
 
     > span {
-      padding: 2px 5px;
+      gap: 3px;
+      padding: 2px 4px;
       font-size: 10px;
       line-height: 12px;
       white-space: nowrap;
     }
 
     svg {
-      display: none;
+      width: 10px;
+      height: 10px;
     }
   }
 }
