@@ -3,7 +3,6 @@ export const elements = {
   searchInput: document.getElementById('searchInput'),
   content: document.querySelector('.content'),
   logo: document.getElementById('logo'),
-  muteButton: document.getElementById('muteButton'),
   favoriteButton: document.getElementById('favoriteButton'),
   filterSelect: document.getElementById('filterSelect'),
   randomButton: document.getElementById('randomButton')
@@ -11,6 +10,7 @@ export const elements = {
 
 export const state = {
   tracksData: [],
+  isLoadingTracks: false,
   loadedTracks: 0,
   currentTrackIndex: -1,
   currentFilteredTracks: [],
@@ -27,7 +27,6 @@ export const state = {
   infiniteScrollEl: null,
   inFilteredView: false,
   seasonEnd: null,
-  historyTimeout: null,
   wasUpdating: false,
   viewMode: localStorage.getItem('viewMode') || 'compact',
   difficultySortOrder: localStorage.getItem('difficultySortOrder') || 'none',

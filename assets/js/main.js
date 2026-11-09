@@ -1,54 +1,77 @@
 import { elements, state, CONFIG } from './state.js';
-import { audio, updateMuteIcon, toggleMute, setupAudioLoop } from './audio.js';
+import { audio, updateMuteIcons, toggleMute, setupAudioLoop } from './audio.js';
 import { stopMarquee, checkAndStartMarquee } from './marquee.js';
 import { initModal, openModal, closeModal, navigateModal, toggleFavorite } from './modal.js';
-import { updateFilterCache, applyFilter, sanitizeInput, sortTracks } from './filter.js';
+import { updateFilterCache, applyFilter, sortTracks } from './filter.js';
 import { initRender, generateDifficultyBars, generateLabels } from './render.js';
-import { initUI, renderHomepage, updateTrackDisplay } from './ui.js';
-import { initData, loadTracks, initializeFromURL } from './data.js';
+import { initUI, renderHomepage, updateTrackDisplay, updateURL } from './ui.js';
+import { updateDropdown } from './dropdown.js';
+import { renderTrackSkeleton } from './skeleton.js';
+import { loadTracks, initializeFromURL, loadFestivalBackdrop } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (state.isMuted) {
     audio.volume = 0;
   }
 
-  function filterTracks(updateHistory = true) {
+  let lastSearchInput = null;
+  const reloadTracks = () => {
+    renderTrackSkeleton(elements);
+    loadTracks(elements, () => filterTracks(false));
+  };
+
+  function filterTracks(updateHistory = true, isSearchInput = false) {
     const rawQuery = elements.searchInput.value;
-    const query = sanitizeInput(rawQuery).toLowerCase();
+    const query = rawQuery.trim();
+    const normalizedQuery = query.toLowerCase();
     const filterValue = elements.filterSelect.value;
+    updateDropdown(elements.filterSelect);
 
     updateFilterCache();
 
     state.currentFilteredTracks = sortTracks(
       state.tracksData.filter(track => {
         const matchesSearch =
-          track.title.toLowerCase().includes(query) ||
-          track.artist.toLowerCase().includes(query);
+          track.title.toLowerCase().includes(normalizedQuery) ||
+          track.artist.toLowerCase().includes(normalizedQuery);
         return matchesSearch && applyFilter(track, filterValue);
       }),
       filterValue
     );
 
-    updateTrackDisplay(query, filterValue, elements, updateHistory);
+    if (updateHistory) {
+      const now = Date.now();
+      const replace = isSearchInput && lastSearchInput !== null && now - lastSearchInput < 500;
+      const changedURL = updateURL(query, filterValue, replace);
+      if (!isSearchInput) lastSearchInput = null;
+      else if (changedURL || replace) lastSearchInput = now;
+    }
+
+    if (state.isLoadingTracks) {
+      renderTrackSkeleton(elements);
+    } else {
+      updateTrackDisplay(query, filterValue, elements);
+    }
   }
 
   initModal({ generateDifficultyBars, generateLabels, filterTracks, renderHomepage: () => renderHomepage(elements) });
   initRender({ openModal: (track) => openModal(track, elements), filterTracks });
-  initUI({ filterTracks, loadTracks: () => loadTracks(elements) });
-  initData({ initializeFromURL: () => initializeFromURL(elements), filterTracks, renderHomepage: () => renderHomepage(elements) });
-
-  loadTracks(elements);
+  initUI({ filterTracks, loadTracks: reloadTracks });
+  initializeFromURL(elements);
+  updateDropdown(elements.filterSelect);
+  reloadTracks();
+  loadFestivalBackdrop(document.querySelector('.festival-backdrop'));
   initializeEventListeners();
-  updateMuteIcon(elements.muteButton);
+  updateMuteIcons();
 
   window.addEventListener('popstate', () => {
+    document.querySelector('.season-dialog[open]')?.close();
+    lastSearchInput = null;
+    document.getElementById('coverLightbox').classList.remove('open');
     if (elements.modal.classList.contains('modal-open')) {
       closeModal(elements);
-      return;
     }
-    const urlParams = new URLSearchParams(window.location.search);
-    elements.searchInput.value = urlParams.get('q') || '';
-    elements.filterSelect.value = urlParams.get('filter') || 'all';
+    initializeFromURL(elements);
     filterTracks(false);
   });
 
@@ -65,8 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    for (const dialog of document.querySelectorAll('.season-dialog')) {
+      dialog.addEventListener('click', event => {
+        if (event.target === dialog) dialog.close();
+      });
+    }
+
     elements.modal.addEventListener('click', (e) => {
       if (e.target === elements.modal) closeModal(elements);
+    });
+
+    elements.modal.addEventListener('cancel', event => {
+      event.preventDefault();
+      closeModal(elements);
     });
 
     elements.modal.querySelector('.modal-close').addEventListener('click', () => closeModal(elements));
@@ -106,17 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    elements.searchInput.addEventListener('input', filterTracks);
-    elements.filterSelect.addEventListener('change', filterTracks);
-    elements.muteButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleMute(elements.muteButton);
+    elements.searchInput.addEventListener('input', () => filterTracks(true, true));
+    elements.filterSelect.addEventListener('change', () => {
+      state.inFilteredView = true;
+      filterTracks();
     });
+    for (const button of document.querySelectorAll('[data-mute-button]')) {
+      button.addEventListener('click', event => {
+        toggleMute();
+        if (event.detail > 0) button.blur();
+      });
+    }
 
     document.addEventListener('keydown', (e) => {
+      if (!elements.modal.open && document.querySelector('.season-dialog[open]')) return;
+
       const lightbox = document.getElementById('coverLightbox');
       if (lightbox.classList.contains('open')) {
-        if (e.key === 'Escape') lightbox.classList.remove('open');
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          lightbox.classList.remove('open');
+        }
         return;
       }
 
@@ -126,14 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (e.key) {
           case 'ArrowLeft':  e.preventDefault(); navigateModal(-1, elements); break;
           case 'ArrowRight': e.preventDefault(); navigateModal(1, elements);  break;
-          case 'Escape':     closeModal(elements);                             break;
+          case 'Escape':     e.preventDefault(); closeModal(elements);          break;
           case 'f': case 'F': e.preventDefault(); toggleFavorite(elements);   break;
-          case 'm': case 'M': e.preventDefault(); toggleMute(elements.muteButton); break;
+          case 'm': case 'M': e.preventDefault(); toggleMute(); break;
         }
       } else {
         if (e.key === 'm' || e.key === 'M') {
           e.preventDefault();
-          toggleMute(elements.muteButton);
+          toggleMute();
         }
       }
     });

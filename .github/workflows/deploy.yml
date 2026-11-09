@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_run:
-    workflows: ["Update Jam Tracks"]
+    workflows: ["Update Jam Tracks", "Update Festival Seasons"]
     types:
       - completed
   workflow_dispatch:

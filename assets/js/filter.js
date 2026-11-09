@@ -1,3 +1,4 @@
+import { getShopOffer } from './shop.js';
 import { state, MS_PER_DAY, MS_PER_WEEK } from './state.js';
 
 export const filterCache = {
@@ -39,17 +40,13 @@ export function applyFilter(track, filterValue) {
              new Date(track.lastFeatured).getTime() >= filterCache.sevenDaysAgo;
     case 'new':
       return new Date(track.createdAt).getTime() > filterCache.sevenDaysAgo;
+    case 'shop':
+      return Boolean(getShopOffer(track));
     case 'favorites':
       return filterCache.favoritesSet.has(track.id);
     default:
       return true;
   }
-}
-
-export function sanitizeInput(input) {
-  const div = document.createElement('div');
-  div.textContent = input;
-  return div.innerHTML.trim();
 }
 
 export function sortTracks(tracks, filterValue) {

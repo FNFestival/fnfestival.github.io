@@ -1,3 +1,4 @@
+import { getShopOffer, getLastShopAppearance } from './shop.js';
 import { state, CONFIG } from './state.js';
 import { audio, fadeIn, fadeOut, setupAudioLoop } from './audio.js';
 import { checkAndStartMarquee } from './marquee.js';
@@ -45,13 +46,12 @@ export function renderModal(track, elements) {
     checkAndStartMarquee(elements.modal.querySelector('#modalArtist'));
   });
 
-  const labelsContainer = elements.modal.querySelector('#modalLabels');
-  labelsContainer.innerHTML = '';
-  labelsContainer.appendChild(_generateLabels(track, true));
+  updateModalLabels(track, elements);
 
   const isFavorited = state.favorites.includes(id);
-  elements.favoriteButton.classList.toggle('favorited', isFavorited);
+  updateFavoriteButton(elements.favoriteButton, isFavorited);
 
+  const offer = getShopOffer(track);
   elements.modal.querySelector('#modalDetails').innerHTML = `
     <div class="detail-grid">
       <div class="detail-item">
@@ -67,20 +67,49 @@ export function renderModal(track, elements) {
         <span class="detail-value">${releaseYear}</span>
       </div>
       <div class="detail-item">
-        <span class="detail-label">Created</span>
+        <span class="detail-label">First Seen</span>
         <span class="detail-value">${new Date(createdAt).toLocaleDateString()}</span>
       </div>
       <div class="detail-item">
         <span class="detail-label">Last Featured</span>
         <span class="detail-value">${lastFeatured ? new Date(lastFeatured).toLocaleDateString() : 'Never'}</span>
       </div>
+      ${offer ? `
+        <div class="detail-item">
+          <span class="detail-label">Leaves Shop</span>
+          <span class="detail-value">${new Date(offer.endsAt).toLocaleDateString('en', {
+            month: 'short',
+            day: 'numeric'
+          })}</span>
+        </div>
+      ` : `
+        <div class="detail-item">
+          <span class="detail-label">Last in Shop</span>
+          <span class="detail-value" id="modalLastInShop">Loading…</span>
+        </div>
+      `}
     </div>
   `;
+
+  const shopLink = elements.modal.querySelector('#modalShopLink');
+  shopLink.hidden = !offer;
+
+  if (!offer) {
+    const lastInShop = elements.modal.querySelector('#modalLastInShop');
+    getLastShopAppearance(track).then(date => {
+      lastInShop.textContent = date
+        ? new Date(date).toLocaleDateString('en', { dateStyle: 'medium', timeZone: 'UTC' })
+        : 'No recorded date';
+    }).catch(() => {
+      lastInShop.textContent = 'Unavailable';
+    });
+  }
 
   _generateDifficultyBars(difficulties, elements.modal.querySelector('#modalDifficulties'));
 
   elements.modal.style.display = 'flex';
   elements.modal.classList.add('modal-open');
+  if (!elements.modal.open) elements.modal.showModal();
   document.body.classList.add('modal-open');
 
   if (previewUrl) {
@@ -126,19 +155,29 @@ export function toggleFavorite(elements) {
 
   if (index > -1) {
     state.favorites.splice(index, 1);
-    elements.favoriteButton.classList.remove('favorited');
   } else {
     state.favorites.push(trackId);
-    elements.favoriteButton.classList.add('favorited');
   }
 
+  updateFavoriteButton(elements.favoriteButton, index === -1);
+  updateModalLabels(state.currentTrack, elements);
   localStorage.setItem('favoriteTracks', JSON.stringify(state.favorites));
 
   if (elements.filterSelect.value === 'favorites') {
-    _filterTracks();
-  } else if (elements.filterSelect.value === 'all' && !elements.searchInput.value) {
+    _filterTracks(false);
+  } else if (elements.filterSelect.value === 'all' && !elements.searchInput.value.trim() && !state.inFilteredView) {
     _renderHomepage();
   }
+}
+
+function updateFavoriteButton(button, isFavorited) {
+  button.classList.toggle('favorited', isFavorited);
+  button.querySelector('span').textContent = isFavorited ? 'Remove from favorites' : 'Add to favorites';
+}
+
+function updateModalLabels(track, elements) {
+  const labelsContainer = elements.modal.querySelector('#modalLabels');
+  labelsContainer.replaceChildren(..._generateLabels(track, true).childNodes);
 }
 
 export function updateModalNavigation(modal) {
@@ -159,6 +198,7 @@ export function updateModalNavigation(modal) {
 }
 
 export function closeModal(elements) {
+  elements.modal.close();
   elements.modal.style.display = 'none';
   elements.modal.classList.remove('modal-open');
   document.body.classList.remove('modal-open');

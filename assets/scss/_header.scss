@@ -32,6 +32,7 @@
     font: inherit;
     font-size: 14px;
     width: 250px;
+    min-width: 0;
     backdrop-filter: blur(10px);
 
     &::placeholder {
@@ -39,7 +40,6 @@
     }
 
     &:focus {
-      background: $bg-input-hover;
       border-color: $border-focus;
     }
 
@@ -63,7 +63,6 @@
     backdrop-filter: blur(10px);
 
     &:focus {
-      background-color: $bg-input-hover;
       @include select-arrow;
       border-color: $border-focus;
     }
@@ -79,12 +78,15 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0;
 
     button,
     a {
       color: $text;
       text-decoration: none;
-      padding: 10px;
+      padding: 0;
+      width: 46px;
+      height: 46px;
       border-radius: 10px;
       background: $bg-input;
       border: 1px solid $border;
@@ -96,9 +98,10 @@
       gap: 6px;
       transition: all 0.2s ease;
       font: inherit;
+      box-sizing: border-box;
+      flex-shrink: 0;
 
       &:hover {
-        background: $bg-input-hover;
         text-decoration: none;
       }
 
@@ -131,6 +134,35 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+
+  button {
+    color: $text;
+    padding: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: $bg-input;
+    border: 1px solid $border;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    font: inherit;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    &:hover {
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 .track-count,
@@ -142,6 +174,7 @@
 // Interactive focus rings for header elements
 .header input[type="search"],
 .header .custom-select,
+.header .search-wrapper button,
 .header .links a,
 .header .links button {
   @include no-focus-ring;
@@ -158,8 +191,7 @@
     position: relative;
 
     .container {
-      gap: 12px;
-      position: relative;
+      gap: 8px;
     }
 
     img {
@@ -168,14 +200,12 @@
     }
 
     .links {
-      margin-left: auto;
-      flex-shrink: 0;
       gap: 6px;
 
       button,
       a {
-        padding: 8px;
-        font-size: 14px;
+        width: 34px;
+        height: 34px;
 
         svg {
           width: 18px;
@@ -185,15 +215,17 @@
     }
 
     .custom-select {
-      flex: 0 0 auto;
-      min-width: 100px;
-      font-size: 16px;
+      height: 34px;
+      padding: 6px 32px 6px 10px;
+      font-size: 16px; // prevents iOS zoom
     }
 
     input[type="search"] {
+      height: 34px;
       flex: 1;
-      min-width: 200px;
-      font-size: 16px;
+      min-width: 0;
+      width: 0; // let flexbox control width entirely
+      font-size: 16px; // prevents iOS zoom
     }
   }
 
@@ -201,21 +233,32 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-  }
-
-  .header-bottom {
-    justify-content: center;
-    font-size: 13px;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .search-wrapper {
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+    #filterSelect {
+      max-width: 50%;
+    }
+
+    order: 10; // second row, below logo + links
     gap: 8px;
-    order: 10;
+
+    button {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
+
 
   main {
     margin-top: 10px;

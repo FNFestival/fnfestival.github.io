@@ -1,0 +1,108 @@
+@use 'variables' as *;
+
+.custom-select[hidden] {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  min-width: 0;
+}
+
+.dropdown .dropdown-trigger,
+.search-wrapper .dropdown .dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 34px;
+  height: auto;
+  padding: 7px 11px;
+  border: 1px solid $border-focus;
+  border-radius: $radius-md;
+  background: $bg-input;
+  color: $text;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  @include no-focus-ring;
+
+  &::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin: -3px 2px 0 0;
+    flex: 0 0 auto;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  &[aria-expanded='true']::after {
+    margin-top: 3px;
+    transform: rotate(225deg);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: $bg-input-hover;
+    @include focus-ring;
+  }
+}
+
+.search-wrapper .dropdown .dropdown-trigger {
+  height: 46px;
+  min-width: 120px;
+
+  @media (max-width: $bp-tablet) {
+    height: 34px;
+    min-width: 0;
+  }
+}
+
+.control-group .dropdown-trigger {
+  min-width: 140px;
+}
+
+.dropdown-options {
+  position: absolute;
+  inset: calc(100% + 6px) auto auto 0;
+  z-index: 20;
+  min-width: 100%;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  max-height: min(50dvh, 320px);
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid $border-focus;
+  border-radius: $radius-md;
+  background: #17171a;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+.dropdown .dropdown-options button,
+.search-wrapper .dropdown .dropdown-options button {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $text;
+  text-align: left;
+  font: 14px/1.35 $font-system;
+  cursor: pointer;
+  outline: none;
+
+  &[aria-selected='true'] {
+    background: $bg-input;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+  }
+}

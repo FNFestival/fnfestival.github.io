@@ -1,0 +1,23 @@
+name: Update Festival Seasons
+
+on:
+  schedule:
+    - cron: '28 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-seasons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: node scripts/update-festival-seasons.js
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Update Festival season history
+          file_pattern: data/live-seasons.json

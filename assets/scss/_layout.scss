@@ -18,6 +18,16 @@ main {
   }
 }
 
+.empty-tracks {
+  margin-top: 20px;
+  padding: 28px 16px;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  background: $bg-card;
+  color: $text-muted;
+  text-align: center;
+}
+
 .footer {
   max-width: 1230px;
   margin: 0 auto;

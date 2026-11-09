@@ -1,3 +1,4 @@
+import { getShopOffer } from './shop.js';
 import { state, CONFIG, MS_PER_WEEK } from './state.js';
 import { marqueeObserver, checkAndStartMarquee } from './marquee.js';
 import { isFeaturedToday, normalizeInstrumentKey } from './filter.js';
@@ -79,24 +80,43 @@ export function generateLabels(track, isModal = false) {
     labelContainer.appendChild(favoriteLabel);
   }
 
+  const shopBadge = createShopBadge(track, isModal);
+  if (shopBadge) labelContainer.appendChild(shopBadge);
+
   return labelContainer;
 }
+
+function createShopBadge(track, showText = false) {
+  if (!getShopOffer(track)) return null;
+
+  const badge = document.createElement('span');
+  badge.className = 'shop-label';
+  if (!showText) {
+    badge.setAttribute('aria-label', 'In Shop');
+  }
+  badge.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M5 4V3a3 3 0 0 1 6 0v1h3l1 11H1L2 4h3Zm1.5 0h3V3a1.5 1.5 0 0 0-3 0v1Z"/>
+    </svg>
+    ${showText ? '<span class="label-text">In Shop</span>' : ''}
+  `;
+  return badge;
+}
+
+const instrumentNames = {
+  vocals: 'Vocals',
+  guitar: 'Lead',
+  bass: 'Bass',
+  drums: 'Drums',
+  plasticVocals: 'Pro Vocals',
+  plasticGuitar: 'Pro Lead',
+  plasticBass: 'Pro Bass',
+  plasticDrums: 'Pro Drums'
+};
 
 export function generateDifficultyBars(difficulties, container, filterInstrument = null) {
   container.innerHTML = '';
   const maxBars = 7;
-
-  function getInstrumentDisplayName(key) {
-    if (key === 'plasticVocals') return 'Pro Vocals';
-    if (key.startsWith('plastic')) {
-      const base = key.replace(/^plastic-?/i, '');
-      const capitalized = base.charAt(0).toUpperCase() + base.slice(1);
-      return capitalized === 'Guitar' ? 'Pro Lead' : `Pro ${capitalized}`;
-    }
-    return key === 'guitar' ? 'Lead' : key.charAt(0).toUpperCase() + key.slice(1);
-  }
-
-  // Separate regular and pro instruments, then interleave for 2-column layout
   const regular = [];
   const pro = [];
   Object.entries(difficulties).forEach(([key, level]) => {
@@ -129,7 +149,7 @@ export function generateDifficultyBars(difficulties, container, filterInstrument
     ).join('');
 
     difficultyElement.innerHTML = `
-      <div class="instrument-name">${getInstrumentDisplayName(instrument)}</div>
+      <div class="instrument-name">${instrumentNames[instrument] || instrument}</div>
       <div class="difficulty-bars">${barsHTML}</div>
     `;
 
@@ -213,6 +233,8 @@ export function createTableRow(track) {
     <div class="marquee-container"><span class="marquee-text" translate="no">${track.title}</span></div>
     <div class="marquee-container"><span class="marquee-text td-artist" translate="no">${track.artist}</span></div>
   `;
+  const shopBadge = createShopBadge(track);
+  if (shopBadge) tdTitle.appendChild(shopBadge);
   tr.appendChild(tdTitle);
 
   const d = track.difficulties || {};
@@ -250,14 +272,14 @@ export function buildTableHTML() {
             <th class="th-title th-sortable" data-sort="title">Track <span class="sort-indicator"></span></th>
             <th class="th-num th-sortable" data-sort="bpm">BPM <span class="sort-indicator"></span></th>
             <th class="th-num th-sortable" data-sort="duration">Dur <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="vocals" data-col="vocals" title="Vocals">Vcl <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="guitar" data-col="guitar" title="Lead">Ld <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="bass" data-col="bass" title="Bass">Bs <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="drums" data-col="drums" title="Drums">Dr <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="plasticVocals" data-col="plasticVocals" title="Pro Vocals">P.Vc <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="plasticGuitar" data-col="plasticGuitar" title="Pro Lead">P.Ld <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="plasticBass" data-col="plasticBass" title="Pro Bass">P.Bs <span class="sort-indicator"></span></th>
-            <th class="th-diff th-sortable" data-sort="plasticDrums" data-col="plasticDrums" title="Pro Drums">P.Dr <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="vocals" data-col="vocals" aria-label="Vocals">Vcl <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="guitar" data-col="guitar" aria-label="Lead">Ld <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="bass" data-col="bass" aria-label="Bass">Bs <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="drums" data-col="drums" aria-label="Drums">Dr <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="plasticVocals" data-col="plasticVocals" aria-label="Pro Vocals">P.Vc <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="plasticGuitar" data-col="plasticGuitar" aria-label="Pro Lead">P.Ld <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="plasticBass" data-col="plasticBass" aria-label="Pro Bass">P.Bs <span class="sort-indicator"></span></th>
+            <th class="th-diff th-sortable" data-sort="plasticDrums" data-col="plasticDrums" aria-label="Pro Drums">P.Dr <span class="sort-indicator"></span></th>
           </tr>
         </thead>
         <tbody></tbody>

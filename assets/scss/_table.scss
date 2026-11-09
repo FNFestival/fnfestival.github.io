@@ -88,6 +88,20 @@
   max-width: 260px;
 
   .marquee-container { max-width: 240px; }
+
+  .shop-label {
+    display: inline-flex;
+    vertical-align: middle;
+    padding: 3px 5px;
+    margin-top: 3px;
+    border-radius: $radius-sm;
+    background: $color-shop;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
 
 .td-artist {

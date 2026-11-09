@@ -1,3 +1,6 @@
+import { updateDropdown } from './dropdown.js';
+import { openSeasonHistory } from './seasons.js';
+import { isShopLoaded } from './shop.js';
 import { state, CONFIG, MS_PER_WEEK } from './state.js';
 import { marqueeObserver } from './marquee.js';
 import { isFeaturedToday, applyDifficultyFiltersAndSort, sortTracksByColumn, normalizeInstrumentKey } from './filter.js';
@@ -98,16 +101,27 @@ export function renderHomepage(elements) {
           <span class="stat-value">${state.tracksData.length}</span>
           <span class="stat-label">Total Tracks</span>
         </div>
-        <div class="stat">
+        <button type="button" class="stat stat-clickable season-stat" id="seasonHistoryButton" aria-haspopup="dialog">
           <span class="stat-value" id="seasonCountdown" translate="no">${seasonCountdownText}</span>
           <span class="stat-label">Until Season End</span>
-        </div>
-        <div class="stat">
+        </button>
+        <button type="button" class="stat stat-clickable season-stat" id="trackRefreshButton" aria-haspopup="dialog">
           <span class="stat-value" id="updateCountdown" translate="no">${countdownText}</span>
-          <span class="stat-label">Until Daily Update</span>
-        </div>
+          <span class="stat-label">Until Track Refresh</span>
+        </button>
       </div>
     </div>
+
+    ${favoriteTracks.length > 0 ? `
+      <div class="track-section">
+        <div class="section-header" tabindex="0" role="button" data-filter="favorites">
+          <h2>Your Favorites</h2>
+          <span class="section-count">${favoriteTracks.length}</span>
+        </div>
+        <div class="tracks-grid" data-section="favorites"></div>
+        ${favoriteTracks.length > 6 ? `<button class="show-all-btn" data-filter="favorites">Show All Favorites</button>` : ''}
+      </div>
+    ` : ''}
 
     ${newTracks.length > 0 ? `
       <div class="track-section">
@@ -126,7 +140,7 @@ export function renderHomepage(elements) {
           <span class="section-count">${dailyRotation.length}</span>
         </div>
         <div class="tracks-grid" data-section="daily"></div>
-        ${dailyRotation.length > 6 ? '<button class="show-all-btn" data-filter="featured">Show All Featured</button>' : ''}
+        ${dailyRotation.length > 6 ? `<button class="show-all-btn" data-filter="featured">Show All Featured</button>` : ''}
       </div>
     ` : ''}
 
@@ -137,18 +151,7 @@ export function renderHomepage(elements) {
           <span class="section-count">${rotatedOut.length}</span>
         </div>
         <div class="tracks-grid" data-section="rotated"></div>
-        ${rotatedOut.length > 6 ? '<button class="show-all-btn" data-filter="rotated">Show All Recently Rotated</button>' : ''}
-      </div>
-    ` : ''}
-
-    ${favoriteTracks.length > 0 ? `
-      <div class="track-section">
-        <div class="section-header" tabindex="0" role="button" data-filter="favorites">
-          <h2>Your Favorites</h2>
-          <span class="section-count">${favoriteTracks.length}</span>
-        </div>
-        <div class="tracks-grid" data-section="favorites"></div>
-        ${favoriteTracks.length > 6 ? '<button class="show-all-btn" data-filter="favorites">Show All Favorites</button>' : ''}
+        ${rotatedOut.length > 6 ? `<button class="show-all-btn" data-filter="rotated">Show All Recently Rotated</button>` : ''}
       </div>
     ` : ''}
 
@@ -171,18 +174,18 @@ export function renderHomepage(elements) {
     grid.appendChild(fragment);
   };
 
+  if (favoriteTracks.length > 0) populateSection('[data-section="favorites"]', favoriteTracks);
   if (newTracks.length > 0) populateSection('[data-section="new"]', newTracks);
   if (dailyRotation.length > 0) populateSection('[data-section="daily"]', dailyRotation);
   if (rotatedOut.length > 0) populateSection('[data-section="rotated"]', rotatedOut);
-  if (favoriteTracks.length > 0) populateSection('[data-section="favorites"]', favoriteTracks);
   populateSection('[data-section="other"]', otherTracks);
 
   // Store the displayed tracks in the order they appear on homepage for modal navigation
   state.currentDisplayedTracks = [
+    ...favoriteTracks.slice(0, 6),
     ...newTracks.slice(0, 6),
     ...dailyRotation.slice(0, 6),
     ...rotatedOut.slice(0, 6),
-    ...favoriteTracks.slice(0, 6),
     ...otherTracks.slice(0, 6)
   ];
 
@@ -239,6 +242,14 @@ export function renderHomepage(elements) {
     });
   }
 
+  elements.content.querySelector('#seasonHistoryButton').addEventListener('click', event => {
+    if (event.detail > 0) event.currentTarget.blur();
+    openSeasonHistory();
+  });
+  elements.content.querySelector('#trackRefreshButton').addEventListener('click', event => {
+    if (event.detail > 0) event.currentTarget.blur();
+    document.getElementById('trackRefreshInfo').showModal();
+  });
   startHomepageCountdown();
 
   requestAnimationFrame(() => {
@@ -298,7 +309,7 @@ export function startHomepageCountdown() {
   }, 1000);
 }
 
-export function updateTrackDisplay(query, filterValue, elements, updateHistory = true) {
+export function updateTrackDisplay(query, filterValue, elements) {
   if (state.infiniteScrollHandler) {
     const prevScrollEl = state.infiniteScrollEl || window;
     prevScrollEl.removeEventListener('scroll', state.infiniteScrollHandler);
@@ -320,6 +331,7 @@ export function updateTrackDisplay(query, filterValue, elements, updateHistory =
       : filterValue === 'rotated' ? 'Recently Rotated'
       : filterValue === 'new' ? 'New Tracks'
       : filterValue === 'favorites' ? 'Your Favorites'
+      : filterValue === 'shop' ? 'Tracks in the Shop'
       : 'All Tracks';
 
     let displayTracks = applyDifficultyFiltersAndSort([...state.currentFilteredTracks]);
@@ -329,7 +341,7 @@ export function updateTrackDisplay(query, filterValue, elements, updateHistory =
       <div class="page-header">
         <div class="page-header-content">
           <div>
-            <h1>${resultText}</h1>
+            <h1></h1>
             <p class="track-count">${displayTracks.length} tracks</p>
           </div>
           <div class="view-controls">
@@ -360,17 +372,17 @@ export function updateTrackDisplay(query, filterValue, elements, updateHistory =
             <div class="control-group">
               <label for="viewToggle">View:</label>
               <div class="view-toggle" id="viewToggle">
-                <button id="compactViewBtn" class="view-toggle-btn ${state.viewMode === 'compact' ? 'active' : ''}" title="Compact View">
+                <button id="compactViewBtn" class="view-toggle-btn ${state.viewMode === 'compact' ? 'active' : ''}" aria-label="Compact view">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"/>
                   </svg>
                 </button>
-                <button id="detailedViewBtn" class="view-toggle-btn ${state.viewMode === 'detailed' ? 'active' : ''}" title="Detailed View">
+                <button id="detailedViewBtn" class="view-toggle-btn ${state.viewMode === 'detailed' ? 'active' : ''}" aria-label="Detailed view">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                   </svg>
                 </button>
-                <button id="tableViewBtn" class="view-toggle-btn ${state.viewMode === 'table' ? 'active' : ''}" title="Table View">
+                <button id="tableViewBtn" class="view-toggle-btn ${state.viewMode === 'table' ? 'active' : ''}" aria-label="Table view">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-4 0v-3H2v2a1 1 0 0 0 1 1zm-4-4h4V8H2zm0-4h4V4H2zm5-3v3h4V4zm4 4H7v3h4z"/>
                   </svg>
@@ -382,6 +394,8 @@ export function updateTrackDisplay(query, filterValue, elements, updateHistory =
       </div>
       ${state.viewMode === 'table' ? buildTableHTML() : `<div class="tracks-grid ${state.viewMode === 'detailed' ? 'detailed-view' : ''}"></div>`}
     `;
+
+    elements.content.querySelector('.page-header h1').textContent = resultText;
 
     if (state.viewMode === 'table') {
       const wrapper = elements.content.querySelector('.tracks-table-wrapper');
@@ -423,12 +437,20 @@ export function updateTrackDisplay(query, filterValue, elements, updateHistory =
     }
 
     setupViewControls(elements);
+    updateEmptyState(elements, displayTracks.length);
   }
+}
 
-  if (updateHistory) {
-    // Use immediate update for section navigation, debounced for search typing
-    debouncedUpdateURL(query, filterValue, state.inFilteredView || filterValue !== 'all');
-  }
+function updateEmptyState(elements, trackCount) {
+  elements.content.querySelector('.empty-tracks')?.remove();
+  if (trackCount) return;
+
+  const message = document.createElement('p');
+  message.className = 'empty-tracks';
+  message.textContent = elements.filterSelect.value === 'shop' && !isShopLoaded()
+    ? 'Shop availability is temporarily unavailable.'
+    : 'No tracks match your filters.';
+  elements.content.appendChild(message);
 }
 
 export function refreshCurrentView(elements) {
@@ -436,6 +458,7 @@ export function refreshCurrentView(elements) {
 
   const trackCount = elements.content.querySelector('.track-count');
   if (trackCount) trackCount.textContent = `${displayTracks.length} tracks`;
+  updateEmptyState(elements, displayTracks.length);
 
   const compactBtn = document.getElementById('compactViewBtn');
   const detailedBtn = document.getElementById('detailedViewBtn');
@@ -537,6 +560,8 @@ export function setupViewControls(elements) {
 
   if (instrumentFilter) instrumentFilter.value = state.difficultyFilterInstrument;
   if (difficultySort) difficultySort.value = state.difficultySortOrder;
+  updateDropdown(instrumentFilter);
+  updateDropdown(difficultySort);
 
   compactBtn.addEventListener('click', () => {
     if (state.viewMode !== 'compact') {
@@ -574,6 +599,7 @@ export function setupViewControls(elements) {
         state.difficultySortOrder = 'none';
         localStorage.setItem('difficultySortOrder', 'none');
         if (difficultySort) difficultySort.value = 'none';
+        updateDropdown(difficultySort);
       }
 
       refreshCurrentView(elements);
@@ -590,6 +616,7 @@ export function setupViewControls(elements) {
         state.difficultyFilterInstrument = 'guitar';
         localStorage.setItem('difficultyFilterInstrument', 'guitar');
         if (instrumentFilter) instrumentFilter.value = 'guitar';
+        updateDropdown(instrumentFilter);
       }
 
       refreshCurrentView(elements);
@@ -643,29 +670,22 @@ export function setupInfiniteScroll(tracks, container, creator = null) {
   setTimeout(() => loadMoreTracks(), 100);
 }
 
-// URL management
-function updateURL(query, filterValue) {
+export function updateURL(query, filterValue, replace) {
   const url = new URL(window.location);
   if (query) url.searchParams.set('q', query);
   else url.searchParams.delete('q');
-  if (filterValue && filterValue !== 'all') url.searchParams.set('filter', filterValue);
-  else url.searchParams.delete('filter');
-  window.history.pushState({ query, filterValue }, '', url);
-}
-
-export function debouncedUpdateURL(query, filterValue, immediate = false) {
-  if (state.historyTimeout) {
-    clearTimeout(state.historyTimeout);
-    state.historyTimeout = null;
-  }
-
-  if (immediate || state.inFilteredView) {
-    updateURL(query, filterValue);
+  if (filterValue !== 'all' || state.inFilteredView) {
+    url.searchParams.set('filter', filterValue);
   } else {
-    // Debounce URL updates for search typing (500ms delay)
-    state.historyTimeout = setTimeout(() => {
-      updateURL(query, filterValue);
-      state.historyTimeout = null;
-    }, 500);
+    url.searchParams.delete('filter');
   }
+
+  if (url.href === window.location.href) return false;
+
+  if (replace) {
+    window.history.replaceState(null, '', url);
+  } else {
+    window.history.pushState(null, '', url);
+  }
+  return true;
 }

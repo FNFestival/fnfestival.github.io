@@ -15,6 +15,7 @@
 body {
   margin: 0;
   padding: 0;
+  isolation: isolate;
   font-family: $font-heading;
   font-variation-settings: $font-variation-normal;
   background: $bg;
@@ -25,6 +26,19 @@ body {
   &.modal-open {
     overflow: hidden;
   }
+}
+
+.festival-backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  height: min(58vw, 480px);
+  min-height: 220px;
+  z-index: -1;
+  background-position: center 55%;
+  background-size: cover;
+  opacity: 0.19;
+  mask-image: linear-gradient(#000 12%, transparent);
+  pointer-events: none;
 }
 
 h2, p {

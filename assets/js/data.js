@@ -1,23 +1,8 @@
+import { loadShop } from './shop.js';
 import { state } from './state.js';
 
-// Callbacks injected at init to avoid circular imports
-let _initializeFromURL;
-let _filterTracks;
-let _renderHomepage;
-
-export function initData({ initializeFromURL, filterTracks, renderHomepage }) {
-  _initializeFromURL = initializeFromURL;
-  _filterTracks = filterTracks;
-  _renderHomepage = renderHomepage;
-}
-
-export function loadTracks(elements) {
-  elements.content.innerHTML = `
-    <div class="loading-container">
-      <div class="loading-spinner"></div>
-      <p>Loading jam tracks...</p>
-    </div>
-  `;
+export function loadTracks(elements, onLoaded) {
+  state.isLoadingTracks = true;
 
   // Calculate cache-friendly timestamp (last update at 00:02 UTC)
   const now = new Date();
@@ -31,22 +16,25 @@ export function loadTracks(elements) {
 
   const cacheTimestamp = lastUpdate.getTime();
 
-  fetch(`data/tracks.json?v=${cacheTimestamp}`)
+  const tracks = fetch(`data/tracks.json?v=${cacheTimestamp}`)
     .then(response => {
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       return response.json();
-    })
-    .then(data => {
+    });
+
+  Promise.all([tracks, loadShop()])
+    .then(([data]) => {
       if (data._metadata) {
         state.seasonEnd = data._metadata.seasonEnd;
         delete data._metadata;
       }
 
       state.tracksData = Object.entries(data).map(([id, track]) => ({ ...track, id }));
-      _initializeFromURL(elements);
-      _filterTracks();
+      state.isLoadingTracks = false;
+      onLoaded();
     })
     .catch(error => {
+      state.isLoadingTracks = false;
       console.error('Error loading tracks:', error);
       elements.content.innerHTML = `
         <div class="error-container">
@@ -60,9 +48,26 @@ export function loadTracks(elements) {
 
 export function initializeFromURL(elements) {
   const urlParams = new URLSearchParams(window.location.search);
-  const searchQuery = urlParams.get('q');
+  elements.searchInput.value = urlParams.get('q') || '';
   const filterValue = urlParams.get('filter');
+  const hasValidFilter = Array.from(elements.filterSelect.options).some(option => option.value === filterValue);
+  elements.filterSelect.value = hasValidFilter ? filterValue : 'all';
+  state.inFilteredView = hasValidFilter;
+}
 
-  if (searchQuery) elements.searchInput.value = searchQuery;
-  if (filterValue) elements.filterSelect.value = filterValue;
+export async function loadFestivalBackdrop(backdrop) {
+  try {
+    const response = await fetch('https://prod.fn-api.cc/v1/mnemonic/playlist_pilgrimquickplay?related=false', {
+      signal: AbortSignal.timeout(3000)
+    });
+    if (!response.ok) return;
+
+    const { data } = await response.json();
+    const image = new URL(data?.metadata?.lobby_background_image_urls?.url);
+    if (image.origin !== 'https://cdn2.unrealengine.com' || image.username || image.password) return;
+
+    backdrop.style.backgroundImage = `url(${JSON.stringify(image.href)})`;
+  } catch {
+    // The background is decorative; keep the dark page background if it cannot load.
+  }
 }

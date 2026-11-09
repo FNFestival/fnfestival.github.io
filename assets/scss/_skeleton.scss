@@ -1,0 +1,89 @@
+@use 'variables' as *;
+
+.skeleton-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skeleton-block {
+  display: block;
+  border-radius: $radius-sm;
+  background: $bg-input-hover;
+  animation: skeleton-pulse 1.6s ease-in-out infinite alternate;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes skeleton-pulse {
+  to {
+    opacity: 0.5;
+  }
+}
+
+.track-skeleton {
+  pointer-events: none;
+}
+
+.skeleton-stat-value {
+  width: 74px;
+  height: 30px;
+}
+
+.skeleton-stat-label {
+  width: 86px;
+  height: 14px;
+}
+
+.skeleton-section-title {
+  width: 150px;
+  height: 28px;
+}
+
+.skeleton-page-title {
+  width: 200px;
+  height: 38px;
+  margin-bottom: 8px;
+}
+
+.skeleton-control {
+  width: 140px;
+  height: 34px;
+
+  @media (max-width: $bp-mobile) {
+    width: 100%;
+  }
+}
+
+.skeleton-cover {
+  flex: 0 0 auto;
+  width: 90px;
+  height: 90px;
+  margin-right: 12px;
+  border-radius: $radius-md;
+}
+
+.skeleton-track-title {
+  width: min(100%, 148px);
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.skeleton-difficulty {
+  height: 18px;
+}
+
+.skeleton-table-cover {
+  width: 44px;
+  height: 44px;
+}
+
+.skeleton-number {
+  width: 18px;
+  height: 14px;
+}

@@ -4,6 +4,13 @@
   display: none;
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  color: $text;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(25px);
   z-index: 1000;
@@ -29,21 +36,23 @@
   border-radius: $radius-2xl;
   width: 100%;
   max-width: 600px;
-  padding: 32px;
+  padding: 24px;
   cursor: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
   overflow-y: auto;
+  scrollbar-width: thin;
 
   @media (max-width: $bp-mobile) {
-    padding: 24px;
+    padding: 18px;
     max-width: 100%;
-    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
   }
 }
 
-.modal-close {
+.modal-close,
+.season-close {
   position: fixed;
   top: 16px;
   right: 16px;
@@ -73,14 +82,13 @@
 .modal-header {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 28px;
+  gap: 16px;
+  margin-bottom: 18px;
   position: relative;
-  flex-wrap: wrap;
 
   img {
-    width: 120px;
-    height: 120px;
+    width: 88px;
+    height: 88px;
     border-radius: $radius-xl;
     background-color: rgba(236, 237, 238, 0.1);
     flex-shrink: 0;
@@ -93,32 +101,33 @@
     }
 
     @media (max-width: $bp-mobile) {
-      width: 140px;
-      height: 140px;
+      width: 88px;
+      height: 88px;
     }
   }
 
   @media (max-width: $bp-mobile) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+    gap: 12px;
   }
 }
 
 .track-info {
+  container-type: inline-size;
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  max-width: calc(100% - 90px);
+  gap: 3px;
+
+  .marquee-container {
+    line-height: 0;
+  }
 
   h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 0;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.2;
     word-wrap: break-word;
     overflow-wrap: break-word;
 
@@ -129,6 +138,7 @@
 
   p {
     font-size: 16px;
+    line-height: 1.25;
     color: $text-muted;
     margin-bottom: 0;
     overflow: hidden;
@@ -139,61 +149,79 @@
       font-size: 15px;
     }
   }
+}
 
-  @media (max-width: $bp-mobile) {
-    padding-right: 0;
-    width: 100%;
+.track-info .track-labels {
+  margin-top: 5px;
+  padding-inline-start: 2px;
+
+  &:empty {
+    display: none;
   }
 }
 
-.modal-controls {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  margin-left: auto;
-  flex-shrink: 0;
+@container (max-width: 330px) {
+  .track-labels:has(> :nth-child(2)) {
+    gap: 4px;
 
-  @media (max-width: $bp-mobile) {
-    margin: 0 auto;
+    > span {
+      padding: 2px 5px;
+      font-size: 10px;
+      line-height: 12px;
+      white-space: nowrap;
+    }
+
+    svg {
+      display: none;
+    }
   }
 }
 
-%icon-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  cursor: pointer;
+.modal-actions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.favorite-button,
+.modal-mute-button,
+.modal-shop-link {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  width: 36px;
-  height: 36px;
-  transition: background-color 0.2s;
-  flex-shrink: 0;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid $border-focus;
+  border-radius: $radius-md;
+  background: $bg-card;
+  color: $text;
+  font: inherit;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-variation-settings: $font-variation-semibold;
+  cursor: pointer;
+  @include no-focus-ring;
+
+  &:hover,
+  &:focus-visible {
+    background: $bg-card-hover;
+    text-decoration: none;
+    @include focus-ring;
+  }
 
   svg {
-    fill: $text;
-    width: 18px;
-    height: 18px;
-    transition: opacity 0.2s;
-  }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  &:active {
-    transform: scale(0.95);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
   }
 }
 
 .favorite-button {
-  @extend %icon-button;
-  position: relative;
-
   &.favorited {
-    background-color: rgba(255, 50, 100, 0.2);
     border-color: rgba(255, 50, 100, 0.4);
 
     .heart-outline { display: none; }
@@ -205,24 +233,52 @@
   }
 }
 
-.mute-button {
-  @extend %icon-button;
+@media (min-width: ($bp-mobile + 1)) {
+  .modal-header {
+    padding-inline-end: 146px;
+  }
+
+  .modal-content:has(.modal-shop-link[hidden]) .modal-header {
+    padding-inline-end: 98px;
+  }
+
+  .modal-actions {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    gap: 8px;
+    margin: 0;
+
+    > :is(button, a) {
+      width: 38px;
+      padding: 0;
+    }
+
+    span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+  }
 }
 
-.modal-body {
-  margin-top: 0;
+.modal-shop-link[hidden] {
+  display: none;
 }
 
 .modal-details,
 .modal-difficulties {
-  padding: 20px;
+  padding: 12px 14px;
   border-radius: $radius-lg;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .modal-details {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   p {
     margin-bottom: 8px;
@@ -235,23 +291,14 @@
 
 .detail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-
-  @media (max-width: $bp-tablet) {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  @media (max-width: $bp-mobile) {
-    gap: 12px;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+  gap: 10px 14px;
 }
 
 .detail-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 2px;
 }
 
 .detail-label {
@@ -270,18 +317,8 @@
 
 .modal-difficulties {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px 24px;
-
-  @media (max-width: $bp-tablet) {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
-  @media (max-width: $bp-mobile) {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 8px 16px;
 }
 
 // Navigation arrows

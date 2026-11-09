@@ -3,18 +3,21 @@ import { state, CONFIG } from './state.js';
 export const audio = new Audio();
 audio.volume = CONFIG.audioVolume;
 
-export function updateMuteIcon(muteButton) {
-  const volumeIcon = muteButton.querySelector('.volume-icon');
-  const mutedIcon = muteButton.querySelector('.muted-icon');
-  volumeIcon.style.display = state.isMuted ? 'none' : 'block';
-  mutedIcon.style.display = state.isMuted ? 'block' : 'none';
+export function updateMuteIcons() {
+  for (const button of document.querySelectorAll('[data-mute-button]')) {
+    button.setAttribute('aria-pressed', String(state.isMuted));
+    const label = button.querySelector('span');
+    if (label) label.textContent = state.isMuted ? 'Unmute' : 'Mute';
+    button.querySelector('.volume-icon').style.display = state.isMuted ? 'none' : 'block';
+    button.querySelector('.muted-icon').style.display = state.isMuted ? 'block' : 'none';
+  }
 }
 
-export function toggleMute(muteButton) {
+export function toggleMute() {
   state.isMuted = !state.isMuted;
   audio.volume = state.isMuted ? 0 : CONFIG.audioVolume;
   localStorage.setItem('isMuted', state.isMuted);
-  updateMuteIcon(muteButton);
+  updateMuteIcons();
 }
 
 export function fadeIn(duration) {

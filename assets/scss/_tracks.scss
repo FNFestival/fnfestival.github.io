@@ -235,6 +235,11 @@
     background-color: $color-new;
   }
 
+  .shop-label {
+    @extend %label-base;
+    background-color: $color-shop;
+  }
+
   .favorite-label {
     @extend %label-base;
     background-color: $color-favorite;
@@ -249,10 +254,6 @@
   gap: 8px;
   flex-wrap: wrap;
   align-items: flex-start;
-
-  @media (max-width: $bp-mobile) {
-    justify-content: center;
-  }
 
   %modal-label-base {
     padding: 4px 10px;
@@ -281,6 +282,11 @@
   .new-label {
     @extend %modal-label-base;
     background-color: $color-new;
+  }
+
+  .shop-label {
+    @extend %modal-label-base;
+    background-color: $color-shop;
   }
 
   .favorite-label {
@@ -314,9 +320,14 @@
   color: $text;
   text-align: left;
   min-width: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @media (max-width: $bp-mobile) {
     min-width: 70px;
+    max-width: 70px;
   }
 }
 
@@ -351,7 +362,6 @@
 }
 
 // Loading / error
-.loading-container,
 .error-container {
   display: flex;
   flex-direction: column;
@@ -366,14 +376,6 @@
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
   }
-}
-
-.loading-container .loading-spinner {
-  min-width: 60px;
-  min-height: 60px;
-  width: 60px;
-  height: 60px;
-  margin: 0;
 }
 
 .error-container h2 {
